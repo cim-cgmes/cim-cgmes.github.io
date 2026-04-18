@@ -1,33 +1,14 @@
-# CIM CGMES Documentation Generator
+# CIM CGMES Documentation Page
 
-This script converts a CIM (Common Information Model) schema in JSON format into a structured Markdown documentation site with Mermaid diagrams.
+Technical reference site for the Common Grid Model Exchange Standard (CGMES).
 
-## Prerequisites
+## About CGMES
 
-- **Python 3.x**: Ensure you have Python installed.
-- **CIM Schema**: The script expects a file named `cim_schema_import_test.json` in the same directory.
-- **Mermaid Support**: The generated diagrams require a Markdown viewer that supports [Mermaid](https://mermaid.js.org/) (e.g., GitHub, VS Code with extensions, or Docusaurus).
+The CGMES is developed and maintained by ENTSO-E (the European Network of Transmission System Operators for Electricity). It provides a standardized framework for exchanging power system data across Europe, ensuring seamless interoperability for critical tasks like operational security analysis and capacity calculation.
+Source & Licensing
 
-## Usage
+The documentation hosted here is automatically generated from the Apache 2.0 licensed RDFS files available in the official ENTSO-E Application Profiles Library on GitHub.
 
-1. Place your `cim_schema_import_test.json` file in the root directory.
-2. Run the generation script:
-   ```bash
-   python3 cim_to_markdown.py
-   ```
+## Disclaimer
 
-## Output Structure
-
-The script generates a `docs/` folder with the following structure:
-
-- `docs/Overview.md`: The main index page listing all profiles and classes.
-- `docs/Profiles/`: Overview pages for each CIM profile, including a Mermaid diagram showing inheritance and associations within that profile.
-- `docs/Classes/`: Individual pages for every class and enumeration, including detailed attribute tables and inheritance diagrams.
-
-## Features
-
-- **Profile Overviews**: Automatically groups classes by their `CIMCategories` and generates relationship diagrams.
-- **Inheritance Diagrams**: Visualizes the class hierarchy using Mermaid `classDiagram` syntax.
-- **Cross-Linking**: Attributes that reference other classes or enumerations are automatically turned into clickable links.
-- **Enumerations**: Detailed lists of all enumeration values and their descriptions.
-- **Diagram Zooming**: Each diagram includes an "Enlarge Diagram" button for detailed inspection.
+This website is not an official ENTSOE publication. While the content is derived directly from official source files to ensure technical accuracy, this site is an independent resource intended for easier navigation and reference. For official policy documents and the formal standard definitions, please visit the ENTSO-E website.
