@@ -1,0 +1,940 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-SPARQL/61970-600-2_Equipment-AP-Con-Simple-SHACL" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.0"><title data-rh=true>61970-600-2_Equipment-AP-Con-Simple-SHACL | CIM-CGMES Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://cim-cgmes.github.io/SPARQL/61970-600-2_Equipment-AP-Con-Simple-SHACL /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="61970-600-2_Equipment-AP-Con-Simple-SHACL | CIM-CGMES Docs"/><meta data-rh=true name=description content=coreeqc:ACDCConverterDCTerminal /><meta data-rh=true property=og:description content=coreeqc:ACDCConverterDCTerminal /><link data-rh=true rel=canonical href=https://cim-cgmes.github.io/SPARQL/61970-600-2_Equipment-AP-Con-Simple-SHACL /><link data-rh=true rel=alternate href=https://cim-cgmes.github.io/SPARQL/61970-600-2_Equipment-AP-Con-Simple-SHACL hreflang=en /><link data-rh=true rel=alternate href=https://cim-cgmes.github.io/SPARQL/61970-600-2_Equipment-AP-Con-Simple-SHACL hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://cim-cgmes.github.io/SPARQL/61970-600-2_Equipment-AP-Con-Simple-SHACL","name":"61970-600-2_Equipment-AP-Con-Simple-SHACL","position":1}]}</script><link rel=stylesheet href=/assets/css/styles.359bc94a.css /><script src=/assets/js/runtime~main.a99c08e2.js defer></script><script src=/assets/js/main.e0774bc9.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-530")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><b class="navbar__title text--truncate">CIM-CGMES</b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/>Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://github.com/cim-cgmes/ target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/><span title=Introduction class=linkLabel_WmDU>Introduction</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/Classes/ACDCConverter><span title=Classes class=categoryLinkLabel_W154>Classes</span></a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/Classes><span title="CIM Classes and Enums" class=linkLabel_WmDU>CIM Classes and Enums</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/Profiles/Package_AsynchronousMachineDynamics><span title=Profiles class=categoryLinkLabel_W154>Profiles</span></a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/Profiles><span title="CIM Profiles" class=linkLabel_WmDU>CIM Profiles</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/SHACL/61968-13_GeographicalLocation-AP-Con-Complex-SHACL><span title=SHACL class=categoryLinkLabel_W154>SHACL</span></a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/SHACL-Overview><span title=SHACL-Overview class=linkLabel_WmDU>SHACL-Overview</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/SPARQL/61968-13_GeographicalLocation-AP-Con-Complex-SHACL><span title=SPARQL class=categoryLinkLabel_W154>SPARQL</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61968-13_GeographicalLocation-AP-Con-Complex-SHACL><span title=61968-13_GeographicalLocation-AP-Con-Complex-SHACL class=linkLabel_WmDU>61968-13_GeographicalLocation-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_DiagramLayout-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_DiagramLayout-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_DiagramLayout-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_DiagramLayout-AP-Con-Complex-SHACL><span title=61970-301_DiagramLayout-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_DiagramLayout-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_Equipment-AP-Con-Complex-SHACL><span title=61970-301_Equipment-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_Equipment-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_EquipmentBoundary-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_EquipmentBoundary-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_EquipmentBoundary-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_EquipmentBoundary-AP-Con-Complex-SHACL><span title=61970-301_EquipmentBoundary-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_EquipmentBoundary-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_Operation-AP-Con-Complex-SHACL><span title=61970-301_Operation-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_Operation-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_ShortCircuit-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_ShortCircuit-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_ShortCircuit-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_ShortCircuit-AP-Con-Complex-SHACL><span title=61970-301_ShortCircuit-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_ShortCircuit-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_StateVariables-AP-Con-Complex-SHACL><span title=61970-301_StateVariables-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_StateVariables-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_StateVariables-AP-Con-Complex-SolvedMAS-SHACL><span title=61970-301_StateVariables-AP-Con-Complex-SolvedMAS-SHACL class=linkLabel_WmDU>61970-301_StateVariables-AP-Con-Complex-SolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_SteadyStateHypothesis-AP-Con-Complex-SHACL><span title=61970-301_SteadyStateHypothesis-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_SteadyStateHypothesis-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-301_Topology-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_Topology-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_Topology-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-302_Dynamics-AP-Con-Complex-SHACL><span title=61970-302_Dynamics-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-302_Dynamics-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-452_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-452_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-452_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-452_Equipment-AP-Con-Complex-SHACL><span title=61970-452_Equipment-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-452_Equipment-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-452_Operation-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-452_Operation-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-452_Operation-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-452_Operation-AP-Con-Complex-SHACL><span title=61970-452_Operation-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-452_Operation-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-452_ShortCircuit-AP-Con-Complex-CrossProfile-SHACL><span title=61970-452_ShortCircuit-AP-Con-Complex-CrossProfile-SHACL class=linkLabel_WmDU>61970-452_ShortCircuit-AP-Con-Complex-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-452_ShortCircuit-AP-Con-Complex-SHACL><span title=61970-452_ShortCircuit-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-452_ShortCircuit-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-453_DiagramLayout-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-453_DiagramLayout-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-453_DiagramLayout-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-453_DiagramLayout-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-453_DiagramLayout-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-453_DiagramLayout-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-453_DiagramLayout-AP-Con-Complex-SHACL><span title=61970-453_DiagramLayout-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-453_DiagramLayout-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL><span title=61970-456_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL class=linkLabel_WmDU>61970-456_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_StateVariables-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-456_StateVariables-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-456_StateVariables-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_StateVariables-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-456_StateVariables-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-456_StateVariables-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_StateVariables-AP-Con-Complex-SHACL><span title=61970-456_StateVariables-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-456_StateVariables-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_StateVariables-AP-Con-Complex-SolvedMAS-SHACL><span title=61970-456_StateVariables-AP-Con-Complex-SolvedMAS-SHACL class=linkLabel_WmDU>61970-456_StateVariables-AP-Con-Complex-SolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-456_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-456_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_SteadyStateHypothesis-AP-Con-Complex-SHACL><span title=61970-456_SteadyStateHypothesis-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-456_SteadyStateHypothesis-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_Topology-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-456_Topology-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-456_Topology-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_Topology-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-456_Topology-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-456_Topology-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_Topology-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-456_Topology-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-456_Topology-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-456_Topology-AP-Con-Complex-SHACL><span title=61970-456_Topology-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-456_Topology-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-457_Dynamics-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-457_Dynamics-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-457_Dynamics-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-457_Dynamics-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-457_Dynamics-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-457_Dynamics-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-457_Dynamics-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-457_Dynamics-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-457_Dynamics-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-457_Dynamics-AP-Con-Complex-SHACL><span title=61970-457_Dynamics-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-457_Dynamics-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-552-Header-AP-Con-Simple-SHACL><span title=61970-552-Header-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-552-Header-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-1_AllProfiles-AP-Con-Complex-SHACL><span title=61970-600-1_AllProfiles-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-1_AllProfiles-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-1_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL><span title=61970-600-1_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL class=linkLabel_WmDU>61970-600-1_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-1_Equipment-AP-Con-Complex-SHACL><span title=61970-600-1_Equipment-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-1_Equipment-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-1_Prof10-Header-AP-Con-Complex-SHACL><span title=61970-600-1_Prof10-Header-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-1_Prof10-Header-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL><span title=61970-600-2_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL class=linkLabel_WmDU>61970-600-2_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_DiagramLayout-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_DiagramLayout-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_DiagramLayout-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_DiagramLayout-AP-Con-Simple-SHACL><span title=61970-600-2_DiagramLayout-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_DiagramLayout-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_Dynamics-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_Dynamics-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_Dynamics-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_Dynamics-AP-Con-Simple-SHACL><span title=61970-600-2_Dynamics-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_Dynamics-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_Equipment-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_Equipment-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_Equipment-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_Equipment-AP-Con-Complex-SHACL><span title=61970-600-2_Equipment-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-2_Equipment-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/SPARQL/61970-600-2_Equipment-AP-Con-Simple-SHACL><span title=61970-600-2_Equipment-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_Equipment-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_EquipmentBoundary-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_EquipmentBoundary-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_EquipmentBoundary-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_EquipmentBoundary-AP-Con-Simple-SHACL><span title=61970-600-2_EquipmentBoundary-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_EquipmentBoundary-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_GeographicalLocation-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-600-2_GeographicalLocation-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-600-2_GeographicalLocation-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_GeographicalLocation-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-600-2_GeographicalLocation-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-600-2_GeographicalLocation-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_GeographicalLocation-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_GeographicalLocation-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_GeographicalLocation-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_GeographicalLocation-AP-Con-Complex-SHACL><span title=61970-600-2_GeographicalLocation-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-2_GeographicalLocation-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_GeographicalLocation-AP-Con-Simple-SHACL><span title=61970-600-2_GeographicalLocation-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_GeographicalLocation-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_IdentifiedObjectCommon_AP-Con-Complex-SHACL><span title=61970-600-2_IdentifiedObjectCommon_AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-2_IdentifiedObjectCommon_AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_Operation-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-600-2_Operation-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-600-2_Operation-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_Operation-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-600-2_Operation-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-600-2_Operation-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_Operation-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_Operation-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_Operation-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_Operation-AP-Con-Simple-SHACL><span title=61970-600-2_Operation-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_Operation-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_ShortCircuit-AP-Con-Complex-SHACL><span title=61970-600-2_ShortCircuit-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-2_ShortCircuit-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_ShortCircuit-AP-Con-Simple-SHACL><span title=61970-600-2_ShortCircuit-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_ShortCircuit-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_StateVariables-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_StateVariables-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_StateVariables-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_StateVariables-AP-Con-Simple-SHACL><span title=61970-600-2_StateVariables-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_StateVariables-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_SteadyStateHypothesis-AP-Con-Simple-SHACL><span title=61970-600-2_SteadyStateHypothesis-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_SteadyStateHypothesis-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_Topology-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_Topology-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_Topology-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600-2_Topology-AP-Con-Simple-SHACL><span title=61970-600-2_Topology-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_Topology-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-600_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-600_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SPARQL/61970-600_Topology-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-600_Topology-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-600_Topology-AP-Con-Complex-NotSolvedMAS-SHACL</span></a></ul><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/SPARQL-Overview><span title="SPARQL Overview" class=linkLabel_WmDU>SPARQL Overview</span></a></ul></nav></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>SPARQL</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>61970-600-2_Equipment-AP-Con-Simple-SHACL</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>61970-600-2_Equipment-AP-Con-Simple-SHACL</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc>coreeqc:ACDCConverterDCTerminal<a href=#coreeqc class=hash-link aria-label="Direct link to coreeqc:ACDCConverterDCTerminal" title="Direct link to coreeqc:ACDCConverterDCTerminal" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ACDCConverterDCTerminal</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcdcconductingequipment-valuetypenodeshape>coreeqc:ACDCConverterDCTerminal.DCConductingEquipment-valueTypeNodeShape<a href=#coreeqcdcconductingequipment-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:ACDCConverterDCTerminal.DCConductingEquipment-valueTypeNodeShape" title="Direct link to coreeqc:ACDCConverterDCTerminal.DCConductingEquipment-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ACDCConverterDCTerminal</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-1>coreeqc:ACLineSegment<a href=#coreeqc-1 class=hash-link aria-label="Direct link to coreeqc:ACLineSegment" title="Direct link to coreeqc:ACLineSegment" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ACLineSegment</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-2>coreeqc:ActivePowerLimit<a href=#coreeqc-2 class=hash-link aria-label="Direct link to coreeqc:ActivePowerLimit" title="Direct link to coreeqc:ActivePowerLimit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ActivePowerLimit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-3>coreeqc:ApparentPowerLimit<a href=#coreeqc-3 class=hash-link aria-label="Direct link to coreeqc:ApparentPowerLimit" title="Direct link to coreeqc:ApparentPowerLimit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ApparentPowerLimit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-4>coreeqc:AsynchronousMachine<a href=#coreeqc-4 class=hash-link aria-label="Direct link to coreeqc:AsynchronousMachine" title="Direct link to coreeqc:AsynchronousMachine" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:AsynchronousMachine</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-5>coreeqc:BaseVoltage<a href=#coreeqc-5 class=hash-link aria-label="Direct link to coreeqc:BaseVoltage" title="Direct link to coreeqc:BaseVoltage" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:BaseVoltage</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-6>coreeqc:BatteryUnit<a href=#coreeqc-6 class=hash-link aria-label="Direct link to coreeqc:BatteryUnit" title="Direct link to coreeqc:BatteryUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:BatteryUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-7>coreeqc:Bay<a href=#coreeqc-7 class=hash-link aria-label="Direct link to coreeqc:Bay" title="Direct link to coreeqc:Bay" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Bay</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-8>coreeqc:BoundaryPoint<a href=#coreeqc-8 class=hash-link aria-label="Direct link to coreeqc:BoundaryPoint" title="Direct link to coreeqc:BoundaryPoint" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim100:BoundaryPoint</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-9>coreeqc:Breaker<a href=#coreeqc-9 class=hash-link aria-label="Direct link to coreeqc:Breaker" title="Direct link to coreeqc:Breaker" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Breaker</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-10>coreeqc:BusNameMarker<a href=#coreeqc-10 class=hash-link aria-label="Direct link to coreeqc:BusNameMarker" title="Direct link to coreeqc:BusNameMarker" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:BusNameMarker</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-11>coreeqc:BusbarSection<a href=#coreeqc-11 class=hash-link aria-label="Direct link to coreeqc:BusbarSection" title="Direct link to coreeqc:BusbarSection" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:BusbarSection</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-12>coreeqc:CAESPlant<a href=#coreeqc-12 class=hash-link aria-label="Direct link to coreeqc:CAESPlant" title="Direct link to coreeqc:CAESPlant" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CAESPlant</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-13>coreeqc:Clamp<a href=#coreeqc-13 class=hash-link aria-label="Direct link to coreeqc:Clamp" title="Direct link to coreeqc:Clamp" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Clamp</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-14>coreeqc:CogenerationPlant<a href=#coreeqc-14 class=hash-link aria-label="Direct link to coreeqc:CogenerationPlant" title="Direct link to coreeqc:CogenerationPlant" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CogenerationPlant</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-15>coreeqc:CombinedCyclePlant<a href=#coreeqc-15 class=hash-link aria-label="Direct link to coreeqc:CombinedCyclePlant" title="Direct link to coreeqc:CombinedCyclePlant" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CombinedCyclePlant</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-16>coreeqc:ConformLoad<a href=#coreeqc-16 class=hash-link aria-label="Direct link to coreeqc:ConformLoad" title="Direct link to coreeqc:ConformLoad" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ConformLoad</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-17>coreeqc:ConformLoadGroup<a href=#coreeqc-17 class=hash-link aria-label="Direct link to coreeqc:ConformLoadGroup" title="Direct link to coreeqc:ConformLoadGroup" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ConformLoadGroup</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-18>coreeqc:ConformLoadSchedule<a href=#coreeqc-18 class=hash-link aria-label="Direct link to coreeqc:ConformLoadSchedule" title="Direct link to coreeqc:ConformLoadSchedule" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ConformLoadSchedule</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-19>coreeqc:ConnectivityNode<a href=#coreeqc-19 class=hash-link aria-label="Direct link to coreeqc:ConnectivityNode" title="Direct link to coreeqc:ConnectivityNode" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ConnectivityNode</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcconnectivitynodecontainer-valuetypenodeshape>coreeqc:ConnectivityNode.ConnectivityNodeContainer-valueTypeNodeShape<a href=#coreeqcconnectivitynodecontainer-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:ConnectivityNode.ConnectivityNodeContainer-valueTypeNodeShape" title="Direct link to coreeqc:ConnectivityNode.ConnectivityNodeContainer-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ConnectivityNode</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-20>coreeqc:ControlArea<a href=#coreeqc-20 class=hash-link aria-label="Direct link to coreeqc:ControlArea" title="Direct link to coreeqc:ControlArea" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ControlArea</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcenergyarea-valuetypenodeshape>coreeqc:ControlArea.EnergyArea-valueTypeNodeShape<a href=#coreeqcenergyarea-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:ControlArea.EnergyArea-valueTypeNodeShape" title="Direct link to coreeqc:ControlArea.EnergyArea-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ControlArea</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-21>coreeqc:ControlAreaGeneratingUnit<a href=#coreeqc-21 class=hash-link aria-label="Direct link to coreeqc:ControlAreaGeneratingUnit" title="Direct link to coreeqc:ControlAreaGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ControlAreaGeneratingUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcgeneratingunit-valuetypenodeshape>coreeqc:ControlAreaGeneratingUnit.GeneratingUnit-valueTypeNodeShape<a href=#coreeqcgeneratingunit-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:ControlAreaGeneratingUnit.GeneratingUnit-valueTypeNodeShape" title="Direct link to coreeqc:ControlAreaGeneratingUnit.GeneratingUnit-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ControlAreaGeneratingUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-22>coreeqc:CsConverter<a href=#coreeqc-22 class=hash-link aria-label="Direct link to coreeqc:CsConverter" title="Direct link to coreeqc:CsConverter" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CsConverter</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-23>coreeqc:CurrentLimit<a href=#coreeqc-23 class=hash-link aria-label="Direct link to coreeqc:CurrentLimit" title="Direct link to coreeqc:CurrentLimit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CurrentLimit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-24>coreeqc:CurrentTransformer<a href=#coreeqc-24 class=hash-link aria-label="Direct link to coreeqc:CurrentTransformer" title="Direct link to coreeqc:CurrentTransformer" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CurrentTransformer</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-25>coreeqc:CurveData<a href=#coreeqc-25 class=hash-link aria-label="Direct link to coreeqc:CurveData" title="Direct link to coreeqc:CurveData" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CurveData</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqccurve-valuetypenodeshape>coreeqc:CurveData.Curve-valueTypeNodeShape<a href=#coreeqccurve-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:CurveData.Curve-valueTypeNodeShape" title="Direct link to coreeqc:CurveData.Curve-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CurveData</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-26>coreeqc:Cut<a href=#coreeqc-26 class=hash-link aria-label="Direct link to coreeqc:Cut" title="Direct link to coreeqc:Cut" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Cut</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-27>coreeqc:DCBreaker<a href=#coreeqc-27 class=hash-link aria-label="Direct link to coreeqc:DCBreaker" title="Direct link to coreeqc:DCBreaker" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCBreaker</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-28>coreeqc:DCBusbar<a href=#coreeqc-28 class=hash-link aria-label="Direct link to coreeqc:DCBusbar" title="Direct link to coreeqc:DCBusbar" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCBusbar</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-29>coreeqc:DCChopper<a href=#coreeqc-29 class=hash-link aria-label="Direct link to coreeqc:DCChopper" title="Direct link to coreeqc:DCChopper" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCChopper</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-30>coreeqc:DCConverterUnit<a href=#coreeqc-30 class=hash-link aria-label="Direct link to coreeqc:DCConverterUnit" title="Direct link to coreeqc:DCConverterUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCConverterUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-31>coreeqc:DCDisconnector<a href=#coreeqc-31 class=hash-link aria-label="Direct link to coreeqc:DCDisconnector" title="Direct link to coreeqc:DCDisconnector" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCDisconnector</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-32>coreeqc:DCGround<a href=#coreeqc-32 class=hash-link aria-label="Direct link to coreeqc:DCGround" title="Direct link to coreeqc:DCGround" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCGround</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-33>coreeqc:DCLine<a href=#coreeqc-33 class=hash-link aria-label="Direct link to coreeqc:DCLine" title="Direct link to coreeqc:DCLine" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCLine</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-34>coreeqc:DCLineSegment<a href=#coreeqc-34 class=hash-link aria-label="Direct link to coreeqc:DCLineSegment" title="Direct link to coreeqc:DCLineSegment" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCLineSegment</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-35>coreeqc:DCNode<a href=#coreeqc-35 class=hash-link aria-label="Direct link to coreeqc:DCNode" title="Direct link to coreeqc:DCNode" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCNode</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcdcequipmentcontainer-valuetypenodeshape>coreeqc:DCNode.DCEquipmentContainer-valueTypeNodeShape<a href=#coreeqcdcequipmentcontainer-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:DCNode.DCEquipmentContainer-valueTypeNodeShape" title="Direct link to coreeqc:DCNode.DCEquipmentContainer-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCNode</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-36>coreeqc:DCSeriesDevice<a href=#coreeqc-36 class=hash-link aria-label="Direct link to coreeqc:DCSeriesDevice" title="Direct link to coreeqc:DCSeriesDevice" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCSeriesDevice</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-37>coreeqc:DCShunt<a href=#coreeqc-37 class=hash-link aria-label="Direct link to coreeqc:DCShunt" title="Direct link to coreeqc:DCShunt" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCShunt</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-38>coreeqc:DCSwitch<a href=#coreeqc-38 class=hash-link aria-label="Direct link to coreeqc:DCSwitch" title="Direct link to coreeqc:DCSwitch" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCSwitch</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-39>coreeqc:DCTerminal<a href=#coreeqc-39 class=hash-link aria-label="Direct link to coreeqc:DCTerminal" title="Direct link to coreeqc:DCTerminal" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCTerminal</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcdcconductingequipment-valuetypenodeshape-1>coreeqc:DCTerminal.DCConductingEquipment-valueTypeNodeShape<a href=#coreeqcdcconductingequipment-valuetypenodeshape-1 class=hash-link aria-label="Direct link to coreeqc:DCTerminal.DCConductingEquipment-valueTypeNodeShape" title="Direct link to coreeqc:DCTerminal.DCConductingEquipment-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCTerminal</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-40>coreeqc:DayType<a href=#coreeqc-40 class=hash-link aria-label="Direct link to coreeqc:DayType" title="Direct link to coreeqc:DayType" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DayType</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-41>coreeqc:DisconnectingCircuitBreaker<a href=#coreeqc-41 class=hash-link aria-label="Direct link to coreeqc:DisconnectingCircuitBreaker" title="Direct link to coreeqc:DisconnectingCircuitBreaker" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DisconnectingCircuitBreaker</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-42>coreeqc:Disconnector<a href=#coreeqc-42 class=hash-link aria-label="Direct link to coreeqc:Disconnector" title="Direct link to coreeqc:Disconnector" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Disconnector</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-43>coreeqc:EnergyConsumer<a href=#coreeqc-43 class=hash-link aria-label="Direct link to coreeqc:EnergyConsumer" title="Direct link to coreeqc:EnergyConsumer" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:EnergyConsumer</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-44>coreeqc:EnergySchedulingType<a href=#coreeqc-44 class=hash-link aria-label="Direct link to coreeqc:EnergySchedulingType" title="Direct link to coreeqc:EnergySchedulingType" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:EnergySchedulingType</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-45>coreeqc:EnergySource<a href=#coreeqc-45 class=hash-link aria-label="Direct link to coreeqc:EnergySource" title="Direct link to coreeqc:EnergySource" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:EnergySource</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcequipmentcontainer-valuetypenodeshape>coreeqc:Equipment.EquipmentContainer-valueTypeNodeShape<a href=#coreeqcequipmentcontainer-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:Equipment.EquipmentContainer-valueTypeNodeShape" title="Direct link to coreeqc:Equipment.EquipmentContainer-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ACLineSegment</li>
+<li class="">targetClass: cim:Breaker</li>
+<li class="">targetClass: cim:EnergySource</li>
+<li class="">targetClass: cim:VsConverter</li>
+<li class="">targetClass: cim:SeriesCompensator</li>
+<li class="">targetClass: cim:AsynchronousMachine</li>
+<li class="">targetClass: cim:Ground</li>
+<li class="">targetClass: cim:PowerTransformer</li>
+<li class="">targetClass: cim:DCBusbar</li>
+<li class="">targetClass: cim:GeneratingUnit</li>
+<li class="">targetClass: cim:Fuse</li>
+<li class="">targetClass: cim:CsConverter</li>
+<li class="">targetClass: cim:Disconnector</li>
+<li class="">targetClass: cim:LinearShuntCompensator</li>
+<li class="">targetClass: cim:SolarGeneratingUnit</li>
+<li class="">targetClass: cim:Switch</li>
+<li class="">targetClass: cim:LoadBreakSwitch</li>
+<li class="">targetClass: cim:PetersenCoil</li>
+<li class="">targetClass: cim:BatteryUnit</li>
+<li class="">targetClass: cim:DCDisconnector</li>
+<li class="">targetClass: cim:EquivalentShunt</li>
+<li class="">targetClass: cim:DisconnectingCircuitBreaker</li>
+<li class="">targetClass: cim:DCSwitch</li>
+<li class="">targetClass: cim:NuclearGeneratingUnit</li>
+<li class="">targetClass: cim:Clamp</li>
+<li class="">targetClass: cim:DCShunt</li>
+<li class="">targetClass: cim:PowerElectronicsConnection</li>
+<li class="">targetClass: cim:NonlinearShuntCompensator</li>
+<li class="">targetClass: cim:DCLineSegment</li>
+<li class="">targetClass: cim:WaveTrap</li>
+<li class="">targetClass: cim:Junction</li>
+<li class="">targetClass: cim:DCGround</li>
+<li class="">targetClass: cim:PostLineSensor</li>
+<li class="">targetClass: cim:StaticVarCompensator</li>
+<li class="">targetClass: cim:PowerElectronicsWindUnit</li>
+<li class="">targetClass: cim:DCBreaker</li>
+<li class="">targetClass: cim:ConformLoad</li>
+<li class="">targetClass: cim:GroundingImpedance</li>
+<li class="">targetClass: cim:BusbarSection</li>
+<li class="">targetClass: cim:DCSeriesDevice</li>
+<li class="">targetClass: cim:ExternalNetworkInjection</li>
+<li class="">targetClass: cim:Jumper</li>
+<li class="">targetClass: cim:EquivalentBranch</li>
+<li class="">targetClass: cim:SurgeArrester</li>
+<li class="">targetClass: cim:FaultIndicator</li>
+<li class="">targetClass: cim:EnergyConsumer</li>
+<li class="">targetClass: cim:Cut</li>
+<li class="">targetClass: cim:NonConformLoad</li>
+<li class="">targetClass: cim:HydroGeneratingUnit</li>
+<li class="">targetClass: cim:PotentialTransformer</li>
+<li class="">targetClass: cim:EquivalentInjection</li>
+<li class="">targetClass: cim:DCChopper</li>
+<li class="">targetClass: cim:PhotoVoltaicUnit</li>
+<li class="">targetClass: cim:CurrentTransformer</li>
+<li class="">targetClass: cim:ThermalGeneratingUnit</li>
+<li class="">targetClass: cim:WindGeneratingUnit</li>
+<li class="">targetClass: cim:GroundDisconnector</li>
+<li class="">targetClass: cim:StationSupply</li>
+<li class="">targetClass: cim:HydroPump</li>
+<li class="">targetClass: cim:SynchronousMachine</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-46>coreeqc:EquivalentBranch<a href=#coreeqc-46 class=hash-link aria-label="Direct link to coreeqc:EquivalentBranch" title="Direct link to coreeqc:EquivalentBranch" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:EquivalentBranch</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-47>coreeqc:EquivalentInjection<a href=#coreeqc-47 class=hash-link aria-label="Direct link to coreeqc:EquivalentInjection" title="Direct link to coreeqc:EquivalentInjection" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:EquivalentInjection</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-48>coreeqc:EquivalentNetwork<a href=#coreeqc-48 class=hash-link aria-label="Direct link to coreeqc:EquivalentNetwork" title="Direct link to coreeqc:EquivalentNetwork" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:EquivalentNetwork</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-49>coreeqc:EquivalentShunt<a href=#coreeqc-49 class=hash-link aria-label="Direct link to coreeqc:EquivalentShunt" title="Direct link to coreeqc:EquivalentShunt" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:EquivalentShunt</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-50>coreeqc:ExternalNetworkInjection<a href=#coreeqc-50 class=hash-link aria-label="Direct link to coreeqc:ExternalNetworkInjection" title="Direct link to coreeqc:ExternalNetworkInjection" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ExternalNetworkInjection</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-51>coreeqc:FaultIndicator<a href=#coreeqc-51 class=hash-link aria-label="Direct link to coreeqc:FaultIndicator" title="Direct link to coreeqc:FaultIndicator" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:FaultIndicator</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-52>coreeqc:FossilFuel<a href=#coreeqc-52 class=hash-link aria-label="Direct link to coreeqc:FossilFuel" title="Direct link to coreeqc:FossilFuel" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:FossilFuel</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-53>coreeqc:Fuse<a href=#coreeqc-53 class=hash-link aria-label="Direct link to coreeqc:Fuse" title="Direct link to coreeqc:Fuse" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Fuse</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-54>coreeqc:GeneratingUnit<a href=#coreeqc-54 class=hash-link aria-label="Direct link to coreeqc:GeneratingUnit" title="Direct link to coreeqc:GeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:GeneratingUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-55>coreeqc:GeographicalRegion<a href=#coreeqc-55 class=hash-link aria-label="Direct link to coreeqc:GeographicalRegion" title="Direct link to coreeqc:GeographicalRegion" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:GeographicalRegion</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-56>coreeqc:GrossToNetActivePowerCurve<a href=#coreeqc-56 class=hash-link aria-label="Direct link to coreeqc:GrossToNetActivePowerCurve" title="Direct link to coreeqc:GrossToNetActivePowerCurve" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:GrossToNetActivePowerCurve</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcgeneratingunit-valuetypenodeshape-1>coreeqc:GrossToNetActivePowerCurve.GeneratingUnit-valueTypeNodeShape<a href=#coreeqcgeneratingunit-valuetypenodeshape-1 class=hash-link aria-label="Direct link to coreeqc:GrossToNetActivePowerCurve.GeneratingUnit-valueTypeNodeShape" title="Direct link to coreeqc:GrossToNetActivePowerCurve.GeneratingUnit-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:GrossToNetActivePowerCurve</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-57>coreeqc:Ground<a href=#coreeqc-57 class=hash-link aria-label="Direct link to coreeqc:Ground" title="Direct link to coreeqc:Ground" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Ground</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-58>coreeqc:GroundDisconnector<a href=#coreeqc-58 class=hash-link aria-label="Direct link to coreeqc:GroundDisconnector" title="Direct link to coreeqc:GroundDisconnector" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:GroundDisconnector</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-59>coreeqc:GroundingImpedance<a href=#coreeqc-59 class=hash-link aria-label="Direct link to coreeqc:GroundingImpedance" title="Direct link to coreeqc:GroundingImpedance" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:GroundingImpedance</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-60>coreeqc:HydroGeneratingUnit<a href=#coreeqc-60 class=hash-link aria-label="Direct link to coreeqc:HydroGeneratingUnit" title="Direct link to coreeqc:HydroGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:HydroGeneratingUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-61>coreeqc:HydroPowerPlant<a href=#coreeqc-61 class=hash-link aria-label="Direct link to coreeqc:HydroPowerPlant" title="Direct link to coreeqc:HydroPowerPlant" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:HydroPowerPlant</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-62>coreeqc:HydroPump<a href=#coreeqc-62 class=hash-link aria-label="Direct link to coreeqc:HydroPump" title="Direct link to coreeqc:HydroPump" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:HydroPump</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcrotatingmachine-valuetypenodeshape>coreeqc:HydroPump.RotatingMachine-valueTypeNodeShape<a href=#coreeqcrotatingmachine-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:HydroPump.RotatingMachine-valueTypeNodeShape" title="Direct link to coreeqc:HydroPump.RotatingMachine-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:HydroPump</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-63>coreeqc:Jumper<a href=#coreeqc-63 class=hash-link aria-label="Direct link to coreeqc:Jumper" title="Direct link to coreeqc:Jumper" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Jumper</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-64>coreeqc:Junction<a href=#coreeqc-64 class=hash-link aria-label="Direct link to coreeqc:Junction" title="Direct link to coreeqc:Junction" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Junction</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-65>coreeqc:Line<a href=#coreeqc-65 class=hash-link aria-label="Direct link to coreeqc:Line" title="Direct link to coreeqc:Line" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Line</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-66>coreeqc:LinearShuntCompensator<a href=#coreeqc-66 class=hash-link aria-label="Direct link to coreeqc:LinearShuntCompensator" title="Direct link to coreeqc:LinearShuntCompensator" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:LinearShuntCompensator</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-67>coreeqc:LoadArea<a href=#coreeqc-67 class=hash-link aria-label="Direct link to coreeqc:LoadArea" title="Direct link to coreeqc:LoadArea" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:LoadArea</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-68>coreeqc:LoadBreakSwitch<a href=#coreeqc-68 class=hash-link aria-label="Direct link to coreeqc:LoadBreakSwitch" title="Direct link to coreeqc:LoadBreakSwitch" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:LoadBreakSwitch</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-69>coreeqc:LoadResponseCharacteristic<a href=#coreeqc-69 class=hash-link aria-label="Direct link to coreeqc:LoadResponseCharacteristic" title="Direct link to coreeqc:LoadResponseCharacteristic" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:LoadResponseCharacteristic</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-70>coreeqc:NonConformLoad<a href=#coreeqc-70 class=hash-link aria-label="Direct link to coreeqc:NonConformLoad" title="Direct link to coreeqc:NonConformLoad" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NonConformLoad</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-71>coreeqc:NonConformLoadGroup<a href=#coreeqc-71 class=hash-link aria-label="Direct link to coreeqc:NonConformLoadGroup" title="Direct link to coreeqc:NonConformLoadGroup" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NonConformLoadGroup</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-72>coreeqc:NonConformLoadSchedule<a href=#coreeqc-72 class=hash-link aria-label="Direct link to coreeqc:NonConformLoadSchedule" title="Direct link to coreeqc:NonConformLoadSchedule" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NonConformLoadSchedule</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-73>coreeqc:NonlinearShuntCompensator<a href=#coreeqc-73 class=hash-link aria-label="Direct link to coreeqc:NonlinearShuntCompensator" title="Direct link to coreeqc:NonlinearShuntCompensator" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NonlinearShuntCompensator</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-74>coreeqc:NonlinearShuntCompensatorPoint<a href=#coreeqc-74 class=hash-link aria-label="Direct link to coreeqc:NonlinearShuntCompensatorPoint" title="Direct link to coreeqc:NonlinearShuntCompensatorPoint" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NonlinearShuntCompensatorPoint</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-75>coreeqc:NuclearGeneratingUnit<a href=#coreeqc-75 class=hash-link aria-label="Direct link to coreeqc:NuclearGeneratingUnit" title="Direct link to coreeqc:NuclearGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NuclearGeneratingUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-76>coreeqc:OperationalLimitSet<a href=#coreeqc-76 class=hash-link aria-label="Direct link to coreeqc:OperationalLimitSet" title="Direct link to coreeqc:OperationalLimitSet" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:OperationalLimitSet</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcequipment-valuetypenodeshape>coreeqc:OperationalLimitSet.Equipment-valueTypeNodeShape<a href=#coreeqcequipment-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:OperationalLimitSet.Equipment-valueTypeNodeShape" title="Direct link to coreeqc:OperationalLimitSet.Equipment-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:OperationalLimitSet</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcterminal-valuetypenodeshape>coreeqc:OperationalLimitSet.Terminal-valueTypeNodeShape<a href=#coreeqcterminal-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:OperationalLimitSet.Terminal-valueTypeNodeShape" title="Direct link to coreeqc:OperationalLimitSet.Terminal-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:OperationalLimitSet</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-77>coreeqc:OperationalLimitType<a href=#coreeqc-77 class=hash-link aria-label="Direct link to coreeqc:OperationalLimitType" title="Direct link to coreeqc:OperationalLimitType" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:OperationalLimitType</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-78>coreeqc:PetersenCoil<a href=#coreeqc-78 class=hash-link aria-label="Direct link to coreeqc:PetersenCoil" title="Direct link to coreeqc:PetersenCoil" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PetersenCoil</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-79>coreeqc:PhaseTapChangerAsymmetrical<a href=#coreeqc-79 class=hash-link aria-label="Direct link to coreeqc:PhaseTapChangerAsymmetrical" title="Direct link to coreeqc:PhaseTapChangerAsymmetrical" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhaseTapChangerAsymmetrical</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-80>coreeqc:PhaseTapChangerLinear<a href=#coreeqc-80 class=hash-link aria-label="Direct link to coreeqc:PhaseTapChangerLinear" title="Direct link to coreeqc:PhaseTapChangerLinear" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhaseTapChangerLinear</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-81>coreeqc:PhaseTapChangerSymmetrical<a href=#coreeqc-81 class=hash-link aria-label="Direct link to coreeqc:PhaseTapChangerSymmetrical" title="Direct link to coreeqc:PhaseTapChangerSymmetrical" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhaseTapChangerSymmetrical</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-82>coreeqc:PhaseTapChangerTable<a href=#coreeqc-82 class=hash-link aria-label="Direct link to coreeqc:PhaseTapChangerTable" title="Direct link to coreeqc:PhaseTapChangerTable" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhaseTapChangerTable</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-83>coreeqc:PhaseTapChangerTablePoint<a href=#coreeqc-83 class=hash-link aria-label="Direct link to coreeqc:PhaseTapChangerTablePoint" title="Direct link to coreeqc:PhaseTapChangerTablePoint" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhaseTapChangerTablePoint</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-84>coreeqc:PhaseTapChangerTabular<a href=#coreeqc-84 class=hash-link aria-label="Direct link to coreeqc:PhaseTapChangerTabular" title="Direct link to coreeqc:PhaseTapChangerTabular" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhaseTapChangerTabular</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-85>coreeqc:PhotoVoltaicUnit<a href=#coreeqc-85 class=hash-link aria-label="Direct link to coreeqc:PhotoVoltaicUnit" title="Direct link to coreeqc:PhotoVoltaicUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhotoVoltaicUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-86>coreeqc:PostLineSensor<a href=#coreeqc-86 class=hash-link aria-label="Direct link to coreeqc:PostLineSensor" title="Direct link to coreeqc:PostLineSensor" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PostLineSensor</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-87>coreeqc:PotentialTransformer<a href=#coreeqc-87 class=hash-link aria-label="Direct link to coreeqc:PotentialTransformer" title="Direct link to coreeqc:PotentialTransformer" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PotentialTransformer</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-88>coreeqc:PowerElectronicsConnection<a href=#coreeqc-88 class=hash-link aria-label="Direct link to coreeqc:PowerElectronicsConnection" title="Direct link to coreeqc:PowerElectronicsConnection" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PowerElectronicsConnection</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcpowerelectronicsunit-valuetypenodeshape>coreeqc:PowerElectronicsConnection.PowerElectronicsUnit-valueTypeNodeShape<a href=#coreeqcpowerelectronicsunit-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:PowerElectronicsConnection.PowerElectronicsUnit-valueTypeNodeShape" title="Direct link to coreeqc:PowerElectronicsConnection.PowerElectronicsUnit-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PowerElectronicsConnection</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-89>coreeqc:PowerElectronicsWindUnit<a href=#coreeqc-89 class=hash-link aria-label="Direct link to coreeqc:PowerElectronicsWindUnit" title="Direct link to coreeqc:PowerElectronicsWindUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PowerElectronicsWindUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-90>coreeqc:PowerTransformer<a href=#coreeqc-90 class=hash-link aria-label="Direct link to coreeqc:PowerTransformer" title="Direct link to coreeqc:PowerTransformer" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PowerTransformer</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-91>coreeqc:PowerTransformerEnd<a href=#coreeqc-91 class=hash-link aria-label="Direct link to coreeqc:PowerTransformerEnd" title="Direct link to coreeqc:PowerTransformerEnd" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PowerTransformerEnd</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-92>coreeqc:RatioTapChanger<a href=#coreeqc-92 class=hash-link aria-label="Direct link to coreeqc:RatioTapChanger" title="Direct link to coreeqc:RatioTapChanger" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:RatioTapChanger</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-93>coreeqc:RatioTapChangerTable<a href=#coreeqc-93 class=hash-link aria-label="Direct link to coreeqc:RatioTapChangerTable" title="Direct link to coreeqc:RatioTapChangerTable" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:RatioTapChangerTable</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-94>coreeqc:RatioTapChangerTablePoint<a href=#coreeqc-94 class=hash-link aria-label="Direct link to coreeqc:RatioTapChangerTablePoint" title="Direct link to coreeqc:RatioTapChangerTablePoint" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:RatioTapChangerTablePoint</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-95>coreeqc:ReactiveCapabilityCurve<a href=#coreeqc-95 class=hash-link aria-label="Direct link to coreeqc:ReactiveCapabilityCurve" title="Direct link to coreeqc:ReactiveCapabilityCurve" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ReactiveCapabilityCurve</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-96>coreeqc:RegularTimePoint<a href=#coreeqc-96 class=hash-link aria-label="Direct link to coreeqc:RegularTimePoint" title="Direct link to coreeqc:RegularTimePoint" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:RegularTimePoint</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcintervalschedule-valuetypenodeshape>coreeqc:RegularTimePoint.IntervalSchedule-valueTypeNodeShape<a href=#coreeqcintervalschedule-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:RegularTimePoint.IntervalSchedule-valueTypeNodeShape" title="Direct link to coreeqc:RegularTimePoint.IntervalSchedule-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:RegularTimePoint</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcregulatingcontrol-valuetypenodeshape>coreeqc:RegulatingCondEq.RegulatingControl-valueTypeNodeShape<a href=#coreeqcregulatingcontrol-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:RegulatingCondEq.RegulatingControl-valueTypeNodeShape" title="Direct link to coreeqc:RegulatingCondEq.RegulatingControl-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NonlinearShuntCompensator</li>
+<li class="">targetClass: cim:AsynchronousMachine</li>
+<li class="">targetClass: cim:LinearShuntCompensator</li>
+<li class="">targetClass: cim:ExternalNetworkInjection</li>
+<li class="">targetClass: cim:SynchronousMachine</li>
+<li class="">targetClass: cim:PowerElectronicsConnection</li>
+<li class="">targetClass: cim:StaticVarCompensator</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-97>coreeqc:RegulatingControl<a href=#coreeqc-97 class=hash-link aria-label="Direct link to coreeqc:RegulatingControl" title="Direct link to coreeqc:RegulatingControl" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:RegulatingControl</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-98>coreeqc:RegulationSchedule<a href=#coreeqc-98 class=hash-link aria-label="Direct link to coreeqc:RegulationSchedule" title="Direct link to coreeqc:RegulationSchedule" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:RegulationSchedule</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcregulatingcontrol-valuetypenodeshape-1>coreeqc:RegulationSchedule.RegulatingControl-valueTypeNodeShape<a href=#coreeqcregulatingcontrol-valuetypenodeshape-1 class=hash-link aria-label="Direct link to coreeqc:RegulationSchedule.RegulatingControl-valueTypeNodeShape" title="Direct link to coreeqc:RegulationSchedule.RegulatingControl-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:RegulationSchedule</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-99>coreeqc:ReportingGroup<a href=#coreeqc-99 class=hash-link aria-label="Direct link to coreeqc:ReportingGroup" title="Direct link to coreeqc:ReportingGroup" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ReportingGroup</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcgeneratingunit-valuetypenodeshape-2>coreeqc:RotatingMachine.GeneratingUnit-valueTypeNodeShape<a href=#coreeqcgeneratingunit-valuetypenodeshape-2 class=hash-link aria-label="Direct link to coreeqc:RotatingMachine.GeneratingUnit-valueTypeNodeShape" title="Direct link to coreeqc:RotatingMachine.GeneratingUnit-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:AsynchronousMachine</li>
+<li class="">targetClass: cim:SynchronousMachine</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-100>coreeqc:Season<a href=#coreeqc-100 class=hash-link aria-label="Direct link to coreeqc:Season" title="Direct link to coreeqc:Season" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Season</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-101>coreeqc:SeriesCompensator<a href=#coreeqc-101 class=hash-link aria-label="Direct link to coreeqc:SeriesCompensator" title="Direct link to coreeqc:SeriesCompensator" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SeriesCompensator</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-102>coreeqc:SolarGeneratingUnit<a href=#coreeqc-102 class=hash-link aria-label="Direct link to coreeqc:SolarGeneratingUnit" title="Direct link to coreeqc:SolarGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SolarGeneratingUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-103>coreeqc:SolarPowerPlant<a href=#coreeqc-103 class=hash-link aria-label="Direct link to coreeqc:SolarPowerPlant" title="Direct link to coreeqc:SolarPowerPlant" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim100:SolarPowerPlant</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-104>coreeqc:StaticVarCompensator<a href=#coreeqc-104 class=hash-link aria-label="Direct link to coreeqc:StaticVarCompensator" title="Direct link to coreeqc:StaticVarCompensator" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:StaticVarCompensator</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-105>coreeqc:StationSupply<a href=#coreeqc-105 class=hash-link aria-label="Direct link to coreeqc:StationSupply" title="Direct link to coreeqc:StationSupply" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:StationSupply</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-106>coreeqc:SubGeographicalRegion<a href=#coreeqc-106 class=hash-link aria-label="Direct link to coreeqc:SubGeographicalRegion" title="Direct link to coreeqc:SubGeographicalRegion" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SubGeographicalRegion</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-107>coreeqc:SubLoadArea<a href=#coreeqc-107 class=hash-link aria-label="Direct link to coreeqc:SubLoadArea" title="Direct link to coreeqc:SubLoadArea" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SubLoadArea</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-108>coreeqc:Substation<a href=#coreeqc-108 class=hash-link aria-label="Direct link to coreeqc:Substation" title="Direct link to coreeqc:Substation" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Substation</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-109>coreeqc:SurgeArrester<a href=#coreeqc-109 class=hash-link aria-label="Direct link to coreeqc:SurgeArrester" title="Direct link to coreeqc:SurgeArrester" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SurgeArrester</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-110>coreeqc:Switch<a href=#coreeqc-110 class=hash-link aria-label="Direct link to coreeqc:Switch" title="Direct link to coreeqc:Switch" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Switch</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-111>coreeqc:SwitchSchedule<a href=#coreeqc-111 class=hash-link aria-label="Direct link to coreeqc:SwitchSchedule" title="Direct link to coreeqc:SwitchSchedule" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SwitchSchedule</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcswitch-valuetypenodeshape>coreeqc:SwitchSchedule.Switch-valueTypeNodeShape<a href=#coreeqcswitch-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:SwitchSchedule.Switch-valueTypeNodeShape" title="Direct link to coreeqc:SwitchSchedule.Switch-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SwitchSchedule</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-112>coreeqc:SynchronousMachine<a href=#coreeqc-112 class=hash-link aria-label="Direct link to coreeqc:SynchronousMachine" title="Direct link to coreeqc:SynchronousMachine" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SynchronousMachine</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-113>coreeqc:TapChangerControl<a href=#coreeqc-113 class=hash-link aria-label="Direct link to coreeqc:TapChangerControl" title="Direct link to coreeqc:TapChangerControl" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:TapChangerControl</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-114>coreeqc:TapSchedule<a href=#coreeqc-114 class=hash-link aria-label="Direct link to coreeqc:TapSchedule" title="Direct link to coreeqc:TapSchedule" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:TapSchedule</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqctapchanger-valuetypenodeshape>coreeqc:TapSchedule.TapChanger-valueTypeNodeShape<a href=#coreeqctapchanger-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:TapSchedule.TapChanger-valueTypeNodeShape" title="Direct link to coreeqc:TapSchedule.TapChanger-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:TapSchedule</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-115>coreeqc:Terminal<a href=#coreeqc-115 class=hash-link aria-label="Direct link to coreeqc:Terminal" title="Direct link to coreeqc:Terminal" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Terminal</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqcconductingequipment-valuetypenodeshape>coreeqc:Terminal.ConductingEquipment-valueTypeNodeShape<a href=#coreeqcconductingequipment-valuetypenodeshape class=hash-link aria-label="Direct link to coreeqc:Terminal.ConductingEquipment-valueTypeNodeShape" title="Direct link to coreeqc:Terminal.ConductingEquipment-valueTypeNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Terminal</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-116>coreeqc:ThermalGeneratingUnit<a href=#coreeqc-116 class=hash-link aria-label="Direct link to coreeqc:ThermalGeneratingUnit" title="Direct link to coreeqc:ThermalGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ThermalGeneratingUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-117>coreeqc:TieFlow<a href=#coreeqc-117 class=hash-link aria-label="Direct link to coreeqc:TieFlow" title="Direct link to coreeqc:TieFlow" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:TieFlow</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-118>coreeqc:VoltageLevel<a href=#coreeqc-118 class=hash-link aria-label="Direct link to coreeqc:VoltageLevel" title="Direct link to coreeqc:VoltageLevel" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:VoltageLevel</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-119>coreeqc:VoltageLimit<a href=#coreeqc-119 class=hash-link aria-label="Direct link to coreeqc:VoltageLimit" title="Direct link to coreeqc:VoltageLimit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:VoltageLimit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-120>coreeqc:VsCapabilityCurve<a href=#coreeqc-120 class=hash-link aria-label="Direct link to coreeqc:VsCapabilityCurve" title="Direct link to coreeqc:VsCapabilityCurve" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:VsCapabilityCurve</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-121>coreeqc:VsConverter<a href=#coreeqc-121 class=hash-link aria-label="Direct link to coreeqc:VsConverter" title="Direct link to coreeqc:VsConverter" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:VsConverter</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-122>coreeqc:WaveTrap<a href=#coreeqc-122 class=hash-link aria-label="Direct link to coreeqc:WaveTrap" title="Direct link to coreeqc:WaveTrap" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:WaveTrap</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-123>coreeqc:WindGeneratingUnit<a href=#coreeqc-123 class=hash-link aria-label="Direct link to coreeqc:WindGeneratingUnit" title="Direct link to coreeqc:WindGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:WindGeneratingUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=coreeqc-124>coreeqc:WindPowerPlant<a href=#coreeqc-124 class=hash-link aria-label="Direct link to coreeqc:WindPowerPlant" title="Direct link to coreeqc:WindPowerPlant" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim100:WindPowerPlant</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/SPARQL/61970-600-2_Equipment-AP-Con-Complex-SHACL><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>61970-600-2_Equipment-AP-Con-Complex-SHACL</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/SPARQL/61970-600-2_EquipmentBoundary-AP-Con-Complex-InverseAssociation-SHACL><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>61970-600-2_EquipmentBoundary-AP-Con-Complex-InverseAssociation-SHACL</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#coreeqc class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcdcconductingequipment-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.DCConductingEquipment-valueTypeNodeShape</a><li><a href=#coreeqc-1 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-2 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-3 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-4 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-5 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-6 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-7 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-8 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-9 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-10 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-11 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-12 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-13 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-14 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-15 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-16 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-17 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-18 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-19 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcconnectivitynodecontainer-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.ConnectivityNodeContainer-valueTypeNodeShape</a><li><a href=#coreeqc-20 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcenergyarea-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.EnergyArea-valueTypeNodeShape</a><li><a href=#coreeqc-21 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcgeneratingunit-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.GeneratingUnit-valueTypeNodeShape</a><li><a href=#coreeqc-22 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-23 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-24 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-25 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqccurve-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.Curve-valueTypeNodeShape</a><li><a href=#coreeqc-26 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-27 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-28 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-29 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-30 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-31 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-32 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-33 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-34 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-35 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcdcequipmentcontainer-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.DCEquipmentContainer-valueTypeNodeShape</a><li><a href=#coreeqc-36 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-37 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-38 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-39 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcdcconductingequipment-valuetypenodeshape-1 class="table-of-contents__link toc-highlight">coreeqc.DCConductingEquipment-valueTypeNodeShape</a><li><a href=#coreeqc-40 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-41 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-42 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-43 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-44 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-45 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcequipmentcontainer-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.EquipmentContainer-valueTypeNodeShape</a><li><a href=#coreeqc-46 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-47 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-48 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-49 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-50 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-51 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-52 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-53 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-54 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-55 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-56 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcgeneratingunit-valuetypenodeshape-1 class="table-of-contents__link toc-highlight">coreeqc.GeneratingUnit-valueTypeNodeShape</a><li><a href=#coreeqc-57 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-58 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-59 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-60 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-61 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-62 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcrotatingmachine-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.RotatingMachine-valueTypeNodeShape</a><li><a href=#coreeqc-63 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-64 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-65 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-66 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-67 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-68 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-69 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-70 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-71 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-72 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-73 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-74 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-75 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-76 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcequipment-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.Equipment-valueTypeNodeShape</a><li><a href=#coreeqcterminal-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.Terminal-valueTypeNodeShape</a><li><a href=#coreeqc-77 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-78 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-79 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-80 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-81 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-82 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-83 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-84 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-85 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-86 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-87 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-88 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcpowerelectronicsunit-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.PowerElectronicsUnit-valueTypeNodeShape</a><li><a href=#coreeqc-89 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-90 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-91 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-92 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-93 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-94 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-95 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-96 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcintervalschedule-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.IntervalSchedule-valueTypeNodeShape</a><li><a href=#coreeqcregulatingcontrol-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.RegulatingControl-valueTypeNodeShape</a><li><a href=#coreeqc-97 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-98 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcregulatingcontrol-valuetypenodeshape-1 class="table-of-contents__link toc-highlight">coreeqc.RegulatingControl-valueTypeNodeShape</a><li><a href=#coreeqc-99 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcgeneratingunit-valuetypenodeshape-2 class="table-of-contents__link toc-highlight">coreeqc.GeneratingUnit-valueTypeNodeShape</a><li><a href=#coreeqc-100 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-101 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-102 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-103 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-104 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-105 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-106 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-107 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-108 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-109 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-110 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-111 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcswitch-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.Switch-valueTypeNodeShape</a><li><a href=#coreeqc-112 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-113 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-114 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqctapchanger-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.TapChanger-valueTypeNodeShape</a><li><a href=#coreeqc-115 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqcconductingequipment-valuetypenodeshape class="table-of-contents__link toc-highlight">coreeqc.ConductingEquipment-valueTypeNodeShape</a><li><a href=#coreeqc-116 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-117 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-118 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-119 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-120 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-121 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-122 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-123 class="table-of-contents__link toc-highlight">coreeqc</a><li><a href=#coreeqc-124 class="table-of-contents__link toc-highlight">coreeqc</a></ul></div></div></div></div></main></div></div></div></div></body>
