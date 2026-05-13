@@ -21,3 +21,5 @@ yarn-error.log*
 
 docs/Classes
 docs/Profiles
+docs/SHACL
+docs/SPARQL

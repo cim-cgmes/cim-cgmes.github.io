@@ -1,0 +1,35 @@
+# SPARQL Overview
+
+| File | sh:SPARQLConstraintComponent |
+| --- |  --- |
+| [61970-301_DiagramLayout-AP-Con-Complex-SHACL](SPARQL/61970-301_DiagramLayout-AP-Con-Complex-SHACL.md) | 1 |
+| [61970-301_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-301_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 1 |
+| [61970-301_Equipment-AP-Con-Complex-SHACL](SPARQL/61970-301_Equipment-AP-Con-Complex-SHACL.md) | 32 |
+| [61970-301_EquipmentBoundary-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-301_EquipmentBoundary-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 1 |
+| [61970-301_ShortCircuit-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-301_ShortCircuit-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 1 |
+| [61970-301_ShortCircuit-AP-Con-Complex-SHACL](SPARQL/61970-301_ShortCircuit-AP-Con-Complex-SHACL.md) | 2 |
+| [61970-301_StateVariables-AP-Con-Complex-SHACL](SPARQL/61970-301_StateVariables-AP-Con-Complex-SHACL.md) | 2 |
+| [61970-301_StateVariables-AP-Con-Complex-SolvedMAS-SHACL](SPARQL/61970-301_StateVariables-AP-Con-Complex-SolvedMAS-SHACL.md) | 1 |
+| [61970-301_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-301_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 7 |
+| [61970-301_SteadyStateHypothesis-AP-Con-Complex-SHACL](SPARQL/61970-301_SteadyStateHypothesis-AP-Con-Complex-SHACL.md) | 19 |
+| [61970-301_Topology-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-301_Topology-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 1 |
+| [61970-302_Dynamics-AP-Con-Complex-SHACL](SPARQL/61970-302_Dynamics-AP-Con-Complex-SHACL.md) | 35 |
+| [61970-452_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-452_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 1 |
+| [61970-452_Equipment-AP-Con-Complex-SHACL](SPARQL/61970-452_Equipment-AP-Con-Complex-SHACL.md) | 25 |
+| [61970-452_Operation-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-452_Operation-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 1 |
+| [61970-452_ShortCircuit-AP-Con-Complex-SHACL](SPARQL/61970-452_ShortCircuit-AP-Con-Complex-SHACL.md) | 2 |
+| [61970-456_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL](SPARQL/61970-456_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL.md) | 1 |
+| [61970-456_StateVariables-AP-Con-Complex-SolvedMAS-SHACL](SPARQL/61970-456_StateVariables-AP-Con-Complex-SolvedMAS-SHACL.md) | 8 |
+| [61970-456_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-456_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 14 |
+| [61970-456_Topology-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-456_Topology-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 1 |
+| [61970-457_Dynamics-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-457_Dynamics-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 1 |
+| [61970-457_Dynamics-AP-Con-Complex-SHACL](SPARQL/61970-457_Dynamics-AP-Con-Complex-SHACL.md) | 4 |
+| [61970-600-1_AllProfiles-AP-Con-Complex-SHACL](SPARQL/61970-600-1_AllProfiles-AP-Con-Complex-SHACL.md) | 7 |
+| [61970-600-1_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL](SPARQL/61970-600-1_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL.md) | 8 |
+| [61970-600-2_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL](SPARQL/61970-600-2_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL.md) | 2 |
+| [61970-600-2_Equipment-AP-Con-Complex-SHACL](SPARQL/61970-600-2_Equipment-AP-Con-Complex-SHACL.md) | 3 |
+| [61970-600-2_IdentifiedObjectCommon_AP-Con-Complex-SHACL](SPARQL/61970-600-2_IdentifiedObjectCommon_AP-Con-Complex-SHACL.md) | 4 |
+| [61970-600-2_ShortCircuit-AP-Con-Complex-SHACL](SPARQL/61970-600-2_ShortCircuit-AP-Con-Complex-SHACL.md) | 2 |
+| [61970-600_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-600_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 4 |
+| [61970-600_Topology-AP-Con-Complex-NotSolvedMAS-SHACL](SPARQL/61970-600_Topology-AP-Con-Complex-NotSolvedMAS-SHACL.md) | 1 |
+| **Total** | **192** |
