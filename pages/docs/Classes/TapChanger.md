@@ -1,0 +1,30 @@
+# TapChanger
+
+Mechanism for changing transformer winding tap positions.
+
+## Inheritance
+
+```mermaid
+classDiagram
+    PowerSystemResource <|-- TapChanger
+    TapChanger <|-- RatioTapChanger
+    TapChanger <|-- PhaseTapChanger
+```
+<button class="mermaid-enlarge-button">Enlarge Diagram</button>
+
+## Attributes
+
+| Label | Type | Multiplicity | Comment |
+|-------|------|--------------|---------|
+| SvTapStep | [SvTapStep](SvTapStep.md) | 0..1 | The tap step state associated with the tap changer. |
+| TapChangerControl | [TapChangerControl](TapChangerControl.md) | 0..1 | The regulating control scheme in which this tap changer participates. |
+| TapSchedules | [TapSchedule](TapSchedule.md) | 0..n | A TapChanger can have TapSchedules. |
+| controlEnabled | Boolean | 1..1 | Specifies the regulation status of the equipment. True is regulating, false is not regulating. |
+| highStep | Integer | 1..1 | Highest possible tap step position, advance from neutral. The attribute shall be greater than lowStep. |
+| lowStep | Integer | 1..1 | Lowest possible tap step position, retard from neutral. |
+| ltcFlag | Boolean | 1..1 | Specifies whether or not a TapChanger has load tap changing capabilities. |
+| neutralStep | Integer | 1..1 | The neutral tap step position for this winding. The attribute shall be equal to or greater than lowStep and equal or less than highStep. It is the step position where the voltage is neutralU when the other terminals of the transformer are at the ratedU. If there are other tap changers on the transformer those taps are kept constant at their neutralStep. |
+| neutralU | Float | 1..1 | Voltage at which the winding operates at the neutral tap setting. It is the voltage at the terminal of the PowerTransformerEnd associated with the tap changer when all tap changers on the transformer are at their neutralStep position. Normally neutralU of the tap changer is the same as ratedU of the PowerTransformerEnd, but it can differ in special cases such as when the tapping mechanism is separate from the winding more common on lower voltage transformers. This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerSymmetrical and PhaseTapChangerLinear. |
+| normalStep | Integer | 1..1 | The tap step position used in 'normal' network operation for this winding. For a 'Fixed' tap changer indicates the current physical tap setting. The attribute shall be equal to or greater than lowStep and equal to or less than highStep. |
+| step | Float | 1..1 | Tap changer position. Starting step for a steady state solution. Non integer values are allowed to support continuous tap variables. The reasons for continuous value are to support study cases where no discrete tap changer has yet been designed, a solution where a narrow voltage band forces the tap step to oscillate or to accommodate for a continuous solution as input. The attribute shall be equal to or greater than lowStep and equal to or less than highStep. |
+

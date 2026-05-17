@@ -18,8 +18,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-docs/Classes
-docs/Profiles
-docs/SHACL
-docs/SPARQL

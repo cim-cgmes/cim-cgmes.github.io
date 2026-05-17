@@ -1,0 +1,106 @@
+# 61970-600-2_GeographicalLocation-AP-Con-Complex-InverseAssociation-SHACL
+
+## gl13ia:PowerSystemResource
+
+**Severity:** sh:Violation
+
+**Targets:**
+- targetClass: cim:EnergySource
+- targetClass: cim:CAESPlant
+- targetClass: cim:CsConverter
+- targetClass: cim:Junction
+- targetClass: cim:AsynchronousMachine
+- targetClass: cim:DisconnectingCircuitBreaker
+- targetClass: cim:GeneratingUnit
+- targetClass: cim:PetersenCoil
+- targetClass: cim:EquivalentShunt
+- targetClass: cim:VoltageLevel
+- targetClass: cim:WaveTrap
+- targetClass: cim:BatteryUnit
+- targetClass: cim100:BoundaryPoint
+- targetClass: cim100:SolarPowerPlant
+- targetClass: cim:SynchronousMachine
+- targetClass: cim:Fuse
+- targetClass: cim:LoadBreakSwitch
+- targetClass: cim:DCBusbar
+- targetClass: cim:DCLineSegment
+- targetClass: cim:FaultIndicator
+- targetClass: cim:ConformLoad
+- targetClass: cim:ExternalNetworkInjection
+- targetClass: cim:Ground
+- targetClass: cim:SeriesCompensator
+- targetClass: cim:PotentialTransformer
+- targetClass: cim:LinearShuntCompensator
+- targetClass: cim:PhaseTapChangerAsymmetrical
+- targetClass: cim100:WindPowerPlant
+- targetClass: cim:Clamp
+- targetClass: cim:EquivalentBranch
+- targetClass: cim:DCConverterUnit
+- targetClass: cim:Switch
+- targetClass: cim:PostLineSensor
+- targetClass: cim:EquivalentNetwork
+- targetClass: cim:DCGround
+- targetClass: cim:StationSupply
+- targetClass: cim:Cut
+- targetClass: cim:NuclearGeneratingUnit
+- targetClass: cim:WindGeneratingUnit
+- targetClass: cim:EnergyConsumer
+- targetClass: cim:RegulatingControl
+- targetClass: cim:PhaseTapChangerSymmetrical
+- targetClass: cim:ACLineSegment
+- targetClass: cim:Bay
+- targetClass: cim:DCChopper
+- targetClass: cim:DCSeriesDevice
+- targetClass: cim:NonConformLoad
+- targetClass: cim:RatioTapChanger
+- targetClass: cim:CurrentTransformer
+- targetClass: cim:PowerElectronicsWindUnit
+- targetClass: cim:HydroPowerPlant
+- targetClass: cim:StaticVarCompensator
+- targetClass: cim:Substation
+- targetClass: cim:VsConverter
+- targetClass: cim:GroundingImpedance
+- targetClass: cim:GroundDisconnector
+- targetClass: cim:DCShunt
+- targetClass: cim:DCBreaker
+- targetClass: cim:PowerTransformer
+- targetClass: cim:Jumper
+- targetClass: cim:Breaker
+- targetClass: cim:CogenerationPlant
+- targetClass: cim:ControlArea
+- targetClass: cim:TapChangerControl
+- targetClass: cim:PhaseTapChangerLinear
+- targetClass: cim:PowerElectronicsConnection
+- targetClass: cim:Disconnector
+- targetClass: cim:CombinedCyclePlant
+- targetClass: cim:BusbarSection
+- targetClass: cim:EquivalentInjection
+- targetClass: cim:SolarGeneratingUnit
+- targetClass: cim:PhotoVoltaicUnit
+- targetClass: cim:Line
+- targetClass: cim:DCDisconnector
+- targetClass: cim:SurgeArrester
+- targetClass: cim:ThermalGeneratingUnit
+- targetClass: cim:HydroPump
+- targetClass: cim:NonlinearShuntCompensator
+- targetClass: cim:HydroGeneratingUnit
+- targetClass: cim:DCSwitch
+- targetClass: cim:DCLine
+
+**Nested Properties:**
+
+### gl13ia:PowerSystemResource.Location-cardinality
+
+**Path:** `^cim:Location.PowerSystemResources`  
+This constraint validates the cardinality of the association at the inverse direction.
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Wrong number of associated instances."
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
