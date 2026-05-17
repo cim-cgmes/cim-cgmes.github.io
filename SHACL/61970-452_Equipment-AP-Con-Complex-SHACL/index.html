@@ -1,0 +1,1584 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-SHACL/61970-452_Equipment-AP-Con-Complex-SHACL" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.0"><title data-rh=true>61970-452_Equipment-AP-Con-Complex-SHACL | CIM-CGMES Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://cim-cgmes.github.io/SHACL/61970-452_Equipment-AP-Con-Complex-SHACL /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="61970-452_Equipment-AP-Con-Complex-SHACL | CIM-CGMES Docs"/><meta data-rh=true name=description content=eq452c:ACDCConverter /><meta data-rh=true property=og:description content=eq452c:ACDCConverter /><link data-rh=true rel=canonical href=https://cim-cgmes.github.io/SHACL/61970-452_Equipment-AP-Con-Complex-SHACL /><link data-rh=true rel=alternate href=https://cim-cgmes.github.io/SHACL/61970-452_Equipment-AP-Con-Complex-SHACL hreflang=en /><link data-rh=true rel=alternate href=https://cim-cgmes.github.io/SHACL/61970-452_Equipment-AP-Con-Complex-SHACL hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://cim-cgmes.github.io/SHACL/61970-452_Equipment-AP-Con-Complex-SHACL","name":"61970-452_Equipment-AP-Con-Complex-SHACL","position":1}]}</script><link rel=stylesheet href=/assets/css/styles.359bc94a.css /><script src=/assets/js/runtime~main.a99c08e2.js defer></script><script src=/assets/js/main.65f1c078.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-530")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><b class="navbar__title text--truncate">CIM-CGMES</b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/>Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://github.com/cim-cgmes/ target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/><span title=Introduction class=linkLabel_WmDU>Introduction</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/Classes/ACDCConverter><span title=Classes class=categoryLinkLabel_W154>Classes</span></a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/Classes><span title="CIM Classes and Enums" class=linkLabel_WmDU>CIM Classes and Enums</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/Profiles/Package_AsynchronousMachineDynamics><span title=Profiles class=categoryLinkLabel_W154>Profiles</span></a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/Profiles><span title="CIM Profiles" class=linkLabel_WmDU>CIM Profiles</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/SHACL/61968-13_GeographicalLocation-AP-Con-Complex-SHACL><span title=SHACL class=categoryLinkLabel_W154>SHACL</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61968-13_GeographicalLocation-AP-Con-Complex-SHACL><span title=61968-13_GeographicalLocation-AP-Con-Complex-SHACL class=linkLabel_WmDU>61968-13_GeographicalLocation-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_DiagramLayout-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_DiagramLayout-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_DiagramLayout-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_DiagramLayout-AP-Con-Complex-SHACL><span title=61970-301_DiagramLayout-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_DiagramLayout-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_Equipment-AP-Con-Complex-SHACL><span title=61970-301_Equipment-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_Equipment-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_EquipmentBoundary-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_EquipmentBoundary-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_EquipmentBoundary-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_EquipmentBoundary-AP-Con-Complex-SHACL><span title=61970-301_EquipmentBoundary-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_EquipmentBoundary-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_Operation-AP-Con-Complex-SHACL><span title=61970-301_Operation-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_Operation-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_ShortCircuit-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_ShortCircuit-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_ShortCircuit-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_ShortCircuit-AP-Con-Complex-SHACL><span title=61970-301_ShortCircuit-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_ShortCircuit-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_StateVariables-AP-Con-Complex-SHACL><span title=61970-301_StateVariables-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_StateVariables-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_StateVariables-AP-Con-Complex-SolvedMAS-SHACL><span title=61970-301_StateVariables-AP-Con-Complex-SolvedMAS-SHACL class=linkLabel_WmDU>61970-301_StateVariables-AP-Con-Complex-SolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_SteadyStateHypothesis-AP-Con-Complex-SHACL><span title=61970-301_SteadyStateHypothesis-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-301_SteadyStateHypothesis-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-301_Topology-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-301_Topology-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-301_Topology-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-302_Dynamics-AP-Con-Complex-SHACL><span title=61970-302_Dynamics-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-302_Dynamics-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-452_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-452_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-452_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/SHACL/61970-452_Equipment-AP-Con-Complex-SHACL><span title=61970-452_Equipment-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-452_Equipment-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-452_Operation-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-452_Operation-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-452_Operation-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-452_Operation-AP-Con-Complex-SHACL><span title=61970-452_Operation-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-452_Operation-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-452_ShortCircuit-AP-Con-Complex-CrossProfile-SHACL><span title=61970-452_ShortCircuit-AP-Con-Complex-CrossProfile-SHACL class=linkLabel_WmDU>61970-452_ShortCircuit-AP-Con-Complex-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-452_ShortCircuit-AP-Con-Complex-SHACL><span title=61970-452_ShortCircuit-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-452_ShortCircuit-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-453_DiagramLayout-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-453_DiagramLayout-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-453_DiagramLayout-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-453_DiagramLayout-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-453_DiagramLayout-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-453_DiagramLayout-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-453_DiagramLayout-AP-Con-Complex-SHACL><span title=61970-453_DiagramLayout-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-453_DiagramLayout-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL><span title=61970-456_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL class=linkLabel_WmDU>61970-456_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_StateVariables-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-456_StateVariables-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-456_StateVariables-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_StateVariables-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-456_StateVariables-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-456_StateVariables-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_StateVariables-AP-Con-Complex-SHACL><span title=61970-456_StateVariables-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-456_StateVariables-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_StateVariables-AP-Con-Complex-SolvedMAS-SHACL><span title=61970-456_StateVariables-AP-Con-Complex-SolvedMAS-SHACL class=linkLabel_WmDU>61970-456_StateVariables-AP-Con-Complex-SolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-456_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-456_SteadyStateHypothesis-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_SteadyStateHypothesis-AP-Con-Complex-SHACL><span title=61970-456_SteadyStateHypothesis-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-456_SteadyStateHypothesis-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_Topology-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-456_Topology-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-456_Topology-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_Topology-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-456_Topology-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-456_Topology-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_Topology-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-456_Topology-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-456_Topology-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-456_Topology-AP-Con-Complex-SHACL><span title=61970-456_Topology-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-456_Topology-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-457_Dynamics-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-457_Dynamics-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-457_Dynamics-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-457_Dynamics-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-457_Dynamics-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-457_Dynamics-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-457_Dynamics-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-457_Dynamics-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-457_Dynamics-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-457_Dynamics-AP-Con-Complex-SHACL><span title=61970-457_Dynamics-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-457_Dynamics-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-552-Header-AP-Con-Simple-SHACL><span title=61970-552-Header-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-552-Header-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-1_AllProfiles-AP-Con-Complex-SHACL><span title=61970-600-1_AllProfiles-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-1_AllProfiles-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-1_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL><span title=61970-600-1_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL class=linkLabel_WmDU>61970-600-1_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-1_Equipment-AP-Con-Complex-SHACL><span title=61970-600-1_Equipment-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-1_Equipment-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-1_Prof10-Header-AP-Con-Complex-SHACL><span title=61970-600-1_Prof10-Header-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-1_Prof10-Header-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL><span title=61970-600-2_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL class=linkLabel_WmDU>61970-600-2_AllProfiles-AP-Con-Complex-SolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_DiagramLayout-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_DiagramLayout-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_DiagramLayout-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_DiagramLayout-AP-Con-Simple-SHACL><span title=61970-600-2_DiagramLayout-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_DiagramLayout-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Dynamics-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_Dynamics-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_Dynamics-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Dynamics-AP-Con-Simple-SHACL><span title=61970-600-2_Dynamics-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_Dynamics-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Equipment-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_Equipment-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_Equipment-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Equipment-AP-Con-Complex-SHACL><span title=61970-600-2_Equipment-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-2_Equipment-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Equipment-AP-Con-Simple-SHACL><span title=61970-600-2_Equipment-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_Equipment-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_EquipmentBoundary-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_EquipmentBoundary-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_EquipmentBoundary-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_EquipmentBoundary-AP-Con-Simple-SHACL><span title=61970-600-2_EquipmentBoundary-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_EquipmentBoundary-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_GeographicalLocation-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-600-2_GeographicalLocation-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-600-2_GeographicalLocation-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_GeographicalLocation-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-600-2_GeographicalLocation-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-600-2_GeographicalLocation-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_GeographicalLocation-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_GeographicalLocation-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_GeographicalLocation-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_GeographicalLocation-AP-Con-Complex-SHACL><span title=61970-600-2_GeographicalLocation-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-2_GeographicalLocation-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_GeographicalLocation-AP-Con-Simple-SHACL><span title=61970-600-2_GeographicalLocation-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_GeographicalLocation-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_IdentifiedObjectCommon_AP-Con-Complex-SHACL><span title=61970-600-2_IdentifiedObjectCommon_AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-2_IdentifiedObjectCommon_AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Operation-AP-Con-Complex-Explicit-CrossProfile-SHACL><span title=61970-600-2_Operation-AP-Con-Complex-Explicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-600-2_Operation-AP-Con-Complex-Explicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Operation-AP-Con-Complex-Implicit-CrossProfile-SHACL><span title=61970-600-2_Operation-AP-Con-Complex-Implicit-CrossProfile-SHACL class=linkLabel_WmDU>61970-600-2_Operation-AP-Con-Complex-Implicit-CrossProfile-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Operation-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_Operation-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_Operation-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Operation-AP-Con-Simple-SHACL><span title=61970-600-2_Operation-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_Operation-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_ShortCircuit-AP-Con-Complex-SHACL><span title=61970-600-2_ShortCircuit-AP-Con-Complex-SHACL class=linkLabel_WmDU>61970-600-2_ShortCircuit-AP-Con-Complex-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_ShortCircuit-AP-Con-Simple-SHACL><span title=61970-600-2_ShortCircuit-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_ShortCircuit-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_StateVariables-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_StateVariables-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_StateVariables-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_StateVariables-AP-Con-Simple-SHACL><span title=61970-600-2_StateVariables-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_StateVariables-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_SteadyStateHypothesis-AP-Con-Simple-SHACL><span title=61970-600-2_SteadyStateHypothesis-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_SteadyStateHypothesis-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Topology-AP-Con-Complex-InverseAssociation-SHACL><span title=61970-600-2_Topology-AP-Con-Complex-InverseAssociation-SHACL class=linkLabel_WmDU>61970-600-2_Topology-AP-Con-Complex-InverseAssociation-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600-2_Topology-AP-Con-Simple-SHACL><span title=61970-600-2_Topology-AP-Con-Simple-SHACL class=linkLabel_WmDU>61970-600-2_Topology-AP-Con-Simple-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-600_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-600_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/SHACL/61970-600_Topology-AP-Con-Complex-NotSolvedMAS-SHACL><span title=61970-600_Topology-AP-Con-Complex-NotSolvedMAS-SHACL class=linkLabel_WmDU>61970-600_Topology-AP-Con-Complex-NotSolvedMAS-SHACL</span></a></ul><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/SHACL-Overview><span title=SHACL-Overview class=linkLabel_WmDU>SHACL-Overview</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/SPARQL/61968-13_GeographicalLocation-AP-Con-Complex-SHACL><span title=SPARQL class=categoryLinkLabel_W154>SPARQL</span></a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/SPARQL-Overview><span title="SPARQL Overview" class=linkLabel_WmDU>SPARQL Overview</span></a></ul></nav></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>SHACL</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>61970-452_Equipment-AP-Con-Complex-SHACL</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>61970-452_Equipment-AP-Con-Complex-SHACL</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c>eq452c:ACDCConverter<a href=#eq452c class=hash-link aria-label="Direct link to eq452c:ACDCConverter" title="Direct link to eq452c:ACDCConverter" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CsConverter</li>
+<li class="">targetClass: cim:VsConverter</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452csubstation-containment>eq452c:DCConverterUnit.Substation-containment<a href=#eq452csubstation-containment class=hash-link aria-label="Direct link to eq452c:DCConverterUnit.Substation-containment" title="Direct link to eq452c:DCConverterUnit.Substation-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / cim:DCConverterUnit.Substation / rdf:type</code><br/>
+For ACDCConverter (CsConverter, VsConverter) the association Equipment.EquipmentContainer is required and shall point to DCEquipmentContainer of type DCConverterUnit. In this case the association DCConverterUnit.Substation is required.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The DCConverterUnit.Substation association is either missing or not pointing to a Substation."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Substation]</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-1>eq452c:ACDCConverter-containment<a href=#eq452c-1 class=hash-link aria-label="Direct link to eq452c:ACDCConverter-containment" title="Direct link to eq452c:ACDCConverter-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For ACDCConverter (CsConverter, VsConverter) the association Equipment.EquipmentContainer is required and shall point to DCEquipmentContainer of type DCConverterUnit. In this case the association DCConverterUnit.Substation is required.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not DCConverterUnit."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:DCConverterUnit]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-2>eq452c:ACLineSegment<a href=#eq452c-2 class=hash-link aria-label="Direct link to eq452c:ACLineSegment" title="Direct link to eq452c:ACLineSegment" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ACLineSegment</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cr-valuerange>eq452c:ACLineSegment.r-valueRange<a href=#eq452cr-valuerange class=hash-link aria-label="Direct link to eq452c:ACLineSegment.r-valueRange" title="Direct link to eq452c:ACLineSegment.r-valueRange" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:ACLineSegment.r</code><br/>
+ACLineSegment.r shall be a positive value or zero.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is negative."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinInclusiveConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Value: <code>0.0</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cx-valuerange>eq452c:ACLineSegment.x-valueRange<a href=#eq452cx-valuerange class=hash-link aria-label="Direct link to eq452c:ACLineSegment.x-valueRange" title="Direct link to eq452c:ACLineSegment.x-valueRange" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:ACLineSegment.x</code><br/>
+The attribute shall be a positive value. As negative reactance values are not allowed for ACLineSegment-s it is recommended to model series compensators explicitly.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is negative or zero."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinExclusiveConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Value: <code>0.0</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cbasevoltage-whererequired>eq452c:ConductingEquipment.BaseVoltage-whereRequired<a href=#eq452cbasevoltage-whererequired class=hash-link aria-label="Direct link to eq452c:ConductingEquipment.BaseVoltage-whereRequired" title="Direct link to eq452c:ConductingEquipment.BaseVoltage-whereRequired" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:ConductingEquipment.BaseVoltage</code><br/>
+The ConductingEquipment.BaseVoltage association is required for the following ConductingEquipment: ACLineSegment, EquivalentBranch and SeriesCompensator. For all other Equipment-s, not contained in a VoltageLevel, the association ConductingEquipment.BaseVoltage can be provided (as it is optional), however the association to BaseVoltage coming from the container or transformer ends takes precedence.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The association ConductingEquipment.BaseVoltage is not provided."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-3>eq452c:AuxiliaryEquipment<a href=#eq452c-3 class=hash-link aria-label="Direct link to eq452c:AuxiliaryEquipment" title="Direct link to eq452c:AuxiliaryEquipment" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CurrentTransformer</li>
+<li class="">targetClass: cim:PotentialTransformer</li>
+<li class="">targetClass: cim:PostLineSensor</li>
+<li class="">targetClass: cim:SurgeArrester</li>
+<li class="">targetClass: cim:WaveTrap</li>
+<li class="">targetClass: cim:FaultIndicator</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-4>eq452c:AuxiliaryEquipment-containment<a href=#eq452c-4 class=hash-link aria-label="Direct link to eq452c:AuxiliaryEquipment-containment" title="Direct link to eq452c:AuxiliaryEquipment-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For AuxilaryEquipment (CurrentTransformer, PotentialTransformer, PostLineSensor, SurgeArrester, WaveTrap, FaultIndicator) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay or Line.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Bay or Line."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Bay cim:Line]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-5>eq452c:Breaker<a href=#eq452c-5 class=hash-link aria-label="Direct link to eq452c:Breaker" title="Direct link to eq452c:Breaker" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Breaker</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-6>eq452c:BusbarSection<a href=#eq452c-6 class=hash-link aria-label="Direct link to eq452c:BusbarSection" title="Direct link to eq452c:BusbarSection" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:BusbarSection</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-7>eq452c:BusbarSection-containment<a href=#eq452c-7 class=hash-link aria-label="Direct link to eq452c:BusbarSection-containment" title="Direct link to eq452c:BusbarSection-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For BusbarSection the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel or Bay (when a disconnector is splitting a busbar section in two).</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Bay or VoltageLevel."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Bay cim:VoltageLevel]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-8>eq452c:Clamp<a href=#eq452c-8 class=hash-link aria-label="Direct link to eq452c:Clamp" title="Direct link to eq452c:Clamp" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Clamp</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-9>eq452c:Clamp-containment<a href=#eq452c-9 class=hash-link aria-label="Direct link to eq452c:Clamp-containment" title="Direct link to eq452c:Clamp-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For Clamp the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay or Line when outside substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Bay or Line."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Bay cim:Line]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-10>eq452c:ConductingEquipment-twoTerminalsShape<a href=#eq452c-10 class=hash-link aria-label="Direct link to eq452c:ConductingEquipment-twoTerminalsShape" title="Direct link to eq452c:ConductingEquipment-twoTerminalsShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ACLineSegment</li>
+<li class="">targetClass: cim:DCSeriesDevice</li>
+<li class="">targetClass: cim:DCBreaker</li>
+<li class="">targetClass: cim:EquivalentBranch</li>
+<li class="">targetClass: cim:Breaker</li>
+<li class="">targetClass: cim:Cut</li>
+<li class="">targetClass: cim:SeriesCompensator</li>
+<li class="">targetClass: cim:DCLineSegment</li>
+<li class="">targetClass: cim:DCSwitch</li>
+<li class="">targetClass: cim:DCChopper</li>
+<li class="">targetClass: cim:Disconnector</li>
+<li class="">targetClass: cim:LoadBreakSwitch</li>
+<li class="">targetClass: cim:DCDisconnector</li>
+<li class="">targetClass: cim:Switch</li>
+<li class="">targetClass: cim:Fuse</li>
+<li class="">targetClass: cim:GroundDisconnector</li>
+<li class="">targetClass: cim:Jumper</li>
+<li class="">targetClass: cim:DisconnectingCircuitBreaker</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-11>eq452c:Conductor<a href=#eq452c-11 class=hash-link aria-label="Direct link to eq452c:Conductor" title="Direct link to eq452c:Conductor" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ACLineSegment</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-12>eq452c:Conductor-containment<a href=#eq452c-12 class=hash-link aria-label="Direct link to eq452c:Conductor-containment" title="Direct link to eq452c:Conductor-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For Conductor (ACLineSegment) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Line.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Line."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Line]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-13>eq452c:CurveData<a href=#eq452c-13 class=hash-link aria-label="Direct link to eq452c:CurveData" title="Direct link to eq452c:CurveData" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:CurveData</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-14>eq452c:Cut<a href=#eq452c-14 class=hash-link aria-label="Direct link to eq452c:Cut" title="Direct link to eq452c:Cut" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Cut</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-15>eq452c:Cut-containment<a href=#eq452c-15 class=hash-link aria-label="Direct link to eq452c:Cut-containment" title="Direct link to eq452c:Cut-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For Cut the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel or DCConverterUnit or Line when outside substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Bay, VoltageLevel, DCConverterUnit or Line."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Bay cim:VoltageLevel cim:DCConverterUnit cim:Line]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-16>eq452c:DCBusbar<a href=#eq452c-16 class=hash-link aria-label="Direct link to eq452c:DCBusbar" title="Direct link to eq452c:DCBusbar" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCBusbar</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-17>eq452c:DCBusbar-containment<a href=#eq452c-17 class=hash-link aria-label="Direct link to eq452c:DCBusbar-containment" title="Direct link to eq452c:DCBusbar-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For DCBusbar the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not DCConverterUnit."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:DCConverterUnit]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-18>eq452c:DCChopper<a href=#eq452c-18 class=hash-link aria-label="Direct link to eq452c:DCChopper" title="Direct link to eq452c:DCChopper" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCChopper</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-19>eq452c:DCChopper-containment<a href=#eq452c-19 class=hash-link aria-label="Direct link to eq452c:DCChopper-containment" title="Direct link to eq452c:DCChopper-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For DCChopper the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not DCConverterUnit."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:DCConverterUnit]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-20>eq452c:DCGround<a href=#eq452c-20 class=hash-link aria-label="Direct link to eq452c:DCGround" title="Direct link to eq452c:DCGround" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCGround</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-21>eq452c:DCGround-containment<a href=#eq452c-21 class=hash-link aria-label="Direct link to eq452c:DCGround-containment" title="Direct link to eq452c:DCGround-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For DCGround the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not DCConverterUnit."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:DCConverterUnit]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-22>eq452c:DCLineSegment<a href=#eq452c-22 class=hash-link aria-label="Direct link to eq452c:DCLineSegment" title="Direct link to eq452c:DCLineSegment" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCLineSegment</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cresistance-valuerange>eq452c:DCLineSegment.resistance-valueRange<a href=#eq452cresistance-valuerange class=hash-link aria-label="Direct link to eq452c:DCLineSegment.resistance-valueRange" title="Direct link to eq452c:DCLineSegment.resistance-valueRange" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:DCLineSegment.resistance</code><br/>
+The attribute DCLineSegment.resistance shall be a positive value.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is negative or zero."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinExclusiveConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Value: <code>0.0</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-23>eq452c:DCLineSegment-containment<a href=#eq452c-23 class=hash-link aria-label="Direct link to eq452c:DCLineSegment-containment" title="Direct link to eq452c:DCLineSegment-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For DCLineSegment the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCLine. In the case of modelling back to back configuration the association shall point to EquipmentContainer of type Substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not DCLine or Substation."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:DCLine cim:Substation]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-24>eq452c:DCSeriesDevice<a href=#eq452c-24 class=hash-link aria-label="Direct link to eq452c:DCSeriesDevice" title="Direct link to eq452c:DCSeriesDevice" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCSeriesDevice</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-25>eq452c:DCSeriesDevice-containment<a href=#eq452c-25 class=hash-link aria-label="Direct link to eq452c:DCSeriesDevice-containment" title="Direct link to eq452c:DCSeriesDevice-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For DCSeriesDevice the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not DCConverterUnit."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:DCConverterUnit]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-26>eq452c:DCShunt<a href=#eq452c-26 class=hash-link aria-label="Direct link to eq452c:DCShunt" title="Direct link to eq452c:DCShunt" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCShunt</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-27>eq452c:DCShunt-containment<a href=#eq452c-27 class=hash-link aria-label="Direct link to eq452c:DCShunt-containment" title="Direct link to eq452c:DCShunt-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For DCShunt the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not DCConverterUnit."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:DCConverterUnit]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-28>eq452c:DCSwitch<a href=#eq452c-28 class=hash-link aria-label="Direct link to eq452c:DCSwitch" title="Direct link to eq452c:DCSwitch" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DCDisconnector</li>
+<li class="">targetClass: cim:DCBreaker</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-29>eq452c:DCSwitch-containment<a href=#eq452c-29 class=hash-link aria-label="Direct link to eq452c:DCSwitch-containment" title="Direct link to eq452c:DCSwitch-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For DCSwitch (DCDisconnector, DCBreaker) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not DCConverterUnit."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:DCConverterUnit]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-30>eq452c:DayType<a href=#eq452c-30 class=hash-link aria-label="Direct link to eq452c:DayType" title="Direct link to eq452c:DayType" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DayType</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cname-validvalues>eq452c:IdentifiedObject.name-validValues<a href=#eq452cname-validvalues class=hash-link aria-label="Direct link to eq452c:IdentifiedObject.name-validValues" title="Direct link to eq452c:IdentifiedObject.name-validValues" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:IdentifiedObject.name</code><br/>
+For DayType the name attribute indicates the days of the week that a given DayType represents. The name attribute is restricted to the following names: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Weekday, Weekend, All. If the name attribute is All, it represents all seven days of the week. If the name attribute is Weekday, it represents Monday through Friday. If the name attribute is Weekend, it represents Saturday and Sunday.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"Not valid value. The value is not one of the following values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Weekday, Weekend, All."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[Monday Tuesday Wednesday Thursday Friday Saturday Sunday Weekday Weekend All]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-31>eq452c:DisconnectingCircuitBreaker<a href=#eq452c-31 class=hash-link aria-label="Direct link to eq452c:DisconnectingCircuitBreaker" title="Direct link to eq452c:DisconnectingCircuitBreaker" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:DisconnectingCircuitBreaker</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-32>eq452c:Disconnector<a href=#eq452c-32 class=hash-link aria-label="Direct link to eq452c:Disconnector" title="Direct link to eq452c:Disconnector" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Disconnector</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-33>eq452c:Disconnector-containment<a href=#eq452c-33 class=hash-link aria-label="Direct link to eq452c:Disconnector-containment" title="Direct link to eq452c:Disconnector-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For Disconnector the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel, DCConverterUnit or Line when outside substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Bay, VoltageLevel, DCConverterUnit or Line."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Bay cim:VoltageLevel cim:DCConverterUnit cim:Line]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-34>eq452c:EarthFaultCompensator<a href=#eq452c-34 class=hash-link aria-label="Direct link to eq452c:EarthFaultCompensator" title="Direct link to eq452c:EarthFaultCompensator" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:GroundingImpedance</li>
+<li class="">targetClass: cim:PetersenCoil</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-35>eq452c:EarthFaultCompensator-containment<a href=#eq452c-35 class=hash-link aria-label="Direct link to eq452c:EarthFaultCompensator-containment" title="Direct link to eq452c:EarthFaultCompensator-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For EarthFaultCompensator (GroundingImpedance, PetersenCoil) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not VoltageLevel."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:VoltageLevel]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-36>eq452c:EnergyConnection<a href=#eq452c-36 class=hash-link aria-label="Direct link to eq452c:EnergyConnection" title="Direct link to eq452c:EnergyConnection" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NonConformLoad</li>
+<li class="">targetClass: cim:StaticVarCompensator</li>
+<li class="">targetClass: cim:AsynchronousMachine</li>
+<li class="">targetClass: cim:EnergyConsumer</li>
+<li class="">targetClass: cim:ConformLoad</li>
+<li class="">targetClass: cim:LinearShuntCompensator</li>
+<li class="">targetClass: cim:NonlinearShuntCompensator</li>
+<li class="">targetClass: cim:ExternalNetworkInjection</li>
+<li class="">targetClass: cim:SynchronousMachine</li>
+<li class="">targetClass: cim:EnergySource</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-37>eq452c:EnergyConnection-containment<a href=#eq452c-37 class=hash-link aria-label="Direct link to eq452c:EnergyConnection-containment" title="Direct link to eq452c:EnergyConnection-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For EnergyConnection (EnergySource, EnergyConsumer, NonConformLoad, ConformLoad, LinearShuntCompensator, NonlinearShuntCompensator, ExternalNetworkInjection, StaticVarCompensator, SynchronousMachine, AsynchronousMachine) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not VoltageLevel."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:VoltageLevel]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-38>eq452c:EquivalentBranch<a href=#eq452c-38 class=hash-link aria-label="Direct link to eq452c:EquivalentBranch" title="Direct link to eq452c:EquivalentBranch" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:EquivalentBranch</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cbasevoltage-whererequired-1>eq452c:ConductingEquipment.BaseVoltage-whereRequired<a href=#eq452cbasevoltage-whererequired-1 class=hash-link aria-label="Direct link to eq452c:ConductingEquipment.BaseVoltage-whereRequired" title="Direct link to eq452c:ConductingEquipment.BaseVoltage-whereRequired" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:ConductingEquipment.BaseVoltage</code><br/>
+The ConductingEquipment.BaseVoltage association is required for the following ConductingEquipment: ACLineSegment, EquivalentBranch and SeriesCompensator. For all other Equipment-s, not contained in a VoltageLevel, the association ConductingEquipment.BaseVoltage can be provided (as it is optional), however the association to BaseVoltage coming from the container or transformer ends takes precedence.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The association ConductingEquipment.BaseVoltage is not provided."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-39>eq452c:EquivalentBranch-containment<a href=#eq452c-39 class=hash-link aria-label="Direct link to eq452c:EquivalentBranch-containment" title="Direct link to eq452c:EquivalentBranch-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For EquivalentBranch the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel, Line or Substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not VoltageLevel, Line or Substation."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:VoltageLevel cim:Line cim:Substation]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-40>eq452c:EquivalentInjection<a href=#eq452c-40 class=hash-link aria-label="Direct link to eq452c:EquivalentInjection" title="Direct link to eq452c:EquivalentInjection" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:EquivalentInjection</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-41>eq452c:EquivalentInjection-containment<a href=#eq452c-41 class=hash-link aria-label="Direct link to eq452c:EquivalentInjection-containment" title="Direct link to eq452c:EquivalentInjection-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For EquivalentInjection the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel or Line.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not VoltageLevel or Line."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:VoltageLevel cim:Line]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-42>eq452c:EquivalentShunt<a href=#eq452c-42 class=hash-link aria-label="Direct link to eq452c:EquivalentShunt" title="Direct link to eq452c:EquivalentShunt" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:EquivalentShunt</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-43>eq452c:EquivalentShunt-containment<a href=#eq452c-43 class=hash-link aria-label="Direct link to eq452c:EquivalentShunt-containment" title="Direct link to eq452c:EquivalentShunt-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For EquivalentShunt the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not VoltageLevel."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:VoltageLevel]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-44>eq452c:Fuse<a href=#eq452c-44 class=hash-link aria-label="Direct link to eq452c:Fuse" title="Direct link to eq452c:Fuse" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Fuse</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-45>eq452c:Fuse-containment<a href=#eq452c-45 class=hash-link aria-label="Direct link to eq452c:Fuse-containment" title="Direct link to eq452c:Fuse-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For Fuse the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel, DCConverterUnit or Line when outside substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Bay, VoltageLevel, DCConverterUnit or Line."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Bay cim:VoltageLevel cim:DCConverterUnit cim:Line]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-46>eq452c:GeneratingUnit<a href=#eq452c-46 class=hash-link aria-label="Direct link to eq452c:GeneratingUnit" title="Direct link to eq452c:GeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:GeneratingUnit</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cminoperatingp-valuerangepair>eq452c:GeneratingUnit.minOperatingP-valueRangePair<a href=#eq452cminoperatingp-valuerangepair class=hash-link aria-label="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" title="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:GeneratingUnit.minOperatingP</code><br/>
+GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is greater than the value of GeneratingUnit.maxOperatingP."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:LessThanOrEqualsConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Path: <code>cim:GeneratingUnit.maxOperatingP</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-47>eq452c:GeneratingUnit-containmentNodeShape<a href=#eq452c-47 class=hash-link aria-label="Direct link to eq452c:GeneratingUnit-containmentNodeShape" title="Direct link to eq452c:GeneratingUnit-containmentNodeShape" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NuclearGeneratingUnit</li>
+<li class="">targetClass: cim:ThermalGeneratingUnit</li>
+<li class="">targetClass: cim:HydroGeneratingUnit</li>
+<li class="">targetClass: cim:WindGeneratingUnit</li>
+<li class="">targetClass: cim:GeneratingUnit</li>
+<li class="">targetClass: cim:SolarGeneratingUnit</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-48>eq452c:GeneratingUnit-containment<a href=#eq452c-48 class=hash-link aria-label="Direct link to eq452c:GeneratingUnit-containment" title="Direct link to eq452c:GeneratingUnit-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For GeneratingUnit (SolarGeneratingUnit, NuclearGeneratingUnit, ThermalGeneratingUnit, HydroGeneratingUnit, WindGeneratingUnit) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Substation."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Substation]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452caggregate>eq452c:GeneratingUnit.aggregate<a href=#eq452caggregate class=hash-link aria-label="Direct link to eq452c:GeneratingUnit.aggregate" title="Direct link to eq452c:GeneratingUnit.aggregate" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:GeneratingUnit</li>
+<li class="">targetClass: cim:SolarGeneratingUnit</li>
+<li class="">targetClass: cim:HydroGeneratingUnit</li>
+<li class="">targetClass: cim:WindGeneratingUnit</li>
+<li class="">targetClass: cim:ThermalGeneratingUnit</li>
+<li class="">targetClass: cim:NuclearGeneratingUnit</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-49>eq452c:Ground<a href=#eq452c-49 class=hash-link aria-label="Direct link to eq452c:Ground" title="Direct link to eq452c:Ground" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Ground</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-50>eq452c:Ground-containment<a href=#eq452c-50 class=hash-link aria-label="Direct link to eq452c:Ground-containment" title="Direct link to eq452c:Ground-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For Ground the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay or VoltageLevel.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Bay or VoltageLevel."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Bay cim:VoltageLevel]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-51>eq452c:GroundDisconnector<a href=#eq452c-51 class=hash-link aria-label="Direct link to eq452c:GroundDisconnector" title="Direct link to eq452c:GroundDisconnector" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:GroundDisconnector</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-52>eq452c:GroundDisconnector-containment<a href=#eq452c-52 class=hash-link aria-label="Direct link to eq452c:GroundDisconnector-containment" title="Direct link to eq452c:GroundDisconnector-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For GroundDisconnector the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel, DCConverterUnit or Line when outside substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Bay, VoltageLevel, DCConverterUnit or Line."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Bay cim:VoltageLevel cim:DCConverterUnit cim:Line]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-53>eq452c:HydroGeneratingUnit<a href=#eq452c-53 class=hash-link aria-label="Direct link to eq452c:HydroGeneratingUnit" title="Direct link to eq452c:HydroGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:HydroGeneratingUnit</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cminoperatingp-valuerangepair-1>eq452c:GeneratingUnit.minOperatingP-valueRangePair<a href=#eq452cminoperatingp-valuerangepair-1 class=hash-link aria-label="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" title="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:GeneratingUnit.minOperatingP</code><br/>
+GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is greater than the value of GeneratingUnit.maxOperatingP."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:LessThanOrEqualsConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Path: <code>cim:GeneratingUnit.maxOperatingP</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-54>eq452c:HydroPump<a href=#eq452c-54 class=hash-link aria-label="Direct link to eq452c:HydroPump" title="Direct link to eq452c:HydroPump" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:HydroPump</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-55>eq452c:HydroPump-containment<a href=#eq452c-55 class=hash-link aria-label="Direct link to eq452c:HydroPump-containment" title="Direct link to eq452c:HydroPump-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For HydroPump the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Substation."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Substation]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-56>eq452c:Jumper<a href=#eq452c-56 class=hash-link aria-label="Direct link to eq452c:Jumper" title="Direct link to eq452c:Jumper" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Jumper</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-57>eq452c:Jumper-containment<a href=#eq452c-57 class=hash-link aria-label="Direct link to eq452c:Jumper-containment" title="Direct link to eq452c:Jumper-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For Jumper the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel, DCConverterUnit or Line when outside substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Bay, VoltageLevel, DCConverterUnit or Line."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Bay cim:VoltageLevel cim:DCConverterUnit cim:Line]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-58>eq452c:Junction<a href=#eq452c-58 class=hash-link aria-label="Direct link to eq452c:Junction" title="Direct link to eq452c:Junction" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Junction</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-59>eq452c:Junction-containment<a href=#eq452c-59 class=hash-link aria-label="Direct link to eq452c:Junction-containment" title="Direct link to eq452c:Junction-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For Junction the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Line (in case they model T-junction of a Line), or VoltageLevel or Bay (in case they model named join locations within a Substation).</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Line, Bay or VoltageLevel."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Line cim:Bay cim:VoltageLevel]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-60>eq452c:LinearShuntCompensator<a href=#eq452c-60 class=hash-link aria-label="Direct link to eq452c:LinearShuntCompensator" title="Direct link to eq452c:LinearShuntCompensator" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:LinearShuntCompensator</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cgpersection-valuerange>eq452c:LinearShuntCompensator.gPerSection-valueRange<a href=#eq452cgpersection-valuerange class=hash-link aria-label="Direct link to eq452c:LinearShuntCompensator.gPerSection-valueRange" title="Direct link to eq452c:LinearShuntCompensator.gPerSection-valueRange" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:LinearShuntCompensator.gPerSection</code><br/>
+LinearShuntCompensator.gPerSection shall be a positive value or zero.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is negative."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinInclusiveConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Value: <code>0.0</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cvoltagesensitivity-valuerange>eq452c:ShuntCompensator.voltageSensitivity-valueRange<a href=#eq452cvoltagesensitivity-valuerange class=hash-link aria-label="Direct link to eq452c:ShuntCompensator.voltageSensitivity-valueRange" title="Direct link to eq452c:ShuntCompensator.voltageSensitivity-valueRange" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:ShuntCompensator.voltageSensitivity</code><br/>
+The ShuntCompensator.voltageSensitivity attribute shall be greater than zero.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is negative or zero."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinExclusiveConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Value: <code>0.0</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-61>eq452c:LoadBreakSwitch<a href=#eq452c-61 class=hash-link aria-label="Direct link to eq452c:LoadBreakSwitch" title="Direct link to eq452c:LoadBreakSwitch" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:LoadBreakSwitch</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-62>eq452c:NonlinearShuntCompensator<a href=#eq452c-62 class=hash-link aria-label="Direct link to eq452c:NonlinearShuntCompensator" title="Direct link to eq452c:NonlinearShuntCompensator" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NonlinearShuntCompensator</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cvoltagesensitivity-valuerange-1>eq452c:ShuntCompensator.voltageSensitivity-valueRange<a href=#eq452cvoltagesensitivity-valuerange-1 class=hash-link aria-label="Direct link to eq452c:ShuntCompensator.voltageSensitivity-valueRange" title="Direct link to eq452c:ShuntCompensator.voltageSensitivity-valueRange" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:ShuntCompensator.voltageSensitivity</code><br/>
+The ShuntCompensator.voltageSensitivity attribute shall be greater than zero.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is negative or zero."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinExclusiveConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Value: <code>0.0</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-63>eq452c:NonlinearShuntCompensatorPoint<a href=#eq452c-63 class=hash-link aria-label="Direct link to eq452c:NonlinearShuntCompensatorPoint" title="Direct link to eq452c:NonlinearShuntCompensatorPoint" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NonlinearShuntCompensatorPoint</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cg-valuerange>eq452c:NonlinearShuntCompensatorPoint.g-valueRange<a href=#eq452cg-valuerange class=hash-link aria-label="Direct link to eq452c:NonlinearShuntCompensatorPoint.g-valueRange" title="Direct link to eq452c:NonlinearShuntCompensatorPoint.g-valueRange" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:NonlinearShuntCompensatorPoint.g</code><br/>
+NonlinearShuntCompensatorPoint.g shall be a positive value or zero.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is negative."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinInclusiveConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Value: <code>0.0</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-64>eq452c:NuclearGeneratingUnit<a href=#eq452c-64 class=hash-link aria-label="Direct link to eq452c:NuclearGeneratingUnit" title="Direct link to eq452c:NuclearGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:NuclearGeneratingUnit</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cminoperatingp-valuerangepair-2>eq452c:GeneratingUnit.minOperatingP-valueRangePair<a href=#eq452cminoperatingp-valuerangepair-2 class=hash-link aria-label="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" title="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:GeneratingUnit.minOperatingP</code><br/>
+GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is greater than the value of GeneratingUnit.maxOperatingP."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:LessThanOrEqualsConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Path: <code>cim:GeneratingUnit.maxOperatingP</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-65>eq452c:OperationalLimitSet<a href=#eq452c-65 class=hash-link aria-label="Direct link to eq452c:OperationalLimitSet" title="Direct link to eq452c:OperationalLimitSet" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:OperationalLimitSet</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-66>eq452c:PhaseTapChangerAsymmetrical<a href=#eq452c-66 class=hash-link aria-label="Direct link to eq452c:PhaseTapChangerAsymmetrical" title="Direct link to eq452c:PhaseTapChangerAsymmetrical" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhaseTapChangerAsymmetrical</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-67>eq452c:PhaseTapChangerLinear<a href=#eq452c-67 class=hash-link aria-label="Direct link to eq452c:PhaseTapChangerLinear" title="Direct link to eq452c:PhaseTapChangerLinear" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhaseTapChangerLinear</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-68>eq452c:PhaseTapChangerSymmetrical<a href=#eq452c-68 class=hash-link aria-label="Direct link to eq452c:PhaseTapChangerSymmetrical" title="Direct link to eq452c:PhaseTapChangerSymmetrical" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhaseTapChangerSymmetrical</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-69>eq452c:PhaseTapChangerTabular<a href=#eq452c-69 class=hash-link aria-label="Direct link to eq452c:PhaseTapChangerTabular" title="Direct link to eq452c:PhaseTapChangerTabular" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PhaseTapChangerTabular</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-70>eq452c:PowerTransformer<a href=#eq452c-70 class=hash-link aria-label="Direct link to eq452c:PowerTransformer" title="Direct link to eq452c:PowerTransformer" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PowerTransformer</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-71>eq452c:PowerTransformer-containment<a href=#eq452c-71 class=hash-link aria-label="Direct link to eq452c:PowerTransformer-containment" title="Direct link to eq452c:PowerTransformer-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For PowerTransformer the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Substation or DCConverterUnit. For the case of a transformer that connects two substations, the terminal of one of the PowerTransformerEnd-s can be connected to a ConnectivityNode defined in another substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Substation or DCConverterUnit."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Substation cim:DCConverterUnit]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-72>eq452c:PowerTransformerEnd<a href=#eq452c-72 class=hash-link aria-label="Direct link to eq452c:PowerTransformerEnd" title="Direct link to eq452c:PowerTransformerEnd" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:PowerTransformerEnd</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cb-valuerange>eq452c:PowerTransformerEnd.b-valueRange<a href=#eq452cb-valuerange class=hash-link aria-label="Direct link to eq452c:PowerTransformerEnd.b-valueRange" title="Direct link to eq452c:PowerTransformerEnd.b-valueRange" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:PowerTransformerEnd.b</code><br/>
+PowerTransformerEnd.b shall be negative value or zero. Negative magnetising branch susceptance (PowerTransformerEnd.b) means inductive reactive power losses in no load.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is positive."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MaxInclusiveConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Value: <code>0.0</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cg-valuerange-1>eq452c:PowerTransformerEnd.g-valueRange<a href=#eq452cg-valuerange-1 class=hash-link aria-label="Direct link to eq452c:PowerTransformerEnd.g-valueRange" title="Direct link to eq452c:PowerTransformerEnd.g-valueRange" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:PowerTransformerEnd.g</code><br/>
+PowerTransformerEnd.g shall be positive value or zero. Positive magnetising branch conductance (PowerTransformerEnd.g) means positive active power losses in no load.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is negative."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinInclusiveConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Value: <code>0.0</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-73>eq452c:ProtectedSwitch<a href=#eq452c-73 class=hash-link aria-label="Direct link to eq452c:ProtectedSwitch" title="Direct link to eq452c:ProtectedSwitch" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Breaker</li>
+<li class="">targetClass: cim:DisconnectingCircuitBreaker</li>
+<li class="">targetClass: cim:LoadBreakSwitch</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-74>eq452c:ProtectedSwitch-containment<a href=#eq452c-74 class=hash-link aria-label="Direct link to eq452c:ProtectedSwitch-containment" title="Direct link to eq452c:ProtectedSwitch-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For ProtectedSwitch (Breaker, DisconnectingCircuitBreaker, LoadBreakSwitch) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel or DCConverterUnit.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not Bay, VoltageLevel or DCConverterUnit."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Bay cim:VoltageLevel cim:DCConverterUnit]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-75>eq452c:RatioTapChanger<a href=#eq452c-75 class=hash-link aria-label="Direct link to eq452c:RatioTapChanger" title="Direct link to eq452c:RatioTapChanger" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:RatioTapChanger</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-76>eq452c:ReactiveCapabilityCurve<a href=#eq452c-76 class=hash-link aria-label="Direct link to eq452c:ReactiveCapabilityCurve" title="Direct link to eq452c:ReactiveCapabilityCurve" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ReactiveCapabilityCurve</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-77>eq452c:RegulatingControl<a href=#eq452c-77 class=hash-link aria-label="Direct link to eq452c:RegulatingControl" title="Direct link to eq452c:RegulatingControl" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:RegulatingControl</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-78>eq452c:RegulatingControl-RegulatingEquipment<a href=#eq452c-78 class=hash-link aria-label="Direct link to eq452c:RegulatingControl-RegulatingEquipment" title="Direct link to eq452c:RegulatingControl-RegulatingEquipment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>^cim:RegulatingCondEq.RegulatingControl</code><br/>
+A RegulatingControl that is not a TapChangerControl must have at least one regulating equipment associated through the RegulatingCondEq.RegulatingControl. That is, a RegulatingControl cannot exist without some equipment using it for regulating.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The RegulatingControl is not associated with an Equpment via RegulatingCondEq.RegulatingControl."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-79>eq452c:SeriesCompensator<a href=#eq452c-79 class=hash-link aria-label="Direct link to eq452c:SeriesCompensator" title="Direct link to eq452c:SeriesCompensator" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SeriesCompensator</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cbasevoltage-whererequired-2>eq452c:ConductingEquipment.BaseVoltage-whereRequired<a href=#eq452cbasevoltage-whererequired-2 class=hash-link aria-label="Direct link to eq452c:ConductingEquipment.BaseVoltage-whereRequired" title="Direct link to eq452c:ConductingEquipment.BaseVoltage-whereRequired" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:ConductingEquipment.BaseVoltage</code><br/>
+The ConductingEquipment.BaseVoltage association is required for the following ConductingEquipment: ACLineSegment, EquivalentBranch and SeriesCompensator. For all other Equipment-s, not contained in a VoltageLevel, the association ConductingEquipment.BaseVoltage can be provided (as it is optional), however the association to BaseVoltage coming from the container or transformer ends takes precedence.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The association ConductingEquipment.BaseVoltage is not provided."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-80>eq452c:SeriesCompensator-containment<a href=#eq452c-80 class=hash-link aria-label="Direct link to eq452c:SeriesCompensator-containment" title="Direct link to eq452c:SeriesCompensator-containment" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:Equipment.EquipmentContainer / rdf:type</code><br/>
+For SeriesCompensator the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel when in substation, DCConverterUnit or Line when outside substation.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The containment is either missing or it is not VoltageLevel, Line or DCConverterUnit."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:MinCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MinCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:MaxCountConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">MaxCount: <code>1</code></li>
+</ul>
+</li>
+<li class=""><strong>sh:InConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Values: <code>[cim:Line cim:VoltageLevel cim:DCConverterUnit]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-81>eq452c:SolarGeneratingUnit<a href=#eq452c-81 class=hash-link aria-label="Direct link to eq452c:SolarGeneratingUnit" title="Direct link to eq452c:SolarGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SolarGeneratingUnit</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cminoperatingp-valuerangepair-3>eq452c:GeneratingUnit.minOperatingP-valueRangePair<a href=#eq452cminoperatingp-valuerangepair-3 class=hash-link aria-label="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" title="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:GeneratingUnit.minOperatingP</code><br/>
+GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is greater than the value of GeneratingUnit.maxOperatingP."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:LessThanOrEqualsConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Path: <code>cim:GeneratingUnit.maxOperatingP</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-82>eq452c:StaticVarCompensator<a href=#eq452c-82 class=hash-link aria-label="Direct link to eq452c:StaticVarCompensator" title="Direct link to eq452c:StaticVarCompensator" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:StaticVarCompensator</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-83>eq452c:Switch<a href=#eq452c-83 class=hash-link aria-label="Direct link to eq452c:Switch" title="Direct link to eq452c:Switch" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:Switch</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-84>eq452c:SynchronousMachine<a href=#eq452c-84 class=hash-link aria-label="Direct link to eq452c:SynchronousMachine" title="Direct link to eq452c:SynchronousMachine" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:SynchronousMachine</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cminq-valuerangepair>eq452c:SynchronousMachine.minQ-valueRangePair<a href=#eq452cminq-valuerangepair class=hash-link aria-label="Direct link to eq452c:SynchronousMachine.minQ-valueRangePair" title="Direct link to eq452c:SynchronousMachine.minQ-valueRangePair" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:SynchronousMachine.minQ</code><br/>
+SynchronousMachine.maxQ shall be greater than or equal to SynchronousMachine.minQ.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is greater than the value of SynchronousMachine.maxQ."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:LessThanOrEqualsConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Path: <code>cim:SynchronousMachine.maxQ</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-85>eq452c:TapChangerControl<a href=#eq452c-85 class=hash-link aria-label="Direct link to eq452c:TapChangerControl" title="Direct link to eq452c:TapChangerControl" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:TapChangerControl</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-86>eq452c:ThermalGeneratingUnit<a href=#eq452c-86 class=hash-link aria-label="Direct link to eq452c:ThermalGeneratingUnit" title="Direct link to eq452c:ThermalGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:ThermalGeneratingUnit</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cminoperatingp-valuerangepair-4>eq452c:GeneratingUnit.minOperatingP-valueRangePair<a href=#eq452cminoperatingp-valuerangepair-4 class=hash-link aria-label="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" title="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:GeneratingUnit.minOperatingP</code><br/>
+GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is greater than the value of GeneratingUnit.maxOperatingP."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:LessThanOrEqualsConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Path: <code>cim:GeneratingUnit.maxOperatingP</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-87>eq452c:VsCapabilityCurve<a href=#eq452c-87 class=hash-link aria-label="Direct link to eq452c:VsCapabilityCurve" title="Direct link to eq452c:VsCapabilityCurve" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:VsCapabilityCurve</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452c-88>eq452c:WindGeneratingUnit<a href=#eq452c-88 class=hash-link aria-label="Direct link to eq452c:WindGeneratingUnit" title="Direct link to eq452c:WindGeneratingUnit" translate=no>​</a></h2>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Targets:</strong></p>
+<ul>
+<li class="">targetClass: cim:WindGeneratingUnit</li>
+</ul>
+<p><strong>Nested Properties:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=eq452cminoperatingp-valuerangepair-5>eq452c:GeneratingUnit.minOperatingP-valueRangePair<a href=#eq452cminoperatingp-valuerangepair-5 class=hash-link aria-label="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" title="Direct link to eq452c:GeneratingUnit.minOperatingP-valueRangePair" translate=no>​</a></h3>
+<p><strong>Path:</strong> <code>cim:GeneratingUnit.minOperatingP</code><br/>
+GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.</p>
+<p><strong>Severity:</strong> sh:Violation</p>
+<p><strong>Messages:</strong></p>
+<ul>
+<li class="">"The value is greater than the value of GeneratingUnit.maxOperatingP."</li>
+</ul>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li class=""><strong>sh:LessThanOrEqualsConstraintComponent</strong> (Severity: sh:Violation)
+<ul>
+<li class="">Path: <code>cim:GeneratingUnit.maxOperatingP</code></li>
+</ul>
+</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/SHACL/61970-452_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>61970-452_Equipment-AP-Con-Complex-NotSolvedMAS-SHACL</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/SHACL/61970-452_Operation-AP-Con-Complex-NotSolvedMAS-SHACL><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>61970-452_Operation-AP-Con-Complex-NotSolvedMAS-SHACL</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#eq452c class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452csubstation-containment class="table-of-contents__link toc-highlight">eq452c.Substation-containment</a><li><a href=#eq452c-1 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-2 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cr-valuerange class="table-of-contents__link toc-highlight">eq452c.r-valueRange</a><li><a href=#eq452cx-valuerange class="table-of-contents__link toc-highlight">eq452c.x-valueRange</a><li><a href=#eq452cbasevoltage-whererequired class="table-of-contents__link toc-highlight">eq452c.BaseVoltage-whereRequired</a></ul><li><a href=#eq452c-3 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-4 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-5 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-6 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-7 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-8 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-9 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-10 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-11 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-12 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-13 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-14 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-15 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-16 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-17 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-18 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-19 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-20 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-21 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-22 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cresistance-valuerange class="table-of-contents__link toc-highlight">eq452c.resistance-valueRange</a><li><a href=#eq452c-23 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-24 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-25 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-26 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-27 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-28 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-29 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-30 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cname-validvalues class="table-of-contents__link toc-highlight">eq452c.name-validValues</a></ul><li><a href=#eq452c-31 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-32 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-33 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-34 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-35 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-36 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-37 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-38 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cbasevoltage-whererequired-1 class="table-of-contents__link toc-highlight">eq452c.BaseVoltage-whereRequired</a><li><a href=#eq452c-39 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-40 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-41 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-42 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-43 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-44 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-45 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-46 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cminoperatingp-valuerangepair class="table-of-contents__link toc-highlight">eq452c.minOperatingP-valueRangePair</a></ul><li><a href=#eq452c-47 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-48 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452caggregate class="table-of-contents__link toc-highlight">eq452c.aggregate</a><li><a href=#eq452c-49 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-50 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-51 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-52 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-53 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cminoperatingp-valuerangepair-1 class="table-of-contents__link toc-highlight">eq452c.minOperatingP-valueRangePair</a></ul><li><a href=#eq452c-54 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-55 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-56 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-57 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-58 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-59 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-60 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cgpersection-valuerange class="table-of-contents__link toc-highlight">eq452c.gPerSection-valueRange</a><li><a href=#eq452cvoltagesensitivity-valuerange class="table-of-contents__link toc-highlight">eq452c.voltageSensitivity-valueRange</a></ul><li><a href=#eq452c-61 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-62 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cvoltagesensitivity-valuerange-1 class="table-of-contents__link toc-highlight">eq452c.voltageSensitivity-valueRange</a></ul><li><a href=#eq452c-63 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cg-valuerange class="table-of-contents__link toc-highlight">eq452c.g-valueRange</a></ul><li><a href=#eq452c-64 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cminoperatingp-valuerangepair-2 class="table-of-contents__link toc-highlight">eq452c.minOperatingP-valueRangePair</a></ul><li><a href=#eq452c-65 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-66 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-67 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-68 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-69 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-70 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-71 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-72 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cb-valuerange class="table-of-contents__link toc-highlight">eq452c.b-valueRange</a><li><a href=#eq452cg-valuerange-1 class="table-of-contents__link toc-highlight">eq452c.g-valueRange</a></ul><li><a href=#eq452c-73 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-74 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-75 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-76 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-77 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452c-78 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-79 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cbasevoltage-whererequired-2 class="table-of-contents__link toc-highlight">eq452c.BaseVoltage-whereRequired</a><li><a href=#eq452c-80 class="table-of-contents__link toc-highlight">eq452c</a></ul><li><a href=#eq452c-81 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cminoperatingp-valuerangepair-3 class="table-of-contents__link toc-highlight">eq452c.minOperatingP-valueRangePair</a></ul><li><a href=#eq452c-82 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-83 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-84 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cminq-valuerangepair class="table-of-contents__link toc-highlight">eq452c.minQ-valueRangePair</a></ul><li><a href=#eq452c-85 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-86 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cminoperatingp-valuerangepair-4 class="table-of-contents__link toc-highlight">eq452c.minOperatingP-valueRangePair</a></ul><li><a href=#eq452c-87 class="table-of-contents__link toc-highlight">eq452c</a><li><a href=#eq452c-88 class="table-of-contents__link toc-highlight">eq452c</a><ul><li><a href=#eq452cminoperatingp-valuerangepair-5 class="table-of-contents__link toc-highlight">eq452c.minOperatingP-valueRangePair</a></ul></ul></div></div></div></div></main></div></div></div></div></body>
