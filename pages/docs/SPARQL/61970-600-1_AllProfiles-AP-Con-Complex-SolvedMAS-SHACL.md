@@ -5,13 +5,14 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetNode: cim:DanglingReferences
+- targetSubjectsOf: rdf:type
 
 **Nested Properties:**
 
 ### mas600:All-DanglingReferences
 
 **Path:** `rdf:type`  
+**Name:** C:600:ALL:NA:FBOD4  
 The CGMES requires that at the receiving end of the exchange all references in the instance files pointing to instance files from other profiles which are part of the exchange should be satisfied. Therefore, the complete set of instance files necessary for the grid model shall have fulfilled references (no dangling references are allowed).
 
 **Severity:** sh:Violation
@@ -28,19 +29,9 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  DISTINCT $this ?value ?s 
 			WHERE {
-        #?s !(rdf:type | md:Model.DependentOn | md:Model.Supersedes) ?value .
         ?s !rdf:type ?value .
         BIND (str(?value) AS ?strvalue).
-        #OPTIONAL{?s (!rdf:type)/rdf:type ?v} .
-        #OPTIONAL{?value  rdf:type ?v}.
-        
-        #FILTER(!isLiteral(?value) && CONTAINS(str(?value),"_") &&
-        #      !CONTAINS(str(?value),"FullModel") && !CONTAINS(str(?value),"DifferenceModel")).
-        #FILTER(!isLiteral(?value) && !STRSTARTS(str(?value),"urn:uuid:") && (CONTAINS(str(?value),"#_") || STRLEN(STRAFTER(str(?value),"#"))<=1) &&
-        #      !CONTAINS(str(?value),"FullModel") && !CONTAINS(str(?value),"DifferenceModel") ).  
         FILTER(isIRI(?value) && (CONTAINS(?strvalue,"#_") || STRSTARTS(?strvalue,"urn:uuid:") || STRENDS(?strvalue,"#"))).              
-        #OPTIONAL{?value  rdf:type ?v}.
-        #FILTER (!bound(?v) ).
         FILTER NOT EXISTS {?value rdf:type ?v }.
 			}
 ```
@@ -51,14 +42,15 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:NonlinearShuntCompensator
 - targetClass: cim:LinearShuntCompensator
+- targetClass: cim:NonlinearShuntCompensator
 
 **Nested Properties:**
 
 ### mas600:SvShuntCompensatorSections.sections-SV__4
 
 **Path:** `cim:ShuntCompensator.sections`  
+**Name:** C:600:SV:SvShuntCompensatorSections.sections:SV__4  
 All state variables shall be instantiated in the SV instance file (distribution) for all energized elements part of a TopologicalIsland independently of the regulating status of the elements (e.g. for a shunt compensator that is not regulating the SvShuntCompensatorSections.sections shall be the same as ShuntCompensator.sections). All instances shall be representing computed values obtained from a power flow calculation. For SvPowerFlow instances refer to profile constraint on the SvPowerFlow class.
 
 **Severity:** sh:Violation
@@ -90,6 +82,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### mas600:SvShuntCompensatorSections-SV__4
 
 **Path:** `rdf:type`  
+**Name:** C:600:SV:SvShuntCompensatorSections:SV__4  
 All state variables shall be instantiated in the SV instance file (distribution) for all energized elements part of a TopologicalIsland independently of the regulating status of the elements (e.g. for a shunt compensator that is not regulating the SvShuntCompensatorSections.sections shall be the same as ShuntCompensator.sections). All instances shall be representing computed values obtained from a power flow calculation. For SvPowerFlow instances refer to profile constraint on the SvPowerFlow class.
 
 **Severity:** sh:Violation
@@ -129,6 +122,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### mas600:SvStatus-SV__4
 
 **Path:** `rdf:type`  
+**Name:** C:600:SV:SvStatus:SV__4  
 All state variables shall be instantiated in the SV instance file (distribution) for all energized elements part of a TopologicalIsland independently of the regulating status of the elements (e.g. for a shunt compensator that is not regulating the SvShuntCompensatorSections.sections shall be the same as ShuntCompensator.sections). All instances shall be representing computed values obtained from a power flow calculation. For SvPowerFlow instances refer to profile constraint on the SvPowerFlow class.
 
 **Severity:** sh:Violation
@@ -162,21 +156,22 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:DisconnectingCircuitBreaker
-- targetClass: cim:Switch
-- targetClass: cim:GroundDisconnector
 - targetClass: cim:Jumper
 - targetClass: cim:LoadBreakSwitch
+- targetClass: cim:Switch
+- targetClass: cim:Fuse
+- targetClass: cim:GroundDisconnector
+- targetClass: cim:Breaker
+- targetClass: cim:DisconnectingCircuitBreaker
 - targetClass: cim:Disconnector
 - targetClass: cim:Cut
-- targetClass: cim:Fuse
-- targetClass: cim:Breaker
 
 **Nested Properties:**
 
 ### mas600:SvSwitch-SV__4
 
 **Path:** `rdf:type`  
+**Name:** C:600:SV:SvSwitch:SV__4  
 All state variables shall be instantiated in the SV instance file (distribution) for all energized elements part of a TopologicalIsland independently of the regulating status of the elements (e.g. for a shunt compensator that is not regulating the SvShuntCompensatorSections.sections shall be the same as ShuntCompensator.sections). All instances shall be representing computed values obtained from a power flow calculation. For SvPowerFlow instances refer to profile constraint on the SvPowerFlow class.
 
 **Severity:** sh:Violation
@@ -210,17 +205,18 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:PhaseTapChangerTabular
 - targetClass: cim:PhaseTapChangerSymmetrical
 - targetClass: cim:PhaseTapChangerAsymmetrical
 - targetClass: cim:PhaseTapChangerLinear
 - targetClass: cim:RatioTapChanger
-- targetClass: cim:PhaseTapChangerTabular
 
 **Nested Properties:**
 
 ### mas600:SvTapStep.position-SV__4
 
 **Path:** `cim:TapChanger.step`  
+**Name:** C:600:SV:SvTapStep.position:SV__4  
 All state variables shall be instantiated in the SV instance file (distribution) for all energized elements part of a TopologicalIsland independently of the regulating status of the elements (e.g. for a shunt compensator that is not regulating the SvShuntCompensatorSections.sections shall be the same as ShuntCompensator.sections). All instances shall be representing computed values obtained from a power flow calculation. For SvPowerFlow instances refer to profile constraint on the SvPowerFlow class.
 
 **Severity:** sh:Violation
@@ -252,6 +248,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### mas600:SvTapStep-SV__4
 
 **Path:** `rdf:type`  
+**Name:** C:600:SV:SvTapStep:SV__4  
 All state variables shall be instantiated in the SV instance file (distribution) for all energized elements part of a TopologicalIsland independently of the regulating status of the elements (e.g. for a shunt compensator that is not regulating the SvShuntCompensatorSections.sections shall be the same as ShuntCompensator.sections). All instances shall be representing computed values obtained from a power flow calculation. For SvPowerFlow instances refer to profile constraint on the SvPowerFlow class.
 
 **Severity:** sh:Violation
@@ -292,6 +289,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### mas600:SvVoltage-SV__4
 
 **Path:** `rdf:type`  
+**Name:** C:600:SV:SvVoltage:SV__4  
 All state variables shall be instantiated in the SV instance file (distribution) for all energized elements part of a TopologicalIsland independently of the regulating status of the elements (e.g. for a shunt compensator that is not regulating the SvShuntCompensatorSections.sections shall be the same as ShuntCompensator.sections). All instances shall be representing computed values obtained from a power flow calculation. For SvPowerFlow instances refer to profile constraint on the SvPowerFlow class.
 
 **Severity:** sh:Violation

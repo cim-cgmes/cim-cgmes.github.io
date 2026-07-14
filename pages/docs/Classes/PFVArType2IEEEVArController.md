@@ -5,8 +5,22 @@ IEEE VAR controller type 2 which is a summing point type controller. It makes up
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PFVArControllerType2Dynamics <|-- PFVArType2IEEEVArController
+    PFVArControllerType2Dynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    click PFVArControllerType2Dynamics href "PFVArControllerType2Dynamics"
+    PFVArType2IEEEVArController : +Boolean exlon[1..1]
+    PFVArType2IEEEVArController : +Float ki[1..1]
+    PFVArType2IEEEVArController : +Float kp[1..1]
+    PFVArType2IEEEVArController : +Float qref[1..1]
+    PFVArType2IEEEVArController : +Float vclmt[1..1]
+    PFVArType2IEEEVArController : +Float vref[1..1]
+    PFVArType2IEEEVArController : +Float vs[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

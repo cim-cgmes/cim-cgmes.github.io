@@ -5,8 +5,32 @@ Synchronous machine detailed modelling types are defined by the combination of t
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     SynchronousMachineDetailed <|-- SynchronousMachineTimeConstantReactance
+    SynchronousMachineDetailed : +Float efdBaseRatio[1..1]
+    SynchronousMachineDetailed : +IfdBaseKind ifdBaseType[1..1]
+    SynchronousMachineDetailed : +Float saturationFactor120QAxis[0..1]
+    SynchronousMachineDetailed : +Float saturationFactorQAxis[0..1]
+    click SynchronousMachineDetailed href "SynchronousMachineDetailed"
+    SynchronousMachineTimeConstantReactance : +Float ks[1..1]
+    SynchronousMachineTimeConstantReactance : +SynchronousMachineModelKind modelType[1..1]
+    SynchronousMachineTimeConstantReactance : +RotorKind rotorType[0..1]
+    SynchronousMachineTimeConstantReactance : +Float tc[1..1]
+    SynchronousMachineTimeConstantReactance : +Float tpdo[1..1]
+    SynchronousMachineTimeConstantReactance : +Float tppdo[1..1]
+    SynchronousMachineTimeConstantReactance : +Float tppqo[1..1]
+    SynchronousMachineTimeConstantReactance : +Float tpqo[0..1]
+    SynchronousMachineTimeConstantReactance : +Float xDirectSubtrans[1..1]
+    SynchronousMachineTimeConstantReactance : +Float xDirectSync[1..1]
+    SynchronousMachineTimeConstantReactance : +Float xDirectTrans[1..1]
+    SynchronousMachineTimeConstantReactance : +Float xQuadSubtrans[1..1]
+    SynchronousMachineTimeConstantReactance : +Float xQuadSync[1..1]
+    SynchronousMachineTimeConstantReactance : +Float xQuadTrans[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

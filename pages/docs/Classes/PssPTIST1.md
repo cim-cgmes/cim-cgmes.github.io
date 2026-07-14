@@ -5,8 +5,27 @@ PTI microprocessor-based stabilizer type 1.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssPTIST1
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssPTIST1 : +Float dtc[1..1]
+    PssPTIST1 : +Float dtf[1..1]
+    PssPTIST1 : +Float dtp[1..1]
+    PssPTIST1 : +Float k[1..1]
+    PssPTIST1 : +Float m[1..1]
+    PssPTIST1 : +Float t1[1..1]
+    PssPTIST1 : +Float t2[1..1]
+    PssPTIST1 : +Float t3[1..1]
+    PssPTIST1 : +Float t4[1..1]
+    PssPTIST1 : +Float tf[1..1]
+    PssPTIST1 : +Float tp[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

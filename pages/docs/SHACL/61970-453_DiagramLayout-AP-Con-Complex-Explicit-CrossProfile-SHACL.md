@@ -12,6 +12,7 @@
 ### dl453cpe:DiagramObject.IdentifiedObject-valueType
 
 **Path:** `cim:DiagramObject.IdentifiedObject / rdf:type`  
+**Name:** DiagramObject.IdentifiedObject-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation

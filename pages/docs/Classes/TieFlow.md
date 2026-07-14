@@ -5,8 +5,23 @@ Defines the structure (in terms of location and direction) of the net interchang
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- TieFlow
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    TieFlow : +ControlArea ControlArea[1]
+    TieFlow : +Terminal Terminal[1]
+    TieFlow : +Boolean positiveFlowIn[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

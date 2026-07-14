@@ -5,8 +5,24 @@ An electrical device consisting of two or more coupled windings, with or without
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ConductingEquipment <|-- PowerTransformer
+    ConductingEquipment : +BaseVoltage BaseVoltage[0..1]
+    ConductingEquipment : +SvStatus SvStatus[0..1]
+    ConductingEquipment : +Terminal Terminals[0..n]
+    click ConductingEquipment href "ConductingEquipment"
+    PowerTransformer : +PowerTransformerEnd PowerTransformerEnd[0..n]
+    PowerTransformer : +Float beforeShCircuitHighestOperatingCurrent[0..1]
+    PowerTransformer : +Float beforeShCircuitHighestOperatingVoltage[0..1]
+    PowerTransformer : +Float beforeShortCircuitAnglePf[0..1]
+    PowerTransformer : +Float highSideMinOperatingU[0..1]
+    PowerTransformer : +Boolean isPartOfGeneratorUnit[1..1]
+    PowerTransformer : +Boolean operationalValuesConsidered[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

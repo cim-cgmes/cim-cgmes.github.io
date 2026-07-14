@@ -96,6 +96,7 @@
 ### dy302c:ExcAC8B.kpr-valueRange
 
 **Path:** `cim:ExcAC8B.kpr`  
+**Name:** C:302:DY:ExcAC8B.kpr:valueRange  
 Voltage regulator proportional gain (Kpr) (> 0 if ExcAC8B.kir = 0).  Typical value = 80.
 
 **Severity:** sh:Violation
@@ -179,6 +180,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:ExcBBC.k-valueRange
 
 **Path:** `cim:ExcBBC.k`  
+**Name:** C:302:DY:ExcBBC.k:valueRange  
 Steady state gain (K) (not = 0).  Typical value = 300.
 
 **Severity:** sh:Violation
@@ -310,6 +312,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:ExcIEEEAC7B.kpa-valueRange
 
 **Path:** `cim:ExcIEEEAC7B.kpa`  
+**Name:** C:302:DY:ExcIEEEAC7B.kpa:valueRange  
 Voltage regulator proportional gain (K<sub>PA</sub>) (> 0 if ExcIEEEAC7B.kia = 0).  Typical value = 65,36.
 
 **Severity:** sh:Violation
@@ -335,6 +338,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:ExcIEEEAC7B.kpr-valueRange
 
 **Path:** `cim:ExcIEEEAC7B.kpr`  
+**Name:** C:302:DY:ExcIEEEAC7B.kpr:valueRange  
 Voltage regulator proportional gain (K<sub>PR</sub>) (> 0 if ExcIEEEAC7B.kir = 0).  Typical value = 4,24.
 
 **Severity:** sh:Violation
@@ -369,6 +373,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:ExcIEEEAC8B.kpr-valueRange
 
 **Path:** `cim:ExcIEEEAC8B.kpr`  
+**Name:** C:302:DY:ExcIEEEAC8B.kpr:valueRange  
 Voltage regulator proportional gain (K<sub>PR</sub>) (> 0 if ExcIEEEAC8B.kir = 0).  Typical value = 80.
 
 **Severity:** sh:Violation
@@ -424,6 +429,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:ExcIEEEDC4B.td-valueRange
 
 **Path:** `cim:ExcIEEEDC4B.td`  
+**Name:** C:302:DY:ExcIEEEDC4B.td:valueRange  
 Regulator derivative filter time constant (T<sub>D</sub>) (> 0 if ExcIEEEDC4B.kd > 0).  Typical value = 0,01.
 
 **Severity:** sh:Violation
@@ -549,6 +555,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:ExcSEXS.kc-valueRange
 
 **Path:** `cim:ExcSEXS.kc`  
+**Name:** C:302:DY:ExcSEXS.kc:valueRange  
 PI controller gain (Kc) (> 0 if ExcSEXS.tc > 0).  Typical value = 0,08.
 
 **Severity:** sh:Violation
@@ -709,6 +716,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.bgv0-valueRange
 
 **Path:** `cim:GovHydro4.bgv0`  
+**Name:** C:302:DY:GovHydro4.bgv0:valueRange  
 Kaplan blade servo point 0 (Bgv0) (= 0 for simple, = 0 for Francis/Pelton).  Typical value for Kaplan = 0.
 
 **Severity:** sh:Violation
@@ -734,6 +742,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.bgv1-valueRange
 
 **Path:** `cim:GovHydro4.bgv1`  
+**Name:** C:302:DY:GovHydro4.bgv1:valueRange  
 Kaplan blade servo point 1 (Bgv1) (= 0 for simple, = 0 for Francis/Pelton).  Typical value for Kaplan = 0.
 
 **Severity:** sh:Violation
@@ -759,6 +768,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.bgv2-valueRange
 
 **Path:** `cim:GovHydro4.bgv2`  
+**Name:** C:302:DY:GovHydro4.bgv2:valueRange  
 Kaplan blade servo point 2 (Bgv2) (= 0 for simple, = 0 for Francis/Pelton).  Typical value for Kaplan = 0,1.
 
 **Severity:** sh:Violation
@@ -784,6 +794,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.bgv3-valueRange
 
 **Path:** `cim:GovHydro4.bgv3`  
+**Name:** C:302:DY:GovHydro4.bgv3:valueRange  
 Kaplan blade servo point 3 (Bgv3) (= 0 for simple, = 0 for Francis/Pelton).  Typical value for Kaplan = 0,667.
 
 **Severity:** sh:Violation
@@ -809,6 +820,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.bgv4-valueRange
 
 **Path:** `cim:GovHydro4.bgv4`  
+**Name:** C:302:DY:GovHydro4.bgv4:valueRange  
 Kaplan blade servo point 4 (Bgv4) (= 0 for simple, = 0 for Francis/Pelton).  Typical value for Kaplan = 0,9.
 
 **Severity:** sh:Violation
@@ -834,6 +846,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.bgv5-valueRange
 
 **Path:** `cim:GovHydro4.bgv5`  
+**Name:** C:302:DY:GovHydro4.bgv5:valueRange  
 Kaplan blade servo point 5 (Bgv5) (= 0 for simple, = 0 for Francis/Pelton).  Typical value for Kaplan = 1.
 
 **Severity:** sh:Violation
@@ -859,6 +872,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.bmax-valueRange
 
 **Path:** `cim:GovHydro4.bmax`  
+**Name:** C:302:DY:GovHydro4.bmax:valueRange  
 Maximum blade adjustment factor (Bmax)  (= 0 for simple, = 0 for Francis/Pelton).  Typical value for Kaplan = 1,1276.
 
 **Severity:** sh:Violation
@@ -884,6 +898,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.gv0-valueRange
 
 **Path:** `cim:GovHydro4.gv0`  
+**Name:** C:302:DY:GovHydro4.gv0:valueRange  
 Nonlinear gain point 0, PU gv (Gv0) (= 0 for simple).  Typical for Francis/Pelton = 0,1, Kaplan = 0,1.
 
 **Severity:** sh:Violation
@@ -909,6 +924,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.gv1-valueRange
 
 **Path:** `cim:GovHydro4.gv1`  
+**Name:** C:302:DY:GovHydro4.gv1:valueRange  
 Nonlinear gain point 1, PU gv (Gv1) (= 0 for simple, > GovHydro4.gv0 for Francis/Pelton and Kaplan). Typical value for Francis/Pelton = 0,4, Kaplan = 0,4.
 
 **Severity:** sh:Violation
@@ -935,6 +951,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.gv2-valueRange
 
 **Path:** `cim:GovHydro4.gv2`  
+**Name:** C:302:DY:GovHydro4.gv2:valueRange  
 Nonlinear gain point 2, PU gv (Gv2) (= 0 for simple, > GovHydro4.gv1 for Francis/Pelton and Kaplan). Typical value for Francis/Pelton = 0,5, Kaplan = 0,5.
 
 **Severity:** sh:Violation
@@ -961,6 +978,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.gv3-valueRange
 
 **Path:** `cim:GovHydro4.gv3`  
+**Name:** C:302:DY:GovHydro4.gv3:valueRange  
 Nonlinear gain point 3, PU gv (Gv3)  (= 0 for simple, > GovHydro4.gv2 for Francis/Pelton and Kaplan). Typical value for Francis/Pelton = 0,7, Kaplan = 0,7.
 
 **Severity:** sh:Violation
@@ -987,6 +1005,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.gv4-valueRange
 
 **Path:** `cim:GovHydro4.gv4`  
+**Name:** C:302:DY:GovHydro4.gv4:valueRange  
 Nonlinear gain point 4, PU gv (Gv4)  (= 0 for simple, > GovHydro4.gv3 for Francis/Pelton and Kaplan). Typical value for  Francis/Pelton = 0,8, Kaplan = 0,8.
 
 **Severity:** sh:Violation
@@ -1013,6 +1032,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.gv5-valueRange
 
 **Path:** `cim:GovHydro4.gv5`  
+**Name:** C:302:DY:GovHydro4.gv5:valueRange  
 Nonlinear gain point 5, PU gv (Gv5)  (= 0 for simple, < 1 and > GovHydro4.gv4 for Francis/Pelton and Kaplan). Typical value for Francis/Pelton = 0,9, Kaplan = 0,9.
 
 **Severity:** sh:Violation
@@ -1039,6 +1059,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.pgv0-valueRange
 
 **Path:** `cim:GovHydro4.pgv0`  
+**Name:** C:302:DY:GovHydro4.pgv0:valueRange  
 Nonlinear gain point 0, PU power (Pgv0) (= 0 for simple).  Typical value = 0.
 
 **Severity:** sh:Violation
@@ -1064,6 +1085,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.pgv1-valueRange
 
 **Path:** `cim:GovHydro4.pgv1`  
+**Name:** C:302:DY:GovHydro4.pgv1:valueRange  
 Nonlinear gain point 1, PU power (Pgv1) (= 0 for simple). Typical value for Francis/Pelton = 0,42, Kaplan = 0,35.
 
 **Severity:** sh:Violation
@@ -1089,6 +1111,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.pgv2-valueRange
 
 **Path:** `cim:GovHydro4.pgv2`  
+**Name:** C:302:DY:GovHydro4.pgv2:valueRange  
 Nonlinear gain point 2, PU power (Pgv2) (= 0 for simple). Typical value for Francis/Pelton = 0,56, Kaplan = 0,468.
 
 **Severity:** sh:Violation
@@ -1114,6 +1137,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.pgv3-valueRange
 
 **Path:** `cim:GovHydro4.pgv3`  
+**Name:** C:302:DY:GovHydro4.pgv3:valueRange  
 Nonlinear gain point 3, PU power (Pgv3) (= 0 for simple). Typical value for Francis/Pelton = 0,8, Kaplan = 0,796.
 
 **Severity:** sh:Violation
@@ -1139,6 +1163,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.pgv4-valueRange
 
 **Path:** `cim:GovHydro4.pgv4`  
+**Name:** C:302:DY:GovHydro4.pgv4:valueRange  
 Nonlinear gain point 4, PU power (Pgv4) (= 0 for simple). Typical value for Francis/Pelton = 0,9, Kaplan = 0,917.
 
 **Severity:** sh:Violation
@@ -1164,6 +1189,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovHydro4.pgv5-valueRange
 
 **Path:** `cim:GovHydro4.pgv5`  
+**Name:** C:302:DY:GovHydro4.pgv5:valueRange  
 Nonlinear gain point 5, PU power (Pgv5) (= 0 for simple). Typical value for Francis/Pelton = 0,97, Kaplan = 0,99.
 
 **Severity:** sh:Violation
@@ -1317,6 +1343,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:GovSteamFV3.t5-valueRange
 
 **Path:** `cim:GovSteamFV3.t5`  
+**Name:** C:302:DY:GovSteamFV3.t5:valueRange  
 Time constant of second boiler pass (i.e. reheater) (T5) (> 0 if fast valving is used, otherwise >= 0).  Typical value = 0,5.
 
 **Severity:** sh:Violation
@@ -1392,6 +1419,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:LoadStatic.staticLoadModelType-constantZ
 
 **Path:** `cim:LoadStatic.staticLoadModelType`  
+**Name:** C:302:DY:StaticLoadModelKind.constantZ:requiredAttributes  
 The load is represented as a constant impedance.  ConstantZ equations are used  for active and reactive power and no attributes are required.
 
 **Severity:** sh:Violation
@@ -1432,6 +1460,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:LoadStatic.staticLoadModelType-exponental
 
 **Path:** `cim:LoadStatic.staticLoadModelType`  
+**Name:** C:302:DY:StaticLoadModelKind.exponential:requiredAttributes  
 This model is an exponential representation of the load. Exponential equations for active and reactive power are used and the following attributes are required: kp1, kp2, kp3, kpf, ep1, ep2, ep3, kq1, kq2, kq3, kqf, eq1, eq2, eq3.
 
 **Severity:** sh:Violation
@@ -1472,6 +1501,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:LoadStatic.staticLoadModelType-zIP1
 
 **Path:** `cim:LoadStatic.staticLoadModelType`  
+**Name:** C:302:DY:StaticLoadModelKind.zIP1:requiredAttributes  
 This model integrates the frequency-dependent load (primarily motors).  ZIP1 equations for active and reactive power are used and the following attributes are required: kp1, kp2, kp3, kpf, kq1, kq2, kq3, kqf.
 
 **Severity:** sh:Violation
@@ -1512,6 +1542,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:LoadStatic.staticLoadModelType-zIP2
 
 **Path:** `cim:LoadStatic.staticLoadModelType`  
+**Name:** C:302:DY:StaticLoadModelKind.zIP2:requiredAttributes  
 This model separates the frequency-dependent load (primarily motors) from other load.  ZIP2 equations for active and reactive power are used and the following attributes are required: kp1, kp2, kp3, kq4, kpf, kq1, kq2, kq3, kq4, kqf.
 
 **Severity:** sh:Violation
@@ -1551,6 +1582,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 ## dy302c:MechanicalLoadDynamics
 
+**Name:** C:302:DY:MechanicalLoadDynamics:associationsCondition  
 MechanicalLoadDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.
 
 **Severity:** sh:Violation
@@ -1630,6 +1662,7 @@ MechanicalLoadDynamics shall have either an association to SynchronousMachineDyn
 ### dy302c:Pss2ST-inputSignals
 
 **Path:** `cim:Pss2ST.inputSignal1Type`  
+**Name:** C:302:DY:Pss2ST:inputSignals  
 shall be different than Pss2ST.inputSignal2Type.
 
 **Severity:** sh:Violation
@@ -1748,6 +1781,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:PssWECC-inputSignals
 
 **Path:** `cim:PssWECC.inputSignal1Type`  
+**Name:** C:302:DY:PssWECC:inputSignals  
 shall be different than PssWECC.inputSignal2Type.
 
 **Severity:** sh:Violation
@@ -1775,18 +1809,19 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:SynchronousMachineUserDefined
+- targetClass: cim:SynchronousMachineTimeConstantReactance
 - targetClass: cim:SynchronousMachineEquivalentCircuit
 - targetClass: cim:AsynchronousMachineUserDefined
 - targetClass: cim:AsynchronousMachineTimeConstantReactance
 - targetClass: cim:AsynchronousMachineEquivalentCircuit
-- targetClass: cim:SynchronousMachineUserDefined
-- targetClass: cim:SynchronousMachineTimeConstantReactance
 
 **Nested Properties:**
 
 ### dy302c:RotatingMachineDynamics.saturationFactor120-valueRange
 
 **Path:** `cim:RotatingMachineDynamics.saturationFactor120`  
+**Name:** C:302:DY:RotatingMachineDynamics.saturationFactor120:valueRange  
 Saturation factor at 120% of rated terminal voltage (S12) (>= RotatingMachineDynamics.saturationFactor). 
 
 **Severity:** sh:Violation
@@ -1828,6 +1863,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### dy302c:SynchronousMachineSimplified-requiredAttributes
 
 **Path:** `rdf:type`  
+**Name:** C:302:DY:SynchronousMachineSimplified:requiredAttributes  
 The parameters used for the simplified model include:- RotatingMachineDynamics.damping (D);- RotatingMachineDynamics.inertia (H);- RotatingMachineDynamics.statorLeakageReactance (used to exchange jXp for SynchronousMachineSimplified);- RotatingMachineDynamics.statorResistance (Rs).
 
 **Severity:** sh:Violation
@@ -1873,6 +1909,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 ## dy302c:TurbineGovernorDynamics
 
+**Name:** C:302:DY:TurbineGovernorDynamics:associationsCondition  
 TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics.
 
 **Severity:** sh:Violation
@@ -1881,39 +1918,39 @@ TurbineGovernorDynamics shall have either an association to SynchronousMachineDy
 - "Required association to either SynchronousMachineDynamics or to AsynchronousMachineDynamics is missing."
 
 **Targets:**
-- targetClass: cim:GovGAST
-- targetClass: cim:GovHydroFrancis
-- targetClass: cim:GovHydroPelton
-- targetClass: cim:GovSteamFV3
-- targetClass: cim:GovSteamIEEE1
-- targetClass: cim:GovSteam2
-- targetClass: cim:GovSteamEU
-- targetClass: cim:GovCT1
-- targetClass: cim:TurbineGovernorUserDefined
-- targetClass: cim:GovHydroIEEE2
-- targetClass: cim:GovSteam1
-- targetClass: cim:GovSteamFV2
-- targetClass: cim:GovHydroPID2
-- targetClass: cim:GovHydro4
-- targetClass: cim:GovGAST2
-- targetClass: cim:GovHydroWPID
-- targetClass: cim:GovHydroIEEE0
-- targetClass: cim:GovSteam0
-- targetClass: cim:GovHydro1
-- targetClass: cim:GovGAST3
-- targetClass: cim:GovHydro3
-- targetClass: cim:GovCT2
-- targetClass: cim:GovHydroPID
-- targetClass: cim:GovHydroDD
-- targetClass: cim:GovHydroR
-- targetClass: cim:GovGAST1
 - targetClass: cim:GovGAST4
-- targetClass: cim:GovSteamBB
-- targetClass: cim:GovSteamFV4
-- targetClass: cim:GovHydroWEH
-- targetClass: cim:GovHydro2
-- targetClass: cim:GovSteamSGO
+- targetClass: cim:GovGAST3
+- targetClass: cim:GovGAST
+- targetClass: cim:GovSteam1
 - targetClass: cim:GovGASTWD
+- targetClass: cim:GovHydro1
+- targetClass: cim:TurbineGovernorUserDefined
+- targetClass: cim:GovHydroIEEE0
+- targetClass: cim:GovHydroFrancis
+- targetClass: cim:GovSteam0
+- targetClass: cim:GovSteamSGO
+- targetClass: cim:GovSteamFV3
+- targetClass: cim:GovHydroPelton
+- targetClass: cim:GovSteamEU
+- targetClass: cim:GovHydro3
+- targetClass: cim:GovSteamIEEE1
+- targetClass: cim:GovSteamBB
+- targetClass: cim:GovGAST2
+- targetClass: cim:GovHydroIEEE2
+- targetClass: cim:GovHydro2
+- targetClass: cim:GovHydroPID
+- targetClass: cim:GovHydro4
+- targetClass: cim:GovSteam2
+- targetClass: cim:GovSteamFV2
+- targetClass: cim:GovHydroWPID
+- targetClass: cim:GovCT1
+- targetClass: cim:GovHydroWEH
+- targetClass: cim:GovHydroPID2
+- targetClass: cim:GovHydroDD
+- targetClass: cim:GovSteamFV4
+- targetClass: cim:GovGAST1
+- targetClass: cim:GovCT2
+- targetClass: cim:GovHydroR
 
 ## dy302c:UnderexcLim2Simplified
 

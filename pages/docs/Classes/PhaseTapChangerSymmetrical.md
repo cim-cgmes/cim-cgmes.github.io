@@ -5,8 +5,17 @@ Describes a symmetrical phase shifting transformer tap model in which the voltag
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PhaseTapChangerNonLinear <|-- PhaseTapChangerSymmetrical
+    PhaseTapChangerNonLinear : +Float voltageStepIncrement[1..1]
+    PhaseTapChangerNonLinear : +Float xMax[1..1]
+    PhaseTapChangerNonLinear : +Float xMin[1..1]
+    click PhaseTapChangerNonLinear href "PhaseTapChangerNonLinear"
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

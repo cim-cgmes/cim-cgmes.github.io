@@ -12,6 +12,7 @@
 ### dl301ia:DiagramObjectGluePoint.DiagramObjectPoints-cardinality
 
 **Path:** `^cim:DiagramObjectPoint.DiagramObjectGluePoint`  
+**Name:** DiagramObjectGluePoint.DiagramObjectPoints-cardinality  
 This constraint validates the cardinality of the association at the inverse direction.
 
 **Severity:** sh:Violation

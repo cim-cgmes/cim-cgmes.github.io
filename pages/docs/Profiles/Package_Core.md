@@ -3,14 +3,19 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    ACDCTerminal <|-- Terminal
-    Terminal --> ConductingEquipment : ConductingEquipment
-    PowerSystemResource <|-- Equipment
-    IdentifiedObject <|-- PowerSystemResource
     IdentifiedObject <|-- ACDCTerminal
     Equipment <|-- ConductingEquipment
     ConductingEquipment --> Terminal : Terminals
+    ACDCTerminal <|-- Terminal
+    Terminal --> ConductingEquipment : ConductingEquipment
+    IdentifiedObject <|-- PowerSystemResource
+    PowerSystemResource <|-- Equipment
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

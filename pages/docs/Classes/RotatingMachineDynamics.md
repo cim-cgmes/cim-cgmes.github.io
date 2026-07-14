@@ -5,10 +5,36 @@ Abstract parent class for all synchronous and asynchronous machine standard mode
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DynamicsFunctionBlock <|-- RotatingMachineDynamics
+    DynamicsFunctionBlock : +Boolean enabled[1..1]
+    click DynamicsFunctionBlock href "DynamicsFunctionBlock"
     RotatingMachineDynamics <|-- AsynchronousMachineDynamics
+    AsynchronousMachineDynamics : +AsynchronousMachine AsynchronousMachine[1]
+    AsynchronousMachineDynamics : +MechanicalLoadDynamics MechanicalLoadDynamics[0..1]
+    AsynchronousMachineDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[0..1]
+    AsynchronousMachineDynamics : +WindTurbineType1or2Dynamics WindTurbineType1or2Dynamics[0..1]
+    click AsynchronousMachineDynamics href "AsynchronousMachineDynamics"
     RotatingMachineDynamics <|-- SynchronousMachineDynamics
+    SynchronousMachineDynamics : +CrossCompoundTurbineGovernorDynamics CrossCompoundTurbineGovernorDyanmics[0..1]
+    SynchronousMachineDynamics : +CrossCompoundTurbineGovernorDynamics CrossCompoundTurbineGovernorDynamics[0..1]
+    SynchronousMachineDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[0..1]
+    SynchronousMachineDynamics : +GenICompensationForGenJ GenICompensationForGenJ[0..n]
+    SynchronousMachineDynamics : +MechanicalLoadDynamics MechanicalLoadDynamics[0..1]
+    SynchronousMachineDynamics : +SynchronousMachine SynchronousMachine[1]
+    SynchronousMachineDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[0..n]
+    click SynchronousMachineDynamics href "SynchronousMachineDynamics"
+    RotatingMachineDynamics : +Float damping[1..1]
+    RotatingMachineDynamics : +Float inertia[1..1]
+    RotatingMachineDynamics : +Float saturationFactor[0..1]
+    RotatingMachineDynamics : +Float saturationFactor120[0..1]
+    RotatingMachineDynamics : +Float statorLeakageReactance[1..1]
+    RotatingMachineDynamics : +Float statorResistance[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

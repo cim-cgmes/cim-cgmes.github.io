@@ -5,8 +5,43 @@ IEEE 421.5-2005 type AC2A model. The model represents a high initial response fi
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEAC2A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEAC2A : +Float ka[1..1]
+    ExcIEEEAC2A : +Float kb[1..1]
+    ExcIEEEAC2A : +Float kc[1..1]
+    ExcIEEEAC2A : +Float kd[1..1]
+    ExcIEEEAC2A : +Float ke[1..1]
+    ExcIEEEAC2A : +Float kf[1..1]
+    ExcIEEEAC2A : +Float kh[1..1]
+    ExcIEEEAC2A : +Float seve1[1..1]
+    ExcIEEEAC2A : +Float seve2[1..1]
+    ExcIEEEAC2A : +Float ta[1..1]
+    ExcIEEEAC2A : +Float tb[1..1]
+    ExcIEEEAC2A : +Float tc[1..1]
+    ExcIEEEAC2A : +Float te[1..1]
+    ExcIEEEAC2A : +Float tf[1..1]
+    ExcIEEEAC2A : +Float vamax[1..1]
+    ExcIEEEAC2A : +Float vamin[1..1]
+    ExcIEEEAC2A : +Float ve1[1..1]
+    ExcIEEEAC2A : +Float ve2[1..1]
+    ExcIEEEAC2A : +Float vfemax[1..1]
+    ExcIEEEAC2A : +Float vrmax[1..1]
+    ExcIEEEAC2A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

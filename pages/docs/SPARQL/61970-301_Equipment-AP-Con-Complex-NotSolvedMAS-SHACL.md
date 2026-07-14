@@ -12,6 +12,7 @@
 ### eq301n:ACLineSegment-baseVoltage
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:ACLineSegment:baseVoltage  
 The BaseVoltage at the two ends of ACLineSegments in a Line shall have the same BaseVoltage.nominalVoltage. However, boundary lines may have slightly different BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference in general requires use of an equivalent branch.
 
 **Severity:** sh:Warning

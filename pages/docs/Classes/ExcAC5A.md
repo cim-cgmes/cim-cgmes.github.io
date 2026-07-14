@@ -5,8 +5,40 @@ Modified IEEE AC5A alternator-supplied rectifier excitation system with differen
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcAC5A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcAC5A : +Float a[1..1]
+    ExcAC5A : +Float efd1[1..1]
+    ExcAC5A : +Float efd2[1..1]
+    ExcAC5A : +Float ka[1..1]
+    ExcAC5A : +Float ke[1..1]
+    ExcAC5A : +Float kf[1..1]
+    ExcAC5A : +Float ks[1..1]
+    ExcAC5A : +Float seefd1[1..1]
+    ExcAC5A : +Float seefd2[1..1]
+    ExcAC5A : +Float ta[1..1]
+    ExcAC5A : +Float tb[1..1]
+    ExcAC5A : +Float tc[1..1]
+    ExcAC5A : +Float te[1..1]
+    ExcAC5A : +Float tf1[1..1]
+    ExcAC5A : +Float tf2[1..1]
+    ExcAC5A : +Float tf3[1..1]
+    ExcAC5A : +Float vrmax[1..1]
+    ExcAC5A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

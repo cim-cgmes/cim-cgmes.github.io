@@ -3,9 +3,14 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    AsynchronousMachineDynamics <|-- AsynchronousMachineEquivalentCircuit
     AsynchronousMachineDynamics <|-- AsynchronousMachineTimeConstantReactance
+    AsynchronousMachineDynamics <|-- AsynchronousMachineEquivalentCircuit
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

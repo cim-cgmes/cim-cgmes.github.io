@@ -5,8 +5,23 @@ ConformLoad represent loads that follow a daily load change pattern where the pa
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EnergyConsumer <|-- ConformLoad
+    EnergyConsumer : +LoadDynamics LoadDynamics[0..1]
+    EnergyConsumer : +LoadResponseCharacteristic LoadResponse[0..1]
+    EnergyConsumer : +Float p[1..1]
+    EnergyConsumer : +Float pfixed[0..1]
+    EnergyConsumer : +Float pfixedPct[0..1]
+    EnergyConsumer : +Float q[1..1]
+    EnergyConsumer : +Float qfixed[0..1]
+    EnergyConsumer : +Float qfixedPct[0..1]
+    click EnergyConsumer href "EnergyConsumer"
+    ConformLoad : +ConformLoadGroup LoadGroup[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

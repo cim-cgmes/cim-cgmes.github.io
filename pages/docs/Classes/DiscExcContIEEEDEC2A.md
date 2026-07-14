@@ -5,8 +5,21 @@ IEEE type DEC2A model for discontinuous excitation control. This system provides
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DiscontinuousExcitationControlDynamics <|-- DiscExcContIEEEDEC2A
+    DiscontinuousExcitationControlDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    DiscontinuousExcitationControlDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click DiscontinuousExcitationControlDynamics href "DiscontinuousExcitationControlDynamics"
+    DiscExcContIEEEDEC2A : +Float td1[1..1]
+    DiscExcContIEEEDEC2A : +Float td2[1..1]
+    DiscExcContIEEEDEC2A : +Float vdmax[1..1]
+    DiscExcContIEEEDEC2A : +Float vdmin[1..1]
+    DiscExcContIEEEDEC2A : +Float vk[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

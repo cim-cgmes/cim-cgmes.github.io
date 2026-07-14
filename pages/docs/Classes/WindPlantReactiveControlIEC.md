@@ -5,8 +5,40 @@ Simplified plant voltage and reactive power control model for use with type 3 an
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindPlantReactiveControlIEC
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindPlantReactiveControlIEC : +WindDynamicsLookupTable WindDynamicsLookupTable[1..n]
+    WindPlantReactiveControlIEC : +WindPlantIEC WindPlantIEC[1]
+    WindPlantReactiveControlIEC : +Float dxrefmax[1..1]
+    WindPlantReactiveControlIEC : +Float dxrefmin[1..1]
+    WindPlantReactiveControlIEC : +Float kiwpx[1..1]
+    WindPlantReactiveControlIEC : +Float kiwpxmax[1..1]
+    WindPlantReactiveControlIEC : +Float kiwpxmin[1..1]
+    WindPlantReactiveControlIEC : +Float kpwpx[1..1]
+    WindPlantReactiveControlIEC : +Float kwpqref[1..1]
+    WindPlantReactiveControlIEC : +Float kwpqu[1..1]
+    WindPlantReactiveControlIEC : +Float tuqfilt[1..1]
+    WindPlantReactiveControlIEC : +Float twppfiltq[1..1]
+    WindPlantReactiveControlIEC : +Float twpqfiltq[1..1]
+    WindPlantReactiveControlIEC : +Float twpufiltq[1..1]
+    WindPlantReactiveControlIEC : +Float txft[1..1]
+    WindPlantReactiveControlIEC : +Float txfv[1..1]
+    WindPlantReactiveControlIEC : +Float uwpqdip[1..1]
+    WindPlantReactiveControlIEC : +WindPlantQcontrolModeKind windPlantQcontrolModesType[1..1]
+    WindPlantReactiveControlIEC : +Float xrefmax[1..1]
+    WindPlantReactiveControlIEC : +Float xrefmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

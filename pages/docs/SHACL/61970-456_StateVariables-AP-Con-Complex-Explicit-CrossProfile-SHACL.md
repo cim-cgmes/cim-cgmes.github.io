@@ -12,6 +12,7 @@
 ### sv456cpe:DCTopologicalIsland.DCTopologicalNodes-valueType
 
 **Path:** `cim:DCTopologicalIsland.DCTopologicalNodes / rdf:type`  
+**Name:** DCTopologicalIsland.DCTopologicalNodes-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -38,6 +39,7 @@ This constraint validates the value type of the association at the used directio
 ### sv456cpe:SvInjection.TopologicalNode-valueType
 
 **Path:** `cim:SvInjection.TopologicalNode / rdf:type`  
+**Name:** SvInjection.TopologicalNode-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -64,6 +66,7 @@ This constraint validates the value type of the association at the used directio
 ### sv456cpe:SvPowerFlow.Terminal-valueType
 
 **Path:** `cim:SvPowerFlow.Terminal / rdf:type`  
+**Name:** SvPowerFlow.Terminal-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -90,6 +93,7 @@ This constraint validates the value type of the association at the used directio
 ### sv456cpe:SvShuntCompensatorSections.ShuntCompensator-valueType
 
 **Path:** `cim:SvShuntCompensatorSections.ShuntCompensator / rdf:type`  
+**Name:** SvShuntCompensatorSections.ShuntCompensator-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -116,6 +120,7 @@ This constraint validates the value type of the association at the used directio
 ### sv456cpe:SvStatus.ConductingEquipment-valueType
 
 **Path:** `cim:SvStatus.ConductingEquipment / rdf:type`  
+**Name:** SvStatus.ConductingEquipment-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -142,6 +147,7 @@ This constraint validates the value type of the association at the used directio
 ### sv456cpe:SvSwitch.Switch-valueType
 
 **Path:** `cim:SvSwitch.Switch / rdf:type`  
+**Name:** SvSwitch.Switch-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -168,6 +174,7 @@ This constraint validates the value type of the association at the used directio
 ### sv456cpe:SvTapStep.TapChanger-valueType
 
 **Path:** `cim:SvTapStep.TapChanger / rdf:type`  
+**Name:** SvTapStep.TapChanger-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -194,6 +201,7 @@ This constraint validates the value type of the association at the used directio
 ### sv456cpe:SvVoltage.TopologicalNode-valueType
 
 **Path:** `cim:SvVoltage.TopologicalNode / rdf:type`  
+**Name:** SvVoltage.TopologicalNode-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -220,6 +228,7 @@ This constraint validates the value type of the association at the used directio
 ### sv456cpe:TopologicalIsland.AngleRefTopologicalNode-valueType
 
 **Path:** `cim:TopologicalIsland.AngleRefTopologicalNode / rdf:type`  
+**Name:** TopologicalIsland.AngleRefTopologicalNode-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -246,6 +255,7 @@ This constraint validates the value type of the association at the used directio
 ### sv456cpe:TopologicalIsland.TopologicalNodes-valueType
 
 **Path:** `cim:TopologicalIsland.TopologicalNodes / rdf:type`  
+**Name:** TopologicalIsland.TopologicalNodes-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation

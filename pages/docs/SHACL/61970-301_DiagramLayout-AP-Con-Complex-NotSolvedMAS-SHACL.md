@@ -13,6 +13,7 @@
 ### dl301n:DiagramObject.IdentifiedObject-GeneratingUnitvalueType
 
 **Path:** `cim:DiagramObject.IdentifiedObject`  
+**Name:** C:453:DL:DiagramObject:SynchronousMachine  
 The DiagramObject should link to SynchronousMachine and not GeneratingUnit.
 
 **Severity:** sh:Violation

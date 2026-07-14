@@ -5,8 +5,25 @@ Simplified governor.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovSteam2
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovSteam2 : +Float dbf[1..1]
+    GovSteam2 : +Float k[1..1]
+    GovSteam2 : +Float mnef[1..1]
+    GovSteam2 : +Float mxef[1..1]
+    GovSteam2 : +Float pmax[1..1]
+    GovSteam2 : +Float pmin[1..1]
+    GovSteam2 : +Float t1[1..1]
+    GovSteam2 : +Float t2[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

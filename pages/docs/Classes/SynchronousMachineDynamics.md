@@ -5,11 +5,39 @@ Synchronous machine whose behaviour is described by reference to a standard mode
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     RotatingMachineDynamics <|-- SynchronousMachineDynamics
-    SynchronousMachineDynamics <|-- SynchronousMachineSimplified
-    SynchronousMachineDynamics <|-- SynchronousMachineUserDefined
+    RotatingMachineDynamics : +Float damping[1..1]
+    RotatingMachineDynamics : +Float inertia[1..1]
+    RotatingMachineDynamics : +Float saturationFactor[0..1]
+    RotatingMachineDynamics : +Float saturationFactor120[0..1]
+    RotatingMachineDynamics : +Float statorLeakageReactance[1..1]
+    RotatingMachineDynamics : +Float statorResistance[1..1]
+    click RotatingMachineDynamics href "RotatingMachineDynamics"
     SynchronousMachineDynamics <|-- SynchronousMachineDetailed
+    SynchronousMachineDetailed : +Float efdBaseRatio[1..1]
+    SynchronousMachineDetailed : +IfdBaseKind ifdBaseType[1..1]
+    SynchronousMachineDetailed : +Float saturationFactor120QAxis[0..1]
+    SynchronousMachineDetailed : +Float saturationFactorQAxis[0..1]
+    click SynchronousMachineDetailed href "SynchronousMachineDetailed"
+    SynchronousMachineDynamics <|-- SynchronousMachineSimplified
+    click SynchronousMachineSimplified href "SynchronousMachineSimplified"
+    SynchronousMachineDynamics <|-- SynchronousMachineUserDefined
+    SynchronousMachineUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    SynchronousMachineUserDefined : +Boolean proprietary[1..1]
+    click SynchronousMachineUserDefined href "SynchronousMachineUserDefined"
+    SynchronousMachineDynamics : +CrossCompoundTurbineGovernorDynamics CrossCompoundTurbineGovernorDyanmics[0..1]
+    SynchronousMachineDynamics : +CrossCompoundTurbineGovernorDynamics CrossCompoundTurbineGovernorDynamics[0..1]
+    SynchronousMachineDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[0..1]
+    SynchronousMachineDynamics : +GenICompensationForGenJ GenICompensationForGenJ[0..n]
+    SynchronousMachineDynamics : +MechanicalLoadDynamics MechanicalLoadDynamics[0..1]
+    SynchronousMachineDynamics : +SynchronousMachine SynchronousMachine[1]
+    SynchronousMachineDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[0..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

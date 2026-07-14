@@ -5,8 +5,15 @@ A FaultIndicator is typically only an indicator (which may or may not be remotel
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     AuxiliaryEquipment <|-- FaultIndicator
+    AuxiliaryEquipment : +Terminal Terminal[1]
+    click AuxiliaryEquipment href "AuxiliaryEquipment"
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

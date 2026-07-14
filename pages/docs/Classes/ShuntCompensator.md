@@ -5,10 +5,33 @@ A shunt capacitor or reactor or switchable bank of shunt capacitors or reactors.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     RegulatingCondEq <|-- ShuntCompensator
-    ShuntCompensator <|-- LinearShuntCompensator
+    RegulatingCondEq : +RegulatingControl RegulatingControl[0..1]
+    RegulatingCondEq : +Boolean controlEnabled[1..1]
+    click RegulatingCondEq href "RegulatingCondEq"
     ShuntCompensator <|-- NonlinearShuntCompensator
+    NonlinearShuntCompensator : +NonlinearShuntCompensatorPoint NonlinearShuntCompensatorPoints[1..n]
+    click NonlinearShuntCompensator href "NonlinearShuntCompensator"
+    ShuntCompensator <|-- LinearShuntCompensator
+    LinearShuntCompensator : +Float b0PerSection[1..1]
+    LinearShuntCompensator : +Float bPerSection[1..1]
+    LinearShuntCompensator : +Float g0PerSection[1..1]
+    LinearShuntCompensator : +Float gPerSection[1..1]
+    click LinearShuntCompensator href "LinearShuntCompensator"
+    ShuntCompensator : +SvShuntCompensatorSections SvShuntCompensatorSections[0..1]
+    ShuntCompensator : +Float aVRDelay[0..1]
+    ShuntCompensator : +Boolean grounded[0..1]
+    ShuntCompensator : +Integer maximumSections[1..1]
+    ShuntCompensator : +Float nomU[1..1]
+    ShuntCompensator : +Integer normalSections[1..1]
+    ShuntCompensator : +Float sections[1..1]
+    ShuntCompensator : +Float voltageSensitivity[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,12 +5,28 @@ AuxiliaryEquipment describe equipment that is not performing any primary functio
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Equipment <|-- AuxiliaryEquipment
+    Equipment : +EquipmentContainer EquipmentContainer[0..1]
+    Equipment : +OperationalLimitSet OperationalLimitSet[0..n]
+    Equipment : +Boolean aggregate[0..1]
+    Equipment : +Boolean inService[1..1]
+    Equipment : +Boolean normallyInService[0..1]
+    click Equipment href "Equipment"
     AuxiliaryEquipment <|-- FaultIndicator
-    AuxiliaryEquipment <|-- SurgeArrester
+    click FaultIndicator href "FaultIndicator"
     AuxiliaryEquipment <|-- Sensor
+    click Sensor href "Sensor"
+    AuxiliaryEquipment <|-- SurgeArrester
+    click SurgeArrester href "SurgeArrester"
     AuxiliaryEquipment <|-- WaveTrap
+    click WaveTrap href "WaveTrap"
+    AuxiliaryEquipment : +Terminal Terminal[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

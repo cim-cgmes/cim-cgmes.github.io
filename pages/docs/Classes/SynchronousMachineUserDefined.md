@@ -5,8 +5,23 @@ Synchronous machine whose dynamic behaviour is described by a user-defined model
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     SynchronousMachineDynamics <|-- SynchronousMachineUserDefined
+    SynchronousMachineDynamics : +CrossCompoundTurbineGovernorDynamics CrossCompoundTurbineGovernorDyanmics[0..1]
+    SynchronousMachineDynamics : +CrossCompoundTurbineGovernorDynamics CrossCompoundTurbineGovernorDynamics[0..1]
+    SynchronousMachineDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[0..1]
+    SynchronousMachineDynamics : +GenICompensationForGenJ GenICompensationForGenJ[0..n]
+    SynchronousMachineDynamics : +MechanicalLoadDynamics MechanicalLoadDynamics[0..1]
+    SynchronousMachineDynamics : +SynchronousMachine SynchronousMachine[1]
+    SynchronousMachineDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[0..n]
+    click SynchronousMachineDynamics href "SynchronousMachineDynamics"
+    SynchronousMachineUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    SynchronousMachineUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

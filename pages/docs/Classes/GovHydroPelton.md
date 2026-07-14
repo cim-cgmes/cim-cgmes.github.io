@@ -5,8 +5,45 @@ Detailed hydro unit - Pelton model. This model can be used to represent the dyna
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydroPelton
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydroPelton : +Float av0[1..1]
+    GovHydroPelton : +Float av1[1..1]
+    GovHydroPelton : +Float bp[1..1]
+    GovHydroPelton : +Float db1[1..1]
+    GovHydroPelton : +Float db2[1..1]
+    GovHydroPelton : +Float h1[1..1]
+    GovHydroPelton : +Float h2[1..1]
+    GovHydroPelton : +Float hn[1..1]
+    GovHydroPelton : +Float kc[1..1]
+    GovHydroPelton : +Float kg[1..1]
+    GovHydroPelton : +Float qc0[1..1]
+    GovHydroPelton : +Float qn[1..1]
+    GovHydroPelton : +Boolean simplifiedPelton[1..1]
+    GovHydroPelton : +Boolean staticCompensating[1..1]
+    GovHydroPelton : +Float ta[1..1]
+    GovHydroPelton : +Float ts[1..1]
+    GovHydroPelton : +Float tv[1..1]
+    GovHydroPelton : +Float twnc[1..1]
+    GovHydroPelton : +Float twng[1..1]
+    GovHydroPelton : +Float tx[1..1]
+    GovHydroPelton : +Float va[1..1]
+    GovHydroPelton : +Float valvmax[1..1]
+    GovHydroPelton : +Float valvmin[1..1]
+    GovHydroPelton : +Float vav[1..1]
+    GovHydroPelton : +Float vc[1..1]
+    GovHydroPelton : +Float vcv[1..1]
+    GovHydroPelton : +Boolean waterTunnelSurgeChamberSimulation[1..1]
+    GovHydroPelton : +Float zsfc[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

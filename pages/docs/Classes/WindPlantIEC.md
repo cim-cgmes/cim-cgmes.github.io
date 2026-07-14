@@ -5,8 +5,18 @@ Simplified IEC type plant level model. Reference: IEC 61400-27-1:2015, Annex D.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     WindPlantDynamics <|-- WindPlantIEC
+    WindPlantDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    WindPlantDynamics : +WindTurbineType3or4Dynamics WindTurbineType3or4Dynamics[1..n]
+    click WindPlantDynamics href "WindPlantDynamics"
+    WindPlantIEC : +WindPlantFreqPcontrolIEC WindPlantFreqPcontrolIEC[1]
+    WindPlantIEC : +WindPlantReactiveControlIEC WindPlantReactiveControlIEC[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,52 @@ General model for any prime mover with a PID governor, used primarily for combus
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovCT1
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovCT1 : +Float aset[1..1]
+    GovCT1 : +Float db[1..1]
+    GovCT1 : +Float dm[1..1]
+    GovCT1 : +Float ka[1..1]
+    GovCT1 : +Float kdgov[1..1]
+    GovCT1 : +Float kigov[1..1]
+    GovCT1 : +Float kiload[1..1]
+    GovCT1 : +Float kimw[1..1]
+    GovCT1 : +Float kpgov[1..1]
+    GovCT1 : +Float kpload[1..1]
+    GovCT1 : +Float kturb[1..1]
+    GovCT1 : +Float ldref[1..1]
+    GovCT1 : +Float maxerr[1..1]
+    GovCT1 : +Float minerr[1..1]
+    GovCT1 : +Float mwbase[1..1]
+    GovCT1 : +Float r[1..1]
+    GovCT1 : +Float rclose[1..1]
+    GovCT1 : +Float rdown[1..1]
+    GovCT1 : +Float ropen[1..1]
+    GovCT1 : +DroopSignalFeedbackKind rselect[1..1]
+    GovCT1 : +Float rup[1..1]
+    GovCT1 : +Float ta[1..1]
+    GovCT1 : +Float tact[1..1]
+    GovCT1 : +Float tb[1..1]
+    GovCT1 : +Float tc[1..1]
+    GovCT1 : +Float tdgov[1..1]
+    GovCT1 : +Float teng[1..1]
+    GovCT1 : +Float tfload[1..1]
+    GovCT1 : +Float tpelec[1..1]
+    GovCT1 : +Float tsa[1..1]
+    GovCT1 : +Float tsb[1..1]
+    GovCT1 : +Float vmax[1..1]
+    GovCT1 : +Float vmin[1..1]
+    GovCT1 : +Float wfnl[1..1]
+    GovCT1 : +Boolean wfspd[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

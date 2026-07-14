@@ -5,8 +5,39 @@ Hydro turbine and governor. Represents plants with straightforward penstock conf
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydroPID2
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydroPID2 : +Float atw[1..1]
+    GovHydroPID2 : +Float d[1..1]
+    GovHydroPID2 : +Boolean feedbackSignal[1..1]
+    GovHydroPID2 : +Float g0[1..1]
+    GovHydroPID2 : +Float g1[1..1]
+    GovHydroPID2 : +Float g2[1..1]
+    GovHydroPID2 : +Float gmax[1..1]
+    GovHydroPID2 : +Float gmin[1..1]
+    GovHydroPID2 : +Float kd[1..1]
+    GovHydroPID2 : +Float ki[1..1]
+    GovHydroPID2 : +Float kp[1..1]
+    GovHydroPID2 : +Float mwbase[1..1]
+    GovHydroPID2 : +Float p1[1..1]
+    GovHydroPID2 : +Float p2[1..1]
+    GovHydroPID2 : +Float p3[1..1]
+    GovHydroPID2 : +Float rperm[1..1]
+    GovHydroPID2 : +Float ta[1..1]
+    GovHydroPID2 : +Float tb[1..1]
+    GovHydroPID2 : +Float treg[1..1]
+    GovHydroPID2 : +Float tw[1..1]
+    GovHydroPID2 : +Float velmax[1..1]
+    GovHydroPID2 : +Float velmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

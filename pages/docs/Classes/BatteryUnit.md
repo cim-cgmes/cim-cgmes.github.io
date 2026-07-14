@@ -5,8 +5,20 @@ An electrochemical energy storage device.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerElectronicsUnit <|-- BatteryUnit
+    PowerElectronicsUnit : +PowerElectronicsConnection PowerElectronicsConnection[1]
+    PowerElectronicsUnit : +Float maxP[0..1]
+    PowerElectronicsUnit : +Float minP[0..1]
+    click PowerElectronicsUnit href "PowerElectronicsUnit"
+    BatteryUnit : +BatteryStateKind batteryState[1..1]
+    BatteryUnit : +Float ratedE[1..1]
+    BatteryUnit : +Float storedE[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,29 @@ Current limitation model. The current limitation model combines the physical lim
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindContCurrLimIEC
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindContCurrLimIEC : +WindDynamicsLookupTable WindDynamicsLookupTable[1..n]
+    WindContCurrLimIEC : +WindTurbineType3or4IEC WindTurbineType3or4IEC[1]
+    WindContCurrLimIEC : +Float imax[1..1]
+    WindContCurrLimIEC : +Float imaxdip[1..1]
+    WindContCurrLimIEC : +Float kpqu[1..1]
+    WindContCurrLimIEC : +Boolean mdfslim[1..1]
+    WindContCurrLimIEC : +Boolean mqpri[1..1]
+    WindContCurrLimIEC : +Float tufiltcl[1..1]
+    WindContCurrLimIEC : +Float upqumax[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

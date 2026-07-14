@@ -5,8 +5,25 @@ Field voltage over excitation limiter.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     OverexcitationLimiterDynamics <|-- OverexcLimX1
+    OverexcitationLimiterDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    click OverexcitationLimiterDynamics href "OverexcitationLimiterDynamics"
+    OverexcLimX1 : +Float efd1[1..1]
+    OverexcLimX1 : +Float efd2[1..1]
+    OverexcLimX1 : +Float efd3[1..1]
+    OverexcLimX1 : +Float efddes[1..1]
+    OverexcLimX1 : +Float efdrated[1..1]
+    OverexcLimX1 : +Float kmx[1..1]
+    OverexcLimX1 : +Float t1[1..1]
+    OverexcLimX1 : +Float t2[1..1]
+    OverexcLimX1 : +Float t3[1..1]
+    OverexcLimX1 : +Float vlow[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

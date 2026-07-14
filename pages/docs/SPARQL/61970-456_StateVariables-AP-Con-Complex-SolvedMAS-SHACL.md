@@ -5,25 +5,26 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:ConformLoad
-- targetClass: cim:EquivalentInjection
-- targetClass: cim:NonlinearShuntCompensator
 - targetClass: cim:ExternalNetworkInjection
 - targetClass: cim:PowerElectronicsConnection
+- targetClass: cim:StationSupply
 - targetClass: cim:NonConformLoad
 - targetClass: cim:EnergyConsumer
+- targetClass: cim:EquivalentInjection
 - targetClass: cim:LinearShuntCompensator
+- targetClass: cim:NonlinearShuntCompensator
 - targetClass: cim:StaticVarCompensator
 - targetClass: cim:EnergySource
 - targetClass: cim:SynchronousMachine
 - targetClass: cim:AsynchronousMachine
-- targetClass: cim:StationSupply
+- targetClass: cim:ConformLoad
 
 **Nested Properties:**
 
 ### sv456sol:SvPowerFlow-instance
 
 **Path:** `rdf:type`  
+**Name:** R:456:SV:SvPowerFlow:instance  
 As a minimum there shall be an instance of SvPowerFlow associated with the Terminal for all the following classes and their specialisation (subclass) that is part of an energized TopologicalIsland: RotatingMachine, EnergyConsumer, EquivalentInjection, ShuntCompensator, StaticVarCompensator, ExternalNetworkInjection, PowerElectronicsConnection and EnergySource. Additional instances of SvPowerFlow may optionally be available for other in service (SvStatus.inService=true) and energised equipment (equipment connected to a TopologicalNode part of the TopologicalIsland).
 
 **Severity:** sh:Violation
@@ -33,9 +34,9 @@ As a minimum there shall be an instance of SvPowerFlow associated with the Termi
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value 
 			WHERE {
@@ -63,6 +64,7 @@ PREFIX cim: <http://iec.ch/TC57/CIM100#>
 ### sv456sol:SvPowerFlow.p-synchronousMachine
 
 **Path:** `rdf:type`  
+**Name:** C:456:SV:SvPowerFlow.p:synchronousMachine  
 The SvPowerFlow.p that is given by the steady state power flow solution for a SynchronousMachine shall normally be within the capability of the machine defined in the ReactiveCapabilityCurve or GeneratingUnit.maxOperatingP and GeneratingUnit.minOperatingP when ReactiveCapabilityCurve is not present. Active power can be outside the capability as part of start-up or shutdown of the generator. CIM cannot represent different operation mode so this constraint will only give a warning. Note that different data exchange processes can assign more restrictive severity depending on the business needs and power flow algorithm applied by the business process.
 
 **Severity:** sh:Warning
@@ -72,9 +74,9 @@ The SvPowerFlow.p that is given by the steady state power flow solution for a Sy
 - **sh:SPARQLConstraintComponent** (Severity: sh:Warning)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value 
 			WHERE {
@@ -111,6 +113,7 @@ PREFIX cim: <http://iec.ch/TC57/CIM100#>
 ### sv456sol:SvPowerFlow.q-synchronousMachine
 
 **Path:** `rdf:type`  
+**Name:** C:456:SV:SvPowerFlow.q:synchronousMachine  
 The SvPowerFlow.q that is given by the steady state power flow solution for a SynchronousMachine shall normally be within the capability of the machine defined in the ReactiveCapabilityCurve or SynchronousMachine.maxQ, SynchronousMachine.minQ when ReactiveCapabilityCurve is not present. Reactive power can be outside the capability if powerflow excludes reactive restriction. CIM cannot represent this so this contains will also give a warning. Note that different data exchange processes can assign more restrictive severity depending on the business needs and power flow algorithm applied by the business process.
 
 **Severity:** sh:Warning
@@ -120,9 +123,9 @@ The SvPowerFlow.q that is given by the steady state power flow solution for a Sy
 - **sh:SPARQLConstraintComponent** (Severity: sh:Warning)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value 
 			WHERE {
@@ -163,6 +166,7 @@ PREFIX cim: <http://iec.ch/TC57/CIM100#>
 ### sv456sol:SvShuntCompensatorSections.sections-value
 
 **Path:** `cim:SvShuntCompensatorSections.sections`  
+**Name:** C:456:SV:SvShuntCompensatorSections.sections:value  
 In cases where RegulatingControl.discrete is true and RegulatingControl.enabled is true, SvShuntCompensatorSections.sections shall be integer.
 
 **Severity:** sh:Violation
@@ -172,9 +176,9 @@ In cases where RegulatingControl.discrete is true and RegulatingControl.enabled 
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -199,19 +203,20 @@ PREFIX cim: <http://iec.ch/TC57/CIM100#>
 **Targets:**
 - targetClass: cim:Cut
 - targetClass: cim:Switch
-- targetClass: cim:GroundDisconnector
 - targetClass: cim:Disconnector
-- targetClass: cim:Fuse
 - targetClass: cim:Jumper
-- targetClass: cim:Breaker
 - targetClass: cim:LoadBreakSwitch
 - targetClass: cim:DisconnectingCircuitBreaker
+- targetClass: cim:Fuse
+- targetClass: cim:GroundDisconnector
+- targetClass: cim:Breaker
 
 **Nested Properties:**
 
 ### sv456sol:SvSwitch-instance
 
 **Path:** `rdf:type`  
+**Name:** C:456:SV:SvSwitch:instance  
 SvSwitch shall be exchanged for all switching devices. It is expected that in most cases the SvSwitch.open in SV instance data will be identical with Switch.open in SSH instance data. However, in cases where a regulating control is modifying the connection state of the controlled device a difference between SvSwitch.open and Switch.open can occur.
 
 **Severity:** sh:Violation
@@ -221,9 +226,9 @@ SvSwitch shall be exchanged for all switching devices. It is expected that in mo
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this
 			WHERE {
@@ -245,6 +250,7 @@ PREFIX cim: <http://iec.ch/TC57/CIM100#>
 ### sv456sol:SvTapStep.position-value
 
 **Path:** `cim:SvTapStep.position`  
+**Name:** C:456:SV:SvTapStep.position:value  
 In cases where RegulatingControl.discrete is true and RegulatingControl.enabled is true, SvTapStep.position shall be integer.
 
 **Severity:** sh:Violation
@@ -254,9 +260,9 @@ In cases where RegulatingControl.discrete is true and RegulatingControl.enabled 
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -286,6 +292,7 @@ PREFIX cim: <http://iec.ch/TC57/CIM100#>
 ### sv456sol:SvVoltage.v-limits
 
 **Path:** `rdf:type`  
+**Name:** C:456:SV:SvVoltage.v:limits  
 The SvVoltage.v shall be less than or equal to VoltageLimit.value associated with OperationalLimitType.limitType=highVoltage and greater than or equal to VoltageLimit.value associated with OperationalLimitType.limitType=lowVoltage.
 
 **Severity:** sh:Violation
@@ -295,9 +302,9 @@ The SvVoltage.v shall be less than or equal to VoltageLimit.value associated wit
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value 
 			WHERE {
@@ -329,6 +336,7 @@ PREFIX cim: <http://iec.ch/TC57/CIM100#>
 ### sv456sol:SvVoltage.v-absoluteLimit
 
 **Path:** `rdf:type`  
+**Name:** C:456:SV:SvVoltage.v:absoluteLimit  
 SvVoltage.v shall be greater than 0.4 pu in cases where associated voltage limits are not defining different limit range.
 
 **Severity:** sh:Violation
@@ -338,9 +346,9 @@ SvVoltage.v shall be greater than 0.4 pu in cases where associated voltage limit
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value 
 			WHERE {

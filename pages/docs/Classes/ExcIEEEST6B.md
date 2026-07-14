@@ -5,8 +5,36 @@ IEEE 421.5-2005 type ST6B model. This model consists of a PI voltage regulator w
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEST6B
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEST6B : +Float ilr[1..1]
+    ExcIEEEST6B : +Float kci[1..1]
+    ExcIEEEST6B : +Float kff[1..1]
+    ExcIEEEST6B : +Float kg[1..1]
+    ExcIEEEST6B : +Float kia[1..1]
+    ExcIEEEST6B : +Float klr[1..1]
+    ExcIEEEST6B : +Float km[1..1]
+    ExcIEEEST6B : +Float kpa[1..1]
+    ExcIEEEST6B : +ExcST6BOELselectorKind oelin[1..1]
+    ExcIEEEST6B : +Float tg[1..1]
+    ExcIEEEST6B : +Float vamax[1..1]
+    ExcIEEEST6B : +Float vamin[1..1]
+    ExcIEEEST6B : +Float vrmax[1..1]
+    ExcIEEEST6B : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

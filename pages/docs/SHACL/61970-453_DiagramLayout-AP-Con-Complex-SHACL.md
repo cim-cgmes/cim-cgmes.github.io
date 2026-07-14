@@ -12,6 +12,7 @@
 ### dl453c:DiagramStyle-allowedNameValues
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** C:453:DL:DiagramStyle:name  
 The inherited IdentifiedObject.name shall have one of the following names: node-breaker, bus-branch, hybrid (node-breaker and bus-branch) or geoschematic.
 
 **Severity:** sh:Violation

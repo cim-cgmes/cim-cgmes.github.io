@@ -5,8 +5,50 @@ DC side of the current source converter (CSC). The firing angle controls the dc 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ACDCConverter <|-- CsConverter
+    ACDCConverter : +ACDCConverterDCTerminal DCTerminals[0..n]
+    ACDCConverter : +Terminal PccTerminal[0..1]
+    ACDCConverter : +Float baseS[0..1]
+    ACDCConverter : +Float idc[1..1]
+    ACDCConverter : +Float idleLoss[0..1]
+    ACDCConverter : +Float maxP[0..1]
+    ACDCConverter : +Float maxUdc[0..1]
+    ACDCConverter : +Float minP[0..1]
+    ACDCConverter : +Float minUdc[0..1]
+    ACDCConverter : +Integer numberOfValves[0..1]
+    ACDCConverter : +Float p[1..1]
+    ACDCConverter : +Float poleLossP[1..1]
+    ACDCConverter : +Float q[1..1]
+    ACDCConverter : +Float ratedUdc[0..1]
+    ACDCConverter : +Float resistiveLoss[0..1]
+    ACDCConverter : +Float switchingLoss[0..1]
+    ACDCConverter : +Float targetPpcc[0..1]
+    ACDCConverter : +Float targetUdc[0..1]
+    ACDCConverter : +Float uc[1..1]
+    ACDCConverter : +Float udc[1..1]
+    ACDCConverter : +Float valveU0[0..1]
+    click ACDCConverter href "ACDCConverter"
+    CsConverter : +CSCDynamics CSCDynamics[0..1]
+    CsConverter : +Float alpha[1..1]
+    CsConverter : +Float gamma[1..1]
+    CsConverter : +Float maxAlpha[0..1]
+    CsConverter : +Float maxGamma[0..1]
+    CsConverter : +Float maxIdc[0..1]
+    CsConverter : +Float minAlpha[0..1]
+    CsConverter : +Float minGamma[0..1]
+    CsConverter : +Float minIdc[0..1]
+    CsConverter : +CsOperatingModeKind operatingMode[1..1]
+    CsConverter : +CsPpccControlKind pPccControl[1..1]
+    CsConverter : +Float ratedIdc[0..1]
+    CsConverter : +Float targetAlpha[0..1]
+    CsConverter : +Float targetGamma[0..1]
+    CsConverter : +Float targetIdc[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

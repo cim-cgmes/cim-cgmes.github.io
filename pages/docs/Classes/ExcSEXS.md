@@ -5,8 +5,32 @@ Simplified excitation system.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcSEXS
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcSEXS : +Float efdmax[1..1]
+    ExcSEXS : +Float efdmin[1..1]
+    ExcSEXS : +Float emax[1..1]
+    ExcSEXS : +Float emin[1..1]
+    ExcSEXS : +Float k[1..1]
+    ExcSEXS : +Float kc[1..1]
+    ExcSEXS : +Float tatb[1..1]
+    ExcSEXS : +Float tb[1..1]
+    ExcSEXS : +Float tc[1..1]
+    ExcSEXS : +Float te[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

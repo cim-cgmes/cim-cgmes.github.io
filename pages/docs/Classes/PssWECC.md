@@ -5,8 +5,34 @@ Dual input power system stabilizer, based on IEEE type 2, with modified output l
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssWECC
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssWECC : +InputSignalKind inputSignal1Type[1..1]
+    PssWECC : +InputSignalKind inputSignal2Type[1..1]
+    PssWECC : +Float k1[1..1]
+    PssWECC : +Float k2[1..1]
+    PssWECC : +Float t1[1..1]
+    PssWECC : +Float t10[1..1]
+    PssWECC : +Float t2[1..1]
+    PssWECC : +Float t3[1..1]
+    PssWECC : +Float t4[1..1]
+    PssWECC : +Float t5[1..1]
+    PssWECC : +Float t6[1..1]
+    PssWECC : +Float t7[1..1]
+    PssWECC : +Float t8[1..1]
+    PssWECC : +Float t9[1..1]
+    PssWECC : +Float vcl[1..1]
+    PssWECC : +Float vcu[1..1]
+    PssWECC : +Float vsmax[1..1]
+    PssWECC : +Float vsmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,18 @@ Compressed air energy storage plant.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemResource <|-- CAESPlant
+    PowerSystemResource : +Control Controls[0..n]
+    PowerSystemResource : +Location Location[0..1]
+    PowerSystemResource : +Measurement Measurements[0..n]
+    click PowerSystemResource href "PowerSystemResource"
+    CAESPlant : +ThermalGeneratingUnit ThermalGeneratingUnit[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

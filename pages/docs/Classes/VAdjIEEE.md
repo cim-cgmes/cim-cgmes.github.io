@@ -5,8 +5,21 @@ IEEE voltage adjuster which is used to represent the voltage adjuster in either 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     VoltageAdjusterDynamics <|-- VAdjIEEE
+    VoltageAdjusterDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[1]
+    click VoltageAdjusterDynamics href "VoltageAdjusterDynamics"
+    VAdjIEEE : +Float adjslew[1..1]
+    VAdjIEEE : +Float taoff[1..1]
+    VAdjIEEE : +Float taon[1..1]
+    VAdjIEEE : +Float vadjf[1..1]
+    VAdjIEEE : +Float vadjmax[1..1]
+    VAdjIEEE : +Float vadjmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

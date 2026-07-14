@@ -5,8 +5,38 @@ Modified IEEE DC3A direct current commutator exciter with speed input, and deadb
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcDC3A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcDC3A : +Float efd1[1..1]
+    ExcDC3A : +Float efd2[1..1]
+    ExcDC3A : +Boolean efdlim[1..1]
+    ExcDC3A : +Float efdmax[1..1]
+    ExcDC3A : +Float efdmin[1..1]
+    ExcDC3A : +Boolean exclim[1..1]
+    ExcDC3A : +Float ke[1..1]
+    ExcDC3A : +Float kr[1..1]
+    ExcDC3A : +Float ks[1..1]
+    ExcDC3A : +Float kv[1..1]
+    ExcDC3A : +Float seefd1[1..1]
+    ExcDC3A : +Float seefd2[1..1]
+    ExcDC3A : +Float te[1..1]
+    ExcDC3A : +Float trh[1..1]
+    ExcDC3A : +Float vrmax[1..1]
+    ExcDC3A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,13 +5,34 @@ A time schedule covering a 24 hour period, with curve data for a specific type o
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     RegularIntervalSchedule <|-- SeasonDayTypeSchedule
-    SeasonDayTypeSchedule <|-- SwitchSchedule
+    RegularIntervalSchedule : +RegularTimePoint TimePoints[1..n]
+    RegularIntervalSchedule : +DateTime endTime[1..1]
+    RegularIntervalSchedule : +Float timeStep[1..1]
+    click RegularIntervalSchedule href "RegularIntervalSchedule"
     SeasonDayTypeSchedule <|-- NonConformLoadSchedule
+    NonConformLoadSchedule : +NonConformLoadGroup NonConformLoadGroup[1]
+    click NonConformLoadSchedule href "NonConformLoadSchedule"
+    SeasonDayTypeSchedule <|-- SwitchSchedule
+    SwitchSchedule : +Switch Switch[1]
+    click SwitchSchedule href "SwitchSchedule"
     SeasonDayTypeSchedule <|-- RegulationSchedule
-    SeasonDayTypeSchedule <|-- ConformLoadSchedule
+    RegulationSchedule : +RegulatingControl RegulatingControl[1]
+    click RegulationSchedule href "RegulationSchedule"
     SeasonDayTypeSchedule <|-- TapSchedule
+    TapSchedule : +TapChanger TapChanger[1]
+    click TapSchedule href "TapSchedule"
+    SeasonDayTypeSchedule <|-- ConformLoadSchedule
+    ConformLoadSchedule : +ConformLoadGroup ConformLoadGroup[1]
+    click ConformLoadSchedule href "ConformLoadSchedule"
+    SeasonDayTypeSchedule : +DayType DayType[1..1]
+    SeasonDayTypeSchedule : +Season Season[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

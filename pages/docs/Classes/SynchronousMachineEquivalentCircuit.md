@@ -5,8 +5,29 @@ The electrical equations for all variations of the synchronous models are based 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     SynchronousMachineDetailed <|-- SynchronousMachineEquivalentCircuit
+    SynchronousMachineDetailed : +Float efdBaseRatio[1..1]
+    SynchronousMachineDetailed : +IfdBaseKind ifdBaseType[1..1]
+    SynchronousMachineDetailed : +Float saturationFactor120QAxis[0..1]
+    SynchronousMachineDetailed : +Float saturationFactorQAxis[0..1]
+    click SynchronousMachineDetailed href "SynchronousMachineDetailed"
+    SynchronousMachineEquivalentCircuit : +Float r1d[1..1]
+    SynchronousMachineEquivalentCircuit : +Float r1q[1..1]
+    SynchronousMachineEquivalentCircuit : +Float r2q[1..1]
+    SynchronousMachineEquivalentCircuit : +Float rfd[1..1]
+    SynchronousMachineEquivalentCircuit : +Float x1d[1..1]
+    SynchronousMachineEquivalentCircuit : +Float x1q[1..1]
+    SynchronousMachineEquivalentCircuit : +Float x2q[1..1]
+    SynchronousMachineEquivalentCircuit : +Float xad[1..1]
+    SynchronousMachineEquivalentCircuit : +Float xaq[1..1]
+    SynchronousMachineEquivalentCircuit : +Float xf1d[1..1]
+    SynchronousMachineEquivalentCircuit : +Float xfd[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

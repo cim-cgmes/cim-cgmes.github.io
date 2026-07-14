@@ -5,8 +5,16 @@ Describes a tap changer with a table defining the relation between the tap step 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PhaseTapChanger <|-- PhaseTapChangerTabular
+    PhaseTapChanger : +TransformerEnd TransformerEnd[1]
+    click PhaseTapChanger href "PhaseTapChanger"
+    PhaseTapChangerTabular : +PhaseTapChangerTable PhaseTapChangerTable[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

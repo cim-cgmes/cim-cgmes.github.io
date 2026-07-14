@@ -5,8 +5,18 @@ Wind type 1 or type 2 function block whose dynamic behaviour is described by a u
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     WindTurbineType1or2Dynamics <|-- WindType1or2UserDefined
+    WindTurbineType1or2Dynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[1]
+    WindTurbineType1or2Dynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click WindTurbineType1or2Dynamics href "WindTurbineType1or2Dynamics"
+    WindType1or2UserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    WindType1or2UserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

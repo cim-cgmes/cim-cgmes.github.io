@@ -5,11 +5,34 @@ Control is used for supervisory/device control. It represents control outputs th
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IOPoint <|-- Control
-    Control <|-- AnalogControl
-    Control <|-- AccumulatorReset
+    click IOPoint href "IOPoint"
     Control <|-- Command
+    Command : +DiscreteValue DiscreteValue[1]
+    Command : +ValueAliasSet ValueAliasSet[0..1]
+    Command : +Integer normalValue[1..1]
+    Command : +Integer value[1..1]
+    click Command href "Command"
+    Control <|-- AccumulatorReset
+    AccumulatorReset : +AccumulatorValue AccumulatorValue[1]
+    click AccumulatorReset href "AccumulatorReset"
+    Control <|-- AnalogControl
+    AnalogControl : +AnalogValue AnalogValue[1]
+    AnalogControl : +Float maxValue[1..1]
+    AnalogControl : +Float minValue[1..1]
+    click AnalogControl href "AnalogControl"
+    Control : +PowerSystemResource PowerSystemResource[0..1]
+    Control : +String controlType[1..1]
+    Control : +Boolean operationInProgress[0..1]
+    Control : +DateTime timeStamp[0..1]
+    Control : +UnitMultiplier unitMultiplier[0..1]
+    Control : +UnitSymbol unitSymbol[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

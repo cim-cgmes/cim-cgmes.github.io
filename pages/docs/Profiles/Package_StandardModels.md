@@ -3,6 +3,11 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DynamicsFunctionBlock <|-- RotatingMachineDynamics
 ```

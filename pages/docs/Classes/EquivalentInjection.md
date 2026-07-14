@@ -5,8 +5,31 @@ This class represents equivalent injections (generation or load). Voltage regula
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EquivalentEquipment <|-- EquivalentInjection
+    EquivalentEquipment : +EquivalentNetwork EquivalentNetwork[0..1]
+    click EquivalentEquipment href "EquivalentEquipment"
+    EquivalentInjection : +ReactiveCapabilityCurve ReactiveCapabilityCurve[0..1]
+    EquivalentInjection : +Float maxP[0..1]
+    EquivalentInjection : +Float maxQ[0..1]
+    EquivalentInjection : +Float minP[0..1]
+    EquivalentInjection : +Float minQ[0..1]
+    EquivalentInjection : +Float p[1..1]
+    EquivalentInjection : +Float q[1..1]
+    EquivalentInjection : +Float r[1..1]
+    EquivalentInjection : +Float r0[1..1]
+    EquivalentInjection : +Float r2[1..1]
+    EquivalentInjection : +Boolean regulationCapability[1..1]
+    EquivalentInjection : +Boolean regulationStatus[0..1]
+    EquivalentInjection : +Float regulationTarget[0..1]
+    EquivalentInjection : +Float x[1..1]
+    EquivalentInjection : +Float x0[1..1]
+    EquivalentInjection : +Float x2[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

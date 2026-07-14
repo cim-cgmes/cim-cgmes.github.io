@@ -5,8 +5,17 @@ An AnalogLimitSet specifies a set of Limits that are associated with an Analog m
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     LimitSet <|-- AnalogLimitSet
+    LimitSet : +Boolean isPercentageLimits[0..1]
+    click LimitSet href "LimitSet"
+    AnalogLimitSet : +AnalogLimit Limits[0..n]
+    AnalogLimitSet : +Analog Measurements[1..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

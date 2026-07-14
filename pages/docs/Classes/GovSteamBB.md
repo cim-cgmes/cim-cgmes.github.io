@@ -5,8 +5,34 @@ European governor model.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovSteamBB
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovSteamBB : +Float fcut[1..1]
+    GovSteamBB : +Float k2[1..1]
+    GovSteamBB : +Float k3[1..1]
+    GovSteamBB : +Float kd[1..1]
+    GovSteamBB : +Float kg[1..1]
+    GovSteamBB : +Float kls[1..1]
+    GovSteamBB : +Float kp[1..1]
+    GovSteamBB : +Float ks[1..1]
+    GovSteamBB : +Boolean peflag[1..1]
+    GovSteamBB : +Float pmax[1..1]
+    GovSteamBB : +Float pmin[1..1]
+    GovSteamBB : +Float t1[1..1]
+    GovSteamBB : +Float t4[1..1]
+    GovSteamBB : +Float t5[1..1]
+    GovSteamBB : +Float t6[1..1]
+    GovSteamBB : +Float td[1..1]
+    GovSteamBB : +Float tn[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

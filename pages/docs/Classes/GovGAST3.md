@@ -5,8 +5,38 @@ Generic turbogas with acceleration and temperature controller.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovGAST3
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovGAST3 : +Float bca[1..1]
+    GovGAST3 : +Float bp[1..1]
+    GovGAST3 : +Float dtc[1..1]
+    GovGAST3 : +Float ka[1..1]
+    GovGAST3 : +Float kac[1..1]
+    GovGAST3 : +Float kca[1..1]
+    GovGAST3 : +Float ksi[1..1]
+    GovGAST3 : +Float ky[1..1]
+    GovGAST3 : +Float mnef[1..1]
+    GovGAST3 : +Float mxef[1..1]
+    GovGAST3 : +Float rcmn[1..1]
+    GovGAST3 : +Float rcmx[1..1]
+    GovGAST3 : +Float tac[1..1]
+    GovGAST3 : +Float tc[1..1]
+    GovGAST3 : +Float td[1..1]
+    GovGAST3 : +Float tfen[1..1]
+    GovGAST3 : +Float tg[1..1]
+    GovGAST3 : +Float tsi[1..1]
+    GovGAST3 : +Float tt[1..1]
+    GovGAST3 : +Float ttc[1..1]
+    GovGAST3 : +Float ty[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

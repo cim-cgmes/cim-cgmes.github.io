@@ -5,8 +5,16 @@ Limit values for Accumulator measurements.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Limit <|-- AccumulatorLimit
+    click Limit href "Limit"
+    AccumulatorLimit : +AccumulatorLimitSet LimitSet[1]
+    AccumulatorLimit : +Integer value[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

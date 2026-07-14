@@ -5,8 +5,17 @@ An active power (Y1-axis) and reactive power (Y2-axis) schedule (curves) versus 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     SeasonDayTypeSchedule <|-- NonConformLoadSchedule
+    SeasonDayTypeSchedule : +DayType DayType[1..1]
+    SeasonDayTypeSchedule : +Season Season[1..1]
+    click SeasonDayTypeSchedule href "SeasonDayTypeSchedule"
+    NonConformLoadSchedule : +NonConformLoadGroup NonConformLoadGroup[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

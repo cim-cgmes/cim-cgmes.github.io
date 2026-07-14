@@ -5,8 +5,24 @@ Resistive and reactive components of compensation for generator associated with 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- GenICompensationForGenJ
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    GenICompensationForGenJ : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    GenICompensationForGenJ : +VCompIEEEType2 VcompIEEEType2[1]
+    GenICompensationForGenJ : +Float rcij[1..1]
+    GenICompensationForGenJ : +Float xcij[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

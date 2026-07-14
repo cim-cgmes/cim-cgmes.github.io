@@ -5,8 +5,24 @@ A Series Compensator is a series capacitor or reactor or an AC transmission line
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ConductingEquipment <|-- SeriesCompensator
+    ConductingEquipment : +BaseVoltage BaseVoltage[0..1]
+    ConductingEquipment : +SvStatus SvStatus[0..1]
+    ConductingEquipment : +Terminal Terminals[0..n]
+    click ConductingEquipment href "ConductingEquipment"
+    SeriesCompensator : +Float r[1..1]
+    SeriesCompensator : +Float r0[1..1]
+    SeriesCompensator : +Boolean varistorPresent[1..1]
+    SeriesCompensator : +Float varistorRatedCurrent[0..1]
+    SeriesCompensator : +Float varistorVoltageThreshold[0..1]
+    SeriesCompensator : +Float x[1..1]
+    SeriesCompensator : +Float x0[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

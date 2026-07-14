@@ -5,8 +5,26 @@ Power system stabilizer type RQB. This power system stabilizer is intended to be
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssRQB
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssRQB : +Float kdpm[1..1]
+    PssRQB : +Float ki2[1..1]
+    PssRQB : +Float ki3[1..1]
+    PssRQB : +Float ki4[1..1]
+    PssRQB : +Float sibv[1..1]
+    PssRQB : +Float t4f[1..1]
+    PssRQB : +Float t4m[1..1]
+    PssRQB : +Float t4mom[1..1]
+    PssRQB : +Float tomd[1..1]
+    PssRQB : +Float tomsl[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

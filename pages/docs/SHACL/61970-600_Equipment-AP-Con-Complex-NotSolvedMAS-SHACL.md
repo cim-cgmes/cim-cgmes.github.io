@@ -11,6 +11,9 @@
 
 **Severity:** sh:Violation
 
+**Targets:**
+- sparqlTarget: 
+
 ## eq600n:EquivalentInjection
 
 **Severity:** sh:Violation

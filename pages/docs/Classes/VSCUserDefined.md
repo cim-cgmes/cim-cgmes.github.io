@@ -5,8 +5,17 @@ Voltage source converter (VSC) function block whose dynamic behaviour is describ
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     VSCDynamics <|-- VSCUserDefined
+    VSCDynamics : +VsConverter VsConverter[1]
+    click VSCDynamics href "VSCDynamics"
+    VSCUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    VSCUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

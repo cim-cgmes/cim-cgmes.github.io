@@ -5,8 +5,18 @@ Operational limit applied to voltage. The use of operational VoltageLimit is pre
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     OperationalLimit <|-- VoltageLimit
+    OperationalLimit : +OperationalLimitSet OperationalLimitSet[1]
+    OperationalLimit : +OperationalLimitType OperationalLimitType[1..1]
+    click OperationalLimit href "OperationalLimit"
+    VoltageLimit : +Float normalValue[1..1]
+    VoltageLimit : +Float value[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

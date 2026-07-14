@@ -5,8 +5,32 @@ Models the characteristic response of the load demand due to changes in system c
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- LoadResponseCharacteristic
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    LoadResponseCharacteristic : +EnergyConsumer EnergyConsumer[0..n]
+    LoadResponseCharacteristic : +Boolean exponentModel[1..1]
+    LoadResponseCharacteristic : +Float pConstantCurrent[0..1]
+    LoadResponseCharacteristic : +Float pConstantImpedance[0..1]
+    LoadResponseCharacteristic : +Float pConstantPower[0..1]
+    LoadResponseCharacteristic : +Float pFrequencyExponent[0..1]
+    LoadResponseCharacteristic : +Float pVoltageExponent[0..1]
+    LoadResponseCharacteristic : +Float qConstantCurrent[0..1]
+    LoadResponseCharacteristic : +Float qConstantImpedance[0..1]
+    LoadResponseCharacteristic : +Float qConstantPower[0..1]
+    LoadResponseCharacteristic : +Float qFrequencyExponent[0..1]
+    LoadResponseCharacteristic : +Float qVoltageExponent[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

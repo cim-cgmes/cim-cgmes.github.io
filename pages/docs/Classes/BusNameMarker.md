@@ -5,8 +5,23 @@ Used to apply user standard names to TopologicalNodes. Associated with one or mo
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- BusNameMarker
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    BusNameMarker : +ReportingGroup ReportingGroup[0..1]
+    BusNameMarker : +ACDCTerminal Terminal[1..n]
+    BusNameMarker : +Integer priority[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

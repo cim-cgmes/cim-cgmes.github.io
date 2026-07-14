@@ -5,9 +5,16 @@ A mechanical switching device capable of making, carrying, and breaking currents
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ProtectedSwitch <|-- Breaker
+    click ProtectedSwitch href "ProtectedSwitch"
     Breaker <|-- DisconnectingCircuitBreaker
+    click DisconnectingCircuitBreaker href "DisconnectingCircuitBreaker"
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

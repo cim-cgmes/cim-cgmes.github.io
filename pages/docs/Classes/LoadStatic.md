@@ -5,8 +5,38 @@ General static load. This model represents the sensitivity of the real and react
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- LoadStatic
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    LoadStatic : +LoadAggregate LoadAggregate[1]
+    LoadStatic : +Float ep1[0..1]
+    LoadStatic : +Float ep2[0..1]
+    LoadStatic : +Float ep3[0..1]
+    LoadStatic : +Float eq1[0..1]
+    LoadStatic : +Float eq2[0..1]
+    LoadStatic : +Float eq3[0..1]
+    LoadStatic : +Float kp1[0..1]
+    LoadStatic : +Float kp2[0..1]
+    LoadStatic : +Float kp3[0..1]
+    LoadStatic : +Float kp4[0..1]
+    LoadStatic : +Float kpf[0..1]
+    LoadStatic : +Float kq1[0..1]
+    LoadStatic : +Float kq2[0..1]
+    LoadStatic : +Float kq3[0..1]
+    LoadStatic : +Float kq4[0..1]
+    LoadStatic : +Float kqf[0..1]
+    LoadStatic : +StaticLoadModelKind staticLoadModelType[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

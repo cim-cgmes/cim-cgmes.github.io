@@ -5,8 +5,19 @@ Different from LimIEEEOEL, LimOEL2 has a fixed pickup threshold and reduces the 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     OverexcitationLimiterDynamics <|-- OverexcLim2
+    OverexcitationLimiterDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    click OverexcitationLimiterDynamics href "OverexcitationLimiterDynamics"
+    OverexcLim2 : +Float ifdlim[1..1]
+    OverexcLim2 : +Float koi[1..1]
+    OverexcLim2 : +Float voimax[1..1]
+    OverexcLim2 : +Float voimin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

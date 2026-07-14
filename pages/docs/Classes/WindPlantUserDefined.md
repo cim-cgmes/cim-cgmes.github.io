@@ -5,8 +5,18 @@ Wind plant function block whose dynamic behaviour is described by a user-defined
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     WindPlantDynamics <|-- WindPlantUserDefined
+    WindPlantDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    WindPlantDynamics : +WindTurbineType3or4Dynamics WindTurbineType3or4Dynamics[1..n]
+    click WindPlantDynamics href "WindPlantDynamics"
+    WindPlantUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    WindPlantUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

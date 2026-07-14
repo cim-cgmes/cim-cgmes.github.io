@@ -5,16 +5,17 @@
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:Analog
 - targetClass: cim:Accumulator
 - targetClass: cim:Discrete
 - targetClass: cim:StringMeasurement
-- targetClass: cim:Analog
 
 **Nested Properties:**
 
 ### op452n:Measurement.Terminal-requiredCases
 
 **Path:** `cim:Measurement.PowerSystemResource`  
+**Name:** C:452:OP:Measurement.Terminal:requiredCases  
 The association Measurement.Terminal shall reference a Terminal of the Equipment referenced by Measurement.PowerSystemResource except in cases where Measurement.measurementType is either TapPosition or SwitchPosition in which the association is not exchanged.
 
 **Severity:** sh:Violation
@@ -24,9 +25,9 @@ The association Measurement.Terminal shall reference a Terminal of the Equipment
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value ?terminal ?terminal1 ?terminal2 ?terminal3 ?meastype
 			WHERE {

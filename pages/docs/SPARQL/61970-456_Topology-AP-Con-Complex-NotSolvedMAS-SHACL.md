@@ -5,21 +5,22 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:GroundDisconnector
-- targetClass: cim:DisconnectingCircuitBreaker
 - targetClass: cim:Switch
-- targetClass: cim:Fuse
+- targetClass: cim:Disconnector
 - targetClass: cim:Jumper
+- targetClass: cim:DisconnectingCircuitBreaker
+- targetClass: cim:Cut
+- targetClass: cim:Fuse
+- targetClass: cim:GroundDisconnector
 - targetClass: cim:Breaker
 - targetClass: cim:LoadBreakSwitch
-- targetClass: cim:Cut
-- targetClass: cim:Disconnector
 
 **Nested Properties:**
 
 ### tp456n:Switch-sameTopologicalNode
 
 **Path:** `cim:Switch.retained`  
+**Name:** C:456:TP:Terminal:switch  
 The Terminal-s of the two sides of a retained Switch (Switch.retained=true) or any of its subclasses shall not be connected to the same TopologicalNode.
 
 **Severity:** sh:Violation

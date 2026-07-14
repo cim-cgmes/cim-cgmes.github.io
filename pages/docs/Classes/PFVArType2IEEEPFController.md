@@ -5,8 +5,22 @@ IEEE PF controller type 2 which is a summing point type controller making up the
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PFVArControllerType2Dynamics <|-- PFVArType2IEEEPFController
+    PFVArControllerType2Dynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    click PFVArControllerType2Dynamics href "PFVArControllerType2Dynamics"
+    PFVArType2IEEEPFController : +Boolean exlon[1..1]
+    PFVArType2IEEEPFController : +Float ki[1..1]
+    PFVArType2IEEEPFController : +Float kp[1..1]
+    PFVArType2IEEEPFController : +Float pfref[1..1]
+    PFVArType2IEEEPFController : +Float vclmt[1..1]
+    PFVArType2IEEEPFController : +Float vref[1..1]
+    PFVArType2IEEEPFController : +Float vs[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

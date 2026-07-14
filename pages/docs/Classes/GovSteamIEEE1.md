@@ -5,8 +5,38 @@ IEEE steam turbine governor model. Reference: IEEE Transactions on Power Apparat
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovSteamIEEE1
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovSteamIEEE1 : +Float k[1..1]
+    GovSteamIEEE1 : +Float k1[1..1]
+    GovSteamIEEE1 : +Float k2[1..1]
+    GovSteamIEEE1 : +Float k3[1..1]
+    GovSteamIEEE1 : +Float k4[1..1]
+    GovSteamIEEE1 : +Float k5[1..1]
+    GovSteamIEEE1 : +Float k6[1..1]
+    GovSteamIEEE1 : +Float k7[1..1]
+    GovSteamIEEE1 : +Float k8[1..1]
+    GovSteamIEEE1 : +Float mwbase[1..1]
+    GovSteamIEEE1 : +Float pmax[1..1]
+    GovSteamIEEE1 : +Float pmin[1..1]
+    GovSteamIEEE1 : +Float t1[1..1]
+    GovSteamIEEE1 : +Float t2[1..1]
+    GovSteamIEEE1 : +Float t3[1..1]
+    GovSteamIEEE1 : +Float t4[1..1]
+    GovSteamIEEE1 : +Float t5[1..1]
+    GovSteamIEEE1 : +Float t6[1..1]
+    GovSteamIEEE1 : +Float t7[1..1]
+    GovSteamIEEE1 : +Float uc[1..1]
+    GovSteamIEEE1 : +Float uo[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

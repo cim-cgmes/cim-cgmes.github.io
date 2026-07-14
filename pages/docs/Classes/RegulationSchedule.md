@@ -5,8 +5,17 @@ A pre-established pattern over time for a controlled variable, e.g., busbar volt
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     SeasonDayTypeSchedule <|-- RegulationSchedule
+    SeasonDayTypeSchedule : +DayType DayType[1..1]
+    SeasonDayTypeSchedule : +Season Season[1..1]
+    click SeasonDayTypeSchedule href "SeasonDayTypeSchedule"
+    RegulationSchedule : +RegulatingControl RegulatingControl[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

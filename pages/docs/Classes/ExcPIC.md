@@ -5,8 +5,45 @@ Proportional/integral regulator excitation system. This model can be used to rep
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcPIC
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcPIC : +Float e1[1..1]
+    ExcPIC : +Float e2[1..1]
+    ExcPIC : +Float efdmax[1..1]
+    ExcPIC : +Float efdmin[1..1]
+    ExcPIC : +Float ka[1..1]
+    ExcPIC : +Float kc[1..1]
+    ExcPIC : +Float ke[1..1]
+    ExcPIC : +Float kf[1..1]
+    ExcPIC : +Float ki[1..1]
+    ExcPIC : +Float kp[1..1]
+    ExcPIC : +Float se1[1..1]
+    ExcPIC : +Float se2[1..1]
+    ExcPIC : +Float ta1[1..1]
+    ExcPIC : +Float ta2[1..1]
+    ExcPIC : +Float ta3[1..1]
+    ExcPIC : +Float ta4[1..1]
+    ExcPIC : +Float te[1..1]
+    ExcPIC : +Float tf1[1..1]
+    ExcPIC : +Float tf2[1..1]
+    ExcPIC : +Float vr1[1..1]
+    ExcPIC : +Float vr2[1..1]
+    ExcPIC : +Float vrmax[1..1]
+    ExcPIC : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

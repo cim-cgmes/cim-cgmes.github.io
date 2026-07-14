@@ -5,10 +5,36 @@ Mechanism for changing transformer winding tap positions.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemResource <|-- TapChanger
+    PowerSystemResource : +Control Controls[0..n]
+    PowerSystemResource : +Location Location[0..1]
+    PowerSystemResource : +Measurement Measurements[0..n]
+    click PowerSystemResource href "PowerSystemResource"
     TapChanger <|-- RatioTapChanger
+    RatioTapChanger : +RatioTapChangerTable RatioTapChangerTable[0..1]
+    RatioTapChanger : +TransformerEnd TransformerEnd[1]
+    RatioTapChanger : +Float stepVoltageIncrement[1..1]
+    click RatioTapChanger href "RatioTapChanger"
     TapChanger <|-- PhaseTapChanger
+    PhaseTapChanger : +TransformerEnd TransformerEnd[1]
+    click PhaseTapChanger href "PhaseTapChanger"
+    TapChanger : +SvTapStep SvTapStep[0..1]
+    TapChanger : +TapChangerControl TapChangerControl[0..1]
+    TapChanger : +TapSchedule TapSchedules[0..n]
+    TapChanger : +Boolean controlEnabled[1..1]
+    TapChanger : +Integer highStep[1..1]
+    TapChanger : +Integer lowStep[1..1]
+    TapChanger : +Boolean ltcFlag[1..1]
+    TapChanger : +Integer neutralStep[1..1]
+    TapChanger : +Float neutralU[1..1]
+    TapChanger : +Integer normalStep[1..1]
+    TapChanger : +Float step[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,27 @@ Power system stabilizer typically associated with ExcELIN2 (though PssIEEE2B or 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssELIN2
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssELIN2 : +Float apss[1..1]
+    PssELIN2 : +Float ks1[1..1]
+    PssELIN2 : +Float ks2[1..1]
+    PssELIN2 : +Float ppss[1..1]
+    PssELIN2 : +Float psslim[1..1]
+    PssELIN2 : +Float ts1[1..1]
+    PssELIN2 : +Float ts2[1..1]
+    PssELIN2 : +Float ts3[1..1]
+    PssELIN2 : +Float ts4[1..1]
+    PssELIN2 : +Float ts5[1..1]
+    PssELIN2 : +Float ts6[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

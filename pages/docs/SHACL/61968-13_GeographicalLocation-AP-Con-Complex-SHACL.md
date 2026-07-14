@@ -12,6 +12,7 @@
 ### gl:CoordinateSystem.crsUrn-epsg
 
 **Path:** `cim:CoordinateSystem.crsUrn`  
+**Name:** C:13:GL:CoordinateSystem.crsUrn:epsg  
 CoordinateSystem.crsUrn: If not specified elsewhere, the CoordinateSystem.crsUrn uses WGS84 (latitude, longitude), i.e. urn:ogc:def:crs:EPSG::4326.
 
 **Severity:** sh:Info

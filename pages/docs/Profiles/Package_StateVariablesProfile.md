@@ -3,43 +3,48 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
+    TapChanger --> SvTapStep : SvTapStep
+    IdentifiedObject <|-- ACDCTerminal
+    ConductingEquipment --> SvStatus : SvStatus
+    ConductingEquipment --> Terminal : Terminals
+    ACDCConverter <|-- CsConverter
     ACDCTerminal <|-- Terminal
     Terminal --> ConductingEquipment : ConductingEquipment
     Terminal --> ACDCConverter : ConverterDCSides
     Terminal --> SvPowerFlow : SvPowerFlow
     Terminal --> TopologicalNode : TopologicalNode
     ACDCConverter <|-- VsConverter
-    TapChanger --> SvTapStep : SvTapStep
+    SvInjection --> TopologicalNode : TopologicalNode
     IdentifiedObject <|-- DCTopologicalIsland
     DCTopologicalIsland --> DCTopologicalNode : DCTopologicalNodes
+    SvShuntCompensatorSections --> ShuntCompensator : ShuntCompensator
+    SvTapStep --> TapChanger : TapChanger
+    SvSwitch --> Switch : Switch
+    SvPowerFlow --> Terminal : Terminal
+    IdentifiedObject <|-- TopologicalIsland
+    TopologicalIsland --> TopologicalNode : AngleRefTopologicalNode
+    TopologicalIsland --> TopologicalNode : TopologicalNodes
+    ConductingEquipment <|-- ACDCConverter
+    ACDCConverter --> Terminal : PccTerminal
     IdentifiedObject <|-- TopologicalNode
     TopologicalNode --> TopologicalIsland : AngleRefTopologicalIsland
     TopologicalNode --> SvInjection : SvInjection
     TopologicalNode --> SvVoltage : SvVoltage
     TopologicalNode --> Terminal : Terminal
     TopologicalNode --> TopologicalIsland : TopologicalIsland
-    ShuntCompensator --> SvShuntCompensatorSections : SvShuntCompensatorSections
-    SvVoltage --> TopologicalNode : TopologicalNode
-    SvInjection --> TopologicalNode : TopologicalNode
     SvStatus --> ConductingEquipment : ConductingEquipment
-    IdentifiedObject <|-- ACDCTerminal
-    ConductingEquipment <|-- ACDCConverter
-    ACDCConverter --> Terminal : PccTerminal
-    SvPowerFlow --> Terminal : Terminal
+    ShuntCompensator --> SvShuntCompensatorSections : SvShuntCompensatorSections
     IdentifiedObject <|-- DCTopologicalNode
     DCTopologicalNode --> DCTopologicalIsland : DCTopologicalIsland
-    IdentifiedObject <|-- TopologicalIsland
-    TopologicalIsland --> TopologicalNode : AngleRefTopologicalNode
-    TopologicalIsland --> TopologicalNode : TopologicalNodes
-    ACDCConverter <|-- CsConverter
-    SvTapStep --> TapChanger : TapChanger
-    SvShuntCompensatorSections --> ShuntCompensator : ShuntCompensator
-    SvSwitch --> Switch : Switch
     ConductingEquipment <|-- Switch
     Switch --> SvSwitch : SvSwitch
-    ConductingEquipment --> SvStatus : SvStatus
-    ConductingEquipment --> Terminal : Terminals
+    SvVoltage --> TopologicalNode : TopologicalNode
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

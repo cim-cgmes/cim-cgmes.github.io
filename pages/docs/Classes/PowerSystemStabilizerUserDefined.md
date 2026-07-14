@@ -5,8 +5,18 @@ Power system stabilizer function block whose dynamic behaviour is described by a
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PowerSystemStabilizerUserDefined
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PowerSystemStabilizerUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    PowerSystemStabilizerUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

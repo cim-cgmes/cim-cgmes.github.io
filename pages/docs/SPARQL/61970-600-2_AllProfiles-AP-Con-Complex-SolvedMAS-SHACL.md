@@ -4,11 +4,15 @@
 
 **Severity:** sh:Violation
 
+**Targets:**
+- sparqlTarget: 
+
 **Nested Properties:**
 
 ### mas600-2:RegulatingControl-samePoint
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:RegulatingControl:samePoint  
 A RegulatingControl will have associations to one or more instances of RegulatingCondEq and an association to a Terminal. The ConnectivityNode associated with the Terminal is the regulated point. It is common to have cases where multiple pieces of equipment regulate ConnectivityNodes that under normal network topology are associated with the same TopologicalNode. In this case, the same instance of RegulatingControl should be used by all of those regulating equipment if possible. If it is not possible, such as the case where a SynchronousMachine and a RatioTapChanger are regulating the same point using associations to instances of RegulatingControl and TapChangerControl, the number of instances of RegulatingControl and TapChangerControl should be minimized. Additionally, the target and deadband values for the same regulated point should not be contradictory. Profile restriction: If multiple instances of RegulatingControl control the same regulation point, the targetValues must not be contradictory.
 
 **Severity:** sh:Violation
@@ -18,9 +22,9 @@ A RegulatingControl will have associations to one or more instances of Regulatin
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
     	SELECT $this ?count ?value ?rcfail
 			WHERE {
@@ -56,6 +60,7 @@ PREFIX cim: <http://iec.ch/TC57/CIM100#>
 ### mas600-2:RegulatingControl-point
 
 **Path:** `rdf:type`  
+**Name:** C:600:EQ:RegulatingControl:point  
 The controlled point and the controlling equipment shall be located in the same TopologicalIsland. In cases where the controlling point is a TopologicalNode only one RegulatingControl shall be instantiated following the terms of constraint C:452:EQ:RegulatingControl:samePoint.
 
 **Severity:** sh:Violation
@@ -65,9 +70,9 @@ The controlled point and the controlling equipment shall be located in the same 
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
     	SELECT $this ?topislandterminal ?topislandterminalratio ?topislandterminalphase ?topislandterminalcondeq
 			WHERE {

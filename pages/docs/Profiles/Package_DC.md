@@ -3,9 +3,14 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    ACDCConverter <|-- VsConverter
     ACDCConverter <|-- CsConverter
+    ACDCConverter <|-- VsConverter
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

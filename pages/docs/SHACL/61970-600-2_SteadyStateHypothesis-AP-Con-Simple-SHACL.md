@@ -12,6 +12,7 @@
 ### ssh:ACDCTerminal.connected-datatype
 
 **Path:** `cim:ACDCTerminal.connected`  
+**Name:** ACDCTerminal.connected-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -29,6 +30,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ACDCTerminal.connected-cardinality
 
 **Path:** `cim:ACDCTerminal.connected`  
+**Name:** ACDCTerminal.connected-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -52,26 +54,10 @@ This constraint validates the cardinality of the property (attribute).
 
 **Nested Properties:**
 
-### ssh:ActivePowerLimit.value-datatype
-
-**Path:** `cim:ActivePowerLimit.value`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### ssh:ActivePowerLimit.value-cardinality
 
 **Path:** `cim:ActivePowerLimit.value`  
+**Name:** ActivePowerLimit.value-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -86,6 +72,24 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:ActivePowerLimit.value-datatype
+
+**Path:** `cim:ActivePowerLimit.value`  
+**Name:** ActivePowerLimit.value-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ## ssh:ApparentPowerLimit
 
 **Severity:** sh:Violation
@@ -98,6 +102,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:ApparentPowerLimit.value-datatype
 
 **Path:** `cim:ApparentPowerLimit.value`  
+**Name:** ApparentPowerLimit.value-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -115,6 +120,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ApparentPowerLimit.value-cardinality
 
 **Path:** `cim:ApparentPowerLimit.value`  
+**Name:** ApparentPowerLimit.value-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -138,26 +144,10 @@ This constraint validates the cardinality of the property (attribute).
 
 **Nested Properties:**
 
-### ssh:AsynchronousMachine.asynchronousMachineType-datatype
-
-**Path:** `cim:AsynchronousMachine.asynchronousMachineType`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile."
-
-**Constraints:**
-
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:IRI` 
-- **sh:InConstraintComponent** (Severity: sh:Violation)
-  - Values: `[cim:AsynchronousMachineKind.generator cim:AsynchronousMachineKind.motor]` 
-
 ### ssh:AsynchronousMachine.asynchronousMachineType-cardinality
 
 **Path:** `cim:AsynchronousMachine.asynchronousMachineType`  
+**Name:** AsynchronousMachine.asynchronousMachineType-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -172,9 +162,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:AsynchronousMachine.asynchronousMachineType-datatype
+
+**Path:** `cim:AsynchronousMachine.asynchronousMachineType`  
+**Name:** AsynchronousMachine.asynchronousMachineType-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile."
+
+**Constraints:**
+
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:IRI` 
+- **sh:InConstraintComponent** (Severity: sh:Violation)
+  - Values: `[cim:AsynchronousMachineKind.generator cim:AsynchronousMachineKind.motor]` 
+
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -192,6 +201,25 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:boolean` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### ssh:RegulatingCondEq.controlEnabled-datatype
+
+**Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -209,40 +237,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RegulatingCondEq.controlEnabled-cardinality
 
 **Path:** `cim:RegulatingCondEq.controlEnabled`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:RegulatingCondEq.controlEnabled-datatype
-
-**Path:** `cim:RegulatingCondEq.controlEnabled`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:boolean` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### ssh:RotatingMachine.p-cardinality
-
-**Path:** `cim:RotatingMachine.p`  
+**Name:** RegulatingCondEq.controlEnabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -260,6 +255,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RotatingMachine.p-datatype
 
 **Path:** `cim:RotatingMachine.p`  
+**Name:** RotatingMachine.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -274,26 +270,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:RotatingMachine.q-datatype
+### ssh:RotatingMachine.p-cardinality
 
-**Path:** `cim:RotatingMachine.q`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### ssh:RotatingMachine.q-cardinality
-
-**Path:** `cim:RotatingMachine.q`  
+**Path:** `cim:RotatingMachine.p`  
+**Name:** RotatingMachine.p-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -308,6 +288,42 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:RotatingMachine.q-cardinality
+
+**Path:** `cim:RotatingMachine.q`  
+**Name:** RotatingMachine.q-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### ssh:RotatingMachine.q-datatype
+
+**Path:** `cim:RotatingMachine.q`  
+**Name:** RotatingMachine.q-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ## ssh:BatteryUnit
 
 **Severity:** sh:Violation
@@ -320,6 +336,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:BatteryUnit.batteryState-datatype
 
 **Path:** `cim:BatteryUnit.batteryState`  
+**Name:** BatteryUnit.batteryState-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -337,6 +354,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:BatteryUnit.batteryState-cardinality
 
 **Path:** `cim:BatteryUnit.batteryState`  
+**Name:** BatteryUnit.batteryState-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -354,6 +372,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:BatteryUnit.storedE-datatype
 
 **Path:** `cim:BatteryUnit.storedE`  
+**Name:** BatteryUnit.storedE-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -371,6 +390,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:BatteryUnit.storedE-cardinality
 
 **Path:** `cim:BatteryUnit.storedE`  
+**Name:** BatteryUnit.storedE-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -388,6 +408,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -405,6 +426,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -431,6 +453,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -448,6 +471,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -465,6 +489,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.locked-datatype
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -482,6 +507,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Switch.locked-cardinality
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -499,6 +525,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.open-datatype
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -516,6 +543,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Switch.open-cardinality
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -542,6 +570,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EnergyConsumer.p-datatype
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** EnergyConsumer.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -559,6 +588,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EnergyConsumer.p-cardinality
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** EnergyConsumer.p-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -576,6 +606,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EnergyConsumer.q-datatype
 
 **Path:** `cim:EnergyConsumer.q`  
+**Name:** EnergyConsumer.q-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -593,6 +624,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EnergyConsumer.q-cardinality
 
 **Path:** `cim:EnergyConsumer.q`  
+**Name:** EnergyConsumer.q-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -610,6 +642,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -627,6 +660,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -653,6 +687,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:ControlArea.netInterchange-datatype
 
 **Path:** `cim:ControlArea.netInterchange`  
+**Name:** ControlArea.netInterchange-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -670,6 +705,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ControlArea.netInterchange-cardinality
 
 **Path:** `cim:ControlArea.netInterchange`  
+**Name:** ControlArea.netInterchange-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -687,6 +723,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:ControlArea.pTolerance-cardinality
 
 **Path:** `cim:ControlArea.pTolerance`  
+**Name:** ControlArea.pTolerance-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -702,6 +739,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:ControlArea.pTolerance-datatype
 
 **Path:** `cim:ControlArea.pTolerance`  
+**Name:** ControlArea.pTolerance-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -728,6 +766,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ACDCConverter.p-cardinality
 
 **Path:** `cim:ACDCConverter.p`  
+**Name:** ACDCConverter.p-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -745,6 +784,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:ACDCConverter.p-datatype
 
 **Path:** `cim:ACDCConverter.p`  
+**Name:** ACDCConverter.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -762,6 +802,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ACDCConverter.q-datatype
 
 **Path:** `cim:ACDCConverter.q`  
+**Name:** ACDCConverter.q-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -779,6 +820,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ACDCConverter.q-cardinality
 
 **Path:** `cim:ACDCConverter.q`  
+**Name:** ACDCConverter.q-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -790,27 +832,13 @@ This constraint validates the cardinality of the property (attribute).
 
 - **sh:MinCountConstraintComponent** (Severity: sh:Violation)
   - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:ACDCConverter.targetPpcc-cardinality
-
-**Path:** `cim:ACDCConverter.targetPpcc`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
 ### ssh:ACDCConverter.targetPpcc-datatype
 
 **Path:** `cim:ACDCConverter.targetPpcc`  
+**Name:** ACDCConverter.targetPpcc-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -825,26 +853,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:ACDCConverter.targetUdc-datatype
+### ssh:ACDCConverter.targetPpcc-cardinality
 
-**Path:** `cim:ACDCConverter.targetUdc`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### ssh:ACDCConverter.targetUdc-cardinality
-
-**Path:** `cim:ACDCConverter.targetUdc`  
+**Path:** `cim:ACDCConverter.targetPpcc`  
+**Name:** ACDCConverter.targetPpcc-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -857,26 +869,44 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### ssh:CsConverter.operatingMode-cardinality
+### ssh:ACDCConverter.targetUdc-cardinality
 
-**Path:** `cim:CsConverter.operatingMode`  
+**Path:** `cim:ACDCConverter.targetUdc`  
+**Name:** ACDCConverter.targetUdc-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
 
 **Messages:**
-- "Missing required property (attribute)."
+- "Cardinality violation. Upper bound shall be 1"
 
 **Constraints:**
 
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
+
+### ssh:ACDCConverter.targetUdc-datatype
+
+**Path:** `cim:ACDCConverter.targetUdc`  
+**Name:** ACDCConverter.targetUdc-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
 
 ### ssh:CsConverter.operatingMode-datatype
 
 **Path:** `cim:CsConverter.operatingMode`  
+**Name:** CsConverter.operatingMode-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -891,9 +921,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:InConstraintComponent** (Severity: sh:Violation)
   - Values: `[cim:CsOperatingModeKind.rectifier cim:CsOperatingModeKind.inverter]` 
 
-### ssh:CsConverter.pPccControl-cardinality
+### ssh:CsConverter.operatingMode-cardinality
 
-**Path:** `cim:CsConverter.pPccControl`  
+**Path:** `cim:CsConverter.operatingMode`  
+**Name:** CsConverter.operatingMode-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -911,6 +942,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:CsConverter.pPccControl-datatype
 
 **Path:** `cim:CsConverter.pPccControl`  
+**Name:** CsConverter.pPccControl-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -925,9 +957,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:InConstraintComponent** (Severity: sh:Violation)
   - Values: `[cim:CsPpccControlKind.activePower cim:CsPpccControlKind.dcVoltage cim:CsPpccControlKind.dcCurrent]` 
 
+### ssh:CsConverter.pPccControl-cardinality
+
+**Path:** `cim:CsConverter.pPccControl`  
+**Name:** CsConverter.pPccControl-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:CsConverter.targetAlpha-datatype
 
 **Path:** `cim:CsConverter.targetAlpha`  
+**Name:** CsConverter.targetAlpha-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -945,21 +996,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:CsConverter.targetAlpha-cardinality
 
 **Path:** `cim:CsConverter.targetAlpha`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:CsConverter.targetGamma-cardinality
-
-**Path:** `cim:CsConverter.targetGamma`  
+**Name:** CsConverter.targetAlpha-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -975,6 +1012,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:CsConverter.targetGamma-datatype
 
 **Path:** `cim:CsConverter.targetGamma`  
+**Name:** CsConverter.targetGamma-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -989,26 +1027,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:CsConverter.targetIdc-datatype
+### ssh:CsConverter.targetGamma-cardinality
 
-**Path:** `cim:CsConverter.targetIdc`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### ssh:CsConverter.targetIdc-cardinality
-
-**Path:** `cim:CsConverter.targetIdc`  
+**Path:** `cim:CsConverter.targetGamma`  
+**Name:** CsConverter.targetGamma-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1021,9 +1043,26 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### ssh:Equipment.inService-datatype
+### ssh:CsConverter.targetIdc-cardinality
 
-**Path:** `cim:Equipment.inService`  
+**Path:** `cim:CsConverter.targetIdc`  
+**Name:** CsConverter.targetIdc-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### ssh:CsConverter.targetIdc-datatype
+
+**Path:** `cim:CsConverter.targetIdc`  
+**Name:** CsConverter.targetIdc-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1034,13 +1073,14 @@ This constraint validates the datatype of the property (attribute).
 **Constraints:**
 
 - **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:boolean` 
+  - Datatype: `xsd:float` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1055,6 +1095,24 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:Equipment.inService-datatype
+
+**Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:boolean` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ## ssh:CurrentLimit
 
 **Severity:** sh:Violation
@@ -1067,6 +1125,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:CurrentLimit.value-datatype
 
 **Path:** `cim:CurrentLimit.value`  
+**Name:** CurrentLimit.value-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1084,6 +1143,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:CurrentLimit.value-cardinality
 
 **Path:** `cim:CurrentLimit.value`  
+**Name:** CurrentLimit.value-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1110,6 +1170,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:ACDCTerminal.connected-datatype
 
 **Path:** `cim:ACDCTerminal.connected`  
+**Name:** ACDCTerminal.connected-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1127,6 +1188,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ACDCTerminal.connected-cardinality
 
 **Path:** `cim:ACDCTerminal.connected`  
+**Name:** ACDCTerminal.connected-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1153,6 +1215,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1170,6 +1233,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1187,6 +1251,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.locked-datatype
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1204,23 +1269,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Switch.locked-cardinality
 
 **Path:** `cim:Switch.locked`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:Switch.open-cardinality
-
-**Path:** `cim:Switch.open`  
+**Name:** Switch.locked-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1238,6 +1287,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.open-datatype
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1251,6 +1301,24 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:boolean` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
+
+### ssh:Switch.open-cardinality
+
+**Path:** `cim:Switch.open`  
+**Name:** Switch.open-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
 
 ## ssh:Disconnector
 
@@ -1264,6 +1332,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1281,6 +1350,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1298,6 +1368,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.locked-datatype
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1315,6 +1386,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Switch.locked-cardinality
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1332,6 +1404,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.open-datatype
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1349,6 +1422,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Switch.open-cardinality
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1375,6 +1449,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EnergyConsumer.p-datatype
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** EnergyConsumer.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1392,23 +1467,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EnergyConsumer.p-cardinality
 
 **Path:** `cim:EnergyConsumer.p`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:EnergyConsumer.q-cardinality
-
-**Path:** `cim:EnergyConsumer.q`  
+**Name:** EnergyConsumer.p-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1426,6 +1485,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EnergyConsumer.q-datatype
 
 **Path:** `cim:EnergyConsumer.q`  
+**Name:** EnergyConsumer.q-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1440,9 +1500,46 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:EnergyConsumer.q-cardinality
+
+**Path:** `cim:EnergyConsumer.q`  
+**Name:** EnergyConsumer.q-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### ssh:Equipment.inService-cardinality
+
+**Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1457,23 +1554,6 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:Equipment.inService-cardinality
-
-**Path:** `cim:Equipment.inService`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ## ssh:EnergySource
 
 **Severity:** sh:Violation
@@ -1483,26 +1563,10 @@ This constraint validates the cardinality of the property (attribute).
 
 **Nested Properties:**
 
-### ssh:EnergySource.activePower-datatype
-
-**Path:** `cim:EnergySource.activePower`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### ssh:EnergySource.activePower-cardinality
 
 **Path:** `cim:EnergySource.activePower`  
+**Name:** EnergySource.activePower-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1517,9 +1581,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### ssh:EnergySource.reactivePower-datatype
+### ssh:EnergySource.activePower-datatype
 
-**Path:** `cim:EnergySource.reactivePower`  
+**Path:** `cim:EnergySource.activePower`  
+**Name:** EnergySource.activePower-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1537,6 +1602,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EnergySource.reactivePower-cardinality
 
 **Path:** `cim:EnergySource.reactivePower`  
+**Name:** EnergySource.reactivePower-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1551,9 +1617,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:EnergySource.reactivePower-datatype
+
+**Path:** `cim:EnergySource.reactivePower`  
+**Name:** EnergySource.reactivePower-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### ssh:EnergySource.voltageAngle-cardinality
 
 **Path:** `cim:EnergySource.voltageAngle`  
+**Name:** EnergySource.voltageAngle-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1569,23 +1654,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EnergySource.voltageAngle-datatype
 
 **Path:** `cim:EnergySource.voltageAngle`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### ssh:EnergySource.voltageMagnitude-datatype
-
-**Path:** `cim:EnergySource.voltageMagnitude`  
+**Name:** EnergySource.voltageAngle-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1603,6 +1672,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EnergySource.voltageMagnitude-cardinality
 
 **Path:** `cim:EnergySource.voltageMagnitude`  
+**Name:** EnergySource.voltageMagnitude-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1615,9 +1685,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:EnergySource.voltageMagnitude-datatype
+
+**Path:** `cim:EnergySource.voltageMagnitude`  
+**Name:** EnergySource.voltageMagnitude-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1635,6 +1724,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1661,6 +1751,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1678,23 +1769,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### io:IdentifiedObject.mRID-cardinality
-
-**Path:** `cim:IdentifiedObject.mRID`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1712,6 +1787,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.mRID-datatype
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1726,18 +1802,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-## ssh:EquivalentInjection
+### io:IdentifiedObject.mRID-cardinality
 
-**Severity:** sh:Violation
-
-**Targets:**
-- targetClass: cim:EquivalentInjection
-
-**Nested Properties:**
-
-### ssh:Equipment.inService-cardinality
-
-**Path:** `cim:Equipment.inService`  
+**Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1752,9 +1820,19 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+## ssh:EquivalentInjection
+
+**Severity:** sh:Violation
+
+**Targets:**
+- targetClass: cim:EquivalentInjection
+
+**Nested Properties:**
+
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1769,9 +1847,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:EquivalentInjection.p-cardinality
+### ssh:Equipment.inService-cardinality
 
-**Path:** `cim:EquivalentInjection.p`  
+**Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1789,6 +1868,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EquivalentInjection.p-datatype
 
 **Path:** `cim:EquivalentInjection.p`  
+**Name:** EquivalentInjection.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1803,9 +1883,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:EquivalentInjection.p-cardinality
+
+**Path:** `cim:EquivalentInjection.p`  
+**Name:** EquivalentInjection.p-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:EquivalentInjection.q-cardinality
 
 **Path:** `cim:EquivalentInjection.q`  
+**Name:** EquivalentInjection.q-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1823,6 +1922,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EquivalentInjection.q-datatype
 
 **Path:** `cim:EquivalentInjection.q`  
+**Name:** EquivalentInjection.q-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1840,6 +1940,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EquivalentInjection.regulationStatus-cardinality
 
 **Path:** `cim:EquivalentInjection.regulationStatus`  
+**Name:** EquivalentInjection.regulationStatus-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1855,6 +1956,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EquivalentInjection.regulationStatus-datatype
 
 **Path:** `cim:EquivalentInjection.regulationStatus`  
+**Name:** EquivalentInjection.regulationStatus-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1869,24 +1971,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:EquivalentInjection.regulationTarget-cardinality
-
-**Path:** `cim:EquivalentInjection.regulationTarget`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ### ssh:EquivalentInjection.regulationTarget-datatype
 
 **Path:** `cim:EquivalentInjection.regulationTarget`  
+**Name:** EquivalentInjection.regulationTarget-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1901,6 +1989,22 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:EquivalentInjection.regulationTarget-cardinality
+
+**Path:** `cim:EquivalentInjection.regulationTarget`  
+**Name:** EquivalentInjection.regulationTarget-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ## ssh:ExternalNetworkInjection
 
 **Severity:** sh:Violation
@@ -1913,6 +2017,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1930,6 +2035,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1947,6 +2053,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ExternalNetworkInjection.p-cardinality
 
 **Path:** `cim:ExternalNetworkInjection.p`  
+**Name:** ExternalNetworkInjection.p-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1964,23 +2071,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:ExternalNetworkInjection.p-datatype
 
 **Path:** `cim:ExternalNetworkInjection.p`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### ssh:ExternalNetworkInjection.q-datatype
-
-**Path:** `cim:ExternalNetworkInjection.q`  
+**Name:** ExternalNetworkInjection.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1998,6 +2089,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ExternalNetworkInjection.q-cardinality
 
 **Path:** `cim:ExternalNetworkInjection.q`  
+**Name:** ExternalNetworkInjection.q-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2012,9 +2104,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:ExternalNetworkInjection.q-datatype
+
+**Path:** `cim:ExternalNetworkInjection.q`  
+**Name:** ExternalNetworkInjection.q-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### ssh:ExternalNetworkInjection.referencePriority-datatype
 
 **Path:** `cim:ExternalNetworkInjection.referencePriority`  
+**Name:** ExternalNetworkInjection.referencePriority-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2032,6 +2143,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ExternalNetworkInjection.referencePriority-cardinality
 
 **Path:** `cim:ExternalNetworkInjection.referencePriority`  
+**Name:** ExternalNetworkInjection.referencePriority-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2049,6 +2161,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingCondEq.controlEnabled-cardinality
 
 **Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2066,6 +2179,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingCondEq.controlEnabled-datatype
 
 **Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2092,6 +2206,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2109,6 +2224,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2126,6 +2242,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.locked-datatype
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2143,6 +2260,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Switch.locked-cardinality
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2160,6 +2278,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.open-datatype
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2177,6 +2296,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Switch.open-cardinality
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2203,6 +2323,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2220,23 +2341,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:GeneratingUnit.normalPF-cardinality
-
-**Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2254,6 +2359,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:GeneratingUnit.normalPF-datatype
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2267,6 +2373,24 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:float` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
+
+### ssh:GeneratingUnit.normalPF-cardinality
+
+**Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
 
 ## ssh:GroundDisconnector
 
@@ -2280,6 +2404,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2297,23 +2422,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:Switch.locked-cardinality
-
-**Path:** `cim:Switch.locked`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2331,6 +2440,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.locked-datatype
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2345,26 +2455,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:Switch.open-datatype
+### ssh:Switch.locked-cardinality
 
-**Path:** `cim:Switch.open`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:boolean` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### ssh:Switch.open-cardinality
-
-**Path:** `cim:Switch.open`  
+**Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2379,6 +2473,42 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:Switch.open-cardinality
+
+**Path:** `cim:Switch.open`  
+**Name:** Switch.open-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### ssh:Switch.open-datatype
+
+**Path:** `cim:Switch.open`  
+**Name:** Switch.open-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:boolean` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ## ssh:HydroGeneratingUnit
 
 **Severity:** sh:Violation
@@ -2391,6 +2521,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2408,6 +2539,25 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### ssh:GeneratingUnit.normalPF-cardinality
+
+**Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2425,6 +2575,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:GeneratingUnit.normalPF-datatype
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2439,23 +2590,6 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:GeneratingUnit.normalPF-cardinality
-
-**Path:** `cim:GeneratingUnit.normalPF`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ## ssh:Jumper
 
 **Severity:** sh:Violation
@@ -2468,6 +2602,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2485,6 +2620,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2502,6 +2638,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.locked-datatype
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2519,6 +2656,25 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Switch.locked-cardinality
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### ssh:Switch.open-cardinality
+
+**Path:** `cim:Switch.open`  
+**Name:** Switch.open-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2536,6 +2692,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.open-datatype
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2550,23 +2707,6 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:Switch.open-cardinality
-
-**Path:** `cim:Switch.open`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ## ssh:LinearShuntCompensator
 
 **Severity:** sh:Violation
@@ -2579,6 +2719,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2596,23 +2737,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:RegulatingCondEq.controlEnabled-cardinality
-
-**Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2630,6 +2755,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingCondEq.controlEnabled-datatype
 
 **Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2644,9 +2770,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:RegulatingCondEq.controlEnabled-cardinality
+
+**Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:ShuntCompensator.sections-datatype
 
 **Path:** `cim:ShuntCompensator.sections`  
+**Name:** ShuntCompensator.sections-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2664,6 +2809,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ShuntCompensator.sections-cardinality
 
 **Path:** `cim:ShuntCompensator.sections`  
+**Name:** ShuntCompensator.sections-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2690,6 +2836,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2707,6 +2854,25 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### ssh:Switch.locked-cardinality
+
+**Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2724,6 +2890,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.locked-datatype
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2737,44 +2904,11 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:boolean` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
-
-### ssh:Switch.locked-cardinality
-
-**Path:** `cim:Switch.locked`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:Switch.open-cardinality
-
-**Path:** `cim:Switch.open`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
 
 ### ssh:Switch.open-datatype
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2788,6 +2922,24 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:boolean` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
+
+### ssh:Switch.open-cardinality
+
+**Path:** `cim:Switch.open`  
+**Name:** Switch.open-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
 
 ## ssh:NonConformLoad
 
@@ -2801,6 +2953,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EnergyConsumer.p-datatype
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** EnergyConsumer.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2818,6 +2971,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EnergyConsumer.p-cardinality
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** EnergyConsumer.p-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2835,6 +2989,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EnergyConsumer.q-datatype
 
 **Path:** `cim:EnergyConsumer.q`  
+**Name:** EnergyConsumer.q-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2852,23 +3007,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EnergyConsumer.q-cardinality
 
 **Path:** `cim:EnergyConsumer.q`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:Equipment.inService-cardinality
-
-**Path:** `cim:Equipment.inService`  
+**Name:** EnergyConsumer.q-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2886,6 +3025,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2899,6 +3039,24 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:boolean` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
+
+### ssh:Equipment.inService-cardinality
+
+**Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
 
 ## ssh:NonlinearShuntCompensator
 
@@ -2912,6 +3070,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2929,23 +3088,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:RegulatingCondEq.controlEnabled-cardinality
-
-**Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2963,6 +3106,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingCondEq.controlEnabled-datatype
 
 **Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2977,9 +3121,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:RegulatingCondEq.controlEnabled-cardinality
+
+**Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:ShuntCompensator.sections-datatype
 
 **Path:** `cim:ShuntCompensator.sections`  
+**Name:** ShuntCompensator.sections-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2997,6 +3160,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ShuntCompensator.sections-cardinality
 
 **Path:** `cim:ShuntCompensator.sections`  
+**Name:** ShuntCompensator.sections-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3023,6 +3187,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3040,6 +3205,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3057,6 +3223,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:GeneratingUnit.normalPF-datatype
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3074,6 +3241,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:GeneratingUnit.normalPF-cardinality
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3100,6 +3268,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:TapChanger.controlEnabled-datatype
 
 **Path:** `cim:TapChanger.controlEnabled`  
+**Name:** TapChanger.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3117,6 +3286,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:TapChanger.controlEnabled-cardinality
 
 **Path:** `cim:TapChanger.controlEnabled`  
+**Name:** TapChanger.controlEnabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3134,6 +3304,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:TapChanger.step-datatype
 
 **Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.step-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3151,6 +3322,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:TapChanger.step-cardinality
 
 **Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.step-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3177,6 +3349,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:TapChanger.controlEnabled-datatype
 
 **Path:** `cim:TapChanger.controlEnabled`  
+**Name:** TapChanger.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3194,23 +3367,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:TapChanger.controlEnabled-cardinality
 
 **Path:** `cim:TapChanger.controlEnabled`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:TapChanger.step-cardinality
-
-**Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.controlEnabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3228,6 +3385,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:TapChanger.step-datatype
 
 **Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.step-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3241,6 +3399,24 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:float` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
+
+### ssh:TapChanger.step-cardinality
+
+**Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.step-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
 
 ## ssh:PhaseTapChangerSymmetrical
 
@@ -3254,6 +3430,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:TapChanger.controlEnabled-datatype
 
 **Path:** `cim:TapChanger.controlEnabled`  
+**Name:** TapChanger.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3271,6 +3448,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:TapChanger.controlEnabled-cardinality
 
 **Path:** `cim:TapChanger.controlEnabled`  
+**Name:** TapChanger.controlEnabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3288,6 +3466,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:TapChanger.step-datatype
 
 **Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.step-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3305,6 +3484,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:TapChanger.step-cardinality
 
 **Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.step-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3331,6 +3511,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:TapChanger.controlEnabled-datatype
 
 **Path:** `cim:TapChanger.controlEnabled`  
+**Name:** TapChanger.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3348,6 +3529,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:TapChanger.controlEnabled-cardinality
 
 **Path:** `cim:TapChanger.controlEnabled`  
+**Name:** TapChanger.controlEnabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3365,6 +3547,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:TapChanger.step-datatype
 
 **Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.step-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3382,6 +3565,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:TapChanger.step-cardinality
 
 **Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.step-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3405,26 +3589,10 @@ This constraint validates the cardinality of the property (attribute).
 
 **Nested Properties:**
 
-### ssh:Equipment.inService-cardinality
-
-**Path:** `cim:Equipment.inService`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3439,9 +3607,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:Equipment.inService-cardinality
+
+**Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:PowerElectronicsConnection.p-cardinality
 
 **Path:** `cim:PowerElectronicsConnection.p`  
+**Name:** PowerElectronicsConnection.p-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3459,6 +3646,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:PowerElectronicsConnection.p-datatype
 
 **Path:** `cim:PowerElectronicsConnection.p`  
+**Name:** PowerElectronicsConnection.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3476,6 +3664,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:PowerElectronicsConnection.q-cardinality
 
 **Path:** `cim:PowerElectronicsConnection.q`  
+**Name:** PowerElectronicsConnection.q-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3493,6 +3682,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:PowerElectronicsConnection.q-datatype
 
 **Path:** `cim:PowerElectronicsConnection.q`  
+**Name:** PowerElectronicsConnection.q-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3510,6 +3700,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RegulatingCondEq.controlEnabled-datatype
 
 **Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3527,6 +3718,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RegulatingCondEq.controlEnabled-cardinality
 
 **Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3550,26 +3742,10 @@ This constraint validates the cardinality of the property (attribute).
 
 **Nested Properties:**
 
-### ssh:TapChanger.controlEnabled-datatype
-
-**Path:** `cim:TapChanger.controlEnabled`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:boolean` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### ssh:TapChanger.controlEnabled-cardinality
 
 **Path:** `cim:TapChanger.controlEnabled`  
+**Name:** TapChanger.controlEnabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3584,9 +3760,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:TapChanger.controlEnabled-datatype
+
+**Path:** `cim:TapChanger.controlEnabled`  
+**Name:** TapChanger.controlEnabled-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:boolean` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### ssh:TapChanger.step-datatype
 
 **Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.step-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3604,6 +3799,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:TapChanger.step-cardinality
 
 **Path:** `cim:TapChanger.step`  
+**Name:** TapChanger.step-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3627,26 +3823,10 @@ This constraint validates the cardinality of the property (attribute).
 
 **Nested Properties:**
 
-### ssh:RegulatingControl.discrete-datatype
-
-**Path:** `cim:RegulatingControl.discrete`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:boolean` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### ssh:RegulatingControl.discrete-cardinality
 
 **Path:** `cim:RegulatingControl.discrete`  
+**Name:** RegulatingControl.discrete-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3661,9 +3841,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:RegulatingControl.discrete-datatype
+
+**Path:** `cim:RegulatingControl.discrete`  
+**Name:** RegulatingControl.discrete-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:boolean` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### ssh:RegulatingControl.enabled-datatype
 
 **Path:** `cim:RegulatingControl.enabled`  
+**Name:** RegulatingControl.enabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3681,6 +3880,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RegulatingControl.enabled-cardinality
 
 **Path:** `cim:RegulatingControl.enabled`  
+**Name:** RegulatingControl.enabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3698,6 +3898,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingControl.maxAllowedTargetValue-cardinality
 
 **Path:** `cim:RegulatingControl.maxAllowedTargetValue`  
+**Name:** RegulatingControl.maxAllowedTargetValue-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3713,23 +3914,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingControl.maxAllowedTargetValue-datatype
 
 **Path:** `cim:RegulatingControl.maxAllowedTargetValue`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### ssh:RegulatingControl.minAllowedTargetValue-datatype
-
-**Path:** `cim:RegulatingControl.minAllowedTargetValue`  
+**Name:** RegulatingControl.maxAllowedTargetValue-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3747,6 +3932,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RegulatingControl.minAllowedTargetValue-cardinality
 
 **Path:** `cim:RegulatingControl.minAllowedTargetValue`  
+**Name:** RegulatingControl.minAllowedTargetValue-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3759,9 +3945,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### ssh:RegulatingControl.targetDeadband-datatype
+### ssh:RegulatingControl.minAllowedTargetValue-datatype
 
-**Path:** `cim:RegulatingControl.targetDeadband`  
+**Path:** `cim:RegulatingControl.minAllowedTargetValue`  
+**Name:** RegulatingControl.minAllowedTargetValue-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3779,6 +3966,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RegulatingControl.targetDeadband-cardinality
 
 **Path:** `cim:RegulatingControl.targetDeadband`  
+**Name:** RegulatingControl.targetDeadband-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3791,26 +3979,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### ssh:RegulatingControl.targetValue-cardinality
+### ssh:RegulatingControl.targetDeadband-datatype
 
-**Path:** `cim:RegulatingControl.targetValue`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:RegulatingControl.targetValue-datatype
-
-**Path:** `cim:RegulatingControl.targetValue`  
+**Path:** `cim:RegulatingControl.targetDeadband`  
+**Name:** RegulatingControl.targetDeadband-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3825,9 +3997,46 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:RegulatingControl.targetValue-datatype
+
+**Path:** `cim:RegulatingControl.targetValue`  
+**Name:** RegulatingControl.targetValue-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### ssh:RegulatingControl.targetValue-cardinality
+
+**Path:** `cim:RegulatingControl.targetValue`  
+**Name:** RegulatingControl.targetValue-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:RegulatingControl.targetValueUnitMultiplier-cardinality
 
 **Path:** `cim:RegulatingControl.targetValueUnitMultiplier`  
+**Name:** RegulatingControl.targetValueUnitMultiplier-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3845,6 +4054,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingControl.targetValueUnitMultiplier-datatype
 
 **Path:** `cim:RegulatingControl.targetValueUnitMultiplier`  
+**Name:** RegulatingControl.targetValueUnitMultiplier-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3871,6 +4081,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3888,6 +4099,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3905,6 +4117,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:GeneratingUnit.normalPF-datatype
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3922,6 +4135,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:GeneratingUnit.normalPF-cardinality
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3948,6 +4162,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3965,23 +4180,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:RegulatingCondEq.controlEnabled-cardinality
-
-**Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -3999,6 +4198,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingCondEq.controlEnabled-datatype
 
 **Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4013,26 +4213,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:StaticVarCompensator.q-datatype
+### ssh:RegulatingCondEq.controlEnabled-cardinality
 
-**Path:** `cim:StaticVarCompensator.q`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### ssh:StaticVarCompensator.q-cardinality
-
-**Path:** `cim:StaticVarCompensator.q`  
+**Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4047,6 +4231,42 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:StaticVarCompensator.q-cardinality
+
+**Path:** `cim:StaticVarCompensator.q`  
+**Name:** StaticVarCompensator.q-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### ssh:StaticVarCompensator.q-datatype
+
+**Path:** `cim:StaticVarCompensator.q`  
+**Name:** StaticVarCompensator.q-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ## ssh:StationSupply
 
 **Severity:** sh:Violation
@@ -4059,6 +4279,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EnergyConsumer.p-datatype
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** EnergyConsumer.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4076,6 +4297,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EnergyConsumer.p-cardinality
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** EnergyConsumer.p-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4093,6 +4315,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:EnergyConsumer.q-datatype
 
 **Path:** `cim:EnergyConsumer.q`  
+**Name:** EnergyConsumer.q-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4110,6 +4333,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:EnergyConsumer.q-cardinality
 
 **Path:** `cim:EnergyConsumer.q`  
+**Name:** EnergyConsumer.q-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4127,6 +4351,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4144,6 +4369,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4170,6 +4396,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4187,6 +4414,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4204,6 +4432,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.locked-datatype
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4221,6 +4450,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Switch.locked-cardinality
 
 **Path:** `cim:Switch.locked`  
+**Name:** Switch.locked-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4238,6 +4468,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.open-cardinality
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4255,6 +4486,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Switch.open-datatype
 
 **Path:** `cim:Switch.open`  
+**Name:** Switch.open-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4278,26 +4510,10 @@ This constraint validates the datatype of the property (attribute).
 
 **Nested Properties:**
 
-### ssh:Equipment.inService-cardinality
-
-**Path:** `cim:Equipment.inService`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4312,9 +4528,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:Equipment.inService-cardinality
+
+**Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:RegulatingCondEq.controlEnabled-datatype
 
 **Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4332,6 +4567,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RegulatingCondEq.controlEnabled-cardinality
 
 **Path:** `cim:RegulatingCondEq.controlEnabled`  
+**Name:** RegulatingCondEq.controlEnabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4349,6 +4585,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RotatingMachine.p-cardinality
 
 **Path:** `cim:RotatingMachine.p`  
+**Name:** RotatingMachine.p-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4366,6 +4603,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RotatingMachine.p-datatype
 
 **Path:** `cim:RotatingMachine.p`  
+**Name:** RotatingMachine.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4383,6 +4621,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RotatingMachine.q-cardinality
 
 **Path:** `cim:RotatingMachine.q`  
+**Name:** RotatingMachine.q-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4400,6 +4639,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RotatingMachine.q-datatype
 
 **Path:** `cim:RotatingMachine.q`  
+**Name:** RotatingMachine.q-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4417,6 +4657,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:SynchronousMachine.operatingMode-cardinality
 
 **Path:** `cim:SynchronousMachine.operatingMode`  
+**Name:** SynchronousMachine.operatingMode-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4434,6 +4675,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:SynchronousMachine.operatingMode-datatype
 
 **Path:** `cim:SynchronousMachine.operatingMode`  
+**Name:** SynchronousMachine.operatingMode-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4451,6 +4693,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:SynchronousMachine.referencePriority-datatype
 
 **Path:** `cim:SynchronousMachine.referencePriority`  
+**Name:** SynchronousMachine.referencePriority-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4468,6 +4711,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:SynchronousMachine.referencePriority-cardinality
 
 **Path:** `cim:SynchronousMachine.referencePriority`  
+**Name:** SynchronousMachine.referencePriority-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4491,26 +4735,10 @@ This constraint validates the cardinality of the property (attribute).
 
 **Nested Properties:**
 
-### ssh:RegulatingControl.discrete-datatype
-
-**Path:** `cim:RegulatingControl.discrete`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:boolean` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### ssh:RegulatingControl.discrete-cardinality
 
 **Path:** `cim:RegulatingControl.discrete`  
+**Name:** RegulatingControl.discrete-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4525,9 +4753,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### ssh:RegulatingControl.enabled-datatype
+### ssh:RegulatingControl.discrete-datatype
 
-**Path:** `cim:RegulatingControl.enabled`  
+**Path:** `cim:RegulatingControl.discrete`  
+**Name:** RegulatingControl.discrete-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4545,6 +4774,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RegulatingControl.enabled-cardinality
 
 **Path:** `cim:RegulatingControl.enabled`  
+**Name:** RegulatingControl.enabled-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4559,9 +4789,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:RegulatingControl.enabled-datatype
+
+**Path:** `cim:RegulatingControl.enabled`  
+**Name:** RegulatingControl.enabled-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:boolean` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### ssh:RegulatingControl.maxAllowedTargetValue-datatype
 
 **Path:** `cim:RegulatingControl.maxAllowedTargetValue`  
+**Name:** RegulatingControl.maxAllowedTargetValue-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4579,6 +4828,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RegulatingControl.maxAllowedTargetValue-cardinality
 
 **Path:** `cim:RegulatingControl.maxAllowedTargetValue`  
+**Name:** RegulatingControl.maxAllowedTargetValue-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4594,6 +4844,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingControl.minAllowedTargetValue-datatype
 
 **Path:** `cim:RegulatingControl.minAllowedTargetValue`  
+**Name:** RegulatingControl.minAllowedTargetValue-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4611,6 +4862,23 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:RegulatingControl.minAllowedTargetValue-cardinality
 
 **Path:** `cim:RegulatingControl.minAllowedTargetValue`  
+**Name:** RegulatingControl.minAllowedTargetValue-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### ssh:RegulatingControl.targetDeadband-cardinality
+
+**Path:** `cim:RegulatingControl.targetDeadband`  
+**Name:** RegulatingControl.targetDeadband-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4626,6 +4894,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingControl.targetDeadband-datatype
 
 **Path:** `cim:RegulatingControl.targetDeadband`  
+**Name:** RegulatingControl.targetDeadband-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4640,24 +4909,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:RegulatingControl.targetDeadband-cardinality
+### ssh:RegulatingControl.targetValue-datatype
 
-**Path:** `cim:RegulatingControl.targetDeadband`  
-This constraint validates the cardinality of the property (attribute).
+**Path:** `cim:RegulatingControl.targetValue`  
+**Name:** RegulatingControl.targetValue-datatype  
+This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
 
 **Messages:**
-- "Cardinality violation. Upper bound shall be 1"
+- "The datatype is not literal or it violates the xsd datatype."
 
 **Constraints:**
 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
 
 ### ssh:RegulatingControl.targetValue-cardinality
 
 **Path:** `cim:RegulatingControl.targetValue`  
+**Name:** RegulatingControl.targetValue-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4672,26 +4945,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### ssh:RegulatingControl.targetValue-datatype
-
-**Path:** `cim:RegulatingControl.targetValue`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### ssh:RegulatingControl.targetValueUnitMultiplier-cardinality
 
 **Path:** `cim:RegulatingControl.targetValueUnitMultiplier`  
+**Name:** RegulatingControl.targetValueUnitMultiplier-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4709,6 +4966,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:RegulatingControl.targetValueUnitMultiplier-datatype
 
 **Path:** `cim:RegulatingControl.targetValueUnitMultiplier`  
+**Name:** RegulatingControl.targetValueUnitMultiplier-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4735,6 +4993,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ACDCTerminal.connected-datatype
 
 **Path:** `cim:ACDCTerminal.connected`  
+**Name:** ACDCTerminal.connected-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4752,6 +5011,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:ACDCTerminal.connected-cardinality
 
 **Path:** `cim:ACDCTerminal.connected`  
+**Name:** ACDCTerminal.connected-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4778,6 +5038,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4795,6 +5056,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4812,6 +5074,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:GeneratingUnit.normalPF-datatype
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4829,6 +5092,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:GeneratingUnit.normalPF-cardinality
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4855,6 +5119,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:VoltageLimit.value-datatype
 
 **Path:** `cim:VoltageLimit.value`  
+**Name:** VoltageLimit.value-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4872,6 +5137,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:VoltageLimit.value-cardinality
 
 **Path:** `cim:VoltageLimit.value`  
+**Name:** VoltageLimit.value-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4895,9 +5161,28 @@ This constraint validates the cardinality of the property (attribute).
 
 **Nested Properties:**
 
+### ssh:ACDCConverter.p-cardinality
+
+**Path:** `cim:ACDCConverter.p`  
+**Name:** ACDCConverter.p-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:ACDCConverter.p-datatype
 
 **Path:** `cim:ACDCConverter.p`  
+**Name:** ACDCConverter.p-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4911,44 +5196,11 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:float` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
-
-### ssh:ACDCConverter.p-cardinality
-
-**Path:** `cim:ACDCConverter.p`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:ACDCConverter.q-cardinality
-
-**Path:** `cim:ACDCConverter.q`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
 
 ### ssh:ACDCConverter.q-datatype
 
 **Path:** `cim:ACDCConverter.q`  
+**Name:** ACDCConverter.q-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4963,26 +5215,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:ACDCConverter.targetPpcc-datatype
+### ssh:ACDCConverter.q-cardinality
 
-**Path:** `cim:ACDCConverter.targetPpcc`  
-This constraint validates the datatype of the property (attribute).
+**Path:** `cim:ACDCConverter.q`  
+**Name:** ACDCConverter.q-cardinality  
+This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
 
 **Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
+- "Missing required property (attribute)."
 
 **Constraints:**
 
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
 
 ### ssh:ACDCConverter.targetPpcc-cardinality
 
 **Path:** `cim:ACDCConverter.targetPpcc`  
+**Name:** ACDCConverter.targetPpcc-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -4995,9 +5249,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### ssh:ACDCConverter.targetPpcc-datatype
+
+**Path:** `cim:ACDCConverter.targetPpcc`  
+**Name:** ACDCConverter.targetPpcc-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### ssh:ACDCConverter.targetUdc-cardinality
 
 **Path:** `cim:ACDCConverter.targetUdc`  
+**Name:** ACDCConverter.targetUdc-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5013,6 +5286,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:ACDCConverter.targetUdc-datatype
 
 **Path:** `cim:ACDCConverter.targetUdc`  
+**Name:** ACDCConverter.targetUdc-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5027,26 +5301,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:Equipment.inService-cardinality
-
-**Path:** `cim:Equipment.inService`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5061,9 +5319,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:Equipment.inService-cardinality
+
+**Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:VsConverter.droop-datatype
 
 **Path:** `cim:VsConverter.droop`  
+**Name:** VsConverter.droop-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5081,6 +5358,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:VsConverter.droop-cardinality
 
 **Path:** `cim:VsConverter.droop`  
+**Name:** VsConverter.droop-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5096,6 +5374,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:VsConverter.droopCompensation-cardinality
 
 **Path:** `cim:VsConverter.droopCompensation`  
+**Name:** VsConverter.droopCompensation-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5111,6 +5390,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:VsConverter.droopCompensation-datatype
 
 **Path:** `cim:VsConverter.droopCompensation`  
+**Name:** VsConverter.droopCompensation-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5125,9 +5405,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:VsConverter.pPccControl-cardinality
+
+**Path:** `cim:VsConverter.pPccControl`  
+**Name:** VsConverter.pPccControl-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:VsConverter.pPccControl-datatype
 
 **Path:** `cim:VsConverter.pPccControl`  
+**Name:** VsConverter.pPccControl-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5142,9 +5441,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:InConstraintComponent** (Severity: sh:Violation)
   - Values: `[cim:VsPpccControlKind.pPccAndUdcDroopPilot cim:VsPpccControlKind.pPccAndUdcDroopWithCompensation cim:VsPpccControlKind.pPcc cim:VsPpccControlKind.udc cim:VsPpccControlKind.pPccAndUdcDroop cim:VsPpccControlKind.phasePcc]` 
 
-### ssh:VsConverter.pPccControl-cardinality
+### ssh:VsConverter.qPccControl-cardinality
 
-**Path:** `cim:VsConverter.pPccControl`  
+**Path:** `cim:VsConverter.qPccControl`  
+**Name:** VsConverter.qPccControl-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5162,6 +5462,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:VsConverter.qPccControl-datatype
 
 **Path:** `cim:VsConverter.qPccControl`  
+**Name:** VsConverter.qPccControl-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5176,26 +5477,26 @@ This constraint validates the datatype of the property (attribute).
 - **sh:InConstraintComponent** (Severity: sh:Violation)
   - Values: `[cim:VsQpccControlKind.voltagePcc cim:VsQpccControlKind.powerFactorPcc cim:VsQpccControlKind.reactivePcc cim:VsQpccControlKind.pulseWidthModulation]` 
 
-### ssh:VsConverter.qPccControl-cardinality
+### ssh:VsConverter.qShare-cardinality
 
-**Path:** `cim:VsConverter.qPccControl`  
+**Path:** `cim:VsConverter.qShare`  
+**Name:** VsConverter.qShare-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
 
 **Messages:**
-- "Missing required property (attribute)."
+- "Cardinality violation. Upper bound shall be 1"
 
 **Constraints:**
 
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
 ### ssh:VsConverter.qShare-datatype
 
 **Path:** `cim:VsConverter.qShare`  
+**Name:** VsConverter.qShare-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5209,40 +5510,11 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:float` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
-
-### ssh:VsConverter.qShare-cardinality
-
-**Path:** `cim:VsConverter.qShare`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### ssh:VsConverter.targetPWMfactor-cardinality
-
-**Path:** `cim:VsConverter.targetPWMfactor`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
 
 ### ssh:VsConverter.targetPWMfactor-datatype
 
 **Path:** `cim:VsConverter.targetPWMfactor`  
+**Name:** VsConverter.targetPWMfactor-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5257,9 +5529,26 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### ssh:VsConverter.targetPWMfactor-cardinality
+
+**Path:** `cim:VsConverter.targetPWMfactor`  
+**Name:** VsConverter.targetPWMfactor-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### ssh:VsConverter.targetPhasePcc-cardinality
 
 **Path:** `cim:VsConverter.targetPhasePcc`  
+**Name:** VsConverter.targetPhasePcc-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5275,6 +5564,25 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:VsConverter.targetPhasePcc-datatype
 
 **Path:** `cim:VsConverter.targetPhasePcc`  
+**Name:** VsConverter.targetPhasePcc-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### ssh:VsConverter.targetPowerFactorPcc-datatype
+
+**Path:** `cim:VsConverter.targetPowerFactorPcc`  
+**Name:** VsConverter.targetPowerFactorPcc-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5292,6 +5600,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:VsConverter.targetPowerFactorPcc-cardinality
 
 **Path:** `cim:VsConverter.targetPowerFactorPcc`  
+**Name:** VsConverter.targetPowerFactorPcc-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5304,26 +5613,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### ssh:VsConverter.targetPowerFactorPcc-datatype
-
-**Path:** `cim:VsConverter.targetPowerFactorPcc`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### ssh:VsConverter.targetQpcc-datatype
 
 **Path:** `cim:VsConverter.targetQpcc`  
+**Name:** VsConverter.targetQpcc-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5341,6 +5634,23 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:VsConverter.targetQpcc-cardinality
 
 **Path:** `cim:VsConverter.targetQpcc`  
+**Name:** VsConverter.targetQpcc-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### ssh:VsConverter.targetUpcc-cardinality
+
+**Path:** `cim:VsConverter.targetUpcc`  
+**Name:** VsConverter.targetUpcc-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5356,6 +5666,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:VsConverter.targetUpcc-datatype
 
 **Path:** `cim:VsConverter.targetUpcc`  
+**Name:** VsConverter.targetUpcc-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5370,21 +5681,6 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### ssh:VsConverter.targetUpcc-cardinality
-
-**Path:** `cim:VsConverter.targetUpcc`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ## ssh:WindGeneratingUnit
 
 **Severity:** sh:Violation
@@ -5397,6 +5693,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:Equipment.inService-datatype
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5414,6 +5711,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:Equipment.inService-cardinality
 
 **Path:** `cim:Equipment.inService`  
+**Name:** Equipment.inService-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5431,6 +5729,7 @@ This constraint validates the cardinality of the property (attribute).
 ### ssh:GeneratingUnit.normalPF-datatype
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -5448,6 +5747,7 @@ This constraint validates the datatype of the property (attribute).
 ### ssh:GeneratingUnit.normalPF-cardinality
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** GeneratingUnit.normalPF-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation

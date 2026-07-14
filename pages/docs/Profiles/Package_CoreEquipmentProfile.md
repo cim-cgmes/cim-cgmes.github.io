@@ -3,9 +3,102 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
+    RegulatingCondEq <|-- RotatingMachine
+    RotatingMachine --> GeneratingUnit : GeneratingUnit
+    RotatingMachine --> HydroPump : HydroPump
+    ConductingEquipment <|-- EnergyConnection
+    EnergyConsumer <|-- NonConformLoad
+    NonConformLoad --> NonConformLoadGroup : LoadGroup
+    DCConductingEquipment <|-- DCSwitch
+    EquipmentContainer <|-- DCEquipmentContainer
+    DCEquipmentContainer --> DCNode : DCNodes
+    Switch <|-- Cut
+    Cut --> ACLineSegment : ACLineSegment
+    SeasonDayTypeSchedule <|-- NonConformLoadSchedule
+    NonConformLoadSchedule --> NonConformLoadGroup : NonConformLoadGroup
+    PowerSystemResource <|-- SolarPowerPlant
+    SolarPowerPlant --> SolarGeneratingUnit : SolarGeneratingUnits
+    PowerSystemResource <|-- ControlArea
+    ControlArea --> ControlAreaGeneratingUnit : ControlAreaGeneratingUnit
+    ControlArea --> EnergyArea : EnergyArea
+    ControlArea --> TieFlow : TieFlow
+    AuxiliaryEquipment <|-- Sensor
+    EquivalentEquipment <|-- EquivalentShunt
+    PhaseTapChanger <|-- PhaseTapChangerLinear
+    Connector <|-- Junction
+    BasicIntervalSchedule <|-- RegularIntervalSchedule
+    RegularIntervalSchedule --> RegularTimePoint : TimePoints
+    PowerElectronicsUnit <|-- PhotoVoltaicUnit
+    IdentifiedObject <|-- OperationalLimitSet
+    OperationalLimitSet --> Equipment : Equipment
+    OperationalLimitSet --> OperationalLimit : OperationalLimitValue
+    OperationalLimitSet --> ACDCTerminal : Terminal
+    DCConductingEquipment <|-- DCSeriesDevice
+    IdentifiedObject <|-- BasicIntervalSchedule
+    TapChanger <|-- RatioTapChanger
+    RatioTapChanger --> RatioTapChangerTable : RatioTapChangerTable
+    RatioTapChanger --> TransformerEnd : TransformerEnd
+    Equipment <|-- GeneratingUnit
+    GeneratingUnit --> ControlAreaGeneratingUnit : ControlAreaGeneratingUnit
+    GeneratingUnit --> GrossToNetActivePowerCurve : GrossToNetActivePowerCurves
+    GeneratingUnit --> RotatingMachine : RotatingMachine
+    PowerSystemResource <|-- TapChanger
+    TapChanger --> TapChangerControl : TapChangerControl
+    TapChanger --> TapSchedule : TapSchedules
+    ConductingEquipment <|-- EarthFaultCompensator
+    ACDCTerminal <|-- DCBaseTerminal
+    DCBaseTerminal --> DCNode : DCNode
+    EnergyArea <|-- SubLoadArea
+    SubLoadArea --> LoadArea : LoadArea
+    SubLoadArea --> LoadGroup : LoadGroups
+    IdentifiedObject <|-- ACDCTerminal
+    ACDCTerminal --> BusNameMarker : BusNameMarker
+    ACDCTerminal --> OperationalLimitSet : OperationalLimitSet
+    RotatingMachine <|-- AsynchronousMachine
+    Equipment <|-- ConductingEquipment
+    ConductingEquipment --> BaseVoltage : BaseVoltage
+    ConductingEquipment --> Terminal : Terminals
+    DCBaseTerminal <|-- DCTerminal
+    DCTerminal --> DCConductingEquipment : DCConductingEquipment
+    DCConductingEquipment <|-- DCGround
+    Switch <|-- Disconnector
+    ACDCConverter <|-- CsConverter
+    RotatingMachine <|-- SynchronousMachine
+    SynchronousMachine --> ReactiveCapabilityCurve : InitialReactiveCapabilityCurve
+    Equipment <|-- PowerElectronicsUnit
+    PowerElectronicsUnit --> PowerElectronicsConnection : PowerElectronicsConnection
+    IdentifiedObject <|-- TieFlow
+    TieFlow --> ControlArea : ControlArea
+    TieFlow --> Terminal : Terminal
+    IdentifiedObject <|-- DayType
+    DayType --> SeasonDayTypeSchedule : SeasonDayTypeSchedules
+    DCConductingEquipment <|-- DCChopper
+    IdentifiedObject <|-- ConnectivityNode
+    ConnectivityNode --> BoundaryPoint : BoundaryPoint
+    ConnectivityNode --> ConnectivityNodeContainer : ConnectivityNodeContainer
+    ConnectivityNode --> Terminal : Terminals
+    IdentifiedObject <|-- RatioTapChangerTable
+    RatioTapChangerTable --> RatioTapChanger : RatioTapChanger
+    RatioTapChangerTable --> RatioTapChangerTablePoint : RatioTapChangerTablePoint
+    PowerSystemResource <|-- ConnectivityNodeContainer
+    ConnectivityNodeContainer --> ConnectivityNode : ConnectivityNodes
+    Switch <|-- GroundDisconnector
+    PhaseTapChangerNonLinear <|-- PhaseTapChangerAsymmetrical
+    SeasonDayTypeSchedule <|-- SwitchSchedule
+    SwitchSchedule --> Switch : Switch
+    RegularIntervalSchedule <|-- SeasonDayTypeSchedule
+    SeasonDayTypeSchedule --> DayType : DayType
+    SeasonDayTypeSchedule --> Season : Season
+    ConductingEquipment <|-- Ground
     IdentifiedObject <|-- FossilFuel
     FossilFuel --> ThermalGeneratingUnit : ThermalGeneratingUnit
+    Breaker <|-- DisconnectingCircuitBreaker
     ACDCTerminal <|-- Terminal
     Terminal --> AuxiliaryEquipment : AuxiliaryEquipment
     Terminal --> ConductingEquipment : ConductingEquipment
@@ -14,305 +107,217 @@ classDiagram
     Terminal --> RegulatingControl : RegulatingControl
     Terminal --> TieFlow : TieFlow
     Terminal --> TransformerEnd : TransformerEnd
-    Equipment <|-- PowerElectronicsUnit
-    PowerElectronicsUnit --> PowerElectronicsConnection : PowerElectronicsConnection
-    ConductingEquipment <|-- PowerTransformer
-    PowerTransformer --> PowerTransformerEnd : PowerTransformerEnd
-    ACDCConverter <|-- VsConverter
-    VsConverter --> VsCapabilityCurve : CapabilityCurve
-    IdentifiedObject <|-- PhaseTapChangerTable
-    PhaseTapChangerTable --> PhaseTapChangerTablePoint : PhaseTapChangerTablePoint
-    PhaseTapChangerTable --> PhaseTapChangerTabular : PhaseTapChangerTabular
-    EquivalentEquipment <|-- EquivalentInjection
-    EquivalentInjection --> ReactiveCapabilityCurve : ReactiveCapabilityCurve
-    OperationalLimit <|-- ActivePowerLimit
-    ProtectedSwitch <|-- Breaker
-    PhaseTapChanger <|-- PhaseTapChangerLinear
-    AuxiliaryEquipment <|-- SurgeArrester
-    Sensor <|-- CurrentTransformer
-    PowerSystemResource <|-- RegulatingControl
-    RegulatingControl --> RegulatingCondEq : RegulatingCondEq
-    RegulatingControl --> RegulationSchedule : RegulationSchedule
-    RegulatingControl --> Terminal : Terminal
-    PhaseTapChanger <|-- PhaseTapChangerTabular
-    PhaseTapChangerTabular --> PhaseTapChangerTable : PhaseTapChangerTable
+    DCConductingEquipment <|-- DCShunt
+    TapChangerTablePoint <|-- RatioTapChangerTablePoint
+    RatioTapChangerTablePoint --> RatioTapChangerTable : RatioTapChangerTable
+    ProtectedSwitch <|-- LoadBreakSwitch
+    EarthFaultCompensator <|-- PetersenCoil
+    SeasonDayTypeSchedule <|-- RegulationSchedule
+    RegulationSchedule --> RegulatingControl : RegulatingControl
     PowerSystemResource <|-- CombinedCyclePlant
     CombinedCyclePlant --> ThermalGeneratingUnit : ThermalGeneratingUnits
-    DCConductingEquipment <|-- DCSwitch
+    ACDCConverter <|-- VsConverter
+    VsConverter --> VsCapabilityCurve : CapabilityCurve
+    Switch <|-- ProtectedSwitch
+    LoadGroup <|-- NonConformLoadGroup
+    NonConformLoadGroup --> NonConformLoad : EnergyConsumers
+    NonConformLoadGroup --> NonConformLoadSchedule : NonConformLoadSchedules
+    PowerElectronicsUnit <|-- PowerElectronicsWindUnit
+    Equipment <|-- HydroPump
+    HydroPump --> HydroPowerPlant : HydroPowerPlant
+    HydroPump --> RotatingMachine : RotatingMachine
+    ConductingEquipment <|-- SeriesCompensator
+    EquipmentContainer <|-- Bay
+    Bay --> VoltageLevel : VoltageLevel
+    ConnectivityNodeContainer <|-- EquipmentContainer
+    EquipmentContainer --> Equipment : Equipments
+    EquipmentContainer <|-- Line
+    Line --> SubGeographicalRegion : Region
+    IdentifiedObject <|-- Season
+    Season --> SeasonDayTypeSchedule : SeasonDayTypeSchedules
+    PowerSystemResource <|-- CogenerationPlant
+    CogenerationPlant --> ThermalGeneratingUnit : ThermalGeneratingUnits
+    GeneratingUnit <|-- SolarGeneratingUnit
+    SolarGeneratingUnit --> SolarPowerPlant : SolarPowerPlant
+    RegularTimePoint --> RegularIntervalSchedule : IntervalSchedule
+    IdentifiedObject <|-- DCNode
+    DCNode --> DCEquipmentContainer : DCEquipmentContainer
+    DCNode --> DCBaseTerminal : DCTerminals
+    ShuntCompensator <|-- NonlinearShuntCompensator
+    NonlinearShuntCompensator --> NonlinearShuntCompensatorPoint : NonlinearShuntCompensatorPoints
+    PhaseTapChanger <|-- PhaseTapChangerNonLinear
+    SeasonDayTypeSchedule <|-- TapSchedule
+    TapSchedule --> TapChanger : TapChanger
+    ConductingEquipment <|-- EquivalentEquipment
+    EquivalentEquipment --> EquivalentNetwork : EquivalentNetwork
+    Connector <|-- BusbarSection
+    Sensor <|-- PostLineSensor
+    PowerSystemResource <|-- BoundaryPoint
+    BoundaryPoint --> ConnectivityNode : ConnectivityNode
+    NonlinearShuntCompensatorPoint --> NonlinearShuntCompensator : NonlinearShuntCompensator
+    EquivalentEquipment <|-- EquivalentInjection
+    EquivalentInjection --> ReactiveCapabilityCurve : ReactiveCapabilityCurve
+    Sensor <|-- CurrentTransformer
+    EquipmentContainer <|-- VoltageLevel
+    VoltageLevel --> BaseVoltage : BaseVoltage
+    VoltageLevel --> Bay : Bays
+    VoltageLevel --> Substation : Substation
+    ConnectivityNodeContainer <|-- EquivalentNetwork
+    EquivalentNetwork --> EquivalentEquipment : EquivalentEquipments
+    Equipment <|-- AuxiliaryEquipment
+    AuxiliaryEquipment --> Terminal : Terminal
+    ConductingEquipment <|-- ACDCConverter
+    ACDCConverter --> ACDCConverterDCTerminal : DCTerminals
+    ACDCConverter --> Terminal : PccTerminal
+    IdentifiedObject <|-- LoadResponseCharacteristic
+    LoadResponseCharacteristic --> EnergyConsumer : EnergyConsumer
+    EnergyConsumer <|-- StationSupply
+    EarthFaultCompensator <|-- GroundingImpedance
+    DCSwitch <|-- DCBreaker
+    IdentifiedObject <|-- BusNameMarker
+    BusNameMarker --> ReportingGroup : ReportingGroup
+    BusNameMarker --> ACDCTerminal : Terminal
     ConductingEquipment <|-- Conductor
-    PowerSystemResource <|-- TapChanger
-    TapChanger --> TapChangerControl : TapChangerControl
-    TapChanger --> TapSchedule : TapSchedules
+    EquipmentContainer <|-- Substation
+    Substation --> DCConverterUnit : DCConverterUnit
+    Substation --> SubGeographicalRegion : Region
+    Substation --> VoltageLevel : VoltageLevels
+    IdentifiedObject <|-- PowerSystemResource
+    Switch <|-- Fuse
+    DCConductingEquipment <|-- DCBusbar
+    TapChangerTablePoint <|-- PhaseTapChangerTablePoint
+    PhaseTapChangerTablePoint --> PhaseTapChangerTable : PhaseTapChangerTable
+    ShuntCompensator <|-- LinearShuntCompensator
+    AuxiliaryEquipment <|-- SurgeArrester
     OperationalLimit <|-- ApparentPowerLimit
+    IdentifiedObject <|-- EnergySchedulingType
+    EnergySchedulingType --> EnergySource : EnergySource
+    PhaseTapChangerNonLinear <|-- PhaseTapChangerSymmetrical
+    IdentifiedObject <|-- Curve
+    Curve --> CurveData : CurveDatas
+    PhaseTapChanger <|-- PhaseTapChangerTabular
+    PhaseTapChangerTabular --> PhaseTapChangerTable : PhaseTapChangerTable
+    DCBaseTerminal <|-- ACDCConverterDCTerminal
+    ACDCConverterDCTerminal --> ACDCConverter : DCConductingEquipment
+    PowerSystemResource <|-- Equipment
+    Equipment --> EquipmentContainer : EquipmentContainer
+    Equipment --> OperationalLimitSet : OperationalLimitSet
+    RegulatingCondEq <|-- ExternalNetworkInjection
+    GeneratingUnit <|-- NuclearGeneratingUnit
+    OperationalLimit <|-- ActivePowerLimit
+    LoadGroup <|-- ConformLoadGroup
+    ConformLoadGroup --> ConformLoadSchedule : ConformLoadSchedules
+    ConformLoadGroup --> ConformLoad : EnergyConsumers
     GeneratingUnit <|-- ThermalGeneratingUnit
     ThermalGeneratingUnit --> CAESPlant : CAESPlant
     ThermalGeneratingUnit --> CogenerationPlant : CogenerationPlant
     ThermalGeneratingUnit --> CombinedCyclePlant : CombinedCyclePlant
     ThermalGeneratingUnit --> FossilFuel : FossilFuels
-    IdentifiedObject <|-- RatioTapChangerTable
-    RatioTapChangerTable --> RatioTapChanger : RatioTapChanger
-    RatioTapChangerTable --> RatioTapChangerTablePoint : RatioTapChangerTablePoint
-    RegularTimePoint --> RegularIntervalSchedule : IntervalSchedule
-    PhaseTapChangerNonLinear <|-- PhaseTapChangerSymmetrical
-    Conductor <|-- ACLineSegment
-    ACLineSegment --> Clamp : Clamp
-    ACLineSegment --> Cut : Cut
-    IdentifiedObject <|-- OperationalLimitSet
-    OperationalLimitSet --> Equipment : Equipment
-    OperationalLimitSet --> OperationalLimit : OperationalLimitValue
-    OperationalLimitSet --> ACDCTerminal : Terminal
-    PowerSystemResource <|-- BoundaryPoint
-    BoundaryPoint --> ConnectivityNode : ConnectivityNode
-    TapChanger <|-- PhaseTapChanger
-    PhaseTapChanger --> TransformerEnd : TransformerEnd
-    RegulatingCondEq <|-- StaticVarCompensator
-    EquipmentContainer <|-- VoltageLevel
-    VoltageLevel --> BaseVoltage : BaseVoltage
-    VoltageLevel --> Bay : Bays
-    VoltageLevel --> Substation : Substation
-    IdentifiedObject <|-- EnergySchedulingType
-    EnergySchedulingType --> EnergySource : EnergySource
-    PowerSystemResource <|-- Equipment
-    Equipment --> EquipmentContainer : EquipmentContainer
-    Equipment --> OperationalLimitSet : OperationalLimitSet
-    DCBaseTerminal <|-- ACDCConverterDCTerminal
-    ACDCConverterDCTerminal --> ACDCConverter : DCConductingEquipment
-    DCSwitch <|-- DCDisconnector
-    ConnectivityNodeContainer <|-- EquivalentNetwork
-    EquivalentNetwork --> EquivalentEquipment : EquivalentEquipments
-    RegulatingCondEq <|-- PowerElectronicsConnection
-    PowerElectronicsConnection --> PowerElectronicsUnit : PowerElectronicsUnit
-    LoadGroup <|-- NonConformLoadGroup
-    NonConformLoadGroup --> NonConformLoad : EnergyConsumers
-    NonConformLoadGroup --> NonConformLoadSchedule : NonConformLoadSchedules
-    IdentifiedObject <|-- TransformerEnd
-    TransformerEnd --> BaseVoltage : BaseVoltage
-    TransformerEnd --> PhaseTapChanger : PhaseTapChanger
-    TransformerEnd --> RatioTapChanger : RatioTapChanger
-    TransformerEnd --> Terminal : Terminal
-    DCBaseTerminal <|-- DCTerminal
-    DCTerminal --> DCConductingEquipment : DCConductingEquipment
-    RegulatingCondEq <|-- ShuntCompensator
-    Sensor <|-- PostLineSensor
-    SeasonDayTypeSchedule <|-- ConformLoadSchedule
-    ConformLoadSchedule --> ConformLoadGroup : ConformLoadGroup
-    ProtectedSwitch <|-- LoadBreakSwitch
-    EnergyArea <|-- SubLoadArea
-    SubLoadArea --> LoadArea : LoadArea
-    SubLoadArea --> LoadGroup : LoadGroups
-    TapChangerTablePoint <|-- PhaseTapChangerTablePoint
-    PhaseTapChangerTablePoint --> PhaseTapChangerTable : PhaseTapChangerTable
-    Equipment <|-- AuxiliaryEquipment
-    AuxiliaryEquipment --> Terminal : Terminal
-    Switch <|-- Fuse
-    Switch <|-- Jumper
-    PhaseTapChanger <|-- PhaseTapChangerNonLinear
-    AuxiliaryEquipment <|-- Sensor
-    DCConductingEquipment <|-- DCShunt
-    TransformerEnd <|-- PowerTransformerEnd
-    PowerTransformerEnd --> PowerTransformer : PowerTransformer
-    Equipment <|-- GeneratingUnit
-    GeneratingUnit --> ControlAreaGeneratingUnit : ControlAreaGeneratingUnit
-    GeneratingUnit --> GrossToNetActivePowerCurve : GrossToNetActivePowerCurves
-    GeneratingUnit --> RotatingMachine : RotatingMachine
-    DCConductingEquipment <|-- DCSeriesDevice
-    Breaker <|-- DisconnectingCircuitBreaker
-    EarthFaultCompensator <|-- PetersenCoil
-    EnergyConnection <|-- RegulatingCondEq
-    RegulatingCondEq --> RegulatingControl : RegulatingControl
-    Switch <|-- ProtectedSwitch
-    IdentifiedObject <|-- PowerSystemResource
-    IdentifiedObject <|-- BaseVoltage
-    BaseVoltage --> ConductingEquipment : ConductingEquipment
-    BaseVoltage --> TransformerEnd : TransformerEnds
-    BaseVoltage --> VoltageLevel : VoltageLevel
-    EnergyConnection <|-- EnergySource
-    EnergySource --> EnergySchedulingType : EnergySchedulingType
-    PowerSystemResource <|-- CAESPlant
-    CAESPlant --> ThermalGeneratingUnit : ThermalGeneratingUnit
-    AuxiliaryEquipment <|-- WaveTrap
-    PowerSystemResource <|-- ControlArea
-    ControlArea --> ControlAreaGeneratingUnit : ControlAreaGeneratingUnit
-    ControlArea --> EnergyArea : EnergyArea
-    ControlArea --> TieFlow : TieFlow
-    SeasonDayTypeSchedule <|-- TapSchedule
-    TapSchedule --> TapChanger : TapChanger
-    IdentifiedObject <|-- LoadGroup
-    LoadGroup --> SubLoadArea : SubLoadArea
-    EquivalentEquipment <|-- EquivalentShunt
-    ConductingEquipment <|-- EnergyConnection
-    IdentifiedObject <|-- Season
-    Season --> SeasonDayTypeSchedule : SeasonDayTypeSchedules
-    GeneratingUnit <|-- NuclearGeneratingUnit
-    PowerSystemResource <|-- CogenerationPlant
-    CogenerationPlant --> ThermalGeneratingUnit : ThermalGeneratingUnits
-    GeneratingUnit <|-- HydroGeneratingUnit
-    HydroGeneratingUnit --> HydroPowerPlant : HydroPowerPlant
-    IdentifiedObject <|-- ACDCTerminal
-    ACDCTerminal --> BusNameMarker : BusNameMarker
-    ACDCTerminal --> OperationalLimitSet : OperationalLimitSet
-    PowerSystemResource <|-- SolarPowerPlant
-    SolarPowerPlant --> SolarGeneratingUnit : SolarGeneratingUnits
-    Curve <|-- GrossToNetActivePowerCurve
-    GrossToNetActivePowerCurve --> GeneratingUnit : GeneratingUnit
-    ConductingEquipment <|-- ACDCConverter
-    ACDCConverter --> ACDCConverterDCTerminal : DCTerminals
-    ACDCConverter --> Terminal : PccTerminal
-    EnergyConsumer <|-- ConformLoad
-    ConformLoad --> ConformLoadGroup : LoadGroup
-    RegularIntervalSchedule <|-- SeasonDayTypeSchedule
-    SeasonDayTypeSchedule --> DayType : DayType
-    SeasonDayTypeSchedule --> Season : Season
-    Equipment <|-- DCConductingEquipment
-    DCConductingEquipment --> DCTerminal : DCTerminals
-    IdentifiedObject <|-- LoadResponseCharacteristic
-    LoadResponseCharacteristic --> EnergyConsumer : EnergyConsumer
-    IdentifiedObject <|-- EnergyArea
-    EnergyArea --> ControlArea : ControlArea
-    EnergyConsumer <|-- StationSupply
-    Connector <|-- BusbarSection
-    SeasonDayTypeSchedule <|-- SwitchSchedule
-    SwitchSchedule --> Switch : Switch
-    EnergyConnection <|-- EnergyConsumer
-    EnergyConsumer --> LoadResponseCharacteristic : LoadResponse
-    IdentifiedObject <|-- BusNameMarker
-    BusNameMarker --> ReportingGroup : ReportingGroup
-    BusNameMarker --> ACDCTerminal : Terminal
-    ConductingEquipment <|-- EquivalentEquipment
-    EquivalentEquipment --> EquivalentNetwork : EquivalentNetwork
-    Sensor <|-- PotentialTransformer
-    SeasonDayTypeSchedule <|-- NonConformLoadSchedule
-    NonConformLoadSchedule --> NonConformLoadGroup : NonConformLoadGroup
-    RotatingMachine <|-- AsynchronousMachine
-    DCEquipmentContainer <|-- DCLine
-    DCLine --> SubGeographicalRegion : Region
-    PowerSystemResource <|-- ConnectivityNodeContainer
-    ConnectivityNodeContainer --> ConnectivityNode : ConnectivityNodes
-    IdentifiedObject <|-- ReportingGroup
-    ReportingGroup --> BusNameMarker : BusNameMarker
-    DCConductingEquipment <|-- DCChopper
-    EquivalentEquipment <|-- EquivalentBranch
-    Curve <|-- VsCapabilityCurve
-    VsCapabilityCurve --> VsConverter : VsConverterDCSides
-    EquipmentContainer <|-- DCEquipmentContainer
-    DCEquipmentContainer --> DCNode : DCNodes
-    DCEquipmentContainer <|-- DCConverterUnit
-    DCConverterUnit --> Substation : Substation
-    Equipment <|-- HydroPump
-    HydroPump --> HydroPowerPlant : HydroPowerPlant
-    HydroPump --> RotatingMachine : RotatingMachine
-    AuxiliaryEquipment <|-- FaultIndicator
-    PowerElectronicsUnit <|-- PowerElectronicsWindUnit
-    EquipmentContainer <|-- Line
-    Line --> SubGeographicalRegion : Region
-    IdentifiedObject <|-- ControlAreaGeneratingUnit
-    ControlAreaGeneratingUnit --> ControlArea : ControlArea
-    ControlAreaGeneratingUnit --> GeneratingUnit : GeneratingUnit
-    IdentifiedObject <|-- DCNode
-    DCNode --> DCEquipmentContainer : DCEquipmentContainer
-    DCNode --> DCBaseTerminal : DCTerminals
-    TapChanger <|-- RatioTapChanger
-    RatioTapChanger --> RatioTapChangerTable : RatioTapChangerTable
-    RatioTapChanger --> TransformerEnd : TransformerEnd
-    ACDCConverter <|-- CsConverter
-    PowerElectronicsUnit <|-- PhotoVoltaicUnit
-    RotatingMachine <|-- SynchronousMachine
-    SynchronousMachine --> ReactiveCapabilityCurve : InitialReactiveCapabilityCurve
-    LoadGroup <|-- ConformLoadGroup
-    ConformLoadGroup --> ConformLoadSchedule : ConformLoadSchedules
-    ConformLoadGroup --> ConformLoad : EnergyConsumers
-    GeneratingUnit <|-- WindGeneratingUnit
-    WindGeneratingUnit --> WindPowerPlant : WindPowerPlant
-    ACDCTerminal <|-- DCBaseTerminal
-    DCBaseTerminal --> DCNode : DCNode
-    IdentifiedObject <|-- TieFlow
-    TieFlow --> ControlArea : ControlArea
-    TieFlow --> Terminal : Terminal
-    EnergyConsumer <|-- NonConformLoad
-    NonConformLoad --> NonConformLoadGroup : LoadGroup
-    RegulatingControl <|-- TapChangerControl
-    TapChangerControl --> TapChanger : TapChanger
-    Switch <|-- Cut
-    Cut --> ACLineSegment : ACLineSegment
-    IdentifiedObject <|-- Curve
-    Curve --> CurveData : CurveDatas
-    ShuntCompensator <|-- LinearShuntCompensator
-    IdentifiedObject <|-- ConnectivityNode
-    ConnectivityNode --> BoundaryPoint : BoundaryPoint
-    ConnectivityNode --> ConnectivityNodeContainer : ConnectivityNodeContainer
-    ConnectivityNode --> Terminal : Terminals
-    PowerSystemResource <|-- HydroPowerPlant
-    HydroPowerPlant --> HydroGeneratingUnit : HydroGeneratingUnits
-    HydroPowerPlant --> HydroPump : HydroPumps
-    ConductingEquipment <|-- Connector
-    PowerSystemResource <|-- WindPowerPlant
-    WindPowerPlant --> WindGeneratingUnit : WindGeneratingUnits
-    RegulatingCondEq <|-- ExternalNetworkInjection
-    ConnectivityNodeContainer <|-- EquipmentContainer
-    EquipmentContainer --> Equipment : Equipments
-    Curve <|-- ReactiveCapabilityCurve
-    ReactiveCapabilityCurve --> EquivalentInjection : EquivalentInjection
-    ReactiveCapabilityCurve --> SynchronousMachine : InitiallyUsedBySynchronousMachines
-    Switch <|-- Disconnector
-    DCConductingEquipment <|-- DCLineSegment
-    ConductingEquipment <|-- SeriesCompensator
-    IdentifiedObject <|-- OperationalLimitType
-    OperationalLimitType --> OperationalLimit : OperationalLimit
-    ConductingEquipment <|-- EarthFaultCompensator
-    GeneratingUnit <|-- SolarGeneratingUnit
-    SolarGeneratingUnit --> SolarPowerPlant : SolarPowerPlant
-    SeasonDayTypeSchedule <|-- RegulationSchedule
-    RegulationSchedule --> RegulatingControl : RegulatingControl
     IdentifiedObject <|-- GeographicalRegion
     GeographicalRegion --> SubGeographicalRegion : Regions
-    DCConductingEquipment <|-- DCBusbar
-    IdentifiedObject <|-- DayType
-    DayType --> SeasonDayTypeSchedule : SeasonDayTypeSchedules
-    EquipmentContainer <|-- Bay
-    Bay --> VoltageLevel : VoltageLevel
-    TapChangerTablePoint <|-- RatioTapChangerTablePoint
-    RatioTapChangerTablePoint --> RatioTapChangerTable : RatioTapChangerTable
-    ConductingEquipment <|-- Clamp
-    Clamp --> ACLineSegment : ACLineSegment
-    Connector <|-- Junction
-    RegulatingCondEq <|-- RotatingMachine
-    RotatingMachine --> GeneratingUnit : GeneratingUnit
-    RotatingMachine --> HydroPump : HydroPump
-    CurveData --> Curve : Curve
-    IdentifiedObject <|-- OperationalLimit
-    OperationalLimit --> OperationalLimitSet : OperationalLimitSet
-    OperationalLimit --> OperationalLimitType : OperationalLimitType
-    ConductingEquipment <|-- Switch
-    Switch --> SwitchSchedule : SwitchSchedules
-    ShuntCompensator <|-- NonlinearShuntCompensator
-    NonlinearShuntCompensator --> NonlinearShuntCompensatorPoint : NonlinearShuntCompensatorPoints
+    TapChanger <|-- PhaseTapChanger
+    PhaseTapChanger --> TransformerEnd : TransformerEnd
     PowerElectronicsUnit <|-- BatteryUnit
-    NonlinearShuntCompensatorPoint --> NonlinearShuntCompensator : NonlinearShuntCompensator
-    PhaseTapChangerNonLinear <|-- PhaseTapChangerAsymmetrical
-    ConductingEquipment <|-- Ground
-    EarthFaultCompensator <|-- GroundingImpedance
+    RegulatingControl <|-- TapChangerControl
+    TapChangerControl --> TapChanger : TapChanger
+    IdentifiedObject <|-- LoadGroup
+    LoadGroup --> SubLoadArea : SubLoadArea
+    DCSwitch <|-- DCDisconnector
+    AuxiliaryEquipment <|-- WaveTrap
     OperationalLimit <|-- CurrentLimit
-    EquipmentContainer <|-- Substation
-    Substation --> DCConverterUnit : DCConverterUnit
-    Substation --> SubGeographicalRegion : Region
-    Substation --> VoltageLevel : VoltageLevels
-    DCSwitch <|-- DCBreaker
-    BasicIntervalSchedule <|-- RegularIntervalSchedule
-    RegularIntervalSchedule --> RegularTimePoint : TimePoints
-    OperationalLimit <|-- VoltageLimit
+    PowerSystemResource <|-- CAESPlant
+    CAESPlant --> ThermalGeneratingUnit : ThermalGeneratingUnit
+    DCEquipmentContainer <|-- DCLine
+    DCLine --> SubGeographicalRegion : Region
+    Sensor <|-- PotentialTransformer
+    EnergyConnection <|-- EnergySource
+    EnergySource --> EnergySchedulingType : EnergySchedulingType
     IdentifiedObject <|-- SubGeographicalRegion
     SubGeographicalRegion --> DCLine : DCLines
     SubGeographicalRegion --> Line : Lines
     SubGeographicalRegion --> GeographicalRegion : Region
     SubGeographicalRegion --> Substation : Substations
-    IdentifiedObject <|-- BasicIntervalSchedule
-    Switch <|-- GroundDisconnector
-    Equipment <|-- ConductingEquipment
-    ConductingEquipment --> BaseVoltage : BaseVoltage
-    ConductingEquipment --> Terminal : Terminals
+    RegulatingCondEq <|-- ShuntCompensator
+    EquivalentEquipment <|-- EquivalentBranch
+    EnergyConnection <|-- EnergyConsumer
+    EnergyConsumer --> LoadResponseCharacteristic : LoadResponse
+    IdentifiedObject <|-- OperationalLimit
+    OperationalLimit --> OperationalLimitSet : OperationalLimitSet
+    OperationalLimit --> OperationalLimitType : OperationalLimitType
+    Switch <|-- Jumper
+    RegulatingCondEq <|-- PowerElectronicsConnection
+    PowerElectronicsConnection --> PowerElectronicsUnit : PowerElectronicsUnit
+    DCConductingEquipment <|-- DCLineSegment
+    ConductingEquipment <|-- Clamp
+    Clamp --> ACLineSegment : ACLineSegment
+    IdentifiedObject <|-- TransformerEnd
+    TransformerEnd --> BaseVoltage : BaseVoltage
+    TransformerEnd --> PhaseTapChanger : PhaseTapChanger
+    TransformerEnd --> RatioTapChanger : RatioTapChanger
+    TransformerEnd --> Terminal : Terminal
+    IdentifiedObject <|-- EnergyArea
+    EnergyArea --> ControlArea : ControlArea
+    PowerSystemResource <|-- RegulatingControl
+    RegulatingControl --> RegulatingCondEq : RegulatingCondEq
+    RegulatingControl --> RegulationSchedule : RegulationSchedule
+    RegulatingControl --> Terminal : Terminal
+    ConductingEquipment <|-- PowerTransformer
+    PowerTransformer --> PowerTransformerEnd : PowerTransformerEnd
+    ProtectedSwitch <|-- Breaker
+    Conductor <|-- ACLineSegment
+    ACLineSegment --> Clamp : Clamp
+    ACLineSegment --> Cut : Cut
+    Curve <|-- ReactiveCapabilityCurve
+    ReactiveCapabilityCurve --> EquivalentInjection : EquivalentInjection
+    ReactiveCapabilityCurve --> SynchronousMachine : InitiallyUsedBySynchronousMachines
+    IdentifiedObject <|-- PhaseTapChangerTable
+    PhaseTapChangerTable --> PhaseTapChangerTablePoint : PhaseTapChangerTablePoint
+    PhaseTapChangerTable --> PhaseTapChangerTabular : PhaseTapChangerTabular
+    OperationalLimit <|-- VoltageLimit
+    IdentifiedObject <|-- BaseVoltage
+    BaseVoltage --> ConductingEquipment : ConductingEquipment
+    BaseVoltage --> TransformerEnd : TransformerEnds
+    BaseVoltage --> VoltageLevel : VoltageLevel
+    Curve <|-- VsCapabilityCurve
+    VsCapabilityCurve --> VsConverter : VsConverterDCSides
+    SeasonDayTypeSchedule <|-- ConformLoadSchedule
+    ConformLoadSchedule --> ConformLoadGroup : ConformLoadGroup
     EnergyArea <|-- LoadArea
     LoadArea --> SubLoadArea : SubLoadAreas
-    DCConductingEquipment <|-- DCGround
+    RegulatingCondEq <|-- StaticVarCompensator
+    IdentifiedObject <|-- OperationalLimitType
+    OperationalLimitType --> OperationalLimit : OperationalLimit
+    DCEquipmentContainer <|-- DCConverterUnit
+    DCConverterUnit --> Substation : Substation
+    Curve <|-- GrossToNetActivePowerCurve
+    GrossToNetActivePowerCurve --> GeneratingUnit : GeneratingUnit
+    PowerSystemResource <|-- HydroPowerPlant
+    HydroPowerPlant --> HydroGeneratingUnit : HydroGeneratingUnits
+    HydroPowerPlant --> HydroPump : HydroPumps
+    IdentifiedObject <|-- ControlAreaGeneratingUnit
+    ControlAreaGeneratingUnit --> ControlArea : ControlArea
+    ControlAreaGeneratingUnit --> GeneratingUnit : GeneratingUnit
+    GeneratingUnit <|-- HydroGeneratingUnit
+    HydroGeneratingUnit --> HydroPowerPlant : HydroPowerPlant
+    EnergyConsumer <|-- ConformLoad
+    ConformLoad --> ConformLoadGroup : LoadGroup
+    ConductingEquipment <|-- Switch
+    Switch --> SwitchSchedule : SwitchSchedules
+    Equipment <|-- DCConductingEquipment
+    DCConductingEquipment --> DCTerminal : DCTerminals
+    CurveData --> Curve : Curve
+    ConductingEquipment <|-- Connector
+    EnergyConnection <|-- RegulatingCondEq
+    RegulatingCondEq --> RegulatingControl : RegulatingControl
+    GeneratingUnit <|-- WindGeneratingUnit
+    WindGeneratingUnit --> WindPowerPlant : WindPowerPlant
+    TransformerEnd <|-- PowerTransformerEnd
+    PowerTransformerEnd --> PowerTransformer : PowerTransformer
+    IdentifiedObject <|-- ReportingGroup
+    ReportingGroup --> BusNameMarker : BusNameMarker
+    AuxiliaryEquipment <|-- FaultIndicator
+    PowerSystemResource <|-- WindPowerPlant
+    WindPowerPlant --> WindGeneratingUnit : WindGeneratingUnits
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

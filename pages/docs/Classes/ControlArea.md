@@ -5,8 +5,23 @@ A control area is a grouping of generating units and/or loads and a cutset of ti
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemResource <|-- ControlArea
+    PowerSystemResource : +Control Controls[0..n]
+    PowerSystemResource : +Location Location[0..1]
+    PowerSystemResource : +Measurement Measurements[0..n]
+    click PowerSystemResource href "PowerSystemResource"
+    ControlArea : +ControlAreaGeneratingUnit ControlAreaGeneratingUnit[0..n]
+    ControlArea : +EnergyArea EnergyArea[1]
+    ControlArea : +TieFlow TieFlow[0..n]
+    ControlArea : +Float netInterchange[1..1]
+    ControlArea : +Float pTolerance[0..1]
+    ControlArea : +ControlAreaTypeKind type[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

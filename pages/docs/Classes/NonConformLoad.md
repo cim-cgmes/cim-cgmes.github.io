@@ -5,8 +5,23 @@ NonConformLoad represents loads that do not follow a daily load change pattern a
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EnergyConsumer <|-- NonConformLoad
+    EnergyConsumer : +LoadDynamics LoadDynamics[0..1]
+    EnergyConsumer : +LoadResponseCharacteristic LoadResponse[0..1]
+    EnergyConsumer : +Float p[1..1]
+    EnergyConsumer : +Float pfixed[0..1]
+    EnergyConsumer : +Float pfixedPct[0..1]
+    EnergyConsumer : +Float q[1..1]
+    EnergyConsumer : +Float qfixed[0..1]
+    EnergyConsumer : +Float qfixedPct[0..1]
+    click EnergyConsumer href "EnergyConsumer"
+    NonConformLoad : +NonConformLoadGroup LoadGroup[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

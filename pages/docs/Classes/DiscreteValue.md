@@ -5,8 +5,20 @@ DiscreteValue represents a discrete MeasurementValue.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     MeasurementValue <|-- DiscreteValue
+    MeasurementValue : +MeasurementValueQuality MeasurementValueQuality[0..1]
+    MeasurementValue : +MeasurementValueSource MeasurementValueSource[1]
+    MeasurementValue : +Float sensorAccuracy[0..1]
+    MeasurementValue : +DateTime timeStamp[0..1]
+    click MeasurementValue href "MeasurementValue"
+    DiscreteValue : +Command Command[0..1]
+    DiscreteValue : +Discrete Discrete[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

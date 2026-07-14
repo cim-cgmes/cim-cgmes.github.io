@@ -5,8 +5,43 @@ IEEE hydro turbine governor model represents plants with straightforward penstoc
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydroIEEE2
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydroIEEE2 : +Float aturb[1..1]
+    GovHydroIEEE2 : +Float bturb[1..1]
+    GovHydroIEEE2 : +Float gv1[1..1]
+    GovHydroIEEE2 : +Float gv2[1..1]
+    GovHydroIEEE2 : +Float gv3[1..1]
+    GovHydroIEEE2 : +Float gv4[1..1]
+    GovHydroIEEE2 : +Float gv5[1..1]
+    GovHydroIEEE2 : +Float gv6[1..1]
+    GovHydroIEEE2 : +Float kturb[1..1]
+    GovHydroIEEE2 : +Float mwbase[1..1]
+    GovHydroIEEE2 : +Float pgv1[1..1]
+    GovHydroIEEE2 : +Float pgv2[1..1]
+    GovHydroIEEE2 : +Float pgv3[1..1]
+    GovHydroIEEE2 : +Float pgv4[1..1]
+    GovHydroIEEE2 : +Float pgv5[1..1]
+    GovHydroIEEE2 : +Float pgv6[1..1]
+    GovHydroIEEE2 : +Float pmax[1..1]
+    GovHydroIEEE2 : +Float pmin[1..1]
+    GovHydroIEEE2 : +Float rperm[1..1]
+    GovHydroIEEE2 : +Float rtemp[1..1]
+    GovHydroIEEE2 : +Float tg[1..1]
+    GovHydroIEEE2 : +Float tp[1..1]
+    GovHydroIEEE2 : +Float tr[1..1]
+    GovHydroIEEE2 : +Float tw[1..1]
+    GovHydroIEEE2 : +Float uc[1..1]
+    GovHydroIEEE2 : +Float uo[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

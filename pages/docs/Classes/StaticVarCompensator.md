@@ -5,8 +5,23 @@ A facility for providing variable and controllable shunt reactive power. The SVC
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     RegulatingCondEq <|-- StaticVarCompensator
+    RegulatingCondEq : +RegulatingControl RegulatingControl[0..1]
+    RegulatingCondEq : +Boolean controlEnabled[1..1]
+    click RegulatingCondEq href "RegulatingCondEq"
+    StaticVarCompensator : +StaticVarCompensatorDynamics StaticVarCompensatorDynamics[0..1]
+    StaticVarCompensator : +Float capacitiveRating[1..1]
+    StaticVarCompensator : +Float inductiveRating[1..1]
+    StaticVarCompensator : +Float q[1..1]
+    StaticVarCompensator : +SVCControlMode sVCControlMode[0..1]
+    StaticVarCompensator : +Float slope[1..1]
+    StaticVarCompensator : +Float voltageSetPoint[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

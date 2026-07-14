@@ -5,8 +5,34 @@ IEEE type DEC1A discontinuous excitation control model that boosts generator exc
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DiscontinuousExcitationControlDynamics <|-- DiscExcContIEEEDEC1A
+    DiscontinuousExcitationControlDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    DiscontinuousExcitationControlDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click DiscontinuousExcitationControlDynamics href "DiscontinuousExcitationControlDynamics"
+    DiscExcContIEEEDEC1A : +Float esc[1..1]
+    DiscExcContIEEEDEC1A : +Float kan[1..1]
+    DiscExcContIEEEDEC1A : +Float ketl[1..1]
+    DiscExcContIEEEDEC1A : +Float tan[1..1]
+    DiscExcContIEEEDEC1A : +Float td[1..1]
+    DiscExcContIEEEDEC1A : +Float tl1[1..1]
+    DiscExcContIEEEDEC1A : +Float tl2[1..1]
+    DiscExcContIEEEDEC1A : +Float tw5[1..1]
+    DiscExcContIEEEDEC1A : +Float val[1..1]
+    DiscExcContIEEEDEC1A : +Float vanmax[1..1]
+    DiscExcContIEEEDEC1A : +Float vomax[1..1]
+    DiscExcContIEEEDEC1A : +Float vomin[1..1]
+    DiscExcContIEEEDEC1A : +Float vsmax[1..1]
+    DiscExcContIEEEDEC1A : +Float vsmin[1..1]
+    DiscExcContIEEEDEC1A : +Float vtc[1..1]
+    DiscExcContIEEEDEC1A : +Float vtlmt[1..1]
+    DiscExcContIEEEDEC1A : +Float vtm[1..1]
+    DiscExcContIEEEDEC1A : +Float vtn[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

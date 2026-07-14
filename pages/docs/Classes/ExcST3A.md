@@ -5,8 +5,42 @@ Modified IEEE ST3A static excitation system with added speed multiplier.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcST3A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcST3A : +Float efdmax[1..1]
+    ExcST3A : +Float kc[1..1]
+    ExcST3A : +Float kg[1..1]
+    ExcST3A : +Float ki[1..1]
+    ExcST3A : +Float kj[1..1]
+    ExcST3A : +Float km[1..1]
+    ExcST3A : +Float kp[1..1]
+    ExcST3A : +Float ks[1..1]
+    ExcST3A : +Float ks1[1..1]
+    ExcST3A : +Float tb[1..1]
+    ExcST3A : +Float tc[1..1]
+    ExcST3A : +Float thetap[1..1]
+    ExcST3A : +Float tm[1..1]
+    ExcST3A : +Float vbmax[1..1]
+    ExcST3A : +Float vgmax[1..1]
+    ExcST3A : +Float vimax[1..1]
+    ExcST3A : +Float vimin[1..1]
+    ExcST3A : +Float vrmax[1..1]
+    ExcST3A : +Float vrmin[1..1]
+    ExcST3A : +Float xl[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

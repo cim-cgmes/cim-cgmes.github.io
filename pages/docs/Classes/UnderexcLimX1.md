@@ -5,8 +5,22 @@ Allis-Chalmers minimum excitation limiter.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     UnderexcitationLimiterDynamics <|-- UnderexcLimX1
+    UnderexcitationLimiterDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    UnderexcitationLimiterDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click UnderexcitationLimiterDynamics href "UnderexcitationLimiterDynamics"
+    UnderexcLimX1 : +Float k[1..1]
+    UnderexcLimX1 : +Float kf2[1..1]
+    UnderexcLimX1 : +Float km[1..1]
+    UnderexcLimX1 : +Float melmax[1..1]
+    UnderexcLimX1 : +Float tf2[1..1]
+    UnderexcLimX1 : +Float tm[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

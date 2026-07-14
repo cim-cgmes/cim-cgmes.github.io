@@ -5,8 +5,40 @@ IEEE 421.5-2005 type AC1A model. The model represents the field-controlled alter
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEAC1A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEAC1A : +Float ka[1..1]
+    ExcIEEEAC1A : +Float kc[1..1]
+    ExcIEEEAC1A : +Float kd[1..1]
+    ExcIEEEAC1A : +Float ke[1..1]
+    ExcIEEEAC1A : +Float kf[1..1]
+    ExcIEEEAC1A : +Float seve1[1..1]
+    ExcIEEEAC1A : +Float seve2[1..1]
+    ExcIEEEAC1A : +Float ta[1..1]
+    ExcIEEEAC1A : +Float tb[1..1]
+    ExcIEEEAC1A : +Float tc[1..1]
+    ExcIEEEAC1A : +Float te[1..1]
+    ExcIEEEAC1A : +Float tf[1..1]
+    ExcIEEEAC1A : +Float vamax[1..1]
+    ExcIEEEAC1A : +Float vamin[1..1]
+    ExcIEEEAC1A : +Float ve1[1..1]
+    ExcIEEEAC1A : +Float ve2[1..1]
+    ExcIEEEAC1A : +Float vrmax[1..1]
+    ExcIEEEAC1A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

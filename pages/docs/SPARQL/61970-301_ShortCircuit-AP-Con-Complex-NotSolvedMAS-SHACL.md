@@ -12,6 +12,7 @@
 ### sc301n:MutualCoupling-terminalsAssignment
 
 **Path:** `rdf:type`  
+**Name:** C:301:SC:MutualCoupling:terminalsAssignment  
 Normally MutualCoupling would only be used for terminals of AC line segments.  The first and second terminals of a mutual coupling should point to different AC line segments.
 
 **Severity:** sh:Violation

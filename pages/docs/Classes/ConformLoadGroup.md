@@ -5,8 +5,17 @@ A group of loads conforming to an allocation pattern.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     LoadGroup <|-- ConformLoadGroup
+    LoadGroup : +SubLoadArea SubLoadArea[1]
+    click LoadGroup href "LoadGroup"
+    ConformLoadGroup : +ConformLoadSchedule ConformLoadSchedules[0..n]
+    ConformLoadGroup : +ConformLoad EnergyConsumers[1..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

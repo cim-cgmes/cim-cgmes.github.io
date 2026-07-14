@@ -12,6 +12,7 @@
 ### tp456cpe:DCTopologicalNode.DCEquipmentContainer-valueType
 
 **Path:** `cim:DCTopologicalNode.DCEquipmentContainer / rdf:type`  
+**Name:** DCTopologicalNode.DCEquipmentContainer-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -38,6 +39,7 @@ This constraint validates the value type of the association at the used directio
 ### tp456cpe:TopologicalNode.BaseVoltage-valueType
 
 **Path:** `cim:TopologicalNode.BaseVoltage / rdf:type`  
+**Name:** TopologicalNode.BaseVoltage-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -64,6 +66,7 @@ This constraint validates the value type of the association at the used directio
 ### tp456cpe:TopologicalNode.ConnectivityNodeContainer-valueType
 
 **Path:** `cim:TopologicalNode.ConnectivityNodeContainer / rdf:type`  
+**Name:** TopologicalNode.ConnectivityNodeContainer-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation

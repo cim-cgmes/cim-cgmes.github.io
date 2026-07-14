@@ -5,8 +5,19 @@ Wind type 3 or type 4 function block whose dynamic behaviour is described by a u
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     WindTurbineType3or4Dynamics <|-- WindType3or4UserDefined
+    WindTurbineType3or4Dynamics : +PowerElectronicsConnection PowerElectronicsConnection[1]
+    WindTurbineType3or4Dynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    WindTurbineType3or4Dynamics : +WindPlantDynamics WindPlantDynamics[0..1]
+    click WindTurbineType3or4Dynamics href "WindTurbineType3or4Dynamics"
+    WindType3or4UserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    WindType3or4UserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

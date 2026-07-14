@@ -5,8 +5,18 @@ Indivisible operative unit comprising all equipment between the point of common 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DCEquipmentContainer <|-- DCConverterUnit
+    DCEquipmentContainer : +DCNode DCNodes[0..n]
+    DCEquipmentContainer : +DCTopologicalNode DCTopologicalNode[0..n]
+    click DCEquipmentContainer href "DCEquipmentContainer"
+    DCConverterUnit : +Substation Substation[0..1]
+    DCConverterUnit : +DCConverterOperatingModeKind operationMode[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

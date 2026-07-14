@@ -5,11 +5,28 @@ Parent class supporting relationships to IEC wind turbines type 1 and type 2 inc
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     WindTurbineType1or2Dynamics <|-- WindTurbineType1or2IEC
+    WindTurbineType1or2Dynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[1]
+    WindTurbineType1or2Dynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click WindTurbineType1or2Dynamics href "WindTurbineType1or2Dynamics"
     WindTurbineType1or2IEC <|-- WindGenTurbineType1aIEC
+    WindGenTurbineType1aIEC : +WindAeroConstIEC WindAeroConstIEC[1]
+    click WindGenTurbineType1aIEC href "WindGenTurbineType1aIEC"
     WindTurbineType1or2IEC <|-- WindGenTurbineType1bIEC
+    WindGenTurbineType1bIEC : +WindPitchContPowerIEC WindPitchContPowerIEC[1]
+    click WindGenTurbineType1bIEC href "WindGenTurbineType1bIEC"
     WindTurbineType1or2IEC <|-- WindGenTurbineType2IEC
+    WindGenTurbineType2IEC : +WindContRotorRIEC WindContRotorRIEC[1]
+    WindGenTurbineType2IEC : +WindPitchContPowerIEC WindPitchContPowerIEC[1]
+    click WindGenTurbineType2IEC href "WindGenTurbineType2IEC"
+    WindTurbineType1or2IEC : +WindMechIEC WindMechIEC[1]
+    WindTurbineType1or2IEC : +WindProtectionIEC WindProtectionIEC[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

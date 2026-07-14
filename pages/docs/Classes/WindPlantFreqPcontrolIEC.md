@@ -5,8 +5,37 @@ Frequency and active power controller model. Reference: IEC 61400-27-1:2015, Ann
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindPlantFreqPcontrolIEC
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindPlantFreqPcontrolIEC : +WindDynamicsLookupTable WindDynamicsLookupTable[1..n]
+    WindPlantFreqPcontrolIEC : +WindPlantIEC WindPlantIEC[1]
+    WindPlantFreqPcontrolIEC : +Float dprefmax[1..1]
+    WindPlantFreqPcontrolIEC : +Float dprefmin[1..1]
+    WindPlantFreqPcontrolIEC : +Float dpwprefmax[1..1]
+    WindPlantFreqPcontrolIEC : +Float dpwprefmin[1..1]
+    WindPlantFreqPcontrolIEC : +Float kiwpp[1..1]
+    WindPlantFreqPcontrolIEC : +Float kiwppmax[1..1]
+    WindPlantFreqPcontrolIEC : +Float kiwppmin[1..1]
+    WindPlantFreqPcontrolIEC : +Float kpwpp[1..1]
+    WindPlantFreqPcontrolIEC : +Float kwppref[1..1]
+    WindPlantFreqPcontrolIEC : +Float prefmax[1..1]
+    WindPlantFreqPcontrolIEC : +Float prefmin[1..1]
+    WindPlantFreqPcontrolIEC : +Float tpft[1..1]
+    WindPlantFreqPcontrolIEC : +Float tpfv[1..1]
+    WindPlantFreqPcontrolIEC : +Float twpffiltp[1..1]
+    WindPlantFreqPcontrolIEC : +Float twppfiltp[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

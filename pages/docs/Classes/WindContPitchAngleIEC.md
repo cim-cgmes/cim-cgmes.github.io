@@ -5,8 +5,31 @@ Pitch angle control model. Reference: IEC 61400-27-1:2015, 5.6.5.2.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindContPitchAngleIEC
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindContPitchAngleIEC : +WindTurbineType3IEC WindTurbineType3IEC[1]
+    WindContPitchAngleIEC : +Float dthetamax[1..1]
+    WindContPitchAngleIEC : +Float dthetamin[1..1]
+    WindContPitchAngleIEC : +Float kic[1..1]
+    WindContPitchAngleIEC : +Float kiomega[1..1]
+    WindContPitchAngleIEC : +Float kpc[1..1]
+    WindContPitchAngleIEC : +Float kpomega[1..1]
+    WindContPitchAngleIEC : +Float kpx[1..1]
+    WindContPitchAngleIEC : +Float thetamax[1..1]
+    WindContPitchAngleIEC : +Float thetamin[1..1]
+    WindContPitchAngleIEC : +Float ttheta[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

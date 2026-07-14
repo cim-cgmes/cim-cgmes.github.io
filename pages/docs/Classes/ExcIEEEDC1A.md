@@ -5,8 +5,38 @@ IEEE 421.5-2005 type DC1A model. This model represents field-controlled DC commu
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEDC1A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEDC1A : +Float efd1[1..1]
+    ExcIEEEDC1A : +Float efd2[1..1]
+    ExcIEEEDC1A : +Boolean exclim[1..1]
+    ExcIEEEDC1A : +Float ka[1..1]
+    ExcIEEEDC1A : +Float ke[1..1]
+    ExcIEEEDC1A : +Float kf[1..1]
+    ExcIEEEDC1A : +Float seefd1[1..1]
+    ExcIEEEDC1A : +Float seefd2[1..1]
+    ExcIEEEDC1A : +Float ta[1..1]
+    ExcIEEEDC1A : +Float tb[1..1]
+    ExcIEEEDC1A : +Float tc[1..1]
+    ExcIEEEDC1A : +Float te[1..1]
+    ExcIEEEDC1A : +Float tf[1..1]
+    ExcIEEEDC1A : +Boolean uelin[1..1]
+    ExcIEEEDC1A : +Float vrmax[1..1]
+    ExcIEEEDC1A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

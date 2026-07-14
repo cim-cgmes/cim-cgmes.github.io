@@ -5,10 +5,30 @@ Parent class supporting relationships to wind turbines type 3 and type 4 and win
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DynamicsFunctionBlock <|-- WindTurbineType3or4Dynamics
-    WindTurbineType3or4Dynamics <|-- WindTurbineType3or4IEC
+    DynamicsFunctionBlock : +Boolean enabled[1..1]
+    click DynamicsFunctionBlock href "DynamicsFunctionBlock"
     WindTurbineType3or4Dynamics <|-- WindType3or4UserDefined
+    WindType3or4UserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    WindType3or4UserDefined : +Boolean proprietary[1..1]
+    click WindType3or4UserDefined href "WindType3or4UserDefined"
+    WindTurbineType3or4Dynamics <|-- WindTurbineType3or4IEC
+    WindTurbineType3or4IEC : +WindContQIEC WIndContQIEC[1]
+    WindTurbineType3or4IEC : +WindContCurrLimIEC WindContCurrLimIEC[1]
+    WindTurbineType3or4IEC : +WindContQLimIEC WindContQLimIEC[0..1]
+    WindTurbineType3or4IEC : +WindContQPQULimIEC WindContQPQULimIEC[0..1]
+    WindTurbineType3or4IEC : +WindProtectionIEC WindProtectionIEC[1]
+    WindTurbineType3or4IEC : +WindRefFrameRotIEC WindRefFrameRotIEC[1]
+    click WindTurbineType3or4IEC href "WindTurbineType3or4IEC"
+    WindTurbineType3or4Dynamics : +PowerElectronicsConnection PowerElectronicsConnection[1]
+    WindTurbineType3or4Dynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    WindTurbineType3or4Dynamics : +WindPlantDynamics WindPlantDynamics[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

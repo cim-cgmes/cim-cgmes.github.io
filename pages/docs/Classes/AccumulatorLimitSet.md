@@ -5,8 +5,17 @@ An AccumulatorLimitSet specifies a set of Limits that are associated with an Acc
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     LimitSet <|-- AccumulatorLimitSet
+    LimitSet : +Boolean isPercentageLimits[0..1]
+    click LimitSet href "LimitSet"
+    AccumulatorLimitSet : +AccumulatorLimit Limits[1..n]
+    AccumulatorLimitSet : +Accumulator Measurements[1..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

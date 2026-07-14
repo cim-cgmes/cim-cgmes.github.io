@@ -5,8 +5,21 @@ The over excitation limiter model is intended to represent the significant featu
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     OverexcitationLimiterDynamics <|-- OverexcLimIEEE
+    OverexcitationLimiterDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    click OverexcitationLimiterDynamics href "OverexcitationLimiterDynamics"
+    OverexcLimIEEE : +Float hyst[1..1]
+    OverexcLimIEEE : +Float ifdlim[1..1]
+    OverexcLimIEEE : +Float ifdmax[1..1]
+    OverexcLimIEEE : +Float itfpu[1..1]
+    OverexcLimIEEE : +Float kcd[1..1]
+    OverexcLimIEEE : +Float kramp[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

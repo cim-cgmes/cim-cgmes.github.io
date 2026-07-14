@@ -5,8 +5,22 @@ Accumulator represents an accumulated (counted) Measurement, e.g. an energy valu
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Measurement <|-- Accumulator
+    Measurement : +PowerSystemResource PowerSystemResource[1..1]
+    Measurement : +ACDCTerminal Terminal[0..1]
+    Measurement : +String measurementType[1..1]
+    Measurement : +PhaseCode phases[0..1]
+    Measurement : +UnitMultiplier unitMultiplier[1..1]
+    Measurement : +UnitSymbol unitSymbol[1..1]
+    click Measurement href "Measurement"
+    Accumulator : +AccumulatorValue AccumulatorValues[0..n]
+    Accumulator : +AccumulatorLimitSet LimitSets[0..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

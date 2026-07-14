@@ -5,8 +5,17 @@ Current source converter (CSC) function block whose dynamic behaviour is describ
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     CSCDynamics <|-- CSCUserDefined
+    CSCDynamics : +CsConverter CSConverter[1]
+    click CSCDynamics href "CSCDynamics"
+    CSCUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    CSCUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

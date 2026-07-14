@@ -5,8 +5,34 @@ Italian excitation system corresponding to IEEE (1968) type 1 model. It represen
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcAVR1
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcAVR1 : +Float e1[1..1]
+    ExcAVR1 : +Float e2[1..1]
+    ExcAVR1 : +Float ka[1..1]
+    ExcAVR1 : +Float kf[1..1]
+    ExcAVR1 : +Float se1[1..1]
+    ExcAVR1 : +Float se2[1..1]
+    ExcAVR1 : +Float ta[1..1]
+    ExcAVR1 : +Float tb[1..1]
+    ExcAVR1 : +Float te[1..1]
+    ExcAVR1 : +Float tf[1..1]
+    ExcAVR1 : +Float vrmn[1..1]
+    ExcAVR1 : +Float vrmx[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,39 @@ WoodwardTM PID hydro governor. [Footnote: Woodward PID hydro governors are an ex
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydroWPID
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydroWPID : +Float d[1..1]
+    GovHydroWPID : +Float gatmax[1..1]
+    GovHydroWPID : +Float gatmin[1..1]
+    GovHydroWPID : +Float gv1[1..1]
+    GovHydroWPID : +Float gv2[1..1]
+    GovHydroWPID : +Float gv3[1..1]
+    GovHydroWPID : +Float kd[1..1]
+    GovHydroWPID : +Float ki[1..1]
+    GovHydroWPID : +Float kp[1..1]
+    GovHydroWPID : +Float mwbase[1..1]
+    GovHydroWPID : +Float pgv1[1..1]
+    GovHydroWPID : +Float pgv2[1..1]
+    GovHydroWPID : +Float pgv3[1..1]
+    GovHydroWPID : +Float pmax[1..1]
+    GovHydroWPID : +Float pmin[1..1]
+    GovHydroWPID : +Float reg[1..1]
+    GovHydroWPID : +Float ta[1..1]
+    GovHydroWPID : +Float tb[1..1]
+    GovHydroWPID : +Float treg[1..1]
+    GovHydroWPID : +Float tw[1..1]
+    GovHydroWPID : +Float velmax[1..1]
+    GovHydroWPID : +Float velmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,48 @@ Simplified GovSteamIEEE1 steam turbine governor with Prmax limit and fast valvin
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovSteamFV3
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovSteamFV3 : +Float gv1[1..1]
+    GovSteamFV3 : +Float gv2[1..1]
+    GovSteamFV3 : +Float gv3[1..1]
+    GovSteamFV3 : +Float gv4[1..1]
+    GovSteamFV3 : +Float gv5[1..1]
+    GovSteamFV3 : +Float gv6[1..1]
+    GovSteamFV3 : +Float k[1..1]
+    GovSteamFV3 : +Float k1[1..1]
+    GovSteamFV3 : +Float k2[1..1]
+    GovSteamFV3 : +Float k3[1..1]
+    GovSteamFV3 : +Float mwbase[1..1]
+    GovSteamFV3 : +Float pgv1[1..1]
+    GovSteamFV3 : +Float pgv2[1..1]
+    GovSteamFV3 : +Float pgv3[1..1]
+    GovSteamFV3 : +Float pgv4[1..1]
+    GovSteamFV3 : +Float pgv5[1..1]
+    GovSteamFV3 : +Float pgv6[1..1]
+    GovSteamFV3 : +Float pmax[1..1]
+    GovSteamFV3 : +Float pmin[1..1]
+    GovSteamFV3 : +Float prmax[1..1]
+    GovSteamFV3 : +Float t1[1..1]
+    GovSteamFV3 : +Float t2[1..1]
+    GovSteamFV3 : +Float t3[1..1]
+    GovSteamFV3 : +Float t4[1..1]
+    GovSteamFV3 : +Float t5[1..1]
+    GovSteamFV3 : +Float t6[1..1]
+    GovSteamFV3 : +Float ta[1..1]
+    GovSteamFV3 : +Float tb[1..1]
+    GovSteamFV3 : +Float tc[1..1]
+    GovSteamFV3 : +Float uc[1..1]
+    GovSteamFV3 : +Float uo[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,30 @@ This class represents the zero sequence line mutual coupling.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- MutualCoupling
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    MutualCoupling : +Terminal First_Terminal[1]
+    MutualCoupling : +Terminal Second_Terminal[1]
+    MutualCoupling : +Float b0ch[1..1]
+    MutualCoupling : +Float distance11[1..1]
+    MutualCoupling : +Float distance12[1..1]
+    MutualCoupling : +Float distance21[1..1]
+    MutualCoupling : +Float distance22[1..1]
+    MutualCoupling : +Float g0ch[1..1]
+    MutualCoupling : +Float r0[1..1]
+    MutualCoupling : +Float x0[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

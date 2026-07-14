@@ -40,6 +40,7 @@
 ### ssh:CsConverter.maxAlpha-valueRangeTypical
 
 **Path:** `cim:CsConverter.maxAlpha`  
+**Name:** C:301:EQ:CsConverter.maxAlpha:valueRangeTypical  
 The attributes minAlpha and maxAlpha define the range of firing angles for rectifier operation between which no discrete tap changer action takes place. The range is typically 10-18 degrees.
 
 **Severity:** sh:Warning
@@ -65,6 +66,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh:CsConverter.maxGamma-valueRangeTypical
 
 **Path:** `cim:CsConverter.maxGamma`  
+**Name:** C:301:EQ:CsConverter.maxGamma:valueRangeTypical  
 The attributes minGamma and maxGamma define the range of extinction angles for inverter operation between which no discrete tap changer action takes place. The range is typically 17-20 degrees.
 
 **Severity:** sh:Warning
@@ -90,6 +92,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh:CsConverter.minAlpha-valueRangeTypical
 
 **Path:** `cim:CsConverter.minAlpha`  
+**Name:** C:301:SV:CsConverter.minAlpha:valueRangeTypical  
 The attributes minAlpha and maxAlpha define the range of firing angles for rectifier operation between which no discrete tap changer action takes place. The range is typically 10-18 degrees.
 
 **Severity:** sh:Warning
@@ -116,6 +119,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh:CsConverter.minGamma-valueRangeTypical
 
 **Path:** `cim:CsConverter.minGamma`  
+**Name:** C:301:SV:CsConverter.minGamma:valueRangeTypical  
 The attributes minGamma and maxGamma define the range of extinction angles for inverter operation between which no discrete tap changer action takes place. The range is typically 17-20 degrees.
 
 **Severity:** sh:Warning
@@ -139,9 +143,36 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ```
   - Messages: `["The value is less than 17 or greater than CsConverter.maxGamma"]`
 
+### ssh:CsConverter.pPccControl-targetValueIdc
+
+**Path:** `cim:CsConverter.pPccControl`  
+**Name:** C:301:SSH:CsPpccControlKind.dcCurrent:targetValueIdc  
+Control is DC current  with target value provided by CsConverter.targetIdc.
+
+**Severity:** sh:Violation
+
+**Constraints:**
+
+- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
+
+```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+			SELECT  $this ?value
+			WHERE {
+        $this $PATH ?value .
+        OPTIONAL {$this cim:CsConverter.targetIdc ?targetidc}.
+        FILTER (!bound(?targetidc) && ?value=cim:CsPpccControlKind.dcCurrent) .        
+			}
+```
+  - Messages: `["CsConverter.targetIdc is not provided for a converter with CsPpccControlKind.dcCurrent."]`
+
 ### ssh:CsConverter.pPccControl-targetValuePpcc
 
 **Path:** `cim:CsConverter.pPccControl`  
+**Name:** C:301:SSH:CsPpccControlKind.activePower:targetValuePpcc  
 Target is provided by ACDCConverter.targetPpcc.
 
 **Severity:** sh:Violation
@@ -167,6 +198,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh:CsConverter.pPccControl-targetValueUdc
 
 **Path:** `cim:CsConverter.pPccControl`  
+**Name:** C:301:SSH:CsPpccControlKind.dcVoltage:targetValueUdc  
 Control is DC voltage  with target value provided by ACDCConverter.targetUdc.
 
 **Severity:** sh:Violation
@@ -189,31 +221,6 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ```
   - Messages: `["ACDCConverter.targetUdc is not provided for a converter with CsPpccControlKind.dcVoltage."]`
 
-### ssh:CsConverter.pPccControl-targetValueIdc
-
-**Path:** `cim:CsConverter.pPccControl`  
-Control is DC current  with target value provided by CsConverter.targetIdc.
-
-**Severity:** sh:Violation
-
-**Constraints:**
-
-- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
-
-```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-
-			SELECT  $this ?value
-			WHERE {
-        $this $PATH ?value .
-        OPTIONAL {$this cim:CsConverter.targetIdc ?targetidc}.
-        FILTER (!bound(?targetidc) && ?value=cim:CsPpccControlKind.dcCurrent) .        
-			}
-```
-  - Messages: `["CsConverter.targetIdc is not provided for a converter with CsPpccControlKind.dcCurrent."]`
-
 ## ssh:CurrentLimit
 
 **Severity:** sh:Violation
@@ -233,6 +240,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh:EnergySource.activePower-consumer
 
 **Path:** `cim:EnergySource.activePower`  
+**Name:** C:301:SSH:EnergySource.activePower:consumer  
 Load sign convention is used, i.e. positive sign means flow out from a node.
 
 **Severity:** sh:Warning
@@ -308,6 +316,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh:RegulatingControl.targetDeadband-applicability
 
 **Path:** `cim:RegulatingControl.discrete`  
+**Name:** C:301:SSH:RegulatingControl.targetDeadband:applicability  
 This is a deadband used with discrete control to avoid excessive update of controls like tap changers and shunt compensator banks while regulating.…If RegulatingControl.discrete is set to false, the RegulatingControl.targetDeadband is to be ignored.
 
 **Severity:** sh:Violation
@@ -349,6 +358,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh:RegulatingControl.targetDeadband-applicability
 
 **Path:** `cim:RegulatingControl.discrete`  
+**Name:** C:301:SSH:RegulatingControl.targetDeadband:applicability  
 This is a deadband used with discrete control to avoid excessive update of controls like tap changers and shunt compensator banks while regulating.…If RegulatingControl.discrete is set to false, the RegulatingControl.targetDeadband is to be ignored.
 
 **Severity:** sh:Violation
@@ -394,9 +404,90 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 **Nested Properties:**
 
+### ssh:VsConverter.pPccControl-targetValueUdc
+
+**Path:** `cim:VsConverter.pPccControl`  
+**Name:** C:301:SSH:VsPpccControlKind.udc:targetValueUdc  
+Control is DC voltage  with target value provided by ACDCConverter.targetUdc.
+
+**Severity:** sh:Violation
+
+**Constraints:**
+
+- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
+
+```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+			SELECT  $this ?value
+			WHERE {
+        $this $PATH ?value .
+        OPTIONAL {$this cim:ACDCConverter.targetUdc ?targetudc}.
+        FILTER (!bound(?targetudc) && ?value=cim:VsPpccControlKind.udc) .        
+			}
+```
+  - Messages: `["ACDCConverter.targetUdc is not provided for a converter with VsPpccControlKind.udc."]`
+
+### ssh:VsConverter.pPccControl-targetValuepPccAndUdcDroop
+
+**Path:** `cim:VsConverter.pPccControl`  
+**Name:** C:301:SSH:VsPpccControlKind.pPccAndUdcDroop:targetValuepPccAndUdcDroop  
+Target values are provided by ACDCConverter.targetPpcc, ACDCConverter.targetUdc and VsConverter.droop.
+
+**Severity:** sh:Violation
+
+**Constraints:**
+
+- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
+
+```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+			SELECT  $this ?value
+			WHERE {
+        $this $PATH ?value .
+        OPTIONAL {$this cim:ACDCConverter.targetPpcc ?targetppcc}.
+        OPTIONAL {$this cim:ACDCConverter.targetUdc ?targetudc}.
+        OPTIONAL {$this cim:VsConverter.droop ?droop}.
+        FILTER ((!bound(?targetppcc) || !bound(?targetudc) || !bound(?droop)) && ?value=cim:VsPpccControlKind.pPccAndUdcDroop) .        
+			}
+```
+  - Messages: `["One or all among ACDCConverter.targetPpcc, ACDCConverter.targetUdc and VsConverter.droop are not provided for a converter with VsPpccControlKind.pPccAndUdcDroop."]`
+
+### ssh:VsConverter.pPccControl-targetValuephasePcc
+
+**Path:** `cim:VsConverter.pPccControl`  
+**Name:** C:301:SSH:VsPpccControlKind.phasePcc:targetValuephasePcc  
+Control is phase at point of common coupling. Target is provided by VsConverter.targetPhasePcc.
+
+**Severity:** sh:Violation
+
+**Constraints:**
+
+- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
+
+```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+			SELECT  $this ?value
+			WHERE {
+        $this $PATH ?value .
+        OPTIONAL {$this cim:VsConverter.targetPhasePcc ?targetphasepcc}.
+        FILTER (!bound(?targetphasepcc) && ?value=cim:VsPpccControlKind.phasePcc) .        
+			}
+```
+  - Messages: `["VsConverter.targetPhasePcc is not provided for a converter with VsPpccControlKind.phasePcc."]`
+
 ### ssh:VsConverter.pPccControl-targetValuepPccAndUdcDroopWithCompensation
 
 **Path:** `cim:VsConverter.pPccControl`  
+**Name:** C:301:SSH:VsPpccControlKind.pPccAndUdcDroopWithCompensation:targetValuepPccAndUdcDroopWithCompensation  
 Targets are provided by ACDCConverter.targetPpcc, ACDCConverter.targetUdc, VsConverter.droop and VsConverter.droopCompensation.
 
 **Severity:** sh:Violation
@@ -422,34 +513,10 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ```
   - Messages: `["One or all among ACDCConverter.targetPpcc, ACDCConverter.targetUdc, VsConverter.droop and VsConverter.droopCompensation are not provided for a converter with VsPpccControlKind.pPccAndUdcDroopWithCompensation."]`
 
-### ssh:VsConverter.pPccControl-targetValuephasePcc
-
-**Path:** `cim:VsConverter.pPccControl`  
-Control is phase at point of common coupling. Target is provided by VsConverter.targetPhasePcc.
-
-**Severity:** sh:Violation
-
-**Constraints:**
-
-- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
-
-```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-
-			SELECT  $this ?value
-			WHERE {
-        $this $PATH ?value .
-        OPTIONAL {$this cim:VsConverter.targetPhasePcc ?targetphasepcc}.
-        FILTER (!bound(?targetphasepcc) && ?value=cim:VsPpccControlKind.phasePcc) .        
-			}
-```
-  - Messages: `["VsConverter.targetPhasePcc is not provided for a converter with VsPpccControlKind.phasePcc."]`
-
 ### ssh:VsConverter.pPccControl-targetValuePpcc
 
 **Path:** `cim:VsConverter.pPccControl`  
+**Name:** C:301:SSH:VsPpccControlKind.pPcc:targetValuePpcc  
 Control is real power at point of common coupling. The target value is provided by ACDCConverter.targetPpcc.
 
 **Severity:** sh:Violation
@@ -472,36 +539,10 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ```
   - Messages: `["ACDCConverter.targetPpcc is not provided for a converter with VsPpccControlKind.pPcc."]`
 
-### ssh:VsConverter.pPccControl-targetValuepPccAndUdcDroop
-
-**Path:** `cim:VsConverter.pPccControl`  
-Target values are provided by ACDCConverter.targetPpcc, ACDCConverter.targetUdc and VsConverter.droop.
-
-**Severity:** sh:Violation
-
-**Constraints:**
-
-- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
-
-```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-
-			SELECT  $this ?value
-			WHERE {
-        $this $PATH ?value .
-        OPTIONAL {$this cim:ACDCConverter.targetPpcc ?targetppcc}.
-        OPTIONAL {$this cim:ACDCConverter.targetUdc ?targetudc}.
-        OPTIONAL {$this cim:VsConverter.droop ?droop}.
-        FILTER ((!bound(?targetppcc) || !bound(?targetudc) || !bound(?droop)) && ?value=cim:VsPpccControlKind.pPccAndUdcDroop) .        
-			}
-```
-  - Messages: `["One or all among ACDCConverter.targetPpcc, ACDCConverter.targetUdc and VsConverter.droop are not provided for a converter with VsPpccControlKind.pPccAndUdcDroop."]`
-
 ### ssh:VsConverter.pPccControl-targetValuepPccAndUdcDroopPilot
 
 **Path:** `cim:VsConverter.pPccControl`  
+**Name:** C:301:SSH:VsPpccControlKind.pPccAndUdcDroopPilot:targetValuepPccAndUdcDroopPilot  
 Targets are provided by ACDCConverter.targetPpcc, ACDCConverter.targetUdc and  VsConverter.droop.
 
 **Severity:** sh:Violation
@@ -526,34 +567,10 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ```
   - Messages: `["One or all among ACDCConverter.targetPpcc, ACDCConverter.targetUdc and  VsConverter.droop are not provided for a converter with VsPpccControlKind.pPccAndUdcDroopPilot."]`
 
-### ssh:VsConverter.pPccControl-targetValueUdc
-
-**Path:** `cim:VsConverter.pPccControl`  
-Control is DC voltage  with target value provided by ACDCConverter.targetUdc.
-
-**Severity:** sh:Violation
-
-**Constraints:**
-
-- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
-
-```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-
-			SELECT  $this ?value
-			WHERE {
-        $this $PATH ?value .
-        OPTIONAL {$this cim:ACDCConverter.targetUdc ?targetudc}.
-        FILTER (!bound(?targetudc) && ?value=cim:VsPpccControlKind.udc) .        
-			}
-```
-  - Messages: `["ACDCConverter.targetUdc is not provided for a converter with VsPpccControlKind.udc."]`
-
 ### ssh:VsConverter.qPccControl-targetValuereactivePcc
 
 **Path:** `cim:VsConverter.qPccControl`  
+**Name:** C:301:SSH:VsQpccControlKind.reactivePcc:targetValuereactivePcc  
 Control is reactive power at point of common coupling. Target is provided by VsConverter.targetQpcc.
 
 **Severity:** sh:Violation
@@ -576,9 +593,36 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ```
   - Messages: `["VsConverter.targetQpcc is not provided for a converter with VsQpccControlKind.reactivePcc."]`
 
+### ssh:VsConverter.qPccControl-targetValuepowerFactorPcc
+
+**Path:** `cim:VsConverter.qPccControl`  
+**Name:** C:301:SSH:VsQpccControlKind.powerFactorPcc:targetValuepowerFactorPcc  
+Control is power factor at point of common coupling. Target is provided by VsConverter.targetPowerFactorPcc.
+
+**Severity:** sh:Violation
+
+**Constraints:**
+
+- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
+
+```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+			SELECT  $this ?value
+			WHERE {
+        $this $PATH ?value .
+        OPTIONAL {$this cim:VsConverter.targetPowerFactorPcc ?targetpowerfactorpcc}.
+        FILTER (!bound(?targetpowerfactorpcc) && ?value=cim:VsQpccControlKind.powerFactorPcc) .        
+			}
+```
+  - Messages: `["VsConverter.targetPowerFactorPcc is not provided for a converter with VsQpccControlKind.powerFactorPcc."]`
+
 ### ssh:VsConverter.qPccControl-targetValuepulseWidthModulation
 
 **Path:** `cim:VsConverter.qPccControl`  
+**Name:** C:301:SSH:VsQpccControlKind.pulseWidthModulation:targetValuepulseWidthModulation  
 No explicit control. Pulse-modulation factor is directly set in magnitude (VsConverter.targetPWMfactor) and phase (VsConverter.targetPhasePcc).
 
 **Severity:** sh:Violation
@@ -605,6 +649,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh:VsConverter.qPccControl-targetValuevoltagePcc
 
 **Path:** `cim:VsConverter.qPccControl`  
+**Name:** C:301:SSH:VsQpccControlKind.voltagePcc:targetValuevoltagePcc  
 Control is voltage at point of common coupling. Target is provided by VsConverter.targetUpcc.
 
 **Severity:** sh:Violation
@@ -626,31 +671,6 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 			}
 ```
   - Messages: `["VsConverter.targetUpcc is not provided for a converter with VsQpccControlKind.voltagePcc."]`
-
-### ssh:VsConverter.qPccControl-targetValuepowerFactorPcc
-
-**Path:** `cim:VsConverter.qPccControl`  
-Control is power factor at point of common coupling. Target is provided by VsConverter.targetPowerFactorPcc.
-
-**Severity:** sh:Violation
-
-**Constraints:**
-
-- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
-
-```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-
-			SELECT  $this ?value
-			WHERE {
-        $this $PATH ?value .
-        OPTIONAL {$this cim:VsConverter.targetPowerFactorPcc ?targetpowerfactorpcc}.
-        FILTER (!bound(?targetpowerfactorpcc) && ?value=cim:VsQpccControlKind.powerFactorPcc) .        
-			}
-```
-  - Messages: `["VsConverter.targetPowerFactorPcc is not provided for a converter with VsQpccControlKind.powerFactorPcc."]`
 
 ## ssh:WindGeneratingUnit
 

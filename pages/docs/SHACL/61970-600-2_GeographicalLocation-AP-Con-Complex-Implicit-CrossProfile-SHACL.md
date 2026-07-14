@@ -12,6 +12,7 @@
 ### gl13cpi:Location.PowerSystemResources-valueType
 
 **Path:** `cim:Location.PowerSystemResources`  
+**Name:** Location.PowerSystemResources-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation

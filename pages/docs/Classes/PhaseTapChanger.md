@@ -5,11 +5,39 @@ A transformer phase shifting tap model that controls the phase angle difference 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TapChanger <|-- PhaseTapChanger
+    TapChanger : +SvTapStep SvTapStep[0..1]
+    TapChanger : +TapChangerControl TapChangerControl[0..1]
+    TapChanger : +TapSchedule TapSchedules[0..n]
+    TapChanger : +Boolean controlEnabled[1..1]
+    TapChanger : +Integer highStep[1..1]
+    TapChanger : +Integer lowStep[1..1]
+    TapChanger : +Boolean ltcFlag[1..1]
+    TapChanger : +Integer neutralStep[1..1]
+    TapChanger : +Float neutralU[1..1]
+    TapChanger : +Integer normalStep[1..1]
+    TapChanger : +Float step[1..1]
+    click TapChanger href "TapChanger"
     PhaseTapChanger <|-- PhaseTapChangerLinear
-    PhaseTapChanger <|-- PhaseTapChangerTabular
+    PhaseTapChangerLinear : +Float stepPhaseShiftIncrement[1..1]
+    PhaseTapChangerLinear : +Float xMax[1..1]
+    PhaseTapChangerLinear : +Float xMin[1..1]
+    click PhaseTapChangerLinear href "PhaseTapChangerLinear"
     PhaseTapChanger <|-- PhaseTapChangerNonLinear
+    PhaseTapChangerNonLinear : +Float voltageStepIncrement[1..1]
+    PhaseTapChangerNonLinear : +Float xMax[1..1]
+    PhaseTapChangerNonLinear : +Float xMin[1..1]
+    click PhaseTapChangerNonLinear href "PhaseTapChangerNonLinear"
+    PhaseTapChanger <|-- PhaseTapChangerTabular
+    PhaseTapChangerTabular : +PhaseTapChangerTable PhaseTapChangerTable[1]
+    click PhaseTapChangerTabular href "PhaseTapChangerTabular"
+    PhaseTapChanger : +TransformerEnd TransformerEnd[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

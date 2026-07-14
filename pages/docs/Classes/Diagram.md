@@ -5,8 +5,27 @@ The diagram being exchanged. The coordinate system is a standard Cartesian coord
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- Diagram
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    Diagram : +DiagramObject DiagramElements[0..n]
+    Diagram : +DiagramStyle DiagramStyle[0..1]
+    Diagram : +OrientationKind orientation[1..1]
+    Diagram : +Float x1InitialView[0..1]
+    Diagram : +Float x2InitialView[0..1]
+    Diagram : +Float y1InitialView[0..1]
+    Diagram : +Float y2InitialView[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

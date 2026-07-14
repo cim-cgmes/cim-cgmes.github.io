@@ -3,14 +3,19 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    RegulatingCondEq <|-- StaticVarCompensator
-    RegulatingCondEq <|-- PowerElectronicsConnection
-    EnergyConnection <|-- RegulatingCondEq
-    EnergyConnection <|-- EnergyConsumer
+    RegulatingCondEq <|-- RotatingMachine
     RotatingMachine <|-- AsynchronousMachine
     RotatingMachine <|-- SynchronousMachine
-    RegulatingCondEq <|-- RotatingMachine
+    EnergyConnection <|-- EnergyConsumer
+    RegulatingCondEq <|-- PowerElectronicsConnection
+    RegulatingCondEq <|-- StaticVarCompensator
+    EnergyConnection <|-- RegulatingCondEq
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

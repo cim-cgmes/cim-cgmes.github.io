@@ -3,77 +3,82 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
+    IdentifiedObject <|-- ACDCTerminal
+    ACDCTerminal --> Measurement : Measurements
+    IOPoint <|-- Control
+    Control --> PowerSystemResource : PowerSystemResource
     ACDCTerminal <|-- Terminal
-    IdentifiedObject <|-- IOPoint
-    Limit <|-- AnalogLimit
-    AnalogLimit --> AnalogLimitSet : LimitSet
-    MeasurementValue <|-- StringMeasurementValue
-    StringMeasurementValue --> StringMeasurement : StringMeasurement
     Measurement <|-- Analog
     Analog --> AnalogValue : AnalogValues
     Analog --> AnalogLimitSet : LimitSets
-    Limit <|-- AccumulatorLimit
-    AccumulatorLimit --> AccumulatorLimitSet : LimitSet
-    IOPoint <|-- MeasurementValue
-    MeasurementValue --> MeasurementValueQuality : MeasurementValueQuality
-    MeasurementValue --> MeasurementValueSource : MeasurementValueSource
-    Quality61850 <|-- MeasurementValueQuality
-    MeasurementValueQuality --> MeasurementValue : MeasurementValue
-    Measurement <|-- Discrete
-    Discrete --> DiscreteValue : DiscreteValues
-    Discrete --> ValueAliasSet : ValueAliasSet
-    MeasurementValue <|-- DiscreteValue
-    DiscreteValue --> Command : Command
-    DiscreteValue --> Discrete : Discrete
-    IdentifiedObject <|-- Measurement
-    Measurement --> PowerSystemResource : PowerSystemResource
-    Measurement --> ACDCTerminal : Terminal
-    IdentifiedObject <|-- PowerSystemResource
-    PowerSystemResource --> Control : Controls
-    PowerSystemResource --> Measurement : Measurements
     Control <|-- Command
     Command --> DiscreteValue : DiscreteValue
     Command --> ValueAliasSet : ValueAliasSet
+    IdentifiedObject <|-- Limit
+    AnalogControl <|-- RaiseLowerCommand
+    RaiseLowerCommand --> ValueAliasSet : ValueAliasSet
     Measurement <|-- Accumulator
     Accumulator --> AccumulatorValue : AccumulatorValues
     Accumulator --> AccumulatorLimitSet : LimitSets
-    IdentifiedObject <|-- ACDCTerminal
-    ACDCTerminal --> Measurement : Measurements
-    AnalogControl <|-- RaiseLowerCommand
-    RaiseLowerCommand --> ValueAliasSet : ValueAliasSet
-    Measurement <|-- StringMeasurement
-    StringMeasurement --> StringMeasurementValue : StringMeasurementValues
-    MeasurementValue <|-- AnalogValue
-    AnalogValue --> Analog : Analog
-    AnalogValue --> AnalogControl : AnalogControl
-    MeasurementValue <|-- AccumulatorValue
-    AccumulatorValue --> Accumulator : Accumulator
-    AccumulatorValue --> AccumulatorReset : AccumulatorReset
-    IdentifiedObject <|-- Limit
+    MeasurementValue <|-- DiscreteValue
+    DiscreteValue --> Command : Command
+    DiscreteValue --> Discrete : Discrete
+    MeasurementValue <|-- StringMeasurementValue
+    StringMeasurementValue --> StringMeasurement : StringMeasurement
     LimitSet <|-- AnalogLimitSet
     AnalogLimitSet --> AnalogLimit : Limits
     AnalogLimitSet --> Analog : Measurements
-    IdentifiedObject <|-- MeasurementValueSource
-    MeasurementValueSource --> MeasurementValue : MeasurementValues
-    IdentifiedObject <|-- ValueToAlias
-    ValueToAlias --> ValueAliasSet : ValueAliasSet
-    AnalogControl <|-- SetPoint
-    IdentifiedObject <|-- LimitSet
-    Control <|-- AnalogControl
-    AnalogControl --> AnalogValue : AnalogValue
+    IdentifiedObject <|-- Measurement
+    Measurement --> PowerSystemResource : PowerSystemResource
+    Measurement --> ACDCTerminal : Terminal
+    Measurement <|-- StringMeasurement
+    StringMeasurement --> StringMeasurementValue : StringMeasurementValues
+    MeasurementValue <|-- AccumulatorValue
+    AccumulatorValue --> Accumulator : Accumulator
+    AccumulatorValue --> AccumulatorReset : AccumulatorReset
     LimitSet <|-- AccumulatorLimitSet
     AccumulatorLimitSet --> AccumulatorLimit : Limits
     AccumulatorLimitSet --> Accumulator : Measurements
-    IOPoint <|-- Control
-    Control --> PowerSystemResource : PowerSystemResource
+    Control <|-- AccumulatorReset
+    AccumulatorReset --> AccumulatorValue : AccumulatorValue
+    IdentifiedObject <|-- ValueToAlias
+    ValueToAlias --> ValueAliasSet : ValueAliasSet
+    Measurement <|-- Discrete
+    Discrete --> DiscreteValue : DiscreteValues
+    Discrete --> ValueAliasSet : ValueAliasSet
     IdentifiedObject <|-- ValueAliasSet
     ValueAliasSet --> Command : Commands
     ValueAliasSet --> Discrete : Discretes
     ValueAliasSet --> RaiseLowerCommand : RaiseLowerCommands
     ValueAliasSet --> ValueToAlias : Values
-    Control <|-- AccumulatorReset
-    AccumulatorReset --> AccumulatorValue : AccumulatorValue
+    IdentifiedObject <|-- MeasurementValueSource
+    MeasurementValueSource --> MeasurementValue : MeasurementValues
+    MeasurementValue <|-- AnalogValue
+    AnalogValue --> Analog : Analog
+    AnalogValue --> AnalogControl : AnalogControl
+    IdentifiedObject <|-- PowerSystemResource
+    PowerSystemResource --> Control : Controls
+    PowerSystemResource --> Measurement : Measurements
+    Limit <|-- AccumulatorLimit
+    AccumulatorLimit --> AccumulatorLimitSet : LimitSet
+    Limit <|-- AnalogLimit
+    AnalogLimit --> AnalogLimitSet : LimitSet
+    AnalogControl <|-- SetPoint
+    Control <|-- AnalogControl
+    AnalogControl --> AnalogValue : AnalogValue
+    IOPoint <|-- MeasurementValue
+    MeasurementValue --> MeasurementValueQuality : MeasurementValueQuality
+    MeasurementValue --> MeasurementValueSource : MeasurementValueSource
+    IdentifiedObject <|-- IOPoint
+    Quality61850 <|-- MeasurementValueQuality
+    MeasurementValueQuality --> MeasurementValue : MeasurementValue
+    IdentifiedObject <|-- LimitSet
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

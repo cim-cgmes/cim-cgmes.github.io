@@ -5,8 +5,37 @@ IEEE 421.5-2005 type ST7B model. This model is representative of static potentia
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEST7B
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEST7B : +Float kh[1..1]
+    ExcIEEEST7B : +Float kia[1..1]
+    ExcIEEEST7B : +Float kl[1..1]
+    ExcIEEEST7B : +Float kpa[1..1]
+    ExcIEEEST7B : +ExcST7BOELselectorKind oelin[1..1]
+    ExcIEEEST7B : +Float tb[1..1]
+    ExcIEEEST7B : +Float tc[1..1]
+    ExcIEEEST7B : +Float tf[1..1]
+    ExcIEEEST7B : +Float tg[1..1]
+    ExcIEEEST7B : +Float tia[1..1]
+    ExcIEEEST7B : +ExcST7BUELselectorKind uelin[1..1]
+    ExcIEEEST7B : +Float vmax[1..1]
+    ExcIEEEST7B : +Float vmin[1..1]
+    ExcIEEEST7B : +Float vrmax[1..1]
+    ExcIEEEST7B : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

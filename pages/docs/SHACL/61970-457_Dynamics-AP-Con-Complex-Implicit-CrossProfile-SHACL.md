@@ -14,6 +14,7 @@
 ### dy457cpi:AsynchronousMachineDynamics.AsynchronousMachine-valueType
 
 **Path:** `cim:AsynchronousMachineDynamics.AsynchronousMachine`  
+**Name:** AsynchronousMachineDynamics.AsynchronousMachine-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -40,6 +41,7 @@ This constraint validates the value type of the association at the used directio
 ### dy457cpi:CSCDynamics.CSConverter-valueType
 
 **Path:** `cim:CSCDynamics.CSConverter`  
+**Name:** CSCDynamics.CSConverter-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -59,16 +61,17 @@ This constraint validates the value type of the association at the used directio
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:ConformLoad
 - targetClass: cim:NonConformLoad
 - targetClass: cim:EnergyConsumer
 - targetClass: cim:StationSupply
-- targetClass: cim:ConformLoad
 
 **Nested Properties:**
 
 ### dy457cpi:EnergyConsumer.LoadDynamics-valueType
 
 **Path:** `cim:EnergyConsumer.LoadDynamics`  
+**Name:** EnergyConsumer.LoadDynamics-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -95,6 +98,7 @@ This constraint validates the value type of the association at the used directio
 ### dy457cpi:RemoteInputSignal.Terminal-valueType
 
 **Path:** `cim:RemoteInputSignal.Terminal`  
+**Name:** RemoteInputSignal.Terminal-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -121,6 +125,7 @@ This constraint validates the value type of the association at the used directio
 ### dy457cpi:StaticVarCompensatorDynamics.StaticVarCompensator-valueType
 
 **Path:** `cim:StaticVarCompensatorDynamics.StaticVarCompensator`  
+**Name:** StaticVarCompensatorDynamics.StaticVarCompensator-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -140,16 +145,17 @@ This constraint validates the value type of the association at the used directio
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:SynchronousMachineEquivalentCircuit
 - targetClass: cim:SynchronousMachineUserDefined
 - targetClass: cim:SynchronousMachineSimplified
 - targetClass: cim:SynchronousMachineTimeConstantReactance
-- targetClass: cim:SynchronousMachineEquivalentCircuit
 
 **Nested Properties:**
 
 ### dy457cpi:SynchronousMachineDynamics.SynchronousMachine-valueType
 
 **Path:** `cim:SynchronousMachineDynamics.SynchronousMachine`  
+**Name:** SynchronousMachineDynamics.SynchronousMachine-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -176,6 +182,7 @@ This constraint validates the value type of the association at the used directio
 ### dy457cpi:VSCDynamics.VsConverter-valueType
 
 **Path:** `cim:VSCDynamics.VsConverter`  
+**Name:** VSCDynamics.VsConverter-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -195,16 +202,17 @@ This constraint validates the value type of the association at the used directio
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:WindTurbineType3IEC
 - targetClass: cim:WindTurbineType4bIEC
 - targetClass: cim:WindTurbineType4aIEC
 - targetClass: cim:WindType3or4UserDefined
-- targetClass: cim:WindTurbineType3IEC
 
 **Nested Properties:**
 
 ### dy457cpi:WindTurbineType3or4Dynamics.PowerElectronicsConnection-valueType
 
 **Path:** `cim:WindTurbineType3or4Dynamics.PowerElectronicsConnection`  
+**Name:** WindTurbineType3or4Dynamics.PowerElectronicsConnection-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation

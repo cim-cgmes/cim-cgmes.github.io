@@ -5,8 +5,24 @@ Reference frame rotation model. Reference: IEC 61400-27-1:2015, 5.6.3.5.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindRefFrameRotIEC
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindRefFrameRotIEC : +WindTurbineType3or4IEC WindTurbineType3or4IEC[1]
+    WindRefFrameRotIEC : +Float tpll[1..1]
+    WindRefFrameRotIEC : +Float upll1[1..1]
+    WindRefFrameRotIEC : +Float upll2[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

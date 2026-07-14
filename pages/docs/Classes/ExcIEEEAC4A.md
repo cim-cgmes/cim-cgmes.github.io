@@ -5,8 +5,31 @@ IEEE 421.5-2005 type AC4A model. The model represents type AC4A alternator-suppl
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEAC4A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEAC4A : +Float ka[1..1]
+    ExcIEEEAC4A : +Float kc[1..1]
+    ExcIEEEAC4A : +Float ta[1..1]
+    ExcIEEEAC4A : +Float tb[1..1]
+    ExcIEEEAC4A : +Float tc[1..1]
+    ExcIEEEAC4A : +Float vimax[1..1]
+    ExcIEEEAC4A : +Float vimin[1..1]
+    ExcIEEEAC4A : +Float vrmax[1..1]
+    ExcIEEEAC4A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

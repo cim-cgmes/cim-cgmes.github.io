@@ -12,6 +12,7 @@
 ### sc452c:SynchronousMachine-attributes
 
 **Path:** `cim:SynchronousMachine.earthing`  
+**Name:** C:452:SC:SynchronousMachine.earthing:attributes  
 If SynchronousMachine.earthing is true, then SynchronousMachine.earthingStarPointR and SynchronousMachine.earthingStarPointX are required.
 
 **Severity:** sh:Violation
@@ -47,6 +48,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### sc452c:TransformerEnd-grounding
 
 **Path:** `cim:TransformerEnd.grounded`  
+**Name:** C:452:SC:PowerTransformerEnd.grounded:grounding  
 If TransformerEnd.grounded is true, then TransformerEnd.rground and TransformerEnd.xground are required.
 
 **Severity:** sh:Violation

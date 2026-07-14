@@ -5,8 +5,23 @@ Analog represents an analog Measurement.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Measurement <|-- Analog
+    Measurement : +PowerSystemResource PowerSystemResource[1..1]
+    Measurement : +ACDCTerminal Terminal[0..1]
+    Measurement : +String measurementType[1..1]
+    Measurement : +PhaseCode phases[0..1]
+    Measurement : +UnitMultiplier unitMultiplier[1..1]
+    Measurement : +UnitSymbol unitSymbol[1..1]
+    click Measurement href "Measurement"
+    Analog : +AnalogValue AnalogValues[0..n]
+    Analog : +AnalogLimitSet LimitSets[0..n]
+    Analog : +Boolean positiveFlowIn[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

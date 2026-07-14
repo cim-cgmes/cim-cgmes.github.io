@@ -5,8 +5,34 @@ Hungarian excitation system, with built-in voltage transducer.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcHU
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcHU : +Float ae[1..1]
+    ExcHU : +Float ai[1..1]
+    ExcHU : +Float atr[1..1]
+    ExcHU : +Float emax[1..1]
+    ExcHU : +Float emin[1..1]
+    ExcHU : +Float imax[1..1]
+    ExcHU : +Float imin[1..1]
+    ExcHU : +Float ke[1..1]
+    ExcHU : +Float ki[1..1]
+    ExcHU : +Float te[1..1]
+    ExcHU : +Float ti[1..1]
+    ExcHU : +Float tr[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

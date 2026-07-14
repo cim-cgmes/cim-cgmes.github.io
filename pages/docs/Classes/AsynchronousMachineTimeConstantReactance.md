@@ -5,8 +5,23 @@ Parameter details: If X'' = X', a single cage (one equivalent rotor winding per 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     AsynchronousMachineDynamics <|-- AsynchronousMachineTimeConstantReactance
+    AsynchronousMachineDynamics : +AsynchronousMachine AsynchronousMachine[1]
+    AsynchronousMachineDynamics : +MechanicalLoadDynamics MechanicalLoadDynamics[0..1]
+    AsynchronousMachineDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[0..1]
+    AsynchronousMachineDynamics : +WindTurbineType1or2Dynamics WindTurbineType1or2Dynamics[0..1]
+    click AsynchronousMachineDynamics href "AsynchronousMachineDynamics"
+    AsynchronousMachineTimeConstantReactance : +Float tpo[1..1]
+    AsynchronousMachineTimeConstantReactance : +Float tppo[1..1]
+    AsynchronousMachineTimeConstantReactance : +Float xp[1..1]
+    AsynchronousMachineTimeConstantReactance : +Float xpp[1..1]
+    AsynchronousMachineTimeConstantReactance : +Float xs[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

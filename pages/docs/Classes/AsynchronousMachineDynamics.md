@@ -5,11 +5,42 @@ Asynchronous machine whose behaviour is described by reference to a standard mod
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     RotatingMachineDynamics <|-- AsynchronousMachineDynamics
-    AsynchronousMachineDynamics <|-- AsynchronousMachineTimeConstantReactance
+    RotatingMachineDynamics : +Float damping[1..1]
+    RotatingMachineDynamics : +Float inertia[1..1]
+    RotatingMachineDynamics : +Float saturationFactor[0..1]
+    RotatingMachineDynamics : +Float saturationFactor120[0..1]
+    RotatingMachineDynamics : +Float statorLeakageReactance[1..1]
+    RotatingMachineDynamics : +Float statorResistance[1..1]
+    click RotatingMachineDynamics href "RotatingMachineDynamics"
     AsynchronousMachineDynamics <|-- AsynchronousMachineUserDefined
+    AsynchronousMachineUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    AsynchronousMachineUserDefined : +Boolean proprietary[1..1]
+    click AsynchronousMachineUserDefined href "AsynchronousMachineUserDefined"
+    AsynchronousMachineDynamics <|-- AsynchronousMachineTimeConstantReactance
+    AsynchronousMachineTimeConstantReactance : +Float tpo[1..1]
+    AsynchronousMachineTimeConstantReactance : +Float tppo[1..1]
+    AsynchronousMachineTimeConstantReactance : +Float xp[1..1]
+    AsynchronousMachineTimeConstantReactance : +Float xpp[1..1]
+    AsynchronousMachineTimeConstantReactance : +Float xs[1..1]
+    click AsynchronousMachineTimeConstantReactance href "AsynchronousMachineTimeConstantReactance"
     AsynchronousMachineDynamics <|-- AsynchronousMachineEquivalentCircuit
+    AsynchronousMachineEquivalentCircuit : +Float rr1[1..1]
+    AsynchronousMachineEquivalentCircuit : +Float rr2[1..1]
+    AsynchronousMachineEquivalentCircuit : +Float xlr1[1..1]
+    AsynchronousMachineEquivalentCircuit : +Float xlr2[1..1]
+    AsynchronousMachineEquivalentCircuit : +Float xm[1..1]
+    click AsynchronousMachineEquivalentCircuit href "AsynchronousMachineEquivalentCircuit"
+    AsynchronousMachineDynamics : +AsynchronousMachine AsynchronousMachine[1]
+    AsynchronousMachineDynamics : +MechanicalLoadDynamics MechanicalLoadDynamics[0..1]
+    AsynchronousMachineDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[0..1]
+    AsynchronousMachineDynamics : +WindTurbineType1or2Dynamics WindTurbineType1or2Dynamics[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

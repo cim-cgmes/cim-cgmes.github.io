@@ -12,6 +12,7 @@
 ### op:AccumulatorLimit.value-valueRange
 
 **Path:** `cim:AccumulatorLimit.value`  
+**Name:** C:301:OP:AccumulatorLimit.value:valueRange  
 The value is positive.
 
 **Severity:** sh:Violation
@@ -36,6 +37,7 @@ The value is positive.
 ### op:AccumulatorValue.value-valueRange
 
 **Path:** `cim:AccumulatorValue.value`  
+**Name:** C:301:OP:AccumulatorValue.value:valueRange  
 The value is positive.
 
 **Severity:** sh:Violation

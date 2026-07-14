@@ -5,8 +5,26 @@ Designates a connection point at which one or more model authority sets shall co
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemResource <|-- BoundaryPoint
+    PowerSystemResource : +Control Controls[0..n]
+    PowerSystemResource : +Location Location[0..1]
+    PowerSystemResource : +Measurement Measurements[0..n]
+    click PowerSystemResource href "PowerSystemResource"
+    BoundaryPoint : +ConnectivityNode ConnectivityNode[1]
+    BoundaryPoint : +String fromEndIsoCode[1..1]
+    BoundaryPoint : +String fromEndName[1..1]
+    BoundaryPoint : +String fromEndNameTso[1..1]
+    BoundaryPoint : +Boolean isDirectCurrent[0..1]
+    BoundaryPoint : +Boolean isExcludedFromAreaInterchange[0..1]
+    BoundaryPoint : +String toEndIsoCode[1..1]
+    BoundaryPoint : +String toEndName[1..1]
+    BoundaryPoint : +String toEndNameTso[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

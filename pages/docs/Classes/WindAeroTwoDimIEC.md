@@ -5,8 +5,28 @@ Two-dimensional aerodynamic model. Reference: IEC 61400-27-1:2015, 5.6.1.3.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindAeroTwoDimIEC
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindAeroTwoDimIEC : +WindTurbineType3IEC WindTurbineType3IEC[1]
+    WindAeroTwoDimIEC : +Float dpomega[1..1]
+    WindAeroTwoDimIEC : +Float dptheta[1..1]
+    WindAeroTwoDimIEC : +Float dpv1[1..1]
+    WindAeroTwoDimIEC : +Float omegazero[1..1]
+    WindAeroTwoDimIEC : +Float pavail[1..1]
+    WindAeroTwoDimIEC : +Float thetav2[1..1]
+    WindAeroTwoDimIEC : +Float thetazero[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

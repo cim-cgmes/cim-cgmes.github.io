@@ -5,8 +5,20 @@ Asynchronous machine whose dynamic behaviour is described by a user-defined mode
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     AsynchronousMachineDynamics <|-- AsynchronousMachineUserDefined
+    AsynchronousMachineDynamics : +AsynchronousMachine AsynchronousMachine[1]
+    AsynchronousMachineDynamics : +MechanicalLoadDynamics MechanicalLoadDynamics[0..1]
+    AsynchronousMachineDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[0..1]
+    AsynchronousMachineDynamics : +WindTurbineType1or2Dynamics WindTurbineType1or2Dynamics[0..1]
+    click AsynchronousMachineDynamics href "AsynchronousMachineDynamics"
+    AsynchronousMachineUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    AsynchronousMachineUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

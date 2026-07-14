@@ -13,6 +13,7 @@
 ### tp456c:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** C:456:TP:IdentifiedObject.name:instance  
 Name is required for all classes in the profile except ACDCTerminal.
 
 **Severity:** sh:Violation

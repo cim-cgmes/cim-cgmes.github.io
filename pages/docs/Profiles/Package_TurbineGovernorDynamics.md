@@ -3,40 +3,45 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    TurbineGovernorDynamics <|-- GovHydro1
-    TurbineGovernorDynamics <|-- GovGAST2
-    TurbineGovernorDynamics <|-- GovSteamFV2
-    TurbineGovernorDynamics <|-- GovGAST1
-    TurbineGovernorDynamics <|-- GovHydroPID
-    TurbineGovernorDynamics <|-- GovGAST4
-    CrossCompoundTurbineGovernorDynamics <|-- GovSteamCC
-    TurbineGovernorDynamics <|-- GovCT2
-    TurbineGovernorDynamics <|-- GovHydroPelton
-    TurbineGovernorDynamics <|-- GovSteamSGO
-    TurbineGovernorDynamics <|-- GovSteamFV3
-    TurbineGovernorDynamics <|-- GovHydroFrancis
     TurbineGovernorDynamics <|-- GovHydro2
-    TurbineGovernorDynamics <|-- GovHydroWPID
-    TurbineGovernorDynamics <|-- GovGASTWD
-    TurbineGovernorDynamics <|-- GovHydroDD
     TurbineGovernorDynamics <|-- GovGAST3
-    TurbineGovernorDynamics <|-- GovHydro4
-    TurbineGovernorDynamics <|-- GovSteamIEEE1
-    TurbineGovernorDynamics <|-- GovSteam0
-    TurbineGovernorDynamics <|-- GovSteamFV4
-    TurbineGovernorDynamics <|-- GovHydroIEEE2
-    TurbineGovernorDynamics <|-- GovHydroR
-    TurbineGovernorDynamics <|-- GovHydroPID2
-    TurbineGovernorDynamics <|-- GovSteam2
     TurbineGovernorDynamics <|-- GovSteamEU
-    TurbineGovernorDynamics <|-- GovSteam1
-    TurbineGovernorDynamics <|-- GovHydroWEH
-    TurbineGovernorDynamics <|-- GovHydroIEEE0
-    TurbineGovernorDynamics <|-- GovGAST
+    TurbineGovernorDynamics <|-- GovHydroR
+    TurbineGovernorDynamics <|-- GovSteamSGO
+    CrossCompoundTurbineGovernorDynamics <|-- GovSteamCC
     TurbineGovernorDynamics <|-- GovCT1
+    TurbineGovernorDynamics <|-- GovHydroPID2
+    TurbineGovernorDynamics <|-- GovSteam0
+    TurbineGovernorDynamics <|-- GovSteam2
+    TurbineGovernorDynamics <|-- GovSteam1
+    TurbineGovernorDynamics <|-- GovHydroPID
     TurbineGovernorDynamics <|-- GovSteamBB
+    TurbineGovernorDynamics <|-- GovHydroIEEE0
+    TurbineGovernorDynamics <|-- GovHydro1
+    TurbineGovernorDynamics <|-- GovCT2
+    TurbineGovernorDynamics <|-- GovSteamFV2
+    TurbineGovernorDynamics <|-- GovHydroPelton
+    TurbineGovernorDynamics <|-- GovGAST4
+    TurbineGovernorDynamics <|-- GovGAST1
+    TurbineGovernorDynamics <|-- GovHydroWPID
+    TurbineGovernorDynamics <|-- GovSteamFV3
+    TurbineGovernorDynamics <|-- GovGAST
+    TurbineGovernorDynamics <|-- GovSteamFV4
+    TurbineGovernorDynamics <|-- GovHydroWEH
+    TurbineGovernorDynamics <|-- GovGAST2
+    TurbineGovernorDynamics <|-- GovHydro4
+    TurbineGovernorDynamics <|-- GovHydroIEEE2
+    TurbineGovernorDynamics <|-- GovGASTWD
+    TurbineGovernorDynamics <|-- GovHydroFrancis
     TurbineGovernorDynamics <|-- GovHydro3
+    TurbineGovernorDynamics <|-- GovSteamIEEE1
+    TurbineGovernorDynamics <|-- GovHydroDD
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

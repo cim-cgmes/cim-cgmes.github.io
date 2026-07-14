@@ -3,14 +3,19 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    LoadMotor --> LoadAggregate : LoadAggregate
-    LoadDynamics <|-- LoadComposite
-    LoadDynamics <|-- LoadGenericNonLinear
     LoadDynamics <|-- LoadAggregate
     LoadAggregate --> LoadMotor : LoadMotor
     LoadAggregate --> LoadStatic : LoadStatic
+    LoadDynamics <|-- LoadComposite
     LoadStatic --> LoadAggregate : LoadAggregate
+    LoadDynamics <|-- LoadGenericNonLinear
+    LoadMotor --> LoadAggregate : LoadAggregate
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

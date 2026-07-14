@@ -5,8 +5,43 @@ IVO excitation system.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcAVR7
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcAVR7 : +Float a1[1..1]
+    ExcAVR7 : +Float a2[1..1]
+    ExcAVR7 : +Float a3[1..1]
+    ExcAVR7 : +Float a4[1..1]
+    ExcAVR7 : +Float a5[1..1]
+    ExcAVR7 : +Float a6[1..1]
+    ExcAVR7 : +Float k1[1..1]
+    ExcAVR7 : +Float k3[1..1]
+    ExcAVR7 : +Float k5[1..1]
+    ExcAVR7 : +Float t1[1..1]
+    ExcAVR7 : +Float t2[1..1]
+    ExcAVR7 : +Float t3[1..1]
+    ExcAVR7 : +Float t4[1..1]
+    ExcAVR7 : +Float t5[1..1]
+    ExcAVR7 : +Float t6[1..1]
+    ExcAVR7 : +Float vmax1[1..1]
+    ExcAVR7 : +Float vmax3[1..1]
+    ExcAVR7 : +Float vmax5[1..1]
+    ExcAVR7 : +Float vmin1[1..1]
+    ExcAVR7 : +Float vmin3[1..1]
+    ExcAVR7 : +Float vmin5[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

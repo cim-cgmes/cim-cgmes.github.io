@@ -5,8 +5,23 @@ A cut separates a line segment into two parts. The cut appears as a switch inser
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Switch <|-- Cut
+    Switch : +SvSwitch SvSwitch[0..n]
+    Switch : +SwitchSchedule SwitchSchedules[0..n]
+    Switch : +Boolean locked[1..1]
+    Switch : +Boolean normalOpen[1..1]
+    Switch : +Boolean open[1..1]
+    Switch : +Float ratedCurrent[0..1]
+    Switch : +Boolean retained[1..1]
+    click Switch href "Switch"
+    Cut : +ACLineSegment ACLineSegment[1]
+    Cut : +Float lengthFromTerminal1[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

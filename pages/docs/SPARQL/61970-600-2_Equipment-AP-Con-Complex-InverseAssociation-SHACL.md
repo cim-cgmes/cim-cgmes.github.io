@@ -33,29 +33,29 @@
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:VsCapabilityCurve
 - targetClass: cim:GrossToNetActivePowerCurve
 - targetClass: cim:ReactiveCapabilityCurve
-- targetClass: cim:VsCapabilityCurve
 
 ## eq301ia:EnergyArea
 
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:SubLoadArea
 - targetClass: cim:LoadArea
+- targetClass: cim:SubLoadArea
 
 ## eq301ia:GeneratingUnit
 
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:WindGeneratingUnit
 - targetClass: cim:GeneratingUnit
 - targetClass: cim:HydroGeneratingUnit
 - targetClass: cim:NuclearGeneratingUnit
 - targetClass: cim:SolarGeneratingUnit
 - targetClass: cim:ThermalGeneratingUnit
-- targetClass: cim:WindGeneratingUnit
 
 ## eq301ia:LoadArea
 

@@ -3,27 +3,32 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
+    IdentifiedObject <|-- DiagramStyle
+    DiagramStyle --> Diagram : Diagram
+    DiagramObjectGluePoint --> DiagramObjectPoint : DiagramObjectPoints
     IdentifiedObject <|-- DiagramObject
     DiagramObject --> Diagram : Diagram
     DiagramObject --> DiagramObjectPoint : DiagramObjectPoints
     DiagramObject --> DiagramObjectStyle : DiagramObjectStyle
     DiagramObject --> IdentifiedObject : IdentifiedObject_
     DiagramObject --> VisibilityLayer : VisibilityLayers
-    IdentifiedObject <|-- DiagramObjectStyle
-    DiagramObjectStyle --> DiagramObject : StyledObjects
     IdentifiedObject --> DiagramObject : DiagramObjects
-    IdentifiedObject <|-- DiagramStyle
-    DiagramStyle --> Diagram : Diagram
-    DiagramObjectGluePoint --> DiagramObjectPoint : DiagramObjectPoints
     IdentifiedObject <|-- Diagram
     Diagram --> DiagramObject : DiagramElements
     Diagram --> DiagramStyle : DiagramStyle
-    DiagramObject <|-- TextDiagramObject
-    IdentifiedObject <|-- VisibilityLayer
-    VisibilityLayer --> DiagramObject : VisibleObjects
     DiagramObjectPoint --> DiagramObject : DiagramObject
     DiagramObjectPoint --> DiagramObjectGluePoint : DiagramObjectGluePoint
+    IdentifiedObject <|-- DiagramObjectStyle
+    DiagramObjectStyle --> DiagramObject : StyledObjects
+    IdentifiedObject <|-- VisibilityLayer
+    VisibilityLayer --> DiagramObject : VisibleObjects
+    DiagramObject <|-- TextDiagramObject
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

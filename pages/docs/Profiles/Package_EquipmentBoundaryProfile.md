@@ -3,50 +3,55 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
+    Connector <|-- Junction
+    IdentifiedObject <|-- ACDCTerminal
+    Equipment <|-- ConductingEquipment
+    ConductingEquipment --> BaseVoltage : BaseVoltage
+    ConductingEquipment --> Terminal : Terminals
+    IdentifiedObject <|-- ConnectivityNode
+    ConnectivityNode --> BoundaryPoint : BoundaryPoint
+    ConnectivityNode --> ConnectivityNodeContainer : ConnectivityNodeContainer
+    ConnectivityNode --> Terminal : Terminals
+    PowerSystemResource <|-- ConnectivityNodeContainer
+    ConnectivityNodeContainer --> ConnectivityNode : ConnectivityNodes
     ACDCTerminal <|-- Terminal
     Terminal --> ConductingEquipment : ConductingEquipment
     Terminal --> ConnectivityNode : ConnectivityNode
+    EquipmentContainer <|-- Bay
+    Bay --> VoltageLevel : VoltageLevel
+    ConnectivityNodeContainer <|-- EquipmentContainer
+    EquipmentContainer --> Equipment : Equipments
+    EquipmentContainer <|-- Line
+    Line --> SubGeographicalRegion : Region
     PowerSystemResource <|-- BoundaryPoint
     BoundaryPoint --> ConnectivityNode : ConnectivityNode
     EquipmentContainer <|-- VoltageLevel
     VoltageLevel --> BaseVoltage : BaseVoltage
     VoltageLevel --> Bay : Bays
     VoltageLevel --> Substation : Substation
-    IdentifiedObject <|-- EnergySchedulingType
-    PowerSystemResource <|-- Equipment
-    Equipment --> EquipmentContainer : EquipmentContainer
-    IdentifiedObject <|-- PowerSystemResource
-    IdentifiedObject <|-- BaseVoltage
-    BaseVoltage --> ConductingEquipment : ConductingEquipment
-    BaseVoltage --> VoltageLevel : VoltageLevel
-    IdentifiedObject <|-- ACDCTerminal
-    PowerSystemResource <|-- ConnectivityNodeContainer
-    ConnectivityNodeContainer --> ConnectivityNode : ConnectivityNodes
-    EquipmentContainer <|-- Line
-    Line --> SubGeographicalRegion : Region
-    IdentifiedObject <|-- ConnectivityNode
-    ConnectivityNode --> BoundaryPoint : BoundaryPoint
-    ConnectivityNode --> ConnectivityNodeContainer : ConnectivityNodeContainer
-    ConnectivityNode --> Terminal : Terminals
-    ConductingEquipment <|-- Connector
-    ConnectivityNodeContainer <|-- EquipmentContainer
-    EquipmentContainer --> Equipment : Equipments
-    IdentifiedObject <|-- GeographicalRegion
-    GeographicalRegion --> SubGeographicalRegion : Regions
-    EquipmentContainer <|-- Bay
-    Bay --> VoltageLevel : VoltageLevel
-    Connector <|-- Junction
     EquipmentContainer <|-- Substation
     Substation --> SubGeographicalRegion : Region
     Substation --> VoltageLevel : VoltageLevels
+    IdentifiedObject <|-- PowerSystemResource
+    IdentifiedObject <|-- EnergySchedulingType
+    PowerSystemResource <|-- Equipment
+    Equipment --> EquipmentContainer : EquipmentContainer
+    IdentifiedObject <|-- GeographicalRegion
+    GeographicalRegion --> SubGeographicalRegion : Regions
     IdentifiedObject <|-- SubGeographicalRegion
     SubGeographicalRegion --> Line : Lines
     SubGeographicalRegion --> GeographicalRegion : Region
     SubGeographicalRegion --> Substation : Substations
-    Equipment <|-- ConductingEquipment
-    ConductingEquipment --> BaseVoltage : BaseVoltage
-    ConductingEquipment --> Terminal : Terminals
+    IdentifiedObject <|-- BaseVoltage
+    BaseVoltage --> ConductingEquipment : ConductingEquipment
+    BaseVoltage --> VoltageLevel : VoltageLevel
+    ConductingEquipment <|-- Connector
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

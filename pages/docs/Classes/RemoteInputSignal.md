@@ -5,8 +5,30 @@ Supports connection to a terminal associated with a remote bus from which an inp
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- RemoteInputSignal
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    RemoteInputSignal : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    RemoteInputSignal : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    RemoteInputSignal : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    RemoteInputSignal : +Terminal Terminal[1]
+    RemoteInputSignal : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    RemoteInputSignal : +VoltageCompensatorDynamics VoltageCompensatorDynamics[0..1]
+    RemoteInputSignal : +WindPlantDynamics WindPlantDynamics[0..1]
+    RemoteInputSignal : +WindTurbineType1or2Dynamics WindTurbineType1or2Dynamics[0..1]
+    RemoteInputSignal : +WindTurbineType3or4Dynamics WindTurbineType3or4Dynamics[0..1]
+    RemoteInputSignal : +RemoteSignalKind remoteSignalType[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,21 @@ A synchronous motor-driven pump, typically associated with a pumped storage plan
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Equipment <|-- HydroPump
+    Equipment : +EquipmentContainer EquipmentContainer[0..1]
+    Equipment : +OperationalLimitSet OperationalLimitSet[0..n]
+    Equipment : +Boolean aggregate[0..1]
+    Equipment : +Boolean inService[1..1]
+    Equipment : +Boolean normallyInService[0..1]
+    click Equipment href "Equipment"
+    HydroPump : +HydroPowerPlant HydroPowerPlant[0..1]
+    HydroPump : +RotatingMachine RotatingMachine[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

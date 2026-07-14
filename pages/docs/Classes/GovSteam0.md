@@ -5,8 +5,25 @@ A simplified steam turbine governor.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovSteam0
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovSteam0 : +Float dt[1..1]
+    GovSteam0 : +Float mwbase[1..1]
+    GovSteam0 : +Float r[1..1]
+    GovSteam0 : +Float t1[1..1]
+    GovSteam0 : +Float t2[1..1]
+    GovSteam0 : +Float t3[1..1]
+    GovSteam0 : +Float vmax[1..1]
+    GovSteam0 : +Float vmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

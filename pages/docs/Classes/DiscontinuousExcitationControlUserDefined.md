@@ -5,8 +5,18 @@ Discontinuous excitation control function block whose dynamic behaviour is descr
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DiscontinuousExcitationControlDynamics <|-- DiscontinuousExcitationControlUserDefined
+    DiscontinuousExcitationControlDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    DiscontinuousExcitationControlDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click DiscontinuousExcitationControlDynamics href "DiscontinuousExcitationControlDynamics"
+    DiscontinuousExcitationControlUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    DiscontinuousExcitationControlUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

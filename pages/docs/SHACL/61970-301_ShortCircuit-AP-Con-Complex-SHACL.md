@@ -12,6 +12,7 @@
 ### sc:MutualCoupling.distance11-lengthValueRange
 
 **Path:** `cim:MutualCoupling.distance11`  
+**Name:** C:301:SC:MutualCoupling:lengthValueRange  
 Length datatype defines that: It shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -27,6 +28,7 @@ Length datatype defines that: It shall be a positive value or zero.
 ### sc:MutualCoupling.distance12-lengthValueRange
 
 **Path:** `cim:MutualCoupling.distance12`  
+**Name:** C:301:SC:MutualCoupling:lengthValueRange  
 Length datatype defines that: It shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -42,6 +44,7 @@ Length datatype defines that: It shall be a positive value or zero.
 ### sc:MutualCoupling.distance21-lengthValueRange
 
 **Path:** `cim:MutualCoupling.distance21`  
+**Name:** C:301:SC:MutualCoupling:lengthValueRange  
 Length datatype defines that: It shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -57,6 +60,7 @@ Length datatype defines that: It shall be a positive value or zero.
 ### sc:MutualCoupling.distance22-lengthValueRange
 
 **Path:** `cim:MutualCoupling.distance22`  
+**Name:** C:301:SC:MutualCoupling:lengthValueRange  
 Length datatype defines that: It shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -81,6 +85,7 @@ Length datatype defines that: It shall be a positive value or zero.
 ### sc:PetersenCoil.offsetCurrent-valueRangeTypical
 
 **Path:** `cim:PetersenCoil.offsetCurrent`  
+**Name:** C:301:SC:PetersenCoil.offsetCurrent:valueRangeTypical  
 This is normally a fixed amount for which the controller is configured and could be positive or negative.  Typically 0 to 60 A depending on voltage and resonance conditions.
 
 **Severity:** sh:Warning
@@ -98,6 +103,7 @@ This is normally a fixed amount for which the controller is configured and could
 ### sc:PetersenCoil.positionCurrent-valueRangeTypical
 
 **Path:** `cim:PetersenCoil.positionCurrent`  
+**Name:** C:301:SC:PetersenCoil.positionCurrent:valueRangeTypical  
 Typically in the range of 20 mA to 200 mA.
 
 **Severity:** sh:Warning
@@ -124,6 +130,7 @@ Typically in the range of 20 mA to 200 mA.
 ### sc:PowerTransformerEnd.phaseAngleClock-valueRange
 
 **Path:** `cim:PowerTransformerEnd.phaseAngleClock`  
+**Name:** C:301:SC:PowerTransformerEnd.phaseAngleClock:valueRange  
 The valid values are 0 to 11.
 
 **Severity:** sh:Violation
@@ -150,6 +157,7 @@ The valid values are 0 to 11.
 ### sc:SeriesCompensator.varistorRatedCurrent-valueRange
 
 **Path:** `cim:SeriesCompensator.varistorRatedCurrent`  
+**Name:** C:301:SC:SeriesCompensator.varistorRatedCurrent:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation

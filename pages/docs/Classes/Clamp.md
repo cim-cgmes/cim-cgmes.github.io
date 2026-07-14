@@ -5,8 +5,19 @@ A Clamp is a galvanic connection at a line segment where other equipment is conn
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ConductingEquipment <|-- Clamp
+    ConductingEquipment : +BaseVoltage BaseVoltage[0..1]
+    ConductingEquipment : +SvStatus SvStatus[0..1]
+    ConductingEquipment : +Terminal Terminals[0..n]
+    click ConductingEquipment href "ConductingEquipment"
+    Clamp : +ACLineSegment ACLineSegment[1]
+    Clamp : +Float lengthFromTerminal1[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

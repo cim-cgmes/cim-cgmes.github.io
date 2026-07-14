@@ -5,8 +5,68 @@ WoodwardTM electric hydro governor. [Footnote: Woodward electric hydro governors
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydroWEH
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydroWEH : +Float db[1..1]
+    GovHydroWEH : +Float dicn[1..1]
+    GovHydroWEH : +Float dpv[1..1]
+    GovHydroWEH : +Float dturb[1..1]
+    GovHydroWEH : +Boolean feedbackSignal[1..1]
+    GovHydroWEH : +Float fl1[1..1]
+    GovHydroWEH : +Float fl2[1..1]
+    GovHydroWEH : +Float fl3[1..1]
+    GovHydroWEH : +Float fl4[1..1]
+    GovHydroWEH : +Float fl5[1..1]
+    GovHydroWEH : +Float fp1[1..1]
+    GovHydroWEH : +Float fp10[1..1]
+    GovHydroWEH : +Float fp2[1..1]
+    GovHydroWEH : +Float fp3[1..1]
+    GovHydroWEH : +Float fp4[1..1]
+    GovHydroWEH : +Float fp5[1..1]
+    GovHydroWEH : +Float fp6[1..1]
+    GovHydroWEH : +Float fp7[1..1]
+    GovHydroWEH : +Float fp8[1..1]
+    GovHydroWEH : +Float fp9[1..1]
+    GovHydroWEH : +Float gmax[1..1]
+    GovHydroWEH : +Float gmin[1..1]
+    GovHydroWEH : +Float gtmxcl[1..1]
+    GovHydroWEH : +Float gtmxop[1..1]
+    GovHydroWEH : +Float gv1[1..1]
+    GovHydroWEH : +Float gv2[1..1]
+    GovHydroWEH : +Float gv3[1..1]
+    GovHydroWEH : +Float gv4[1..1]
+    GovHydroWEH : +Float gv5[1..1]
+    GovHydroWEH : +Float kd[1..1]
+    GovHydroWEH : +Float ki[1..1]
+    GovHydroWEH : +Float kp[1..1]
+    GovHydroWEH : +Float mwbase[1..1]
+    GovHydroWEH : +Float pmss1[1..1]
+    GovHydroWEH : +Float pmss10[1..1]
+    GovHydroWEH : +Float pmss2[1..1]
+    GovHydroWEH : +Float pmss3[1..1]
+    GovHydroWEH : +Float pmss4[1..1]
+    GovHydroWEH : +Float pmss5[1..1]
+    GovHydroWEH : +Float pmss6[1..1]
+    GovHydroWEH : +Float pmss7[1..1]
+    GovHydroWEH : +Float pmss8[1..1]
+    GovHydroWEH : +Float pmss9[1..1]
+    GovHydroWEH : +Float rpg[1..1]
+    GovHydroWEH : +Float rpp[1..1]
+    GovHydroWEH : +Float td[1..1]
+    GovHydroWEH : +Float tdv[1..1]
+    GovHydroWEH : +Float tg[1..1]
+    GovHydroWEH : +Float tp[1..1]
+    GovHydroWEH : +Float tpe[1..1]
+    GovHydroWEH : +Float tw[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

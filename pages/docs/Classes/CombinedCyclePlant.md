@@ -5,8 +5,18 @@ A set of combustion turbines and steam turbines where the exhaust heat from the 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemResource <|-- CombinedCyclePlant
+    PowerSystemResource : +Control Controls[0..n]
+    PowerSystemResource : +Location Location[0..1]
+    PowerSystemResource : +Measurement Measurements[0..n]
+    click PowerSystemResource href "PowerSystemResource"
+    CombinedCyclePlant : +ThermalGeneratingUnit ThermalGeneratingUnits[0..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

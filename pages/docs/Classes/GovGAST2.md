@@ -5,8 +5,49 @@ Gas turbine.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovGAST2
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovGAST2 : +Float a[1..1]
+    GovGAST2 : +Float af1[1..1]
+    GovGAST2 : +Float af2[1..1]
+    GovGAST2 : +Float b[1..1]
+    GovGAST2 : +Float bf1[1..1]
+    GovGAST2 : +Float bf2[1..1]
+    GovGAST2 : +Float c[1..1]
+    GovGAST2 : +Float cf2[1..1]
+    GovGAST2 : +Float ecr[1..1]
+    GovGAST2 : +Float etd[1..1]
+    GovGAST2 : +Float k3[1..1]
+    GovGAST2 : +Float k4[1..1]
+    GovGAST2 : +Float k5[1..1]
+    GovGAST2 : +Float k6[1..1]
+    GovGAST2 : +Float kf[1..1]
+    GovGAST2 : +Float mwbase[1..1]
+    GovGAST2 : +Float t[1..1]
+    GovGAST2 : +Float t3[1..1]
+    GovGAST2 : +Float t4[1..1]
+    GovGAST2 : +Float t5[1..1]
+    GovGAST2 : +Float tc[1..1]
+    GovGAST2 : +Float tcd[1..1]
+    GovGAST2 : +Float tf[1..1]
+    GovGAST2 : +Float tmax[1..1]
+    GovGAST2 : +Float tmin[1..1]
+    GovGAST2 : +Float tr[1..1]
+    GovGAST2 : +Float trate[1..1]
+    GovGAST2 : +Float tt[1..1]
+    GovGAST2 : +Float w[1..1]
+    GovGAST2 : +Float x[1..1]
+    GovGAST2 : +Float y[1..1]
+    GovGAST2 : +Integer z[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

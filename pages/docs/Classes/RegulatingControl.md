@@ -5,9 +5,31 @@ Specifies a set of equipment that works together to control a power system quant
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemResource <|-- RegulatingControl
+    PowerSystemResource : +Control Controls[0..n]
+    PowerSystemResource : +Location Location[0..1]
+    PowerSystemResource : +Measurement Measurements[0..n]
+    click PowerSystemResource href "PowerSystemResource"
     RegulatingControl <|-- TapChangerControl
+    TapChangerControl : +TapChanger TapChanger[1..n]
+    click TapChangerControl href "TapChangerControl"
+    RegulatingControl : +RegulatingCondEq RegulatingCondEq[0..n]
+    RegulatingControl : +RegulationSchedule RegulationSchedule[0..n]
+    RegulatingControl : +Terminal Terminal[1..1]
+    RegulatingControl : +Boolean discrete[1..1]
+    RegulatingControl : +Boolean enabled[1..1]
+    RegulatingControl : +Float maxAllowedTargetValue[0..1]
+    RegulatingControl : +Float minAllowedTargetValue[0..1]
+    RegulatingControl : +RegulatingControlModeKind mode[1..1]
+    RegulatingControl : +Float targetDeadband[0..1]
+    RegulatingControl : +Float targetValue[1..1]
+    RegulatingControl : +UnitMultiplier targetValueUnitMultiplier[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

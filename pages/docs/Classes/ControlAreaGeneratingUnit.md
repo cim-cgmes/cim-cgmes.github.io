@@ -5,8 +5,22 @@ A control area generating unit. This class is needed so that alternate control a
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- ControlAreaGeneratingUnit
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    ControlAreaGeneratingUnit : +ControlArea ControlArea[1]
+    ControlAreaGeneratingUnit : +GeneratingUnit GeneratingUnit[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

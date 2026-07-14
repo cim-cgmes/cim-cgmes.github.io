@@ -5,8 +5,30 @@ The grid protection model includes protection against over- and under-voltage, a
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindProtectionIEC
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindProtectionIEC : +WindDynamicsLookupTable WindDynamicsLookupTable[1..n]
+    WindProtectionIEC : +WindTurbineType1or2IEC WindTurbineType1or2IEC[0..1]
+    WindProtectionIEC : +WindTurbineType3or4IEC WindTurbineType3or4IEC[0..1]
+    WindProtectionIEC : +Float dfimax[1..1]
+    WindProtectionIEC : +Float fover[1..1]
+    WindProtectionIEC : +Float funder[1..1]
+    WindProtectionIEC : +Boolean mzc[1..1]
+    WindProtectionIEC : +Float tfma[1..1]
+    WindProtectionIEC : +Float uover[1..1]
+    WindProtectionIEC : +Float uunder[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

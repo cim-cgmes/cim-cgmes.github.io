@@ -3,46 +3,51 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
+    RegulatingCondEq <|-- RotatingMachine
+    ConductingEquipment <|-- EnergyConnection
+    ConductingEquipment <|-- EarthFaultCompensator
+    IdentifiedObject <|-- ACDCTerminal
+    RotatingMachine <|-- AsynchronousMachine
+    Equipment <|-- ConductingEquipment
+    ConductingEquipment --> Terminal : Terminals
+    RotatingMachine <|-- SynchronousMachine
     ACDCTerminal <|-- Terminal
     Terminal --> ConductingEquipment : ConductingEquipment
     Terminal --> MutualCoupling : HasFirstMutualCoupling
     Terminal --> MutualCoupling : HasSecondMutualCoupling
     Terminal --> TransformerEnd : TransformerEnd
-    ConductingEquipment <|-- PowerTransformer
-    PowerTransformer --> PowerTransformerEnd : PowerTransformerEnd
+    EarthFaultCompensator <|-- PetersenCoil
+    ConductingEquipment <|-- SeriesCompensator
+    ConductingEquipment <|-- EquivalentEquipment
+    Connector <|-- BusbarSection
     EquivalentEquipment <|-- EquivalentInjection
+    EarthFaultCompensator <|-- GroundingImpedance
     ConductingEquipment <|-- Conductor
-    Conductor <|-- ACLineSegment
+    IdentifiedObject <|-- PowerSystemResource
+    ShuntCompensator <|-- LinearShuntCompensator
     PowerSystemResource <|-- Equipment
+    RegulatingCondEq <|-- ExternalNetworkInjection
+    EnergyConnection <|-- EnergySource
+    RegulatingCondEq <|-- ShuntCompensator
+    EquivalentEquipment <|-- EquivalentBranch
     IdentifiedObject <|-- TransformerEnd
     TransformerEnd --> Terminal : Terminal
-    RegulatingCondEq <|-- ShuntCompensator
-    TransformerEnd <|-- PowerTransformerEnd
-    PowerTransformerEnd --> PowerTransformer : PowerTransformer
-    EarthFaultCompensator <|-- PetersenCoil
-    EnergyConnection <|-- RegulatingCondEq
-    IdentifiedObject <|-- PowerSystemResource
-    EnergyConnection <|-- EnergySource
-    ConductingEquipment <|-- EnergyConnection
-    IdentifiedObject <|-- ACDCTerminal
-    Connector <|-- BusbarSection
-    ConductingEquipment <|-- EquivalentEquipment
-    RotatingMachine <|-- AsynchronousMachine
-    EquivalentEquipment <|-- EquivalentBranch
-    RotatingMachine <|-- SynchronousMachine
-    ShuntCompensator <|-- LinearShuntCompensator
-    ConductingEquipment <|-- Connector
-    RegulatingCondEq <|-- ExternalNetworkInjection
-    ConductingEquipment <|-- SeriesCompensator
-    ConductingEquipment <|-- EarthFaultCompensator
-    RegulatingCondEq <|-- RotatingMachine
-    EarthFaultCompensator <|-- GroundingImpedance
+    ConductingEquipment <|-- PowerTransformer
+    PowerTransformer --> PowerTransformerEnd : PowerTransformerEnd
+    Conductor <|-- ACLineSegment
     IdentifiedObject <|-- MutualCoupling
     MutualCoupling --> Terminal : First_Terminal
     MutualCoupling --> Terminal : Second_Terminal
-    Equipment <|-- ConductingEquipment
-    ConductingEquipment --> Terminal : Terminals
+    ConductingEquipment <|-- Connector
+    EnergyConnection <|-- RegulatingCondEq
+    TransformerEnd <|-- PowerTransformerEnd
+    PowerTransformerEnd --> PowerTransformer : PowerTransformer
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

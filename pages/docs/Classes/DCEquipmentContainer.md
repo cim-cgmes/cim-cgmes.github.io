@@ -5,10 +5,24 @@ A modelling construct to provide a root class for containment of DC as well as A
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EquipmentContainer <|-- DCEquipmentContainer
+    EquipmentContainer : +Equipment Equipments[0..n]
+    click EquipmentContainer href "EquipmentContainer"
     DCEquipmentContainer <|-- DCLine
+    DCLine : +SubGeographicalRegion Region[0..1]
+    click DCLine href "DCLine"
     DCEquipmentContainer <|-- DCConverterUnit
+    DCConverterUnit : +Substation Substation[0..1]
+    DCConverterUnit : +DCConverterOperatingModeKind operationMode[1..1]
+    click DCConverterUnit href "DCConverterUnit"
+    DCEquipmentContainer : +DCNode DCNodes[0..n]
+    DCEquipmentContainer : +DCTopologicalNode DCTopologicalNode[0..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

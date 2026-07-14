@@ -12,6 +12,7 @@
 ### ssh:ActivePowerLimit.value-valueRange
 
 **Path:** `cim:ActivePowerLimit.value`  
+**Name:** C:301:SSH:ActivePowerLimit.value:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -36,6 +37,7 @@ The attribute shall be a positive value or zero.
 ### ssh:ApparentPowerLimit.value-valueRange
 
 **Path:** `cim:ApparentPowerLimit.value`  
+**Name:** C:301:SSH:ApparentPowerLimit.value:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -60,6 +62,7 @@ The attribute shall be a positive value or zero.
 ### ssh:BatteryUnit.storedE-valueRange
 
 **Path:** `cim:BatteryUnit.storedE`  
+**Name:** C:301:SSH:BatteryUnit.storedE:valueRange  
 The attribute shall be a positive value or zero and lower than BatteryUnit.ratedE.
 
 **Severity:** sh:Violation
@@ -84,6 +87,7 @@ The attribute shall be a positive value or zero and lower than BatteryUnit.rated
 ### ssh:ControlArea.pTolerance-valueRange
 
 **Path:** `cim:ControlArea.pTolerance`  
+**Name:** C:301:SSH:ControlArea.pTolerance:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -108,6 +112,7 @@ The attribute shall be a positive value or zero.
 ### ssh:ACDCConverter.targetUdc-valueRange
 
 **Path:** `cim:ACDCConverter.targetUdc`  
+**Name:** C:301:SSH:ACDCConverter.targetUdc:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -123,6 +128,7 @@ The attribute shall be a positive value.
 ### ssh:CsConverter.targetAlpha-valueRange
 
 **Path:** `cim:CsConverter.targetAlpha`  
+**Name:** C:301:SSH:CsConverter.targetAlpha:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -138,6 +144,7 @@ The attribute shall be a positive value.
 ### ssh:CsConverter.targetGamma-valueRange
 
 **Path:** `cim:CsConverter.targetGamma`  
+**Name:** C:301:SSH:CsConverter.targetGamma:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -153,6 +160,7 @@ The attribute shall be a positive value.
 ### ssh:CsConverter.targetIdc-valueRange
 
 **Path:** `cim:CsConverter.targetIdc`  
+**Name:** C:301:SSH:CsConverter.targetIdc:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -177,6 +185,7 @@ The attribute shall be a positive value.
 ### ssh:CurrentLimit.value-valueRange
 
 **Path:** `cim:CurrentLimit.value`  
+**Name:** C:301:SSH:CurrentLimit.value:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -201,6 +210,7 @@ The attribute shall be a positive value or zero.
 ### ssh:EnergySource.voltageAngle-valueRange
 
 **Path:** `cim:EnergySource.voltageAngle`  
+**Name:** C:301:SSH:EnergySource.voltageAngle:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -216,6 +226,7 @@ The attribute shall be a positive value or zero.
 ### ssh:EnergySource.voltageMagnitude-valueRange
 
 **Path:** `cim:EnergySource.voltageMagnitude`  
+**Name:** C:301:SSH:EnergySource.voltageMagnitude:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -240,6 +251,7 @@ The attribute shall be a positive value or zero.
 ### ssh:EquivalentInjection.regulationTarget-valueRange
 
 **Path:** `cim:EquivalentInjection.regulationTarget`  
+**Name:** C:301:SSH:EquivalentInjection.regulationTarget:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -264,6 +276,7 @@ The attribute shall be a positive value.
 ### ssh:GeneratingUnit.normalPF-valueRange
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** C:301:SSH:GeneratingUnit.normalPF:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -288,6 +301,7 @@ The attribute shall be a positive value or zero.
 ### ssh:GeneratingUnit.normalPF-valueRange
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** C:301:SSH:GeneratingUnit.normalPF:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -312,6 +326,7 @@ The attribute shall be a positive value or zero.
 ### ssh:ShuntCompensator.sections-valueRange
 
 **Path:** `cim:ShuntCompensator.sections`  
+**Name:** C:301:SSH:ShuntCompensator.sections:valueRange  
 The attribute shall be a positive value or zero. 
 
 **Severity:** sh:Violation
@@ -336,6 +351,7 @@ The attribute shall be a positive value or zero.
 ### ssh:ShuntCompensator.sections-valueRange
 
 **Path:** `cim:ShuntCompensator.sections`  
+**Name:** C:301:SSH:ShuntCompensator.sections:valueRange  
 The attribute shall be a positive value or zero. 
 
 **Severity:** sh:Violation
@@ -360,6 +376,7 @@ The attribute shall be a positive value or zero.
 ### ssh:GeneratingUnit.normalPF-valueRange
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** C:301:SSH:GeneratingUnit.normalPF:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -384,6 +401,7 @@ The attribute shall be a positive value or zero.
 ### ssh:RegulatingControl.targetDeadband-valueRange
 
 **Path:** `cim:RegulatingControl.targetDeadband`  
+**Name:** C:301:SSH:RegulatingControl.targetDeadband:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -408,6 +426,7 @@ The attribute shall be a positive value or zero.
 ### ssh:GeneratingUnit.normalPF-valueRange
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** C:301:SSH:GeneratingUnit.normalPF:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -432,6 +451,7 @@ The attribute shall be a positive value or zero.
 ### ssh:RegulatingControl.targetDeadband-valueRange
 
 **Path:** `cim:RegulatingControl.targetDeadband`  
+**Name:** C:301:SSH:RegulatingControl.targetDeadband:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -456,6 +476,7 @@ The attribute shall be a positive value or zero.
 ### ssh:GeneratingUnit.normalPF-valueRange
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** C:301:SSH:GeneratingUnit.normalPF:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -480,6 +501,7 @@ The attribute shall be a positive value or zero.
 ### ssh:VoltageLimit.value-valueRange
 
 **Path:** `cim:VoltageLimit.value`  
+**Name:** C:301:SSH:VoltageLimit.value:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -504,6 +526,7 @@ The attribute shall be a positive value or zero.
 ### ssh:ACDCConverter.targetUdc-valueRange
 
 **Path:** `cim:ACDCConverter.targetUdc`  
+**Name:** C:301:SSH:ACDCConverter.targetUdc:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -519,6 +542,7 @@ The attribute shall be a positive value.
 ### ssh:VsConverter.droop-valueRange
 
 **Path:** `cim:VsConverter.droop`  
+**Name:** C:301:SSH:VsConverter.droop:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -534,6 +558,7 @@ The attribute shall be a positive value.
 ### ssh:VsConverter.droopCompensation-valueRange
 
 **Path:** `cim:VsConverter.droopCompensation`  
+**Name:** C:301:SSH:VsConverter.droopCompensation:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -549,6 +574,7 @@ The attribute shall be a positive value.
 ### ssh:VsConverter.qShare-valueRange
 
 **Path:** `cim:VsConverter.qShare`  
+**Name:** C:301:SSH:VsConverter.qShare:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -564,6 +590,7 @@ The attribute shall be a positive value or zero.
 ### ssh:VsConverter.targetPWMfactor-valueRange
 
 **Path:** `cim:VsConverter.targetPWMfactor`  
+**Name:** C:301:SSH:VsConverter.targetPWMfactor:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -579,6 +606,7 @@ The attribute shall be a positive value.
 ### ssh:VsConverter.targetPhasePcc-valueRange
 
 **Path:** `cim:VsConverter.targetPhasePcc`  
+**Name:** C:301:SSH:VsConverter.targetPhasePcc:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -594,6 +622,7 @@ The attribute shall be a positive value.
 ### ssh:VsConverter.targetPowerFactorPcc-valueRange
 
 **Path:** `cim:VsConverter.targetPowerFactorPcc`  
+**Name:** C:301:SSH:VsConverter.targetPowerFactorPcc:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -609,6 +638,7 @@ The attribute shall be a positive value.
 ### ssh:VsConverter.targetUpcc-valueRange
 
 **Path:** `cim:VsConverter.targetUpcc`  
+**Name:** C:301:SSH:VsConverter.targetUpcc:valueRange  
 The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -633,6 +663,7 @@ The attribute shall be a positive value.
 ### ssh:GeneratingUnit.normalPF-valueRange
 
 **Path:** `cim:GeneratingUnit.normalPF`  
+**Name:** C:301:SSH:GeneratingUnit.normalPF:valueRange  
 The attribute shall be a positive value or zero.
 
 **Severity:** sh:Violation

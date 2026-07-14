@@ -5,8 +5,25 @@ IEEE PF controller type 1 which operates by moving the voltage reference directl
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PFVArControllerType1Dynamics <|-- PFVArType1IEEEPFController
+    PFVArControllerType1Dynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PFVArControllerType1Dynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    PFVArControllerType1Dynamics : +VoltageAdjusterDynamics VoltageAdjusterDynamics[0..1]
+    click PFVArControllerType1Dynamics href "PFVArControllerType1Dynamics"
+    PFVArType1IEEEPFController : +Boolean ovex[1..1]
+    PFVArType1IEEEPFController : +Float tpfc[1..1]
+    PFVArType1IEEEPFController : +Float vitmin[1..1]
+    PFVArType1IEEEPFController : +Float vpf[1..1]
+    PFVArType1IEEEPFController : +Float vpfcbw[1..1]
+    PFVArType1IEEEPFController : +Float vpfref[1..1]
+    PFVArType1IEEEPFController : +Float vvtmax[1..1]
+    PFVArType1IEEEPFController : +Float vvtmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

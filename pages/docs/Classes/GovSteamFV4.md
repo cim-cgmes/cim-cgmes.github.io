@@ -5,8 +5,68 @@ Detailed electro-hydraulic governor for steam unit.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovSteamFV4
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovSteamFV4 : +Float cpsmn[1..1]
+    GovSteamFV4 : +Float cpsmx[1..1]
+    GovSteamFV4 : +Float crmn[1..1]
+    GovSteamFV4 : +Float crmx[1..1]
+    GovSteamFV4 : +Float kdc[1..1]
+    GovSteamFV4 : +Float kf1[1..1]
+    GovSteamFV4 : +Float kf3[1..1]
+    GovSteamFV4 : +Float khp[1..1]
+    GovSteamFV4 : +Float kic[1..1]
+    GovSteamFV4 : +Float kip[1..1]
+    GovSteamFV4 : +Float kit[1..1]
+    GovSteamFV4 : +Float kmp1[1..1]
+    GovSteamFV4 : +Float kmp2[1..1]
+    GovSteamFV4 : +Float kpc[1..1]
+    GovSteamFV4 : +Float kpp[1..1]
+    GovSteamFV4 : +Float kpt[1..1]
+    GovSteamFV4 : +Float krc[1..1]
+    GovSteamFV4 : +Float ksh[1..1]
+    GovSteamFV4 : +Float lpi[1..1]
+    GovSteamFV4 : +Float lps[1..1]
+    GovSteamFV4 : +Float mnef[1..1]
+    GovSteamFV4 : +Float mxef[1..1]
+    GovSteamFV4 : +Float pr1[1..1]
+    GovSteamFV4 : +Float pr2[1..1]
+    GovSteamFV4 : +Float psmn[1..1]
+    GovSteamFV4 : +Float rsmimn[1..1]
+    GovSteamFV4 : +Float rsmimx[1..1]
+    GovSteamFV4 : +Float rvgmn[1..1]
+    GovSteamFV4 : +Float rvgmx[1..1]
+    GovSteamFV4 : +Float srmn[1..1]
+    GovSteamFV4 : +Float srmx[1..1]
+    GovSteamFV4 : +Float srsmp[1..1]
+    GovSteamFV4 : +Float svmn[1..1]
+    GovSteamFV4 : +Float svmx[1..1]
+    GovSteamFV4 : +Float ta[1..1]
+    GovSteamFV4 : +Float tam[1..1]
+    GovSteamFV4 : +Float tc[1..1]
+    GovSteamFV4 : +Float tcm[1..1]
+    GovSteamFV4 : +Float tdc[1..1]
+    GovSteamFV4 : +Float tf1[1..1]
+    GovSteamFV4 : +Float tf2[1..1]
+    GovSteamFV4 : +Float thp[1..1]
+    GovSteamFV4 : +Float tmp[1..1]
+    GovSteamFV4 : +Float trh[1..1]
+    GovSteamFV4 : +Float tv[1..1]
+    GovSteamFV4 : +Float ty[1..1]
+    GovSteamFV4 : +Float y[1..1]
+    GovSteamFV4 : +Float yhpmn[1..1]
+    GovSteamFV4 : +Float yhpmx[1..1]
+    GovSteamFV4 : +Float ympmn[1..1]
+    GovSteamFV4 : +Float ympmx[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

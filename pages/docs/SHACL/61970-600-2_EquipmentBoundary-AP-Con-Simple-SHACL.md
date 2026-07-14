@@ -12,6 +12,7 @@
 ### io:IdentifiedObject.energyIdentCodeEic-cardinality
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -27,6 +28,25 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.energyIdentCodeEic-datatype
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### io:IdentifiedObject.shortName-datatype
+
+**Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -44,6 +64,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -56,43 +77,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.shortName-datatype
-
-**Path:** `cim100:IdentifiedObject.shortName`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### eqbd:BaseVoltage.nominalVoltage-datatype
-
-**Path:** `cim:BaseVoltage.nominalVoltage`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:float` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### eqbd:BaseVoltage.nominalVoltage-cardinality
 
 **Path:** `cim:BaseVoltage.nominalVoltage`  
+**Name:** BaseVoltage.nominalVoltage-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -107,9 +95,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### eqbd:BaseVoltage.nominalVoltage-datatype
+
+**Path:** `cim:BaseVoltage.nominalVoltage`  
+**Name:** BaseVoltage.nominalVoltage-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:float` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### io:IdentifiedObject.description-cardinality
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -125,6 +132,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.description-datatype
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -142,6 +150,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.mRID-datatype
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -159,6 +168,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -176,6 +186,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -193,6 +204,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.name-datatype
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -219,6 +231,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.energyIdentCodeEic-cardinality
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -234,23 +247,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.energyIdentCodeEic-datatype
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### io:IdentifiedObject.shortName-datatype
-
-**Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -268,6 +265,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -280,9 +278,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### io:IdentifiedObject.shortName-datatype
+
+**Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### eqbd:Bay.VoltageLevel-cardinality
 
 **Path:** `cim:Bay.VoltageLevel`  
+**Name:** Bay.VoltageLevel-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -300,6 +317,7 @@ This constraint validates the cardinality of the association at the used directi
 ### eqbd:Bay.VoltageLevel-valueType
 
 **Path:** `cim:Bay.VoltageLevel / rdf:type`  
+**Name:** Bay.VoltageLevel-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -317,6 +335,7 @@ This constraint validates the value type of the association at the used directio
 ### io:IdentifiedObject.description-datatype
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -334,6 +353,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.description-cardinality
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -346,26 +366,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.mRID-datatype
-
-**Path:** `cim:IdentifiedObject.mRID`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -380,9 +384,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### io:IdentifiedObject.mRID-datatype
+
+**Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### io:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -400,6 +423,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.name-datatype
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -426,6 +450,7 @@ This constraint validates the datatype of the property (attribute).
 ### eqbd:BoundaryPoint.ConnectivityNode-cardinality
 
 **Path:** `cim100:BoundaryPoint.ConnectivityNode`  
+**Name:** BoundaryPoint.ConnectivityNode-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -443,6 +468,7 @@ This constraint validates the cardinality of the association at the used directi
 ### eqbd:BoundaryPoint.ConnectivityNode-valueType
 
 **Path:** `cim100:BoundaryPoint.ConnectivityNode / rdf:type`  
+**Name:** BoundaryPoint.ConnectivityNode-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -457,26 +483,10 @@ This constraint validates the value type of the association at the used directio
 - **sh:InConstraintComponent** (Severity: sh:Violation)
   - Values: `[cim:ConnectivityNode]` 
 
-### eqbd:BoundaryPoint.fromEndIsoCode-datatype
-
-**Path:** `cim100:BoundaryPoint.fromEndIsoCode`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### eqbd:BoundaryPoint.fromEndIsoCode-cardinality
 
 **Path:** `cim100:BoundaryPoint.fromEndIsoCode`  
+**Name:** BoundaryPoint.fromEndIsoCode-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -491,9 +501,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### eqbd:BoundaryPoint.fromEndIsoCode-datatype
+
+**Path:** `cim100:BoundaryPoint.fromEndIsoCode`  
+**Name:** BoundaryPoint.fromEndIsoCode-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### eqbd:BoundaryPoint.fromEndName-cardinality
 
 **Path:** `cim100:BoundaryPoint.fromEndName`  
+**Name:** BoundaryPoint.fromEndName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -511,6 +540,7 @@ This constraint validates the cardinality of the property (attribute).
 ### eqbd:BoundaryPoint.fromEndName-datatype
 
 **Path:** `cim100:BoundaryPoint.fromEndName`  
+**Name:** BoundaryPoint.fromEndName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -528,6 +558,7 @@ This constraint validates the datatype of the property (attribute).
 ### eqbd:BoundaryPoint.fromEndNameTso-cardinality
 
 **Path:** `cim100:BoundaryPoint.fromEndNameTso`  
+**Name:** BoundaryPoint.fromEndNameTso-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -545,6 +576,7 @@ This constraint validates the cardinality of the property (attribute).
 ### eqbd:BoundaryPoint.fromEndNameTso-datatype
 
 **Path:** `cim100:BoundaryPoint.fromEndNameTso`  
+**Name:** BoundaryPoint.fromEndNameTso-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -562,6 +594,7 @@ This constraint validates the datatype of the property (attribute).
 ### eqbd:BoundaryPoint.isDirectCurrent-cardinality
 
 **Path:** `cim100:BoundaryPoint.isDirectCurrent`  
+**Name:** BoundaryPoint.isDirectCurrent-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -577,6 +610,25 @@ This constraint validates the cardinality of the property (attribute).
 ### eqbd:BoundaryPoint.isDirectCurrent-datatype
 
 **Path:** `cim100:BoundaryPoint.isDirectCurrent`  
+**Name:** BoundaryPoint.isDirectCurrent-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:boolean` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### eqbd:BoundaryPoint.isExcludedFromAreaInterchange-datatype
+
+**Path:** `cim100:BoundaryPoint.isExcludedFromAreaInterchange`  
+**Name:** BoundaryPoint.isExcludedFromAreaInterchange-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -594,6 +646,7 @@ This constraint validates the datatype of the property (attribute).
 ### eqbd:BoundaryPoint.isExcludedFromAreaInterchange-cardinality
 
 **Path:** `cim100:BoundaryPoint.isExcludedFromAreaInterchange`  
+**Name:** BoundaryPoint.isExcludedFromAreaInterchange-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -606,26 +659,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### eqbd:BoundaryPoint.isExcludedFromAreaInterchange-datatype
+### eqbd:BoundaryPoint.toEndIsoCode-cardinality
 
-**Path:** `cim100:BoundaryPoint.isExcludedFromAreaInterchange`  
-This constraint validates the datatype of the property (attribute).
+**Path:** `cim100:BoundaryPoint.toEndIsoCode`  
+**Name:** BoundaryPoint.toEndIsoCode-cardinality  
+This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
 
 **Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
+- "Missing required property (attribute)."
 
 **Constraints:**
 
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:boolean` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
 
 ### eqbd:BoundaryPoint.toEndIsoCode-datatype
 
 **Path:** `cim100:BoundaryPoint.toEndIsoCode`  
+**Name:** BoundaryPoint.toEndIsoCode-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -639,44 +694,11 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:string` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
-
-### eqbd:BoundaryPoint.toEndIsoCode-cardinality
-
-**Path:** `cim100:BoundaryPoint.toEndIsoCode`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### eqbd:BoundaryPoint.toEndName-cardinality
-
-**Path:** `cim100:BoundaryPoint.toEndName`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
 
 ### eqbd:BoundaryPoint.toEndName-datatype
 
 **Path:** `cim100:BoundaryPoint.toEndName`  
+**Name:** BoundaryPoint.toEndName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -691,9 +713,28 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### eqbd:BoundaryPoint.toEndName-cardinality
+
+**Path:** `cim100:BoundaryPoint.toEndName`  
+**Name:** BoundaryPoint.toEndName-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### eqbd:BoundaryPoint.toEndNameTso-cardinality
 
 **Path:** `cim100:BoundaryPoint.toEndNameTso`  
+**Name:** BoundaryPoint.toEndNameTso-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -711,6 +752,7 @@ This constraint validates the cardinality of the property (attribute).
 ### eqbd:BoundaryPoint.toEndNameTso-datatype
 
 **Path:** `cim100:BoundaryPoint.toEndNameTso`  
+**Name:** BoundaryPoint.toEndNameTso-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -728,6 +770,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.energyIdentCodeEic-cardinality
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -743,6 +786,25 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.energyIdentCodeEic-datatype
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### io:IdentifiedObject.shortName-datatype
+
+**Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -760,6 +822,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -772,9 +835,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.shortName-datatype
+### io:IdentifiedObject.description-datatype
 
-**Path:** `cim100:IdentifiedObject.shortName`  
+**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -792,6 +856,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.description-cardinality
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -804,26 +869,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.description-datatype
-
-**Path:** `cim:IdentifiedObject.description`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### io:IdentifiedObject.mRID-datatype
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -841,6 +890,25 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### io:IdentifiedObject.name-cardinality
+
+**Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -858,6 +926,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.name-datatype
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -871,23 +940,6 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:string` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
-
-### io:IdentifiedObject.name-cardinality
-
-**Path:** `cim:IdentifiedObject.name`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Missing required property (attribute)."
-
-**Constraints:**
-
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
 
 ## eqbd:ConnectivityNode
 
@@ -898,26 +950,10 @@ This constraint validates the cardinality of the property (attribute).
 
 **Nested Properties:**
 
-### io:IdentifiedObject.energyIdentCodeEic-datatype
-
-**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### io:IdentifiedObject.energyIdentCodeEic-cardinality
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -930,9 +966,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### io:IdentifiedObject.energyIdentCodeEic-datatype
+
+**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -948,6 +1003,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.shortName-datatype
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -965,6 +1021,7 @@ This constraint validates the datatype of the property (attribute).
 ### eqbd:ConnectivityNode.ConnectivityNodeContainer-cardinality
 
 **Path:** `cim:ConnectivityNode.ConnectivityNodeContainer`  
+**Name:** ConnectivityNode.ConnectivityNodeContainer-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -979,9 +1036,28 @@ This constraint validates the cardinality of the association at the used directi
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### io:IdentifiedObject.description-datatype
+
+**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### io:IdentifiedObject.description-cardinality
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -994,9 +1070,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.description-datatype
+### io:IdentifiedObject.mRID-datatype
 
-**Path:** `cim:IdentifiedObject.description`  
+**Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1014,6 +1091,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1027,44 +1105,11 @@ This constraint validates the cardinality of the property (attribute).
   - MinCount: `1` 
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
-
-### io:IdentifiedObject.mRID-datatype
-
-**Path:** `cim:IdentifiedObject.mRID`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### io:IdentifiedObject.name-datatype
-
-**Path:** `cim:IdentifiedObject.name`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
 
 ### io:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1078,6 +1123,24 @@ This constraint validates the cardinality of the property (attribute).
   - MinCount: `1` 
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
+
+### io:IdentifiedObject.name-datatype
+
+**Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
 
 ## eqbd:ConnectivityNode.ConnectivityNodeContainer-valueTypeNodeShape
 
@@ -1091,6 +1154,7 @@ This constraint validates the cardinality of the property (attribute).
 ### eqbd:ConnectivityNode.ConnectivityNodeContainer-valueType
 
 **Path:** `cim:ConnectivityNode.ConnectivityNodeContainer / rdf:type`  
+**Name:** ConnectivityNode.ConnectivityNodeContainer-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -1114,9 +1178,28 @@ This constraint validates the value type of the association at the used directio
 
 **Nested Properties:**
 
+### io:IdentifiedObject.energyIdentCodeEic-datatype
+
+**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### io:IdentifiedObject.energyIdentCodeEic-cardinality
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1128,44 +1211,11 @@ This constraint validates the cardinality of the property (attribute).
 
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
-
-### io:IdentifiedObject.energyIdentCodeEic-datatype
-
-**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### io:IdentifiedObject.shortName-datatype
-
-**Path:** `cim100:IdentifiedObject.shortName`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
 
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1178,9 +1228,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.description-datatype
+### io:IdentifiedObject.shortName-datatype
 
-**Path:** `cim:IdentifiedObject.description`  
+**Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1198,6 +1249,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.description-cardinality
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1210,9 +1262,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### io:IdentifiedObject.description-datatype
+
+**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1230,6 +1301,25 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.mRID-datatype
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### io:IdentifiedObject.name-datatype
+
+**Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1247,6 +1337,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1261,23 +1352,6 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.name-datatype
-
-**Path:** `cim:IdentifiedObject.name`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ## eqbd:Equipment.EquipmentContainer-valueTypeNodeShape
 
 **Severity:** sh:Violation
@@ -1290,6 +1364,7 @@ This constraint validates the datatype of the property (attribute).
 ### eqbd:Equipment.EquipmentContainer-valueType
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** Equipment.EquipmentContainer-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -1313,24 +1388,10 @@ This constraint validates the value type of the association at the used directio
 
 **Nested Properties:**
 
-### io:IdentifiedObject.energyIdentCodeEic-cardinality
-
-**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ### io:IdentifiedObject.energyIdentCodeEic-datatype
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1345,9 +1406,26 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### io:IdentifiedObject.energyIdentCodeEic-cardinality
+
+**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1363,6 +1441,25 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.shortName-datatype
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### io:IdentifiedObject.description-datatype
+
+**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1380,6 +1477,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.description-cardinality
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1392,9 +1490,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.description-datatype
+### io:IdentifiedObject.mRID-datatype
 
-**Path:** `cim:IdentifiedObject.description`  
+**Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1412,6 +1511,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1426,26 +1526,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.mRID-datatype
-
-**Path:** `cim:IdentifiedObject.mRID`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### io:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1463,6 +1547,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.name-datatype
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1486,9 +1571,26 @@ This constraint validates the datatype of the property (attribute).
 
 **Nested Properties:**
 
+### io:IdentifiedObject.energyIdentCodeEic-cardinality
+
+**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### io:IdentifiedObject.energyIdentCodeEic-datatype
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1502,40 +1604,11 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:string` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
-
-### io:IdentifiedObject.energyIdentCodeEic-cardinality
-
-**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### io:IdentifiedObject.shortName-cardinality
-
-**Path:** `cim100:IdentifiedObject.shortName`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
 
 ### io:IdentifiedObject.shortName-datatype
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1550,9 +1623,26 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### io:IdentifiedObject.shortName-cardinality
+
+**Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### eqbd:Equipment.EquipmentContainer-cardinality
 
 **Path:** `cim:Equipment.EquipmentContainer`  
+**Name:** Equipment.EquipmentContainer-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -1568,6 +1658,7 @@ This constraint validates the cardinality of the association at the used directi
 ### io:IdentifiedObject.description-cardinality
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1583,6 +1674,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.description-datatype
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1600,6 +1692,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1617,6 +1710,25 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.mRID-datatype
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### io:IdentifiedObject.name-datatype
+
+**Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1634,6 +1746,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1648,23 +1761,6 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.name-datatype
-
-**Path:** `cim:IdentifiedObject.name`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ## eqbd:Line
 
 **Severity:** sh:Violation
@@ -1674,26 +1770,10 @@ This constraint validates the datatype of the property (attribute).
 
 **Nested Properties:**
 
-### io:IdentifiedObject.energyIdentCodeEic-datatype
-
-**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### io:IdentifiedObject.energyIdentCodeEic-cardinality
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1706,9 +1786,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### io:IdentifiedObject.energyIdentCodeEic-datatype
+
+**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1724,23 +1823,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.shortName-datatype
 
 **Path:** `cim100:IdentifiedObject.shortName`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### io:IdentifiedObject.description-datatype
-
-**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.shortName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1758,6 +1841,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.description-cardinality
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1770,9 +1854,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### io:IdentifiedObject.description-datatype
+
+**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1790,6 +1893,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.mRID-datatype
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1807,6 +1911,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.name-datatype
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1824,6 +1929,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1841,6 +1947,7 @@ This constraint validates the cardinality of the property (attribute).
 ### eqbd:Line.Region-cardinality
 
 **Path:** `cim:Line.Region`  
+**Name:** Line.Region-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -1856,6 +1963,7 @@ This constraint validates the cardinality of the association at the used directi
 ### eqbd:Line.Region-valueType
 
 **Path:** `cim:Line.Region / rdf:type`  
+**Name:** Line.Region-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -1879,24 +1987,10 @@ This constraint validates the value type of the association at the used directio
 
 **Nested Properties:**
 
-### io:IdentifiedObject.energyIdentCodeEic-cardinality
-
-**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ### io:IdentifiedObject.energyIdentCodeEic-datatype
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1911,9 +2005,26 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### io:IdentifiedObject.energyIdentCodeEic-cardinality
+
+**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1929,23 +2040,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.shortName-datatype
 
 **Path:** `cim100:IdentifiedObject.shortName`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### io:IdentifiedObject.description-datatype
-
-**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.shortName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1963,6 +2058,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.description-cardinality
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -1975,26 +2071,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.mRID-cardinality
+### io:IdentifiedObject.description-datatype
 
-**Path:** `cim:IdentifiedObject.mRID`  
-This constraint validates the cardinality of the property (attribute).
+**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
+This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
 
 **Messages:**
-- "Missing required property (attribute)."
+- "The datatype is not literal or it violates the xsd datatype."
 
 **Constraints:**
 
-- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
-  - MinCount: `1` 
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
 
 ### io:IdentifiedObject.mRID-datatype
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2009,26 +2107,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### io:IdentifiedObject.name-datatype
+### io:IdentifiedObject.mRID-cardinality
 
-**Path:** `cim:IdentifiedObject.name`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### io:IdentifiedObject.name-cardinality
-
-**Path:** `cim:IdentifiedObject.name`  
+**Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2043,9 +2125,46 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### io:IdentifiedObject.name-cardinality
+
+**Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Missing required property (attribute)."
+
+**Constraints:**
+
+- **sh:MinCountConstraintComponent** (Severity: sh:Violation)
+  - MinCount: `1` 
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### io:IdentifiedObject.name-datatype
+
+**Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### eqbd:SubGeographicalRegion.Region-cardinality
 
 **Path:** `cim:SubGeographicalRegion.Region`  
+**Name:** SubGeographicalRegion.Region-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2063,6 +2182,7 @@ This constraint validates the cardinality of the association at the used directi
 ### eqbd:SubGeographicalRegion.Region-valueType
 
 **Path:** `cim:SubGeographicalRegion.Region / rdf:type`  
+**Name:** SubGeographicalRegion.Region-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2089,6 +2209,7 @@ This constraint validates the value type of the association at the used directio
 ### io:IdentifiedObject.energyIdentCodeEic-datatype
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2106,6 +2227,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.energyIdentCodeEic-cardinality
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2121,6 +2243,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.shortName-datatype
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2138,21 +2261,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### io:IdentifiedObject.description-cardinality
-
-**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2168,6 +2277,41 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.description-datatype
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### io:IdentifiedObject.description-cardinality
+
+**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
+### io:IdentifiedObject.mRID-datatype
+
+**Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2185,6 +2329,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2199,26 +2344,10 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
-### io:IdentifiedObject.mRID-datatype
-
-**Path:** `cim:IdentifiedObject.mRID`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
 ### io:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2236,6 +2365,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.name-datatype
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2253,6 +2383,7 @@ This constraint validates the datatype of the property (attribute).
 ### eqbd:Substation.Region-cardinality
 
 **Path:** `cim:Substation.Region`  
+**Name:** Substation.Region-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2270,6 +2401,7 @@ This constraint validates the cardinality of the association at the used directi
 ### eqbd:Substation.Region-valueType
 
 **Path:** `cim:Substation.Region / rdf:type`  
+**Name:** Substation.Region-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2296,6 +2428,7 @@ This constraint validates the value type of the association at the used directio
 ### io:IdentifiedObject.energyIdentCodeEic-cardinality
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2311,23 +2444,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.energyIdentCodeEic-datatype
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### io:IdentifiedObject.shortName-datatype
-
-**Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2345,6 +2462,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2357,9 +2475,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### io:IdentifiedObject.shortName-datatype
+
+**Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### io:IdentifiedObject.description-cardinality
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2375,6 +2512,25 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.description-datatype
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
+### io:IdentifiedObject.mRID-datatype
+
+**Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2392,6 +2548,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2405,44 +2562,11 @@ This constraint validates the cardinality of the property (attribute).
   - MinCount: `1` 
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
-
-### io:IdentifiedObject.mRID-datatype
-
-**Path:** `cim:IdentifiedObject.mRID`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
-
-### io:IdentifiedObject.name-datatype
-
-**Path:** `cim:IdentifiedObject.name`  
-This constraint validates the datatype of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "The datatype is not literal or it violates the xsd datatype."
-
-**Constraints:**
-
-- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
-  - Datatype: `xsd:string` 
-- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
-  - NodeKind: `sh:Literal` 
 
 ### io:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2457,9 +2581,28 @@ This constraint validates the cardinality of the property (attribute).
 - **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
   - MaxCount: `1` 
 
+### io:IdentifiedObject.name-datatype
+
+**Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
+This constraint validates the datatype of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "The datatype is not literal or it violates the xsd datatype."
+
+**Constraints:**
+
+- **sh:DatatypeConstraintComponent** (Severity: sh:Violation)
+  - Datatype: `xsd:string` 
+- **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
+  - NodeKind: `sh:Literal` 
+
 ### eqbd:Terminal.ConductingEquipment-cardinality
 
 **Path:** `cim:Terminal.ConductingEquipment`  
+**Name:** Terminal.ConductingEquipment-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2477,6 +2620,7 @@ This constraint validates the cardinality of the association at the used directi
 ### eqbd:Terminal.ConductingEquipment-valueType
 
 **Path:** `cim:Terminal.ConductingEquipment / rdf:type`  
+**Name:** Terminal.ConductingEquipment-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2494,6 +2638,7 @@ This constraint validates the value type of the association at the used directio
 ### eqbd:Terminal.ConnectivityNode-cardinality
 
 **Path:** `cim:Terminal.ConnectivityNode`  
+**Name:** Terminal.ConnectivityNode-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2509,6 +2654,7 @@ This constraint validates the cardinality of the association at the used directi
 ### eqbd:Terminal.ConnectivityNode-valueType
 
 **Path:** `cim:Terminal.ConnectivityNode / rdf:type`  
+**Name:** Terminal.ConnectivityNode-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2532,9 +2678,26 @@ This constraint validates the value type of the association at the used directio
 
 **Nested Properties:**
 
+### io:IdentifiedObject.energyIdentCodeEic-cardinality
+
+**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### io:IdentifiedObject.energyIdentCodeEic-datatype
 
 **Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
+**Name:** IdentifiedObject.energyIdentCodeEic-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2549,24 +2712,10 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
-### io:IdentifiedObject.energyIdentCodeEic-cardinality
-
-**Path:** `cim100:IdentifiedObject.energyIdentCodeEic`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
 ### io:IdentifiedObject.shortName-datatype
 
 **Path:** `cim100:IdentifiedObject.shortName`  
+**Name:** IdentifiedObject.shortName-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2584,21 +2733,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.shortName-cardinality
 
 **Path:** `cim100:IdentifiedObject.shortName`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### io:IdentifiedObject.description-cardinality
-
-**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.shortName-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2614,6 +2749,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.description-datatype
 
 **Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2628,9 +2764,26 @@ This constraint validates the datatype of the property (attribute).
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
 
+### io:IdentifiedObject.description-cardinality
+
+**Path:** `cim:IdentifiedObject.description`  
+**Name:** IdentifiedObject.description-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
+
 ### io:IdentifiedObject.mRID-datatype
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2648,6 +2801,7 @@ This constraint validates the datatype of the property (attribute).
 ### io:IdentifiedObject.mRID-cardinality
 
 **Path:** `cim:IdentifiedObject.mRID`  
+**Name:** IdentifiedObject.mRID-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2665,6 +2819,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.name-cardinality
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2682,6 +2837,7 @@ This constraint validates the cardinality of the property (attribute).
 ### io:IdentifiedObject.name-datatype
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** IdentifiedObject.name-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2699,6 +2855,7 @@ This constraint validates the datatype of the property (attribute).
 ### eqbd:VoltageLevel.BaseVoltage-cardinality
 
 **Path:** `cim:VoltageLevel.BaseVoltage`  
+**Name:** VoltageLevel.BaseVoltage-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2716,6 +2873,7 @@ This constraint validates the cardinality of the association at the used directi
 ### eqbd:VoltageLevel.BaseVoltage-valueType
 
 **Path:** `cim:VoltageLevel.BaseVoltage / rdf:type`  
+**Name:** VoltageLevel.BaseVoltage-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2733,6 +2891,7 @@ This constraint validates the value type of the association at the used directio
 ### eqbd:VoltageLevel.Substation-cardinality
 
 **Path:** `cim:VoltageLevel.Substation`  
+**Name:** VoltageLevel.Substation-cardinality  
 This constraint validates the cardinality of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2750,6 +2909,7 @@ This constraint validates the cardinality of the association at the used directi
 ### eqbd:VoltageLevel.Substation-valueType
 
 **Path:** `cim:VoltageLevel.Substation / rdf:type`  
+**Name:** VoltageLevel.Substation-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -2767,6 +2927,7 @@ This constraint validates the value type of the association at the used directio
 ### eqbd:VoltageLevel.highVoltageLimit-datatype
 
 **Path:** `cim:VoltageLevel.highVoltageLimit`  
+**Name:** VoltageLevel.highVoltageLimit-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2784,21 +2945,7 @@ This constraint validates the datatype of the property (attribute).
 ### eqbd:VoltageLevel.highVoltageLimit-cardinality
 
 **Path:** `cim:VoltageLevel.highVoltageLimit`  
-This constraint validates the cardinality of the property (attribute).
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "Cardinality violation. Upper bound shall be 1"
-
-**Constraints:**
-
-- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
-  - MaxCount: `1` 
-
-### eqbd:VoltageLevel.lowVoltageLimit-cardinality
-
-**Path:** `cim:VoltageLevel.lowVoltageLimit`  
+**Name:** VoltageLevel.highVoltageLimit-cardinality  
 This constraint validates the cardinality of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2814,6 +2961,7 @@ This constraint validates the cardinality of the property (attribute).
 ### eqbd:VoltageLevel.lowVoltageLimit-datatype
 
 **Path:** `cim:VoltageLevel.lowVoltageLimit`  
+**Name:** VoltageLevel.lowVoltageLimit-datatype  
 This constraint validates the datatype of the property (attribute).
 
 **Severity:** sh:Violation
@@ -2827,4 +2975,20 @@ This constraint validates the datatype of the property (attribute).
   - Datatype: `xsd:float` 
 - **sh:NodeKindConstraintComponent** (Severity: sh:Violation)
   - NodeKind: `sh:Literal` 
+
+### eqbd:VoltageLevel.lowVoltageLimit-cardinality
+
+**Path:** `cim:VoltageLevel.lowVoltageLimit`  
+**Name:** VoltageLevel.lowVoltageLimit-cardinality  
+This constraint validates the cardinality of the property (attribute).
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "Cardinality violation. Upper bound shall be 1"
+
+**Constraints:**
+
+- **sh:MaxCountConstraintComponent** (Severity: sh:Violation)
+  - MaxCount: `1` 
 

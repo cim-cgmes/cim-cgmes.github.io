@@ -3,11 +3,16 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     VoltageCompensatorDynamics <|-- VCompIEEEType1
+    GenICompensationForGenJ --> VCompIEEEType2 : VcompIEEEType2
     VoltageCompensatorDynamics <|-- VCompIEEEType2
     VCompIEEEType2 --> GenICompensationForGenJ : GenICompensationForGenJ
-    GenICompensationForGenJ --> VCompIEEEType2 : VcompIEEEType2
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

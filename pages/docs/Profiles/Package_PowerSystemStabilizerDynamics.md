@@ -3,25 +3,30 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    PowerSystemStabilizerDynamics <|-- Pss1
-    PowerSystemStabilizerDynamics <|-- PssIEEE3B
-    PowerSystemStabilizerDynamics <|-- Pss2B
-    PowerSystemStabilizerDynamics <|-- PssIEEE2B
-    PowerSystemStabilizerDynamics <|-- Pss5
-    PowerSystemStabilizerDynamics <|-- PssSB4
-    PowerSystemStabilizerDynamics <|-- PssRQB
     PowerSystemStabilizerDynamics <|-- PssSK
-    PowerSystemStabilizerDynamics <|-- PssPTIST1
     PowerSystemStabilizerDynamics <|-- PssIEEE1A
-    PowerSystemStabilizerDynamics <|-- PssIEEE4B
-    PowerSystemStabilizerDynamics <|-- PssSTAB2A
-    PowerSystemStabilizerDynamics <|-- PssSH
-    PowerSystemStabilizerDynamics <|-- PssELIN2
-    PowerSystemStabilizerDynamics <|-- Pss1A
-    PowerSystemStabilizerDynamics <|-- PssWECC
+    PowerSystemStabilizerDynamics <|-- Pss1
     PowerSystemStabilizerDynamics <|-- PssPTIST3
+    PowerSystemStabilizerDynamics <|-- PssSH
+    PowerSystemStabilizerDynamics <|-- PssIEEE2B
+    PowerSystemStabilizerDynamics <|-- PssSB4
+    PowerSystemStabilizerDynamics <|-- Pss2B
+    PowerSystemStabilizerDynamics <|-- PssWECC
+    PowerSystemStabilizerDynamics <|-- PssSTAB2A
+    PowerSystemStabilizerDynamics <|-- PssIEEE4B
+    PowerSystemStabilizerDynamics <|-- Pss1A
+    PowerSystemStabilizerDynamics <|-- PssPTIST1
+    PowerSystemStabilizerDynamics <|-- Pss5
+    PowerSystemStabilizerDynamics <|-- PssELIN2
+    PowerSystemStabilizerDynamics <|-- PssIEEE3B
     PowerSystemStabilizerDynamics <|-- Pss2ST
+    PowerSystemStabilizerDynamics <|-- PssRQB
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

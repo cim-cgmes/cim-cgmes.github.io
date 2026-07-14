@@ -5,12 +5,42 @@ A Measurement represents any measured, calculated or non-measured non-calculated
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- Measurement
-    Measurement <|-- StringMeasurement
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
     Measurement <|-- Analog
-    Measurement <|-- Discrete
+    Analog : +AnalogValue AnalogValues[0..n]
+    Analog : +AnalogLimitSet LimitSets[0..n]
+    Analog : +Boolean positiveFlowIn[0..1]
+    click Analog href "Analog"
     Measurement <|-- Accumulator
+    Accumulator : +AccumulatorValue AccumulatorValues[0..n]
+    Accumulator : +AccumulatorLimitSet LimitSets[0..n]
+    click Accumulator href "Accumulator"
+    Measurement <|-- StringMeasurement
+    StringMeasurement : +StringMeasurementValue StringMeasurementValues[0..n]
+    click StringMeasurement href "StringMeasurement"
+    Measurement <|-- Discrete
+    Discrete : +DiscreteValue DiscreteValues[0..n]
+    Discrete : +ValueAliasSet ValueAliasSet[0..1]
+    click Discrete href "Discrete"
+    Measurement : +PowerSystemResource PowerSystemResource[1..1]
+    Measurement : +ACDCTerminal Terminal[0..1]
+    Measurement : +String measurementType[1..1]
+    Measurement : +PhaseCode phases[0..1]
+    Measurement : +UnitMultiplier unitMultiplier[1..1]
+    Measurement : +UnitSymbol unitSymbol[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

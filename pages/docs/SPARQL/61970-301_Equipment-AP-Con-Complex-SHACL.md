@@ -5,64 +5,65 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:VsConverter
 - targetClass: cim:CsConverter
+- targetClass: cim:VsConverter
 
 ## eq:ACDCTerminal
 
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:ConformLoad
+- targetClass: cim:Disconnector
+- targetClass: cim:DCBreaker
+- targetClass: cim:DCChopper
+- targetClass: cim:Switch
+- targetClass: cim:CsConverter
+- targetClass: cim:LinearShuntCompensator
+- targetClass: cim:GroundingImpedance
+- targetClass: cim:EnergyConsumer
+- targetClass: cim:AsynchronousMachine
+- targetClass: cim:Ground
+- targetClass: cim:DCSwitch
+- targetClass: cim:DCSeriesDevice
+- targetClass: cim:DCShunt
+- targetClass: cim:Junction
+- targetClass: cim:SeriesCompensator
+- targetClass: cim:VsConverter
+- targetClass: cim:NonConformLoad
+- targetClass: cim:StationSupply
+- targetClass: cim:PowerElectronicsConnection
+- targetClass: cim:GroundDisconnector
+- targetClass: cim:DCLineSegment
+- targetClass: cim:DCDisconnector
+- targetClass: cim:EquivalentInjection
+- targetClass: cim:EquivalentBranch
+- targetClass: cim:PowerTransformer
 - targetClass: cim:Clamp
 - targetClass: cim:BusbarSection
 - targetClass: cim:PetersenCoil
-- targetClass: cim:ConformLoad
-- targetClass: cim:Breaker
-- targetClass: cim:Cut
-- targetClass: cim:DCLineSegment
-- targetClass: cim:DCSwitch
-- targetClass: cim:CsConverter
-- targetClass: cim:VsConverter
-- targetClass: cim:ACLineSegment
-- targetClass: cim:EnergyConsumer
+- targetClass: cim:ExternalNetworkInjection
 - targetClass: cim:NonlinearShuntCompensator
-- targetClass: cim:EquivalentShunt
-- targetClass: cim:SeriesCompensator
-- targetClass: cim:Switch
+- targetClass: cim:EnergySource
 - targetClass: cim:StaticVarCompensator
+- targetClass: cim:Fuse
+- targetClass: cim:Jumper
 - targetClass: cim:LoadBreakSwitch
 - targetClass: cim:DisconnectingCircuitBreaker
-- targetClass: cim:Junction
-- targetClass: cim:GroundingImpedance
-- targetClass: cim:NonConformLoad
-- targetClass: cim:StationSupply
-- targetClass: cim:LinearShuntCompensator
-- targetClass: cim:EquivalentInjection
-- targetClass: cim:Ground
-- targetClass: cim:DCSeriesDevice
-- targetClass: cim:PowerElectronicsConnection
-- targetClass: cim:EquivalentBranch
-- targetClass: cim:Disconnector
+- targetClass: cim:Cut
 - targetClass: cim:DCBusbar
-- targetClass: cim:DCDisconnector
-- targetClass: cim:DCGround
-- targetClass: cim:EnergySource
-- targetClass: cim:AsynchronousMachine
-- targetClass: cim:Jumper
-- targetClass: cim:ExternalNetworkInjection
 - targetClass: cim:SynchronousMachine
-- targetClass: cim:Fuse
-- targetClass: cim:GroundDisconnector
-- targetClass: cim:DCChopper
-- targetClass: cim:DCShunt
-- targetClass: cim:PowerTransformer
-- targetClass: cim:DCBreaker
+- targetClass: cim:EquivalentShunt
+- targetClass: cim:Breaker
+- targetClass: cim:DCGround
+- targetClass: cim:ACLineSegment
 
 **Nested Properties:**
 
 ### eq:ACDCTerminal.sequenceNumber-numbering
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:ACDCTerminal.sequenceNumber:numbering  
 The sequence numbering starts with 1 and additional terminals should follow in increasing order. The first terminal is the starting point for a two terminal branch.
 
 **Severity:** sh:Violation
@@ -72,9 +73,9 @@ The sequence numbering starts with 1 and additional terminals should follow in i
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this (COUNT(?sn) AS ?countsn) (COUNT(DISTINCT ?sn) AS ?countdsn) (MIN(?sn) AS ?minsn) (SUM(?sn) AS ?sumsn) (COUNT(?terms) AS ?countterms)
 			WHERE {
@@ -160,6 +161,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 ## eq:Clamp-numberOfTerminals
 
+**Name:** C:452:EQ:Clamp:numberOfTerminals  
 A Clamp is ConductingEquipment and has one Terminal with an associated ConnectivityNode.
 
 **Severity:** sh:Violation
@@ -172,6 +174,7 @@ A Clamp is ConductingEquipment and has one Terminal with an associated Connectiv
 
 ## eq:ConductingEquipment-oneTerminal
 
+**Name:** C:301:EQ:ConductingEquipment:oneTerminal  
 All other ConductingEquipment leaf classes (notably also including Clamp and BusbarSection) and DCConductingEquipment have a single terminal.
 
 **Severity:** sh:Violation
@@ -180,28 +183,29 @@ All other ConductingEquipment leaf classes (notably also including Clamp and Bus
 - "The ConductingEquipment does not have the required number of Terminal-s."
 
 **Targets:**
+- targetClass: cim:EnergyConsumer
+- targetClass: cim:SynchronousMachine
+- targetClass: cim:AsynchronousMachine
 - targetClass: cim:DCGround
 - targetClass: cim:EnergySource
 - targetClass: cim:NonConformLoad
-- targetClass: cim:PowerElectronicsConnection
-- targetClass: cim:ExternalNetworkInjection
-- targetClass: cim:EnergyConsumer
-- targetClass: cim:ConformLoad
-- targetClass: cim:StationSupply
-- targetClass: cim:LinearShuntCompensator
-- targetClass: cim:NonlinearShuntCompensator
-- targetClass: cim:SynchronousMachine
-- targetClass: cim:EquivalentShunt
-- targetClass: cim:DCBusbar
-- targetClass: cim:DCShunt
-- targetClass: cim:Ground
-- targetClass: cim:AsynchronousMachine
 - targetClass: cim:EquivalentInjection
 - targetClass: cim:Junction
+- targetClass: cim:DCBusbar
+- targetClass: cim:DCShunt
+- targetClass: cim:ExternalNetworkInjection
+- targetClass: cim:LinearShuntCompensator
 - targetClass: cim:StaticVarCompensator
+- targetClass: cim:EquivalentShunt
+- targetClass: cim:Ground
+- targetClass: cim:ConformLoad
+- targetClass: cim:StationSupply
+- targetClass: cim:PowerElectronicsConnection
+- targetClass: cim:NonlinearShuntCompensator
 
 ## eq:ConductingEquipment-twoTerminals
 
+**Name:** C:301:EQ:ConductingEquipment:twoTerminals  
 The following ConductingEquipment classes have two terminals: ACLineSegment, DCLineSegment, DCSeriesDevice, DCSwitch (and its specializations), DCChopper, Switch and all its specializations (including Jumper, Fuse, Breaker, Disconnector, LoadBreakSwitch, and Cut), SeriesCompensator, and EquivalentBranch. The PowerTransformer class typically has two terminals, but may also have one or more terminals. For example a zig-zag connected grounding transformer may have one terminal. Three terminal transformers are commonly used in transmission systems and in special cases transformers may have four, five, or more terminals. 
 
 **Severity:** sh:Violation
@@ -210,54 +214,55 @@ The following ConductingEquipment classes have two terminals: ACLineSegment, DCL
 - "The ConductingEquipment does not have the required number of Terminal-s."
 
 **Targets:**
+- targetClass: cim:LoadBreakSwitch
+- targetClass: cim:DCLineSegment
 - targetClass: cim:DCSeriesDevice
-- targetClass: cim:DCBreaker
-- targetClass: cim:DCChopper
-- targetClass: cim:Jumper
-- targetClass: cim:Cut
-- targetClass: cim:DCSwitch
-- targetClass: cim:DCDisconnector
-- targetClass: cim:Switch
-- targetClass: cim:Disconnector
-- targetClass: cim:Fuse
 - targetClass: cim:GroundDisconnector
 - targetClass: cim:Breaker
-- targetClass: cim:LoadBreakSwitch
 - targetClass: cim:DisconnectingCircuitBreaker
+- targetClass: cim:Cut
 - targetClass: cim:SeriesCompensator
+- targetClass: cim:DCBreaker
+- targetClass: cim:DCChopper
+- targetClass: cim:Switch
+- targetClass: cim:Disconnector
+- targetClass: cim:Jumper
 - targetClass: cim:EquivalentBranch
 - targetClass: cim:ACLineSegment
-- targetClass: cim:DCLineSegment
+- targetClass: cim:DCSwitch
+- targetClass: cim:DCDisconnector
+- targetClass: cim:Fuse
 
 ## eq:ConductingEquipment-twoTerminalsShape
 
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:GroundDisconnector
-- targetClass: cim:Jumper
-- targetClass: cim:Breaker
-- targetClass: cim:DCSeriesDevice
-- targetClass: cim:DCSwitch
-- targetClass: cim:DCDisconnector
+- targetClass: cim:ACLineSegment
 - targetClass: cim:DCBreaker
-- targetClass: cim:Fuse
+- targetClass: cim:Jumper
+- targetClass: cim:DCLineSegment
+- targetClass: cim:DCSeriesDevice
+- targetClass: cim:DCDisconnector
+- targetClass: cim:DCChopper
+- targetClass: cim:GroundDisconnector
+- targetClass: cim:Breaker
 - targetClass: cim:EquivalentBranch
+- targetClass: cim:Switch
+- targetClass: cim:Fuse
 - targetClass: cim:LoadBreakSwitch
 - targetClass: cim:DisconnectingCircuitBreaker
-- targetClass: cim:SeriesCompensator
-- targetClass: cim:ACLineSegment
-- targetClass: cim:DCChopper
-- targetClass: cim:Disconnector
 - targetClass: cim:Cut
-- targetClass: cim:DCLineSegment
-- targetClass: cim:Switch
+- targetClass: cim:SeriesCompensator
+- targetClass: cim:DCSwitch
+- targetClass: cim:Disconnector
 
 **Nested Properties:**
 
 ### eq:Terminal.phases-consistencyEquipment
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:Terminal.phases:consistencyEquipment  
 The phase code on terminals connecting same ConnectivityNode or same TopologicalNode as well as for equipment between two terminals shall be consistent.
 
 **Severity:** sh:Violation
@@ -267,9 +272,9 @@ The phase code on terminals connecting same ConnectivityNode or same Topological
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value2 ?value1
 			WHERE {      
@@ -292,47 +297,48 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:CsConverter
-- targetClass: cim:Clamp
+- targetClass: cim:Junction
+- targetClass: cim:NonlinearShuntCompensator
+- targetClass: cim:Disconnector
+- targetClass: cim:BusbarSection
 - targetClass: cim:EnergyConsumer
-- targetClass: cim:EquivalentBranch
-- targetClass: cim:Fuse
-- targetClass: cim:GroundingImpedance
-- targetClass: cim:EnergySource
 - targetClass: cim:ConformLoad
-- targetClass: cim:Ground
-- targetClass: cim:Cut
-- targetClass: cim:NonConformLoad
+- targetClass: cim:PowerElectronicsConnection
+- targetClass: cim:SeriesCompensator
+- targetClass: cim:Switch
+- targetClass: cim:CsConverter
+- targetClass: cim:GroundingImpedance
 - targetClass: cim:StationSupply
+- targetClass: cim:EquivalentShunt
+- targetClass: cim:EquivalentBranch
+- targetClass: cim:Breaker
+- targetClass: cim:DisconnectingCircuitBreaker
+- targetClass: cim:Clamp
+- targetClass: cim:ACLineSegment
+- targetClass: cim:LinearShuntCompensator
+- targetClass: cim:AsynchronousMachine
+- targetClass: cim:Ground
+- targetClass: cim:NonConformLoad
 - targetClass: cim:EquivalentInjection
+- targetClass: cim:Jumper
+- targetClass: cim:VsConverter
+- targetClass: cim:SynchronousMachine
 - targetClass: cim:PowerTransformer
+- targetClass: cim:Fuse
 - targetClass: cim:GroundDisconnector
+- targetClass: cim:LoadBreakSwitch
+- targetClass: cim:PetersenCoil
+- targetClass: cim:EnergySource
 - targetClass: cim:ExternalNetworkInjection
 - targetClass: cim:StaticVarCompensator
-- targetClass: cim:PowerElectronicsConnection
-- targetClass: cim:DisconnectingCircuitBreaker
-- targetClass: cim:Junction
-- targetClass: cim:AsynchronousMachine
-- targetClass: cim:SeriesCompensator
-- targetClass: cim:Disconnector
-- targetClass: cim:Jumper
-- targetClass: cim:ACLineSegment
-- targetClass: cim:SynchronousMachine
-- targetClass: cim:VsConverter
-- targetClass: cim:LinearShuntCompensator
-- targetClass: cim:NonlinearShuntCompensator
-- targetClass: cim:EquivalentShunt
-- targetClass: cim:Breaker
-- targetClass: cim:LoadBreakSwitch
-- targetClass: cim:BusbarSection
-- targetClass: cim:PetersenCoil
-- targetClass: cim:Switch
+- targetClass: cim:Cut
 
 **Nested Properties:**
 
 ### eq:ConductingEquipment.BaseVoltage-usage
 
 **Path:** `cim:Equipment.EquipmentContainer`  
+**Name:** C:301:EQ:ConductingEquipment.BaseVoltage:usage  
 Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers.
 
 **Severity:** sh:Violation
@@ -342,9 +348,9 @@ Use only when there is no voltage level container used and only one base voltage
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT $this ?value
 			WHERE {
@@ -365,18 +371,19 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:HydroGeneratingUnit
 - targetClass: cim:NuclearGeneratingUnit
 - targetClass: cim:SolarGeneratingUnit
 - targetClass: cim:ThermalGeneratingUnit
 - targetClass: cim:GeneratingUnit
 - targetClass: cim:WindGeneratingUnit
-- targetClass: cim:HydroGeneratingUnit
 
 **Nested Properties:**
 
 ### eq:ControlAreaGeneratingUnit.GeneratingUnit-instance
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:ControlAreaGeneratingUnit.GeneratingUnit:instance  
 Note that a control area should include a GeneratingUnit only once.
 
 **Severity:** sh:Violation
@@ -386,9 +393,9 @@ Note that a control area should include a GeneratingUnit only once.
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this (COUNT(?ca) AS ?count)
 			WHERE {
@@ -412,6 +419,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:DCConverterUnit-cscPowerTransformer
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:DCConverterUnit:cscPowerTransformer  
 For a CSC HVDC, the transformer shall be modelled explicitly.
 
 **Severity:** sh:Violation
@@ -421,9 +429,9 @@ For a CSC HVDC, the transformer shall be modelled explicitly.
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value  
 			WHERE {      
@@ -549,6 +557,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:Equipment.aggregate-notUsed
 
 **Path:** `cim:Equipment.aggregate`  
+**Name:** C:301:EQ:Equipment.aggregate:notUsed  
 The attribute is not used for EquivalentBranch, EquivalentShunt and EquivalentInjection.
 
 **Severity:** sh:Violation
@@ -558,9 +567,9 @@ The attribute is not used for EquivalentBranch, EquivalentShunt and EquivalentIn
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -582,6 +591,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:EquivalentBranch.r21-usage
 
 **Path:** `cim:EquivalentBranch.r21`  
+**Name:** C:301:EQ:EquivalentBranch.r21:usage  
 This attribute is optional and represent unbalanced network such as off-nominal phase shifter. If only EquivalentBranch.r is given, then EquivalentBranch.r21 is assumed equal to EquivalentBranch.r.
 
 **Severity:** sh:Info
@@ -591,9 +601,9 @@ This attribute is optional and represent unbalanced network such as off-nominal 
 - **sh:SPARQLConstraintComponent** (Severity: sh:Info)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -607,6 +617,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:EquivalentBranch.x21-usage
 
 **Path:** `cim:EquivalentBranch.x21`  
+**Name:** C:301:EQ:EquivalentBranch.x21:usage  
 This attribute is optional and represent unbalanced network such as off-nominal phase shifter. If only EquivalentBranch.x is given, then EquivalentBranch.x21 is assumed equal to EquivalentBranch.x.
 
 **Severity:** sh:Info
@@ -616,9 +627,9 @@ This attribute is optional and represent unbalanced network such as off-nominal 
 - **sh:SPARQLConstraintComponent** (Severity: sh:Info)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -641,6 +652,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:EquivalentInjection.regulationCapability-associatedCurve
 
 **Path:** `cim:EquivalentInjection.regulationCapability`  
+**Name:** C:301:EQ:EquivalentInjection.regulationCapability:associatedCurve  
 ReactiveCapabilityCurve can only be associated with EquivalentInjection  if the flag is true.
 
 **Severity:** sh:Violation
@@ -650,9 +662,9 @@ ReactiveCapabilityCurve can only be associated with EquivalentInjection  if the 
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -682,18 +694,19 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:GeneratingUnit
+- targetClass: cim:WindGeneratingUnit
 - targetClass: cim:HydroGeneratingUnit
 - targetClass: cim:NuclearGeneratingUnit
 - targetClass: cim:SolarGeneratingUnit
 - targetClass: cim:ThermalGeneratingUnit
-- targetClass: cim:GeneratingUnit
-- targetClass: cim:WindGeneratingUnit
 
 **Nested Properties:**
 
 ### eq:GeneratingUnit.nominalP-valueRangePair
 
 **Path:** `cim:GeneratingUnit.nominalP`  
+**Name:** C:301:EQ:GeneratingUnit.nominalP:valueRangePair  
 The attribute shall be a positive value equal to or less than RotatingMachine.ratedS.
 
 **Severity:** sh:Violation
@@ -703,9 +716,9 @@ The attribute shall be a positive value equal to or less than RotatingMachine.ra
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -751,38 +764,10 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 **Nested Properties:**
 
-### eq:LimitKind.tc-duration
-
-**Path:** `rdf:type`  
-The duration is always zero if the OperationalLimitType.acceptableDuration is exchanged. Only one limit value exists for the TC type.
-
-**Severity:** sh:Violation
-
-**Constraints:**
-
-- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
-
-```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
-			SELECT  $this (COUNT(?ol) AS ?tcs) ?adur ?value
-			WHERE {      
-        $this eu:OperationalLimitType.kind eu:LimitKind.tc .
-        $this ^cim:OperationalLimit.OperationalLimitType ?ol .
-        ?ol cim:OperationalLimit.OperationalLimitSet ?value .
-        OPTIONAL {$this cim:OperationalLimitType.acceptableDuration ?adur }.
-			}
-      GROUP BY $this ?value ?adur ?value
-      HAVING (?tcs>1 || (bound(?adur) && ?adur!=0))
-      
-```
-  - Messages: `["Either OperationalLimitType.acceptableDuration is present and different than 0 or there is more than one limit with TC type. The OperationnalLimitType.acceptableDuration is: {?adur}."]`
-
 ### eq:LimitKind.patl-numberOfLimitType
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:LimitKind.patl:numberOfLimitType  
 The OperationnalLimitType.isInfiniteDuration is set to true. There shall be only one OperationalLimitType of kind PATL per OperationalLimitSet if the PATL is ApparentPowerLimit, ActivePowerLimit, or CurrentLimit for a given Terminal or Equipment.
 
 **Severity:** sh:Violation
@@ -792,9 +777,9 @@ The OperationnalLimitType.isInfiniteDuration is set to true. There shall be only
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this (COUNT(?ol) AS ?patls) ?infdur ?value
 			WHERE {      
@@ -811,6 +796,36 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ```
   - Messages: `["Either there is more than one PATL defined for a given OperationalLimitSet or OperationnalLimitType.isInfiniteDuration is not set to true for PATL type. The OperationnalLimitType.isInfiniteDuration is: {?infdur}."]`
 
+### eq:LimitKind.tc-duration
+
+**Path:** `rdf:type`  
+**Name:** C:301:EQ:LimitKind.tc:duration  
+The duration is always zero if the OperationalLimitType.acceptableDuration is exchanged. Only one limit value exists for the TC type.
+
+**Severity:** sh:Violation
+
+**Constraints:**
+
+- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
+
+```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+			SELECT  $this (COUNT(?ol) AS ?tcs) ?adur ?value
+			WHERE {      
+        $this eu:OperationalLimitType.kind eu:LimitKind.tc .
+        $this ^cim:OperationalLimit.OperationalLimitType ?ol .
+        ?ol cim:OperationalLimit.OperationalLimitSet ?value .
+        OPTIONAL {$this cim:OperationalLimitType.acceptableDuration ?adur }.
+			}
+      GROUP BY $this ?value ?adur ?value
+      HAVING (?tcs>1 || (bound(?adur) && ?adur!=0))
+      
+```
+  - Messages: `["Either OperationalLimitType.acceptableDuration is present and different than 0 or there is more than one limit with TC type. The OperationnalLimitType.acceptableDuration is: {?adur}."]`
+
 ## eq:LinearShuntCompensator
 
 **Severity:** sh:Violation
@@ -823,6 +838,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:ShuntCompensator.nomU-nominalVoltageDifference
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:ShuntCompensator.nomU:nominalVoltageDifference  
 This should normally be within 10% of the voltage at which the capacitor is connected to the network.
 
 **Severity:** sh:Warning
@@ -832,9 +848,9 @@ This should normally be within 10% of the voltage at which the capacitor is conn
 - **sh:SPARQLConstraintComponent** (Severity: sh:Warning)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value   
 			WHERE {      
@@ -865,6 +881,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:LoadResponseCharacteristic.exponentModel-exponentCoefficient
 
 **Path:** `cim:LoadResponseCharacteristic.exponentModel`  
+**Name:** C:301:EQ:LoadResponseCharacteristic.exponentModel:exponent|C:301:EQ:LoadResponseCharacteristic.exponentModel:coefficient|C:301:EQ:LoadResponseCharacteristic.exponentModel:coefficientSum  
 Indicates the exponential voltage dependency model is to be used. If false, the coefficient model is to be used. The exponential voltage dependency model consist of the attributes:- pVoltageExponent; - qVoltageExponent; - pFrequencyExponent; - qFrequencyExponent. The coefficient model consist of the attributes:- pConstantImpedance; - pConstantCurrent; - pConstantPower; - qConstantImpedance; - qConstantCurrent; - qConstantPower. The sum of pConstantImpedance, pConstantCurrent and pConstantPower shall equal 1. The sum of qConstantImpedance, qConstantCurrent and qConstantPower shall equal 1.
 
 **Severity:** sh:Violation
@@ -874,9 +891,9 @@ Indicates the exponential voltage dependency model is to be used. If false, the 
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -913,6 +930,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:ShuntCompensator.maximumSections-numberOfInstances
 
 **Path:** `cim:ShuntCompensator.maximumSections`  
+**Name:** C:301:EQ:NonlinearShuntCompensatorPoint:numberOfInstances  
 The number of NonlinearShuntCompenstorPoint instances associated with a NonlinearShuntCompensator shall be equal to ShuntCompensator.maximumSections. 
 
 **Severity:** sh:Violation
@@ -922,9 +940,9 @@ The number of NonlinearShuntCompenstorPoint instances associated with a Nonlinea
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value ?typesall
 			WHERE {
@@ -946,6 +964,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:ShuntCompensator.nomU-nominalVoltageDifference
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:ShuntCompensator.nomU:nominalVoltageDifference  
 This should normally be within 10% of the voltage at which the capacitor is connected to the network.
 
 **Severity:** sh:Warning
@@ -955,9 +974,9 @@ This should normally be within 10% of the voltage at which the capacitor is conn
 - **sh:SPARQLConstraintComponent** (Severity: sh:Warning)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value   
 			WHERE {      
@@ -988,6 +1007,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:OperationalLimitType.acceptableDuration-usage
 
 **Path:** `cim:OperationalLimitType.acceptableDuration`  
+**Name:** C:301:EQ:OperationalLimitType.acceptableDuration:usage  
 The attribute has meaning only if the flag isInfiniteDuration is set to false, hence it shall not be exchanged when isInfiniteDuration is set to true.
 
 **Severity:** sh:Violation
@@ -997,9 +1017,9 @@ The attribute has meaning only if the flag isInfiniteDuration is set to false, h
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -1014,6 +1034,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:OperationalLimitType.isInfiniteDuration-usage
 
 **Path:** `cim:OperationalLimitType.acceptableDuration`  
+**Name:** C:301:EQ:OperationalLimitType.isInfiniteDuration:usage  
 If false, the limit has definite duration which is defined by the attribute acceptableDuration.
 
 **Severity:** sh:Violation
@@ -1023,9 +1044,9 @@ If false, the limit has definite duration which is defined by the attribute acce
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -1050,6 +1071,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:PhaseTapChangerAsymmetrical.windingConnectionAngle-valueRange
 
 **Path:** `cim:PhaseTapChangerAsymmetrical.windingConnectionAngle`  
+**Name:** C:301:EQ:PhaseTapChangerAsymmetrical.windingConnectionAngle:valueRange  
 The attribute can only be multiples of 30 degrees.  The allowed range is -150 degrees to 150 degrees excluding 0.
 
 **Severity:** sh:Violation
@@ -1059,9 +1081,9 @@ The attribute can only be multiples of 30 degrees.  The allowed range is -150 de
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -1074,6 +1096,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:PhaseTapChangerNonLinear.xMin-valueRangePair
 
 **Path:** `cim:PhaseTapChangerNonLinear.xMin`  
+**Name:** C:301:EQ:PhaseTapChangerNonLinear.xMin:valueRangePair  
 PowerTransformerEnd.x shall be consistent with PhaseTapChangerLinear.xMin and PhaseTapChangerNonLinear.xMin. In case of inconsistency, PowerTransformerEnd.x shall be used.
 
 **Severity:** sh:Violation
@@ -1083,9 +1106,9 @@ PowerTransformerEnd.x shall be consistent with PhaseTapChangerLinear.xMin and Ph
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -1110,6 +1133,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:PhaseTapChangerLinear.xMin-valueRangePair
 
 **Path:** `cim:PhaseTapChangerLinear.xMin`  
+**Name:** C:301:EQ:PhaseTapChangerLinear.xMin:valueRangePair  
 PowerTransformerEnd.x shall be consistent with PhaseTapChangerLinear.xMin and PhaseTapChangerNonLinear.xMin. In case of inconsistency, PowerTransformerEnd.x shall be used.
 
 **Severity:** sh:Violation
@@ -1119,9 +1143,9 @@ PowerTransformerEnd.x shall be consistent with PhaseTapChangerLinear.xMin and Ph
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -1146,6 +1170,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:PhaseTapChangerNonLinear.xMin-valueRangePair
 
 **Path:** `cim:PhaseTapChangerNonLinear.xMin`  
+**Name:** C:301:EQ:PhaseTapChangerNonLinear.xMin:valueRangePair  
 PowerTransformerEnd.x shall be consistent with PhaseTapChangerLinear.xMin and PhaseTapChangerNonLinear.xMin. In case of inconsistency, PowerTransformerEnd.x shall be used.
 
 **Severity:** sh:Violation
@@ -1155,9 +1180,9 @@ PowerTransformerEnd.x shall be consistent with PhaseTapChangerLinear.xMin and Ph
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -1193,9 +1218,81 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 **Nested Properties:**
 
+### eq:PowerTransformer-associationNotUsed
+
+**Path:** `rdf:type`  
+**Name:** C:301:EQ:PowerTransformer:associationNotUsed  
+The inherited association ConductingEquipment.BaseVoltage should not be used.  The association from TransformerEnd to BaseVoltage should be used instead.
+
+**Severity:** sh:Violation
+
+**Constraints:**
+
+- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
+
+```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+			SELECT  $this ?value
+			WHERE {
+        $this cim:ConductingEquipment.BaseVoltage ?value .
+        BIND(EXISTS{$this cim:ConductingEquipment.BaseVoltage ?v } AS ?hasvalue). 
+        FILTER (?hasvalue=true) .        
+			}
+```
+  - Messages: `["The inherited association ConductingEquipment.BaseVoltage is used."]`
+
+### eq:PowerTransformerEnd.ratedS-valueRange2winding
+
+**Path:** `rdf:type`  
+**Name:** C:301:EQ:PowerTransformerEnd.ratedS:valueRange2winding  
+For a two-winding transformer the values for the high and low voltage sides shall be identical. 
+
+**Severity:** sh:Violation
+
+**Constraints:**
+
+- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
+
+```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+			SELECT  $this ?value ?ends
+			WHERE {
+        {
+        SELECT $this (COUNT(?typeend) AS ?ends)
+        WHERE {
+        $this ^cim:PowerTransformerEnd.PowerTransformer/rdf:type ?typeend .
+        }
+        GROUP BY $this ?typeend
+        }
+        
+        ?end1 cim:PowerTransformerEnd.PowerTransformer $this .
+        ?end1 cim:TransformerEnd.endNumber  1.
+        ?end1 cim:PowerTransformerEnd.ratedS  ?value .
+        #OPTIONAL {?end1 cim:PowerTransformerEnd.ratedS  ?value }.
+        BIND(EXISTS{?end1 cim:PowerTransformerEnd.ratedS  ?v} AS ?hasvalue).
+        ?end2 cim:PowerTransformerEnd.PowerTransformer $this  .
+        ?end2 cim:TransformerEnd.endNumber  2 .
+        ?end2 cim:PowerTransformerEnd.ratedS  ?ratedsend2 .
+        BIND(EXISTS{?end2 cim:PowerTransformerEnd.ratedS  ?r} AS ?hasratedsend2).
+        #OPTIONAL {?end2 cim:PowerTransformerEnd.ratedS  ?ratedsend2 }.
+
+        FILTER (?hasvalue=true && ?hasratedsend2=true && ?end1!=?end2 && ?value!=?ratedsend2) .        
+			}
+      HAVING(?ends=2)
+      
+```
+  - Messages: `["The value is different for a two-winding transformer."]`
+
 ### eq:PowerTransformerEnd.ratedU-valueRange
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:PowerTransformerEnd.ratedU:valueRange  
 A high voltage side, as given by TransformerEnd.endNumber, shall have a ratedU that is greater than or equal to ratedU for the lower voltage sides. The attribute shall be a positive value.
 
 **Severity:** sh:Violation
@@ -1205,9 +1302,9 @@ A high voltage side, as given by TransformerEnd.endNumber, shall have a ratedU t
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value ?ends
 			WHERE {
@@ -1243,6 +1340,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:TransformerEnd.endNumber-unique
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:TransformerEnd.endNumber:unique  
 Highest voltage winding should be 1.  Each end within a power transformer should have a unique subsequent end number.
 
 **Severity:** sh:Violation
@@ -1252,9 +1350,9 @@ Highest voltage winding should be 1.  Each end within a power transformer should
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -1282,84 +1380,19 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ```
   - Messages: `["The PowerTransformer has TransformerEnd.endNumber which is not unique or the PowerTransformerEnd with endNumber 1 is not the highest voltage winding."]`
 
-### eq:PowerTransformer-associationNotUsed
-
-**Path:** `rdf:type`  
-The inherited association ConductingEquipment.BaseVoltage should not be used.  The association from TransformerEnd to BaseVoltage should be used instead.
-
-**Severity:** sh:Violation
-
-**Constraints:**
-
-- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
-
-```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
-			SELECT  $this ?value
-			WHERE {
-        $this cim:ConductingEquipment.BaseVoltage ?value .
-        BIND(EXISTS{$this cim:ConductingEquipment.BaseVoltage ?v } AS ?hasvalue). 
-        FILTER (?hasvalue=true) .        
-			}
-```
-  - Messages: `["The inherited association ConductingEquipment.BaseVoltage is used."]`
-
-### eq:PowerTransformerEnd.ratedS-valueRange2winding
-
-**Path:** `rdf:type`  
-For a two-winding transformer the values for the high and low voltage sides shall be identical. 
-
-**Severity:** sh:Violation
-
-**Constraints:**
-
-- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
-
-```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
-			SELECT  $this ?value ?ends
-			WHERE {
-        {
-        SELECT $this (COUNT(?typeend) AS ?ends)
-        WHERE {
-        $this ^cim:PowerTransformerEnd.PowerTransformer/rdf:type ?typeend .
-        }
-        GROUP BY $this ?typeend
-        }
-        
-        ?end1 cim:PowerTransformerEnd.PowerTransformer $this .
-        ?end1 cim:TransformerEnd.endNumber  1.
-        ?end1 cim:PowerTransformerEnd.ratedS  ?value .
-        #OPTIONAL {?end1 cim:PowerTransformerEnd.ratedS  ?value }.
-        BIND(EXISTS{?end1 cim:PowerTransformerEnd.ratedS  ?v} AS ?hasvalue).
-        ?end2 cim:PowerTransformerEnd.PowerTransformer $this  .
-        ?end2 cim:TransformerEnd.endNumber  2 .
-        ?end2 cim:PowerTransformerEnd.ratedS  ?ratedsend2 .
-        BIND(EXISTS{?end2 cim:PowerTransformerEnd.ratedS  ?r} AS ?hasratedsend2).
-        #OPTIONAL {?end2 cim:PowerTransformerEnd.ratedS  ?ratedsend2 }.
-
-        FILTER (?hasvalue=true && ?hasratedsend2=true && ?end1!=?end2 && ?value!=?ratedsend2) .        
-			}
-      HAVING(?ends=2)
-      
-```
-  - Messages: `["The value is different for a two-winding transformer."]`
-
 ## eq:PowerTransformer-twoWinding
 
 **Severity:** sh:Violation
+
+**Targets:**
+- sparqlTarget: 
 
 **Nested Properties:**
 
 ### eq:PowerTransformerEnd-secondWindingValues
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:PowerTransformerEnd:secondWindingValues  
 1) for a two Terminal PowerTransformer the high voltage (TransformerEnd.endNumber=1) PowerTransformerEnd has non zero values on r, r0, x, and x0 while the low voltage (TransformerEnd.endNumber=2) PowerTransformerEnd has zero values for r, r0, x, and x0.  Parameters are always provided, even if the PowerTransformerEnds have the same rated voltage.  In this case, the parameters are provided at the PowerTransformerEnd which has TransformerEnd.endNumber equal to 1.
 
 **Severity:** sh:Violation
@@ -1369,9 +1402,9 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -1401,6 +1434,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:PowerTransformerEnd.r-valueRange
 
 **Path:** `cim:PowerTransformerEnd.r`  
+**Name:** C:301:EQ:PowerTransformerEnd.r:valueRange  
 The attribute shall be equal to or greater than zero for non-equivalent transformers.
 
 **Severity:** sh:Violation
@@ -1410,9 +1444,9 @@ The attribute shall be equal to or greater than zero for non-equivalent transfor
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -1427,6 +1461,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:PowerTransformerEnd-terminalConsistency
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:PowerTransformerEnd:terminalConsistency  
 In all cases a PowerTransformer models a group of physical devices acting together to transform power among terminals and in one physical location.
 
 **Severity:** sh:Violation
@@ -1436,9 +1471,9 @@ In all cases a PowerTransformer models a group of physical devices acting togeth
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this   
 			WHERE {      
@@ -1459,6 +1494,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 ## eq:ReactiveCapabilityCurve-curveYvalues
 
+**Name:** C:301:EQ:ReactiveCapabilityCurve:yvalues  
 For each active power value there is a corresponding high and low reactive power limit  value. Typically there will be a separate curve for each coolant condition, such as hydrogen pressure. 
 
 **Severity:** sh:Violation
@@ -1488,6 +1524,7 @@ For each active power value there is a corresponding high and low reactive power
 ### eq:RegulatingControl-terminalConnectivityNode
 
 **Path:** `cim:RegulatingControl.Terminal`  
+**Name:** C:301:EQ:RegulatingControl:terminalConnectivityNode  
 The specified terminal shall be associated with the connectivity node of the controlled point.  The most specific subtype of RegulatingControl shall be used in case such equipment participate in the control, e.g. TapChangerControl for tap changers.
 
 **Severity:** sh:Violation
@@ -1497,9 +1534,9 @@ The specified terminal shall be associated with the connectivity node of the con
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 	    SELECT $this ?value 
       WHERE {
@@ -1551,17 +1588,18 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:RatioTapChanger
-- targetClass: cim:PhaseTapChangerTabular
 - targetClass: cim:PhaseTapChangerSymmetrical
 - targetClass: cim:PhaseTapChangerAsymmetrical
 - targetClass: cim:PhaseTapChangerLinear
+- targetClass: cim:RatioTapChanger
+- targetClass: cim:PhaseTapChangerTabular
 
 **Nested Properties:**
 
 ### eq:TapChanger.ltcFlag-tapChangerControl
 
 **Path:** `cim:TapChanger.ltcFlag`  
+**Name:** C:301:EQ:TapChanger.ltcFlag:tapChangerControl  
 When TapChanger.ltcFlag=false and TapChanger.TapChangerControl is present an artificial tap changer can be used to simulate control behaviour in power flow.
 
 **Severity:** sh:Violation
@@ -1571,9 +1609,9 @@ When TapChanger.ltcFlag=false and TapChanger.TapChangerControl is present an art
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value  
 			WHERE {      
@@ -1588,6 +1626,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:DCConverterUnit-tapChangerControl
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:DCConverterUnit:tapChangerControl  
 No TapChangerControl is used for the converter transformer, the control function is described in the ACDCConverter-s.
 
 **Severity:** sh:Violation
@@ -1597,9 +1636,9 @@ No TapChangerControl is used for the converter transformer, the control function
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value  
 			WHERE {      
@@ -1624,6 +1663,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:RegulatingControl-terminalConnectivityNode
 
 **Path:** `cim:RegulatingControl.Terminal`  
+**Name:** C:301:EQ:RegulatingControl:terminalConnectivityNode  
 The specified terminal shall be associated with the connectivity node of the controlled point.  The most specific subtype of RegulatingControl shall be used in case such equipment participate in the control, e.g. TapChangerControl for tap changers.
 
 **Severity:** sh:Violation
@@ -1633,9 +1673,9 @@ The specified terminal shall be associated with the connectivity node of the con
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 	    SELECT $this ?value 
       WHERE {
@@ -1652,10 +1692,10 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:GroundDisconnector
-- targetClass: cim:Ground
 - targetClass: cim:GroundingImpedance
 - targetClass: cim:PetersenCoil
+- targetClass: cim:GroundDisconnector
+- targetClass: cim:Ground
 
 ## eq:Terminal.phases
 
@@ -1669,6 +1709,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:Terminal.phases-consistencyConnectivityNode
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:Terminal.phases:consistencyConnectivityNode  
 The phase code on terminals connecting same ConnectivityNode or same TopologicalNode as well as for equipment between two terminals shall be consistent.
 
 **Severity:** sh:Violation
@@ -1678,9 +1719,9 @@ The phase code on terminals connecting same ConnectivityNode or same Topological
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value2 ?terms ?value1 ?value
 			WHERE {
@@ -1741,6 +1782,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 ### eq:LimitKind.patl-allowedType
 
 **Path:** `rdf:type`  
+**Name:** C:301:EQ:LimitKind.patl:allowedType  
 The Permanent Admissible Transmission Loading (PATL) is the loading in amperes, MVA or MW that can be accepted by a network branch for an unlimited duration without any risk for the material.
 
 **Severity:** sh:Violation
@@ -1750,9 +1792,9 @@ The Permanent Admissible Transmission Loading (PATL) is the loading in amperes, 
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value
 			WHERE {      

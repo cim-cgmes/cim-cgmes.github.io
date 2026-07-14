@@ -5,8 +5,25 @@ IEEE simplified hydro governor-turbine model. Used for mechanical-hydraulic and 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydroIEEE0
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydroIEEE0 : +Float k[1..1]
+    GovHydroIEEE0 : +Float mwbase[1..1]
+    GovHydroIEEE0 : +Float pmax[1..1]
+    GovHydroIEEE0 : +Float pmin[1..1]
+    GovHydroIEEE0 : +Float t1[1..1]
+    GovHydroIEEE0 : +Float t2[1..1]
+    GovHydroIEEE0 : +Float t3[1..1]
+    GovHydroIEEE0 : +Float t4[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

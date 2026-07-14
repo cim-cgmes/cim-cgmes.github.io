@@ -5,8 +5,29 @@ SiemensTM “H infinity” power system stabilizer with generator electrical pow
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssSH
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssSH : +Float k[1..1]
+    PssSH : +Float k0[1..1]
+    PssSH : +Float k1[1..1]
+    PssSH : +Float k2[1..1]
+    PssSH : +Float k3[1..1]
+    PssSH : +Float k4[1..1]
+    PssSH : +Float t1[1..1]
+    PssSH : +Float t2[1..1]
+    PssSH : +Float t3[1..1]
+    PssSH : +Float t4[1..1]
+    PssSH : +Float td[1..1]
+    PssSH : +Float vsmax[1..1]
+    PssSH : +Float vsmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

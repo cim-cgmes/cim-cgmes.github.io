@@ -5,8 +5,59 @@ Fourth order lead-lag governor and hydro turbine.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydroR
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydroR : +Float at[1..1]
+    GovHydroR : +Float db1[1..1]
+    GovHydroR : +Float db2[1..1]
+    GovHydroR : +Float dturb[1..1]
+    GovHydroR : +Float eps[1..1]
+    GovHydroR : +Float gmax[1..1]
+    GovHydroR : +Float gmin[1..1]
+    GovHydroR : +Float gv1[1..1]
+    GovHydroR : +Float gv2[1..1]
+    GovHydroR : +Float gv3[1..1]
+    GovHydroR : +Float gv4[1..1]
+    GovHydroR : +Float gv5[1..1]
+    GovHydroR : +Float gv6[1..1]
+    GovHydroR : +Float h0[1..1]
+    GovHydroR : +Boolean inputSignal[1..1]
+    GovHydroR : +Float kg[1..1]
+    GovHydroR : +Float ki[1..1]
+    GovHydroR : +Float mwbase[1..1]
+    GovHydroR : +Float pgv1[1..1]
+    GovHydroR : +Float pgv2[1..1]
+    GovHydroR : +Float pgv3[1..1]
+    GovHydroR : +Float pgv4[1..1]
+    GovHydroR : +Float pgv5[1..1]
+    GovHydroR : +Float pgv6[1..1]
+    GovHydroR : +Float pmax[1..1]
+    GovHydroR : +Float pmin[1..1]
+    GovHydroR : +Float qnl[1..1]
+    GovHydroR : +Float r[1..1]
+    GovHydroR : +Float t1[1..1]
+    GovHydroR : +Float t2[1..1]
+    GovHydroR : +Float t3[1..1]
+    GovHydroR : +Float t4[1..1]
+    GovHydroR : +Float t5[1..1]
+    GovHydroR : +Float t6[1..1]
+    GovHydroR : +Float t7[1..1]
+    GovHydroR : +Float t8[1..1]
+    GovHydroR : +Float td[1..1]
+    GovHydroR : +Float tp[1..1]
+    GovHydroR : +Float tt[1..1]
+    GovHydroR : +Float tw[1..1]
+    GovHydroR : +Float velcl[1..1]
+    GovHydroR : +Float velop[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

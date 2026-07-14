@@ -5,8 +5,22 @@ IEC type 3B generator set model. Reference: IEC 61400-27-1:2015, 5.6.3.3.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     WindGenType3IEC <|-- WindGenType3bIEC
+    WindGenType3IEC : +WindTurbineType3IEC WindTurbineType3IEC[0..1]
+    WindGenType3IEC : +Float dipmax[1..1]
+    WindGenType3IEC : +Float diqmax[1..1]
+    WindGenType3IEC : +Float xs[1..1]
+    click WindGenType3IEC href "WindGenType3IEC"
+    WindGenType3bIEC : +WindDynamicsLookupTable WindDynamicsLookupTable[1..n]
+    WindGenType3bIEC : +Boolean mwtcwp[1..1]
+    WindGenType3bIEC : +Float tg[1..1]
+    WindGenType3bIEC : +Float two[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

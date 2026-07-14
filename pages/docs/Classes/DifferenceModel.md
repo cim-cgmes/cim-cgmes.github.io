@@ -5,8 +5,27 @@ It represents the difference model header. The content is described by the Model
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Model <|-- DifferenceModel
+    Model : +Model DependentOn[0..n]
+    Model : +Model Depending[0..n]
+    Model : +Model SupersededBy[0..n]
+    Model : +Model Supersedes[0..n]
+    Model : +DateTime created[1..1]
+    Model : +String description[1..1]
+    Model : +URI modelingAuthoritySet[1..1]
+    Model : +URI profile[1..n]
+    Model : +DateTime scenarioTime[1..1]
+    Model : +Integer version[1..1]
+    click Model href "Model"
+    DifferenceModel : +N/A forwardDifferences[1..n]
+    DifferenceModel : +N/A preconditions[1..n]
+    DifferenceModel : +N/A reverseDifferences[1..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

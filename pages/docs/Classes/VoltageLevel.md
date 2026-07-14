@@ -5,8 +5,20 @@ A collection of equipment at one common system voltage forming a switchgear. The
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EquipmentContainer <|-- VoltageLevel
+    EquipmentContainer : +Equipment Equipments[0..n]
+    click EquipmentContainer href "EquipmentContainer"
+    VoltageLevel : +BaseVoltage BaseVoltage[1]
+    VoltageLevel : +Bay Bays[0..n]
+    VoltageLevel : +Substation Substation[1]
+    VoltageLevel : +Float highVoltageLimit[0..1]
+    VoltageLevel : +Float lowVoltageLimit[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

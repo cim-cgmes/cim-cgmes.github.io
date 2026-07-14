@@ -5,10 +5,25 @@ Parent class supporting relationships to wind turbines type 1 and type 2 and the
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DynamicsFunctionBlock <|-- WindTurbineType1or2Dynamics
-    WindTurbineType1or2Dynamics <|-- WindType1or2UserDefined
+    DynamicsFunctionBlock : +Boolean enabled[1..1]
+    click DynamicsFunctionBlock href "DynamicsFunctionBlock"
     WindTurbineType1or2Dynamics <|-- WindTurbineType1or2IEC
+    WindTurbineType1or2IEC : +WindMechIEC WindMechIEC[1]
+    WindTurbineType1or2IEC : +WindProtectionIEC WindProtectionIEC[1]
+    click WindTurbineType1or2IEC href "WindTurbineType1or2IEC"
+    WindTurbineType1or2Dynamics <|-- WindType1or2UserDefined
+    WindType1or2UserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    WindType1or2UserDefined : +Boolean proprietary[1..1]
+    click WindType1or2UserDefined href "WindType1or2UserDefined"
+    WindTurbineType1or2Dynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[1]
+    WindTurbineType1or2Dynamics : +RemoteInputSignal RemoteInputSignal[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

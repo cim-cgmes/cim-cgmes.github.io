@@ -5,8 +5,17 @@ A class that groups electrical equivalents, including internal nodes, of a netwo
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ConnectivityNodeContainer <|-- EquivalentNetwork
+    ConnectivityNodeContainer : +ConnectivityNode ConnectivityNodes[0..n]
+    ConnectivityNodeContainer : +TopologicalNode TopologicalNode[0..n]
+    click ConnectivityNodeContainer href "ConnectivityNodeContainer"
+    EquivalentNetwork : +EquivalentEquipment EquivalentEquipments[0..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

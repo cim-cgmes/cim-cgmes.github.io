@@ -5,10 +5,23 @@ The non-linear phase tap changer describes the non-linear behaviour of a phase t
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PhaseTapChanger <|-- PhaseTapChangerNonLinear
+    PhaseTapChanger : +TransformerEnd TransformerEnd[1]
+    click PhaseTapChanger href "PhaseTapChanger"
     PhaseTapChangerNonLinear <|-- PhaseTapChangerAsymmetrical
+    PhaseTapChangerAsymmetrical : +Float windingConnectionAngle[1..1]
+    click PhaseTapChangerAsymmetrical href "PhaseTapChangerAsymmetrical"
     PhaseTapChangerNonLinear <|-- PhaseTapChangerSymmetrical
+    click PhaseTapChangerSymmetrical href "PhaseTapChangerSymmetrical"
+    PhaseTapChangerNonLinear : +Float voltageStepIncrement[1..1]
+    PhaseTapChangerNonLinear : +Float xMax[1..1]
+    PhaseTapChangerNonLinear : +Float xMin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

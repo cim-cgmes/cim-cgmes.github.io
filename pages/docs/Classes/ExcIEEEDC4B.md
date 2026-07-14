@@ -5,8 +5,41 @@ IEEE 421.5-2005 type DC4B model. These excitation systems utilize a field-contro
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEDC4B
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEDC4B : +Float efd1[1..1]
+    ExcIEEEDC4B : +Float efd2[1..1]
+    ExcIEEEDC4B : +Float ka[1..1]
+    ExcIEEEDC4B : +Float kd[1..1]
+    ExcIEEEDC4B : +Float ke[1..1]
+    ExcIEEEDC4B : +Float kf[1..1]
+    ExcIEEEDC4B : +Float ki[1..1]
+    ExcIEEEDC4B : +Float kp[1..1]
+    ExcIEEEDC4B : +Boolean oelin[1..1]
+    ExcIEEEDC4B : +Float seefd1[1..1]
+    ExcIEEEDC4B : +Float seefd2[1..1]
+    ExcIEEEDC4B : +Float ta[1..1]
+    ExcIEEEDC4B : +Float td[1..1]
+    ExcIEEEDC4B : +Float te[1..1]
+    ExcIEEEDC4B : +Float tf[1..1]
+    ExcIEEEDC4B : +Boolean uelin[1..1]
+    ExcIEEEDC4B : +Float vemin[1..1]
+    ExcIEEEDC4B : +Float vrmax[1..1]
+    ExcIEEEDC4B : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

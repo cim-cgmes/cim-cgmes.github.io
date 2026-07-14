@@ -12,6 +12,7 @@
 ### eqbd301n:BoundaryPoint.isExcludedFromAreaInterchange-requiredTieFlow
 
 **Path:** `cim100:BoundaryPoint.isExcludedFromAreaInterchange`  
+**Name:** C:301:EQBD:BoundaryPoint.isExcludedFromAreaInterchange:requiredTieFlow  
 If true, this boundary point is on the interconnection that is excluded from control area interchange calculation and consequently has no related tie flows. Otherwise, the interconnection is included in control area interchange and a TieFlow is required at all sides of the boundary point (default).
 
 **Severity:** sh:Violation
@@ -21,9 +22,9 @@ If true, this boundary point is on the interconnection that is excluded from con
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value ?terminal ?tieflow
 			WHERE {

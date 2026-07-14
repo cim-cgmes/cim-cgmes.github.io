@@ -5,8 +5,41 @@ Modified IEEE ST4B static excitation system with maximum inner loop feedback gai
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcST4B
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcST4B : +Float kc[1..1]
+    ExcST4B : +Float kg[1..1]
+    ExcST4B : +Float ki[1..1]
+    ExcST4B : +Float kim[1..1]
+    ExcST4B : +Float kir[1..1]
+    ExcST4B : +Float kp[1..1]
+    ExcST4B : +Float kpm[1..1]
+    ExcST4B : +Float kpr[1..1]
+    ExcST4B : +Boolean lvgate[1..1]
+    ExcST4B : +Float ta[1..1]
+    ExcST4B : +Float thetap[1..1]
+    ExcST4B : +Boolean uel[1..1]
+    ExcST4B : +Float vbmax[1..1]
+    ExcST4B : +Float vgmax[1..1]
+    ExcST4B : +Float vmmax[1..1]
+    ExcST4B : +Float vmmin[1..1]
+    ExcST4B : +Float vrmax[1..1]
+    ExcST4B : +Float vrmin[1..1]
+    ExcST4B : +Float xl[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

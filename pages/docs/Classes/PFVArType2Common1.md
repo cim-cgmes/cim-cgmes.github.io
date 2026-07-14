@@ -5,8 +5,20 @@ Power factor / reactive power regulator. This model represents the power factor 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PFVArControllerType2Dynamics <|-- PFVArType2Common1
+    PFVArControllerType2Dynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    click PFVArControllerType2Dynamics href "PFVArControllerType2Dynamics"
+    PFVArType2Common1 : +Boolean j[1..1]
+    PFVArType2Common1 : +Float ki[1..1]
+    PFVArType2Common1 : +Float kp[1..1]
+    PFVArType2Common1 : +Float max[1..1]
+    PFVArType2Common1 : +Float ref[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

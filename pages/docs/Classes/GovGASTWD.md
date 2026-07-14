@@ -5,8 +5,50 @@ Woodward™ gas turbine governor. [Footnote: Woodward gas turbines are an exampl
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovGASTWD
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovGASTWD : +Float a[1..1]
+    GovGASTWD : +Float af1[1..1]
+    GovGASTWD : +Float af2[1..1]
+    GovGASTWD : +Float b[1..1]
+    GovGASTWD : +Float bf1[1..1]
+    GovGASTWD : +Float bf2[1..1]
+    GovGASTWD : +Float c[1..1]
+    GovGASTWD : +Float cf2[1..1]
+    GovGASTWD : +Float ecr[1..1]
+    GovGASTWD : +Float etd[1..1]
+    GovGASTWD : +Float k3[1..1]
+    GovGASTWD : +Float k4[1..1]
+    GovGASTWD : +Float k5[1..1]
+    GovGASTWD : +Float k6[1..1]
+    GovGASTWD : +Float kd[1..1]
+    GovGASTWD : +Float kdroop[1..1]
+    GovGASTWD : +Float kf[1..1]
+    GovGASTWD : +Float ki[1..1]
+    GovGASTWD : +Float kp[1..1]
+    GovGASTWD : +Float mwbase[1..1]
+    GovGASTWD : +Float t[1..1]
+    GovGASTWD : +Float t3[1..1]
+    GovGASTWD : +Float t4[1..1]
+    GovGASTWD : +Float t5[1..1]
+    GovGASTWD : +Float tc[1..1]
+    GovGASTWD : +Float tcd[1..1]
+    GovGASTWD : +Float td[1..1]
+    GovGASTWD : +Float tf[1..1]
+    GovGASTWD : +Float tmax[1..1]
+    GovGASTWD : +Float tmin[1..1]
+    GovGASTWD : +Float tr[1..1]
+    GovGASTWD : +Float trate[1..1]
+    GovGASTWD : +Float tt[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

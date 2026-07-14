@@ -5,8 +5,23 @@ The electrical equations of all variations of the asynchronous model are based o
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     AsynchronousMachineDynamics <|-- AsynchronousMachineEquivalentCircuit
+    AsynchronousMachineDynamics : +AsynchronousMachine AsynchronousMachine[1]
+    AsynchronousMachineDynamics : +MechanicalLoadDynamics MechanicalLoadDynamics[0..1]
+    AsynchronousMachineDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[0..1]
+    AsynchronousMachineDynamics : +WindTurbineType1or2Dynamics WindTurbineType1or2Dynamics[0..1]
+    click AsynchronousMachineDynamics href "AsynchronousMachineDynamics"
+    AsynchronousMachineEquivalentCircuit : +Float rr1[1..1]
+    AsynchronousMachineEquivalentCircuit : +Float rr2[1..1]
+    AsynchronousMachineEquivalentCircuit : +Float xlr1[1..1]
+    AsynchronousMachineEquivalentCircuit : +Float xlr2[1..1]
+    AsynchronousMachineEquivalentCircuit : +Float xm[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

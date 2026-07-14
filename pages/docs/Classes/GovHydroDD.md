@@ -5,8 +5,52 @@ Double derivative hydro governor and turbine.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydroDD
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydroDD : +Float aturb[1..1]
+    GovHydroDD : +Float bturb[1..1]
+    GovHydroDD : +Float db1[1..1]
+    GovHydroDD : +Float db2[1..1]
+    GovHydroDD : +Float eps[1..1]
+    GovHydroDD : +Float gmax[1..1]
+    GovHydroDD : +Float gmin[1..1]
+    GovHydroDD : +Float gv1[1..1]
+    GovHydroDD : +Float gv2[1..1]
+    GovHydroDD : +Float gv3[1..1]
+    GovHydroDD : +Float gv4[1..1]
+    GovHydroDD : +Float gv5[1..1]
+    GovHydroDD : +Float gv6[1..1]
+    GovHydroDD : +Boolean inputSignal[1..1]
+    GovHydroDD : +Float k1[1..1]
+    GovHydroDD : +Float k2[1..1]
+    GovHydroDD : +Float kg[1..1]
+    GovHydroDD : +Float ki[1..1]
+    GovHydroDD : +Float mwbase[1..1]
+    GovHydroDD : +Float pgv1[1..1]
+    GovHydroDD : +Float pgv2[1..1]
+    GovHydroDD : +Float pgv3[1..1]
+    GovHydroDD : +Float pgv4[1..1]
+    GovHydroDD : +Float pgv5[1..1]
+    GovHydroDD : +Float pgv6[1..1]
+    GovHydroDD : +Float pmax[1..1]
+    GovHydroDD : +Float pmin[1..1]
+    GovHydroDD : +Float r[1..1]
+    GovHydroDD : +Float td[1..1]
+    GovHydroDD : +Float tf[1..1]
+    GovHydroDD : +Float tp[1..1]
+    GovHydroDD : +Float tt[1..1]
+    GovHydroDD : +Float tturb[1..1]
+    GovHydroDD : +Float velcl[1..1]
+    GovHydroDD : +Float velop[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

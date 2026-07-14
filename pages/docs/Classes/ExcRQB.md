@@ -5,8 +5,35 @@ Excitation system type RQB (four-loop regulator, r?gulateur quatre boucles, deve
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcRQB
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcRQB : +Float ki0[1..1]
+    ExcRQB : +Float ki1[1..1]
+    ExcRQB : +Float klir[1..1]
+    ExcRQB : +Float klus[1..1]
+    ExcRQB : +Float lsat[1..1]
+    ExcRQB : +Float lus[1..1]
+    ExcRQB : +Float mesu[1..1]
+    ExcRQB : +Float t4m[1..1]
+    ExcRQB : +Float tc[1..1]
+    ExcRQB : +Float te[1..1]
+    ExcRQB : +Float tf[1..1]
+    ExcRQB : +Float ucmax[1..1]
+    ExcRQB : +Float ucmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

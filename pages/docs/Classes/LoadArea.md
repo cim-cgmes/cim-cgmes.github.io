@@ -5,8 +5,16 @@ The class is the root or first level in a hierarchical structure for grouping of
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EnergyArea <|-- LoadArea
+    EnergyArea : +ControlArea ControlArea[0..1]
+    click EnergyArea href "EnergyArea"
+    LoadArea : +SubLoadArea SubLoadAreas[1..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

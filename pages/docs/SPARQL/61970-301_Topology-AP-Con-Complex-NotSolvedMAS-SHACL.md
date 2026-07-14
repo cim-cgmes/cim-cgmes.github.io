@@ -12,6 +12,7 @@
 ### tp301n:Terminal.phases-consistencyTopologicalNode
 
 **Path:** `rdf:type`  
+**Name:** C:301:TP:Terminal.phases:consistencyTopologicalNode  
 The phase code on terminals connecting same ConnectivityNode or same TopologicalNode as well as for equipment between two terminals shall be consistent.
 
 **Severity:** sh:Violation
@@ -21,9 +22,9 @@ The phase code on terminals connecting same ConnectivityNode or same Topological
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 			SELECT  $this ?value2 ?terms ?value1 ?value
 			WHERE {

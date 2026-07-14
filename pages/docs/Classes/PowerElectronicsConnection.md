@@ -5,8 +5,24 @@ A connection to the AC network for energy production or consumption that uses po
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     RegulatingCondEq <|-- PowerElectronicsConnection
+    RegulatingCondEq : +RegulatingControl RegulatingControl[0..1]
+    RegulatingCondEq : +Boolean controlEnabled[1..1]
+    click RegulatingCondEq href "RegulatingCondEq"
+    PowerElectronicsConnection : +PowerElectronicsUnit PowerElectronicsUnit[0..1]
+    PowerElectronicsConnection : +WindTurbineType3or4Dynamics WindTurbineType3or4Dynamics[0..1]
+    PowerElectronicsConnection : +Float maxQ[0..1]
+    PowerElectronicsConnection : +Float minQ[0..1]
+    PowerElectronicsConnection : +Float p[1..1]
+    PowerElectronicsConnection : +Float q[1..1]
+    PowerElectronicsConnection : +Float ratedS[0..1]
+    PowerElectronicsConnection : +Float ratedU[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

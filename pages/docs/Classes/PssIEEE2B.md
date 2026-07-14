@@ -5,8 +5,43 @@ IEEE 421.5-2005 type PSS2B power system stabilizer model. This stabilizer model 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssIEEE2B
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssIEEE2B : +InputSignalKind inputSignal1Type[1..1]
+    PssIEEE2B : +InputSignalKind inputSignal2Type[1..1]
+    PssIEEE2B : +Float ks1[1..1]
+    PssIEEE2B : +Float ks2[1..1]
+    PssIEEE2B : +Float ks3[1..1]
+    PssIEEE2B : +Integer m[1..1]
+    PssIEEE2B : +Integer n[1..1]
+    PssIEEE2B : +Float t1[1..1]
+    PssIEEE2B : +Float t10[1..1]
+    PssIEEE2B : +Float t11[1..1]
+    PssIEEE2B : +Float t2[1..1]
+    PssIEEE2B : +Float t3[1..1]
+    PssIEEE2B : +Float t4[1..1]
+    PssIEEE2B : +Float t6[1..1]
+    PssIEEE2B : +Float t7[1..1]
+    PssIEEE2B : +Float t8[1..1]
+    PssIEEE2B : +Float t9[1..1]
+    PssIEEE2B : +Float tw1[1..1]
+    PssIEEE2B : +Float tw2[1..1]
+    PssIEEE2B : +Float tw3[1..1]
+    PssIEEE2B : +Float tw4[1..1]
+    PssIEEE2B : +Float vsi1max[1..1]
+    PssIEEE2B : +Float vsi1min[1..1]
+    PssIEEE2B : +Float vsi2max[1..1]
+    PssIEEE2B : +Float vsi2min[1..1]
+    PssIEEE2B : +Float vstmax[1..1]
+    PssIEEE2B : +Float vstmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

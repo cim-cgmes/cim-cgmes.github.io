@@ -5,8 +5,17 @@ The class is the second level in a hierarchical structure for grouping of loads 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EnergyArea <|-- SubLoadArea
+    EnergyArea : +ControlArea ControlArea[0..1]
+    click EnergyArea href "EnergyArea"
+    SubLoadArea : +LoadArea LoadArea[1]
+    SubLoadArea : +LoadGroup LoadGroups[1..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -12,6 +12,7 @@
 ### tp600n:Terminal-EXCH8TopologicalNode
 
 **Path:** `rdf:type`  
+**Name:** C:600:EQ:Terminal:EXCH8TopologicalNode  
 The association end Terminal.TopologicalNode is required in cases where a RegulatingControl is associated with a Terminal.
 
 **Severity:** sh:Violation

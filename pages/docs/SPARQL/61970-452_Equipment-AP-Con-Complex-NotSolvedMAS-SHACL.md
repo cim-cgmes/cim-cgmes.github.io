@@ -12,6 +12,7 @@
 ### eq452n:RegulatingControl.targetValue-tapChanger
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:RegulatingControl.targetValue:tapChanger  
 In cases where RequlatingControl.mode is voltage and both TapChanger.controlEnabled and RequlatingControl.enabled are true, The RegulatingControl.targetValue in per unit value is calculated by RegulatingControl.targetValue/BaseVoltage.nominalVoltage. shall be within the regulating capability limits:	The tap changer upper capability limit in per unit value is calculated by 1+RatioTapChanger.stepVoltageIncrement/100*(TapChanger.highStep-TapChanger.neutralStep). The tap changer lower capability limit in per unit value is calculated by 1-RatioTapChanger.stepVoltageIncrement/100*(TapChanger.neutralStep-TapChanger.lowStep).
 
 **Severity:** sh:Violation
@@ -21,9 +22,9 @@ In cases where RequlatingControl.mode is voltage and both TapChanger.controlEnab
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 			SELECT $this ?value
 			WHERE {

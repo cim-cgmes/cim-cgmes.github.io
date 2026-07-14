@@ -19,6 +19,7 @@
 ### eq600-2:ReactiveCapabilityCurve-units
 
 **Path:** `rdf:type`  
+**Name:** C:600:EQ:ReactiveCapabilityCurve:units  
 For a ReactiveCapabilityCurve associated with SynchronousMachine, the Curve.xUnit shall be set to UnitSymbol.W and both Curve.y1Unit and Curve.y2Unit shall be set to UnitSymbol.VAr. As the multiplier is not included in the profile it is defined the same as the multiplier used for datatype ActivePower and ReactivePower, i.e. UnitMultiplier.M.
 
 **Severity:** sh:Violation
@@ -64,6 +65,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq600-2:Substation-count
 
 **Path:** `rdf:type`  
+**Name:** C:600:EQ:Substation:count  
 The number of Substation-s shall reflect the design of the power system. Cases of a single Substation in a power system model or having a Substation per VoltageLevel are reported as warnings.
 
 **Severity:** sh:Warning
@@ -104,17 +106,18 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:PhaseTapChangerAsymmetrical
+- targetClass: cim:PhaseTapChangerLinear
 - targetClass: cim:RatioTapChanger
 - targetClass: cim:PhaseTapChangerTabular
 - targetClass: cim:PhaseTapChangerSymmetrical
-- targetClass: cim:PhaseTapChangerAsymmetrical
-- targetClass: cim:PhaseTapChangerLinear
 
 **Nested Properties:**
 
 ### eq600-2:TapChanger.neutralU-valueRangePair
 
 **Path:** `cim:TapChanger.neutralU`  
+**Name:** C:600:EQ:TapChanger.neutralU:ValueRangePair  
 The TapChanger.neutralU shall be the same as PowerTransformerEnd.ratedU.
 
 **Severity:** sh:Violation

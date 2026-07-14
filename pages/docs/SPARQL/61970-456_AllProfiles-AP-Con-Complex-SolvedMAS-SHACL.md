@@ -12,6 +12,7 @@
 ### mas456sol:Model-angleReference
 
 **Path:** `rdf:type`  
+**Name:** C:456:SSH:NA:angleReference  
 Angle reference: In cases where it is required to exchange a solved model and compare power flow results (assuming identical/comparable calculation methods and initial conditions) it is required that the angle reference slack is placed within the exported model. The slack generator is the SynchronousMachine connected to the TopologicalNode referenced by TopologicalIsland.AngleRefTopologicalNode and which has the highest SynchronousMachine.referencePriority in the exported MAS’s SSH.
 
 **Severity:** sh:Violation

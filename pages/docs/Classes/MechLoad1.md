@@ -5,8 +5,20 @@ Mechanical load model type 1.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     MechanicalLoadDynamics <|-- MechLoad1
+    MechanicalLoadDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    MechanicalLoadDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    click MechanicalLoadDynamics href "MechanicalLoadDynamics"
+    MechLoad1 : +Float a[1..1]
+    MechLoad1 : +Float b[1..1]
+    MechLoad1 : +Float d[1..1]
+    MechLoad1 : +Float e[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

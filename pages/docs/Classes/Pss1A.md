@@ -5,8 +5,38 @@ Single input power system stabilizer. It is a modified version in order to allow
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- Pss1A
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    Pss1A : +Float a1[1..1]
+    Pss1A : +Float a2[1..1]
+    Pss1A : +Float a3[1..1]
+    Pss1A : +Float a4[1..1]
+    Pss1A : +Float a5[1..1]
+    Pss1A : +Float a6[1..1]
+    Pss1A : +Float a7[1..1]
+    Pss1A : +Float a8[1..1]
+    Pss1A : +InputSignalKind inputSignalType[1..1]
+    Pss1A : +Boolean kd[1..1]
+    Pss1A : +Float ks[1..1]
+    Pss1A : +Float t1[1..1]
+    Pss1A : +Float t2[1..1]
+    Pss1A : +Float t3[1..1]
+    Pss1A : +Float t4[1..1]
+    Pss1A : +Float t5[1..1]
+    Pss1A : +Float t6[1..1]
+    Pss1A : +Float tdelay[1..1]
+    Pss1A : +Float vcl[1..1]
+    Pss1A : +Float vcu[1..1]
+    Pss1A : +Float vrmax[1..1]
+    Pss1A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

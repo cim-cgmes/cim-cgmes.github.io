@@ -3,6 +3,11 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PFVArControllerType2Dynamics <|-- PFVArType2IEEEPFController
     PFVArControllerType2Dynamics <|-- PFVArType2Common1

@@ -5,8 +5,17 @@ Static var compensator (SVC) function block whose dynamic behaviour is described
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     StaticVarCompensatorDynamics <|-- SVCUserDefined
+    StaticVarCompensatorDynamics : +StaticVarCompensator StaticVarCompensator[1]
+    click StaticVarCompensatorDynamics href "StaticVarCompensatorDynamics"
+    SVCUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    SVCUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,33 @@ Transformer fed static excitation system (static with ABB regulator). This model
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcBBC
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcBBC : +Float efdmax[1..1]
+    ExcBBC : +Float efdmin[1..1]
+    ExcBBC : +Float k[1..1]
+    ExcBBC : +Boolean switch_[1..1]
+    ExcBBC : +Float t1[1..1]
+    ExcBBC : +Float t2[1..1]
+    ExcBBC : +Float t3[1..1]
+    ExcBBC : +Float t4[1..1]
+    ExcBBC : +Float vrmax[1..1]
+    ExcBBC : +Float vrmin[1..1]
+    ExcBBC : +Float xe[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

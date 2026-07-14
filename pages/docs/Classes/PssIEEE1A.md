@@ -5,8 +5,28 @@ IEEE 421.5-2005 type PSS1A power system stabilizer model. PSS1A is the generaliz
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssIEEE1A
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssIEEE1A : +Float a1[1..1]
+    PssIEEE1A : +Float a2[1..1]
+    PssIEEE1A : +InputSignalKind inputSignalType[1..1]
+    PssIEEE1A : +Float ks[1..1]
+    PssIEEE1A : +Float t1[1..1]
+    PssIEEE1A : +Float t2[1..1]
+    PssIEEE1A : +Float t3[1..1]
+    PssIEEE1A : +Float t4[1..1]
+    PssIEEE1A : +Float t5[1..1]
+    PssIEEE1A : +Float t6[1..1]
+    PssIEEE1A : +Float vrmax[1..1]
+    PssIEEE1A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

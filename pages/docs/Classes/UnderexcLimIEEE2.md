@@ -5,8 +5,56 @@ Type UEL2 underexcitation limiter which has either a straight-line or multi-segm
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     UnderexcitationLimiterDynamics <|-- UnderexcLimIEEE2
+    UnderexcitationLimiterDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    UnderexcitationLimiterDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click UnderexcitationLimiterDynamics href "UnderexcitationLimiterDynamics"
+    UnderexcLimIEEE2 : +Float k1[1..1]
+    UnderexcLimIEEE2 : +Float k2[1..1]
+    UnderexcLimIEEE2 : +Float kfb[1..1]
+    UnderexcLimIEEE2 : +Float kuf[1..1]
+    UnderexcLimIEEE2 : +Float kui[1..1]
+    UnderexcLimIEEE2 : +Float kul[1..1]
+    UnderexcLimIEEE2 : +Float p0[1..1]
+    UnderexcLimIEEE2 : +Float p1[1..1]
+    UnderexcLimIEEE2 : +Float p10[1..1]
+    UnderexcLimIEEE2 : +Float p2[1..1]
+    UnderexcLimIEEE2 : +Float p3[1..1]
+    UnderexcLimIEEE2 : +Float p4[1..1]
+    UnderexcLimIEEE2 : +Float p5[1..1]
+    UnderexcLimIEEE2 : +Float p6[1..1]
+    UnderexcLimIEEE2 : +Float p7[1..1]
+    UnderexcLimIEEE2 : +Float p8[1..1]
+    UnderexcLimIEEE2 : +Float p9[1..1]
+    UnderexcLimIEEE2 : +Float q0[1..1]
+    UnderexcLimIEEE2 : +Float q1[1..1]
+    UnderexcLimIEEE2 : +Float q10[1..1]
+    UnderexcLimIEEE2 : +Float q2[1..1]
+    UnderexcLimIEEE2 : +Float q3[1..1]
+    UnderexcLimIEEE2 : +Float q4[1..1]
+    UnderexcLimIEEE2 : +Float q5[1..1]
+    UnderexcLimIEEE2 : +Float q6[1..1]
+    UnderexcLimIEEE2 : +Float q7[1..1]
+    UnderexcLimIEEE2 : +Float q8[1..1]
+    UnderexcLimIEEE2 : +Float q9[1..1]
+    UnderexcLimIEEE2 : +Float tu1[1..1]
+    UnderexcLimIEEE2 : +Float tu2[1..1]
+    UnderexcLimIEEE2 : +Float tu3[1..1]
+    UnderexcLimIEEE2 : +Float tu4[1..1]
+    UnderexcLimIEEE2 : +Float tul[1..1]
+    UnderexcLimIEEE2 : +Float tup[1..1]
+    UnderexcLimIEEE2 : +Float tuq[1..1]
+    UnderexcLimIEEE2 : +Float tuv[1..1]
+    UnderexcLimIEEE2 : +Float vuimax[1..1]
+    UnderexcLimIEEE2 : +Float vuimin[1..1]
+    UnderexcLimIEEE2 : +Float vulmax[1..1]
+    UnderexcLimIEEE2 : +Float vulmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

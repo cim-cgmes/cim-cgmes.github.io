@@ -5,9 +5,33 @@ An object that defines one or more points in a given space. This object can be a
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- DiagramObject
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
     DiagramObject <|-- TextDiagramObject
+    TextDiagramObject : +String text[1..1]
+    click TextDiagramObject href "TextDiagramObject"
+    DiagramObject : +Diagram Diagram[1]
+    DiagramObject : +DiagramObjectPoint DiagramObjectPoints[0..n]
+    DiagramObject : +DiagramObjectStyle DiagramObjectStyle[0..1]
+    DiagramObject : +IdentifiedObject IdentifiedObject_[0..1]
+    DiagramObject : +VisibilityLayer VisibilityLayers[0..n]
+    DiagramObject : +Integer drawingOrder[0..1]
+    DiagramObject : +Boolean isPolygon[0..1]
+    DiagramObject : +Float offsetX[0..1]
+    DiagramObject : +Float offsetY[0..1]
+    DiagramObject : +Float rotation[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

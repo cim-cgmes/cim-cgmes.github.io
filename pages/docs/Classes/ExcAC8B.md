@@ -5,8 +5,49 @@ Modified IEEE AC8B alternator-supplied rectifier excitation system with speed in
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcAC8B
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcAC8B : +Boolean inlim[1..1]
+    ExcAC8B : +Float ka[1..1]
+    ExcAC8B : +Float kc[1..1]
+    ExcAC8B : +Float kd[1..1]
+    ExcAC8B : +Float kdr[1..1]
+    ExcAC8B : +Float ke[1..1]
+    ExcAC8B : +Float kir[1..1]
+    ExcAC8B : +Float kpr[1..1]
+    ExcAC8B : +Float ks[1..1]
+    ExcAC8B : +Boolean pidlim[1..1]
+    ExcAC8B : +Float seve1[1..1]
+    ExcAC8B : +Float seve2[1..1]
+    ExcAC8B : +Float ta[1..1]
+    ExcAC8B : +Float tdr[1..1]
+    ExcAC8B : +Float te[1..1]
+    ExcAC8B : +Boolean telim[1..1]
+    ExcAC8B : +Float ve1[1..1]
+    ExcAC8B : +Float ve2[1..1]
+    ExcAC8B : +Float vemin[1..1]
+    ExcAC8B : +Float vfemax[1..1]
+    ExcAC8B : +Float vimax[1..1]
+    ExcAC8B : +Float vimin[1..1]
+    ExcAC8B : +Float vpidmax[1..1]
+    ExcAC8B : +Float vpidmin[1..1]
+    ExcAC8B : +Float vrmax[1..1]
+    ExcAC8B : +Float vrmin[1..1]
+    ExcAC8B : +Boolean vtmult[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

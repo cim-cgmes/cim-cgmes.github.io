@@ -5,8 +5,44 @@ Q control model. Reference: IEC 61400-27-1:2015, 5.6.5.7.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindContQIEC
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindContQIEC : +WindTurbineType3or4IEC WindTurbineType3or4IEC[1]
+    WindContQIEC : +Float iqh1[1..1]
+    WindContQIEC : +Float iqmax[1..1]
+    WindContQIEC : +Float iqmin[1..1]
+    WindContQIEC : +Float iqpost[1..1]
+    WindContQIEC : +Float kiq[1..1]
+    WindContQIEC : +Float kiu[1..1]
+    WindContQIEC : +Float kpq[1..1]
+    WindContQIEC : +Float kpu[1..1]
+    WindContQIEC : +Float kqv[1..1]
+    WindContQIEC : +Float rdroop[1..1]
+    WindContQIEC : +Float tpfiltq[1..1]
+    WindContQIEC : +Float tpost[1..1]
+    WindContQIEC : +Float tqord[1..1]
+    WindContQIEC : +Float tufiltq[1..1]
+    WindContQIEC : +Float udb1[1..1]
+    WindContQIEC : +Float udb2[1..1]
+    WindContQIEC : +Float umax[1..1]
+    WindContQIEC : +Float umin[1..1]
+    WindContQIEC : +Float uqdip[1..1]
+    WindContQIEC : +Float uref0[1..1]
+    WindContQIEC : +WindQcontrolModeKind windQcontrolModesType[1..1]
+    WindContQIEC : +WindUVRTQcontrolModeKind windUVRTQcontrolModesType[1..1]
+    WindContQIEC : +Float xdroop[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

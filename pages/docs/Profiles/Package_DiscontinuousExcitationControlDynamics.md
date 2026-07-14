@@ -3,10 +3,15 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    DiscontinuousExcitationControlDynamics <|-- DiscExcContIEEEDEC3A
-    DiscontinuousExcitationControlDynamics <|-- DiscExcContIEEEDEC2A
     DiscontinuousExcitationControlDynamics <|-- DiscExcContIEEEDEC1A
+    DiscontinuousExcitationControlDynamics <|-- DiscExcContIEEEDEC2A
+    DiscontinuousExcitationControlDynamics <|-- DiscExcContIEEEDEC3A
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

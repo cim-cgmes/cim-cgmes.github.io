@@ -5,8 +5,34 @@ Aggregate induction motor load. This model is used to represent a fraction of an
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- LoadMotor
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    LoadMotor : +LoadAggregate LoadAggregate[1]
+    LoadMotor : +Float d[1..1]
+    LoadMotor : +Float h[1..1]
+    LoadMotor : +Float lfac[1..1]
+    LoadMotor : +Float lp[1..1]
+    LoadMotor : +Float lpp[1..1]
+    LoadMotor : +Float ls[1..1]
+    LoadMotor : +Float pfrac[1..1]
+    LoadMotor : +Float ra[1..1]
+    LoadMotor : +Float tbkr[1..1]
+    LoadMotor : +Float tpo[1..1]
+    LoadMotor : +Float tppo[1..1]
+    LoadMotor : +Float tv[1..1]
+    LoadMotor : +Float vt[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

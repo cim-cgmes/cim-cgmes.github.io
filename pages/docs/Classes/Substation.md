@@ -5,8 +5,18 @@ A collection of equipment for purposes other than generation or utilization, thr
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EquipmentContainer <|-- Substation
+    EquipmentContainer : +Equipment Equipments[0..n]
+    click EquipmentContainer href "EquipmentContainer"
+    Substation : +DCConverterUnit DCConverterUnit[0..n]
+    Substation : +SubGeographicalRegion Region[1]
+    Substation : +VoltageLevel VoltageLevels[0..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

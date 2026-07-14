@@ -5,8 +5,33 @@ Detailed Italian PSS.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- Pss5
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    Pss5 : +Boolean ctw2[1..1]
+    Pss5 : +Float deadband[1..1]
+    Pss5 : +Boolean isfreq[1..1]
+    Pss5 : +Float kf[1..1]
+    Pss5 : +Float kpe[1..1]
+    Pss5 : +Float kpss[1..1]
+    Pss5 : +Float pmin[1..1]
+    Pss5 : +Float tl1[1..1]
+    Pss5 : +Float tl2[1..1]
+    Pss5 : +Float tl3[1..1]
+    Pss5 : +Float tl4[1..1]
+    Pss5 : +Float tpe[1..1]
+    Pss5 : +Float tw1[1..1]
+    Pss5 : +Float tw2[1..1]
+    Pss5 : +Boolean vadat[1..1]
+    Pss5 : +Float vsmn[1..1]
+    Pss5 : +Float vsmx[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

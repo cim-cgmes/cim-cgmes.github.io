@@ -5,8 +5,26 @@ Combined static load and induction motor load effects. The dynamics of the motor
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     LoadDynamics <|-- LoadComposite
+    LoadDynamics : +EnergyConsumer EnergyConsumer[0..n]
+    click LoadDynamics href "LoadDynamics"
+    LoadComposite : +Float epfd[1..1]
+    LoadComposite : +Float epfs[1..1]
+    LoadComposite : +Float epvd[1..1]
+    LoadComposite : +Float epvs[1..1]
+    LoadComposite : +Float eqfd[1..1]
+    LoadComposite : +Float eqfs[1..1]
+    LoadComposite : +Float eqvd[1..1]
+    LoadComposite : +Float eqvs[1..1]
+    LoadComposite : +Float h[1..1]
+    LoadComposite : +Float lfac[1..1]
+    LoadComposite : +Float pfrac[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

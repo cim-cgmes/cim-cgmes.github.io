@@ -5,8 +5,17 @@ Turbine load controller function block whose dynamic behaviour is described by a
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineLoadControllerDynamics <|-- TurbineLoadControllerUserDefined
+    TurbineLoadControllerDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[1]
+    click TurbineLoadControllerDynamics href "TurbineLoadControllerDynamics"
+    TurbineLoadControllerUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    TurbineLoadControllerUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

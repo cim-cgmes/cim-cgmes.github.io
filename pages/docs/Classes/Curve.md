@@ -5,11 +5,35 @@ A multi-purpose curve or functional relationship between an independent variable
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- Curve
-    Curve <|-- VsCapabilityCurve
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
     Curve <|-- ReactiveCapabilityCurve
+    ReactiveCapabilityCurve : +EquivalentInjection EquivalentInjection[0..n]
+    ReactiveCapabilityCurve : +SynchronousMachine InitiallyUsedBySynchronousMachines[1..n]
+    click ReactiveCapabilityCurve href "ReactiveCapabilityCurve"
+    Curve <|-- VsCapabilityCurve
+    VsCapabilityCurve : +VsConverter VsConverterDCSides[0..n]
+    click VsCapabilityCurve href "VsCapabilityCurve"
     Curve <|-- GrossToNetActivePowerCurve
+    GrossToNetActivePowerCurve : +GeneratingUnit GeneratingUnit[1]
+    click GrossToNetActivePowerCurve href "GrossToNetActivePowerCurve"
+    Curve : +CurveData CurveDatas[1..n]
+    Curve : +CurveStyle curveStyle[1..1]
+    Curve : +UnitSymbol xUnit[1..1]
+    Curve : +UnitSymbol y1Unit[1..1]
+    Curve : +UnitSymbol y2Unit[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -3,9 +3,14 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    HVDCDynamics <|-- CSCDynamics
     HVDCDynamics <|-- VSCDynamics
+    HVDCDynamics <|-- CSCDynamics
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

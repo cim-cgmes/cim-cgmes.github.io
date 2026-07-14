@@ -5,8 +5,16 @@ A collection of power system resources (within a given substation) including con
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EquipmentContainer <|-- Bay
+    EquipmentContainer : +Equipment Equipments[0..n]
+    click EquipmentContainer href "EquipmentContainer"
+    Bay : +VoltageLevel VoltageLevel[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

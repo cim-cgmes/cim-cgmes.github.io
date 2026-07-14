@@ -5,8 +5,14 @@ A circuit breaking device including disconnecting function, eliminating the need
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Breaker <|-- DisconnectingCircuitBreaker
+    click Breaker href "Breaker"
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

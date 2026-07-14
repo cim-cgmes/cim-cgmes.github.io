@@ -12,6 +12,7 @@
 ### eqbd:BaseVoltage.nominalVoltage-valueRange
 
 **Path:** `cim:BaseVoltage.nominalVoltage`  
+**Name:** C:301:EQBD:BaseVoltage.nominalVoltage:valueRange  
 Shall be a positive value and not zero.
 
 **Severity:** sh:Violation
@@ -33,26 +34,10 @@ Shall be a positive value and not zero.
 
 **Nested Properties:**
 
-### eqbd:BoundaryPoint.fromEndIsoCode-stringLength
-
-**Path:** `cim100:BoundaryPoint.fromEndIsoCode`  
-The length of the string is 2 characters maximum.
-
-**Severity:** sh:Violation
-
-**Messages:**
-- "String length is not 2 characters."
-
-**Constraints:**
-
-- **sh:MinLengthConstraintComponent** (Severity: sh:Violation)
-  - MinLength: `2` 
-- **sh:MaxLengthConstraintComponent** (Severity: sh:Violation)
-  - MaxLength: `2` 
-
 ### eqbd:BoundaryPoint.fromEndIsoCode-valueValidity
 
 **Path:** `cim100:BoundaryPoint.fromEndIsoCode`  
+**Name:** C:301:EQBD:BoundaryPoint.fromEndIsoCode:valueValidity  
 The ISO code is a two-character country code as defined by ISO 3166 (http://www.iso.org/iso/country_codes).
 
 **Severity:** sh:Violation
@@ -69,9 +54,28 @@ The ISO code is a two-character country code as defined by ISO 3166 (http://www.
 - **sh:InConstraintComponent** (Severity: sh:Violation)
   - Values: `[AL AT BE BG HR CY CZ DK EE FI FR DE GR HU IS IE IT LV LI LT LU MT MD ME NL NO PL PT RO RS SK SI ES SE CH TR UA MK GB]` 
 
+### eqbd:BoundaryPoint.fromEndIsoCode-stringLength
+
+**Path:** `cim100:BoundaryPoint.fromEndIsoCode`  
+**Name:** C:301:EQBD:BoundaryPoint.fromEndIsoCode:stringLength  
+The length of the string is 2 characters maximum.
+
+**Severity:** sh:Violation
+
+**Messages:**
+- "String length is not 2 characters."
+
+**Constraints:**
+
+- **sh:MinLengthConstraintComponent** (Severity: sh:Violation)
+  - MinLength: `2` 
+- **sh:MaxLengthConstraintComponent** (Severity: sh:Violation)
+  - MaxLength: `2` 
+
 ### eqbd:BoundaryPoint.fromEndName-stringLength
 
 **Path:** `cim100:BoundaryPoint.fromEndName`  
+**Name:** C:301:EQBD:BoundaryPoint.fromEndName:stringLength  
 A human readable name with length of the string 64 characters maximum. 
 
 **Severity:** sh:Violation
@@ -87,6 +91,7 @@ A human readable name with length of the string 64 characters maximum.
 ### eqbd:BoundaryPoint.fromEndNameTso-stringLength
 
 **Path:** `cim100:BoundaryPoint.fromEndNameTso`  
+**Name:** C:301:EQBD:BoundaryPoint.fromEndNameTso:stringLength  
 The length of the string is 64 characters maximum.
 
 **Severity:** sh:Violation
@@ -102,6 +107,7 @@ The length of the string is 64 characters maximum.
 ### eqbd:BoundaryPoint.toEndIsoCode-stringLength
 
 **Path:** `cim100:BoundaryPoint.toEndIsoCode`  
+**Name:** C:301:EQBD:BoundaryPoint.toEndIsoCode:stringLength  
 The length of the string is 2 characters maximum.
 
 **Severity:** sh:Violation
@@ -119,6 +125,7 @@ The length of the string is 2 characters maximum.
 ### eqbd:BoundaryPoint.toEndIsoCode-valueValidity
 
 **Path:** `cim100:BoundaryPoint.toEndIsoCode`  
+**Name:** C:301:EQBD:BoundaryPoint.toEndIsoCode:valueValidity  
 The ISO code is a two-character country code as defined by ISO 3166 (http://www.iso.org/iso/country_codes).
 
 **Severity:** sh:Violation
@@ -138,6 +145,7 @@ The ISO code is a two-character country code as defined by ISO 3166 (http://www.
 ### eqbd:BoundaryPoint.toEndName-stringLength
 
 **Path:** `cim100:BoundaryPoint.toEndName`  
+**Name:** C:301:EQBD:BoundaryPoint.toEndName:stringLength  
 A human readable name with length of the string 64 characters maximum. 
 
 **Severity:** sh:Violation
@@ -153,6 +161,7 @@ A human readable name with length of the string 64 characters maximum.
 ### eqbd:BoundaryPoint.toEndNameTso-stringLength
 
 **Path:** `cim100:BoundaryPoint.toEndNameTso`  
+**Name:** C:301:EQBD:BoundaryPoint.toEndNameTso:stringLength  
 The length of the string is 64 characters maximum.
 
 **Severity:** sh:Violation

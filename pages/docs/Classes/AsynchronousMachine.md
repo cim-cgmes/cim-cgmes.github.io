@@ -5,8 +5,32 @@ A rotating machine whose shaft rotates asynchronously with the electrical field.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     RotatingMachine <|-- AsynchronousMachine
+    RotatingMachine : +GeneratingUnit GeneratingUnit[0..1]
+    RotatingMachine : +HydroPump HydroPump[0..1]
+    RotatingMachine : +Float p[1..1]
+    RotatingMachine : +Float q[1..1]
+    RotatingMachine : +Float ratedPowerFactor[0..1]
+    RotatingMachine : +Float ratedS[0..1]
+    RotatingMachine : +Float ratedU[0..1]
+    click RotatingMachine href "RotatingMachine"
+    AsynchronousMachine : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    AsynchronousMachine : +AsynchronousMachineKind asynchronousMachineType[1..1]
+    AsynchronousMachine : +Boolean converterFedDrive[1..1]
+    AsynchronousMachine : +Float efficiency[1..1]
+    AsynchronousMachine : +Float iaIrRatio[1..1]
+    AsynchronousMachine : +Float nominalFrequency[0..1]
+    AsynchronousMachine : +Float nominalSpeed[0..1]
+    AsynchronousMachine : +Integer polePairNumber[1..1]
+    AsynchronousMachine : +Float ratedMechanicalPower[1..1]
+    AsynchronousMachine : +Boolean reversible[1..1]
+    AsynchronousMachine : +Float rxLockedRotorRatio[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

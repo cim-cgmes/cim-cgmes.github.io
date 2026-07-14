@@ -5,11 +5,31 @@ A generating unit or battery or aggregation that connects to the AC network usin
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Equipment <|-- PowerElectronicsUnit
-    PowerElectronicsUnit <|-- PowerElectronicsWindUnit
+    Equipment : +EquipmentContainer EquipmentContainer[0..1]
+    Equipment : +OperationalLimitSet OperationalLimitSet[0..n]
+    Equipment : +Boolean aggregate[0..1]
+    Equipment : +Boolean inService[1..1]
+    Equipment : +Boolean normallyInService[0..1]
+    click Equipment href "Equipment"
     PowerElectronicsUnit <|-- PhotoVoltaicUnit
+    click PhotoVoltaicUnit href "PhotoVoltaicUnit"
+    PowerElectronicsUnit <|-- PowerElectronicsWindUnit
+    click PowerElectronicsWindUnit href "PowerElectronicsWindUnit"
     PowerElectronicsUnit <|-- BatteryUnit
+    BatteryUnit : +BatteryStateKind batteryState[1..1]
+    BatteryUnit : +Float ratedE[1..1]
+    BatteryUnit : +Float storedE[1..1]
+    click BatteryUnit href "BatteryUnit"
+    PowerElectronicsUnit : +PowerElectronicsConnection PowerElectronicsConnection[1]
+    PowerElectronicsUnit : +Float maxP[0..1]
+    PowerElectronicsUnit : +Float minP[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

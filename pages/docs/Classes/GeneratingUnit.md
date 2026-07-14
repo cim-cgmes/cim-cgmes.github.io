@@ -5,13 +5,59 @@ A single or set of synchronous machines for converting mechanical power into alt
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Equipment <|-- GeneratingUnit
-    GeneratingUnit <|-- WindGeneratingUnit
+    Equipment : +EquipmentContainer EquipmentContainer[0..1]
+    Equipment : +OperationalLimitSet OperationalLimitSet[0..n]
+    Equipment : +Boolean aggregate[0..1]
+    Equipment : +Boolean inService[1..1]
+    Equipment : +Boolean normallyInService[0..1]
+    click Equipment href "Equipment"
     GeneratingUnit <|-- SolarGeneratingUnit
-    GeneratingUnit <|-- ThermalGeneratingUnit
+    SolarGeneratingUnit : +SolarPowerPlant SolarPowerPlant[0..1]
+    click SolarGeneratingUnit href "SolarGeneratingUnit"
     GeneratingUnit <|-- NuclearGeneratingUnit
+    click NuclearGeneratingUnit href "NuclearGeneratingUnit"
+    GeneratingUnit <|-- ThermalGeneratingUnit
+    ThermalGeneratingUnit : +CAESPlant CAESPlant[0..1]
+    ThermalGeneratingUnit : +CogenerationPlant CogenerationPlant[0..1]
+    ThermalGeneratingUnit : +CombinedCyclePlant CombinedCyclePlant[0..1]
+    ThermalGeneratingUnit : +FossilFuel FossilFuels[0..n]
+    click ThermalGeneratingUnit href "ThermalGeneratingUnit"
     GeneratingUnit <|-- HydroGeneratingUnit
+    HydroGeneratingUnit : +HydroPowerPlant HydroPowerPlant[0..1]
+    HydroGeneratingUnit : +Float dropHeight[0..1]
+    HydroGeneratingUnit : +HydroEnergyConversionKind energyConversionCapability[0..1]
+    HydroGeneratingUnit : +HydroTurbineKind turbineType[0..1]
+    click HydroGeneratingUnit href "HydroGeneratingUnit"
+    GeneratingUnit <|-- WindGeneratingUnit
+    WindGeneratingUnit : +WindPowerPlant WindPowerPlant[0..1]
+    WindGeneratingUnit : +WindGenUnitKind windGenUnitType[1..1]
+    click WindGeneratingUnit href "WindGeneratingUnit"
+    GeneratingUnit : +ControlAreaGeneratingUnit ControlAreaGeneratingUnit[0..n]
+    GeneratingUnit : +GrossToNetActivePowerCurve GrossToNetActivePowerCurves[0..n]
+    GeneratingUnit : +RotatingMachine RotatingMachine[1..n]
+    GeneratingUnit : +GeneratorControlSource genControlSource[0..1]
+    GeneratingUnit : +Float governorSCD[0..1]
+    GeneratingUnit : +Float longPF[0..1]
+    GeneratingUnit : +Float maxOperatingP[1..1]
+    GeneratingUnit : +Float maximumAllowableSpinningReserve[0..1]
+    GeneratingUnit : +Float minOperatingP[1..1]
+    GeneratingUnit : +Float nominalP[0..1]
+    GeneratingUnit : +Float normalPF[1..1]
+    GeneratingUnit : +Float ratedGrossMaxP[0..1]
+    GeneratingUnit : +Float ratedGrossMinP[0..1]
+    GeneratingUnit : +Float ratedNetMaxP[0..1]
+    GeneratingUnit : +Float shortPF[0..1]
+    GeneratingUnit : +Float startupCost[0..1]
+    GeneratingUnit : +Float startupTime[0..1]
+    GeneratingUnit : +Float totalEfficiency[0..1]
+    GeneratingUnit : +Float variableCost[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

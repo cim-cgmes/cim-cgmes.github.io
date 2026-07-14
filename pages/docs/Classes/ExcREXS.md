@@ -5,8 +5,58 @@ General purpose rotating excitation system. This model can be used to represent 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcREXS
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcREXS : +Float e1[1..1]
+    ExcREXS : +Float e2[1..1]
+    ExcREXS : +ExcREXSFeedbackSignalKind fbf[1..1]
+    ExcREXS : +Float flimf[1..1]
+    ExcREXS : +Float kc[1..1]
+    ExcREXS : +Float kd[1..1]
+    ExcREXS : +Float ke[1..1]
+    ExcREXS : +Float kefd[1..1]
+    ExcREXS : +Float kf[1..1]
+    ExcREXS : +Float kh[1..1]
+    ExcREXS : +Float kii[1..1]
+    ExcREXS : +Float kip[1..1]
+    ExcREXS : +Float ks[1..1]
+    ExcREXS : +Float kvi[1..1]
+    ExcREXS : +Float kvp[1..1]
+    ExcREXS : +Float kvphz[1..1]
+    ExcREXS : +Float nvphz[1..1]
+    ExcREXS : +Float se1[1..1]
+    ExcREXS : +Float se2[1..1]
+    ExcREXS : +Float ta[1..1]
+    ExcREXS : +Float tb1[1..1]
+    ExcREXS : +Float tb2[1..1]
+    ExcREXS : +Float tc1[1..1]
+    ExcREXS : +Float tc2[1..1]
+    ExcREXS : +Float te[1..1]
+    ExcREXS : +Float tf[1..1]
+    ExcREXS : +Float tf1[1..1]
+    ExcREXS : +Float tf2[1..1]
+    ExcREXS : +Float tp[1..1]
+    ExcREXS : +Float vcmax[1..1]
+    ExcREXS : +Float vfmax[1..1]
+    ExcREXS : +Float vfmin[1..1]
+    ExcREXS : +Float vimax[1..1]
+    ExcREXS : +Float vrmax[1..1]
+    ExcREXS : +Float vrmin[1..1]
+    ExcREXS : +Float xc[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

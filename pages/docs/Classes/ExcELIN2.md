@@ -5,8 +5,49 @@ Detailed excitation system ELIN (VATECH). This model represents an all-static ex
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcELIN2
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcELIN2 : +Float efdbas[1..1]
+    ExcELIN2 : +Float iefmax[1..1]
+    ExcELIN2 : +Float iefmax2[1..1]
+    ExcELIN2 : +Float iefmin[1..1]
+    ExcELIN2 : +Float k1[1..1]
+    ExcELIN2 : +Float k1ec[1..1]
+    ExcELIN2 : +Float k2[1..1]
+    ExcELIN2 : +Float k3[1..1]
+    ExcELIN2 : +Float k4[1..1]
+    ExcELIN2 : +Float kd1[1..1]
+    ExcELIN2 : +Float ke2[1..1]
+    ExcELIN2 : +Float ketb[1..1]
+    ExcELIN2 : +Float pid1max[1..1]
+    ExcELIN2 : +Float seve1[1..1]
+    ExcELIN2 : +Float seve2[1..1]
+    ExcELIN2 : +Float tb1[1..1]
+    ExcELIN2 : +Float te[1..1]
+    ExcELIN2 : +Float te2[1..1]
+    ExcELIN2 : +Float ti1[1..1]
+    ExcELIN2 : +Float ti3[1..1]
+    ExcELIN2 : +Float ti4[1..1]
+    ExcELIN2 : +Float tr4[1..1]
+    ExcELIN2 : +Float upmax[1..1]
+    ExcELIN2 : +Float upmin[1..1]
+    ExcELIN2 : +Float ve1[1..1]
+    ExcELIN2 : +Float ve2[1..1]
+    ExcELIN2 : +Float xp[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,50 @@ PID governor and turbine.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydroPID
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydroPID : +Float aturb[1..1]
+    GovHydroPID : +Float bturb[1..1]
+    GovHydroPID : +Float db1[1..1]
+    GovHydroPID : +Float db2[1..1]
+    GovHydroPID : +Float eps[1..1]
+    GovHydroPID : +Float gv1[1..1]
+    GovHydroPID : +Float gv2[1..1]
+    GovHydroPID : +Float gv3[1..1]
+    GovHydroPID : +Float gv4[1..1]
+    GovHydroPID : +Float gv5[1..1]
+    GovHydroPID : +Float gv6[1..1]
+    GovHydroPID : +Boolean inputSignal[1..1]
+    GovHydroPID : +Float kd[1..1]
+    GovHydroPID : +Float kg[1..1]
+    GovHydroPID : +Float ki[1..1]
+    GovHydroPID : +Float kp[1..1]
+    GovHydroPID : +Float mwbase[1..1]
+    GovHydroPID : +Float pgv1[1..1]
+    GovHydroPID : +Float pgv2[1..1]
+    GovHydroPID : +Float pgv3[1..1]
+    GovHydroPID : +Float pgv4[1..1]
+    GovHydroPID : +Float pgv5[1..1]
+    GovHydroPID : +Float pgv6[1..1]
+    GovHydroPID : +Float pmax[1..1]
+    GovHydroPID : +Float pmin[1..1]
+    GovHydroPID : +Float r[1..1]
+    GovHydroPID : +Float td[1..1]
+    GovHydroPID : +Float tf[1..1]
+    GovHydroPID : +Float tp[1..1]
+    GovHydroPID : +Float tt[1..1]
+    GovHydroPID : +Float tturb[1..1]
+    GovHydroPID : +Float velcl[1..1]
+    GovHydroPID : +Float velop[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

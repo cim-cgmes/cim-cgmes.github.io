@@ -5,8 +5,20 @@ Relationship between the generating unit's gross active power output on the X-ax
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Curve <|-- GrossToNetActivePowerCurve
+    Curve : +CurveData CurveDatas[1..n]
+    Curve : +CurveStyle curveStyle[1..1]
+    Curve : +UnitSymbol xUnit[1..1]
+    Curve : +UnitSymbol y1Unit[1..1]
+    Curve : +UnitSymbol y2Unit[0..1]
+    click Curve href "Curve"
+    GrossToNetActivePowerCurve : +GeneratingUnit GeneratingUnit[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

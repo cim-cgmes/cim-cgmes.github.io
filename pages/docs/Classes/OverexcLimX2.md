@@ -5,8 +5,26 @@ Field voltage or current overexcitation limiter designed to protect the generato
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     OverexcitationLimiterDynamics <|-- OverexcLimX2
+    OverexcitationLimiterDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    click OverexcitationLimiterDynamics href "OverexcitationLimiterDynamics"
+    OverexcLimX2 : +Float efd1[1..1]
+    OverexcLimX2 : +Float efd2[1..1]
+    OverexcLimX2 : +Float efd3[1..1]
+    OverexcLimX2 : +Float efddes[1..1]
+    OverexcLimX2 : +Float efdrated[1..1]
+    OverexcLimX2 : +Float kmx[1..1]
+    OverexcLimX2 : +Boolean m[1..1]
+    OverexcLimX2 : +Float t1[1..1]
+    OverexcLimX2 : +Float t2[1..1]
+    OverexcLimX2 : +Float t3[1..1]
+    OverexcLimX2 : +Float vlow[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,10 +5,27 @@ Mechanical load function block whose behaviour is described by reference to a st
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DynamicsFunctionBlock <|-- MechanicalLoadDynamics
-    MechanicalLoadDynamics <|-- MechLoad1
+    DynamicsFunctionBlock : +Boolean enabled[1..1]
+    click DynamicsFunctionBlock href "DynamicsFunctionBlock"
     MechanicalLoadDynamics <|-- MechanicalLoadUserDefined
+    MechanicalLoadUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    MechanicalLoadUserDefined : +Boolean proprietary[1..1]
+    click MechanicalLoadUserDefined href "MechanicalLoadUserDefined"
+    MechanicalLoadDynamics <|-- MechLoad1
+    MechLoad1 : +Float a[1..1]
+    MechLoad1 : +Float b[1..1]
+    MechLoad1 : +Float d[1..1]
+    MechLoad1 : +Float e[1..1]
+    click MechLoad1 href "MechLoad1"
+    MechanicalLoadDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    MechanicalLoadDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,37 @@ Modified IEEE ST2A static excitation system with another lead-lag block added to
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcST2A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcST2A : +Float efdmax[1..1]
+    ExcST2A : +Float ka[1..1]
+    ExcST2A : +Float kc[1..1]
+    ExcST2A : +Float ke[1..1]
+    ExcST2A : +Float kf[1..1]
+    ExcST2A : +Float ki[1..1]
+    ExcST2A : +Float kp[1..1]
+    ExcST2A : +Float ta[1..1]
+    ExcST2A : +Float tb[1..1]
+    ExcST2A : +Float tc[1..1]
+    ExcST2A : +Float te[1..1]
+    ExcST2A : +Float tf[1..1]
+    ExcST2A : +Boolean uelin[1..1]
+    ExcST2A : +Float vrmax[1..1]
+    ExcST2A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

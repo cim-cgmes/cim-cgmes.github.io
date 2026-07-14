@@ -5,8 +5,30 @@ Simple excitation system with generic characteristics typical of many excitation
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcSCRX
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcSCRX : +Boolean cswitch[1..1]
+    ExcSCRX : +Float emax[1..1]
+    ExcSCRX : +Float emin[1..1]
+    ExcSCRX : +Float k[1..1]
+    ExcSCRX : +Float rcrfd[1..1]
+    ExcSCRX : +Float tatb[1..1]
+    ExcSCRX : +Float tb[1..1]
+    ExcSCRX : +Float te[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

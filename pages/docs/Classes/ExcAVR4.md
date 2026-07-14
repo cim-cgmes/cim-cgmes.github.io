@@ -5,8 +5,36 @@ Italian excitation system. It represents a static exciter and electric voltage r
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcAVR4
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcAVR4 : +Boolean imul[1..1]
+    ExcAVR4 : +Float ka[1..1]
+    ExcAVR4 : +Float ke[1..1]
+    ExcAVR4 : +Float kif[1..1]
+    ExcAVR4 : +Float t1[1..1]
+    ExcAVR4 : +Float t1if[1..1]
+    ExcAVR4 : +Float t2[1..1]
+    ExcAVR4 : +Float t3[1..1]
+    ExcAVR4 : +Float t4[1..1]
+    ExcAVR4 : +Float tif[1..1]
+    ExcAVR4 : +Float vfmn[1..1]
+    ExcAVR4 : +Float vfmx[1..1]
+    ExcAVR4 : +Float vrmn[1..1]
+    ExcAVR4 : +Float vrmx[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

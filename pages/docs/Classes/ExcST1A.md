@@ -5,8 +5,40 @@ Modification of an old IEEE ST1A static excitation system without overexcitation
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcST1A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcST1A : +Float ilr[1..1]
+    ExcST1A : +Float ka[1..1]
+    ExcST1A : +Float kc[1..1]
+    ExcST1A : +Float kf[1..1]
+    ExcST1A : +Float klr[1..1]
+    ExcST1A : +Float ta[1..1]
+    ExcST1A : +Float tb[1..1]
+    ExcST1A : +Float tb1[1..1]
+    ExcST1A : +Float tc[1..1]
+    ExcST1A : +Float tc1[1..1]
+    ExcST1A : +Float tf[1..1]
+    ExcST1A : +Float vamax[1..1]
+    ExcST1A : +Float vamin[1..1]
+    ExcST1A : +Float vimax[1..1]
+    ExcST1A : +Float vimin[1..1]
+    ExcST1A : +Float vrmax[1..1]
+    ExcST1A : +Float vrmin[1..1]
+    ExcST1A : +Float xe[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

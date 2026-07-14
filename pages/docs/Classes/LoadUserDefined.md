@@ -5,8 +5,17 @@ Load whose dynamic behaviour is described by a user-defined model.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     LoadDynamics <|-- LoadUserDefined
+    LoadDynamics : +EnergyConsumer EnergyConsumer[0..n]
+    click LoadDynamics href "LoadDynamics"
+    LoadUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    LoadUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

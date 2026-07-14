@@ -12,6 +12,7 @@
 ### <http://iec.ch/TC57/ns/CIM/StateVariable-EU/constraints/IEC61970-301/solved/3.0#SvTapStep.position-valueRange>
 
 **Path:** `cim:SvTapStep.position`  
+**Name:** C:301:SV:SvTapStep.position:valueRange  
 This is not the tap ratio, but rather the tap step position as defined by the related tap changer model and normally is constrained to be within the range of minimum and maximum tap positions.
 
 **Severity:** sh:Violation

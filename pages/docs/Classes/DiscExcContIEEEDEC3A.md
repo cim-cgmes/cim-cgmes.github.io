@@ -5,8 +5,18 @@ IEEE type DEC3A model. In some systems, the stabilizer output is disconnected fr
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DiscontinuousExcitationControlDynamics <|-- DiscExcContIEEEDEC3A
+    DiscontinuousExcitationControlDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    DiscontinuousExcitationControlDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click DiscontinuousExcitationControlDynamics href "DiscontinuousExcitationControlDynamics"
+    DiscExcContIEEEDEC3A : +Float tdr[1..1]
+    DiscExcContIEEEDEC3A : +Float vtmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -19,8 +19,8 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:DiagramObject
 - targetClass: cim:TextDiagramObject
+- targetClass: cim:DiagramObject
 
 ## dl:DiagramObjectGluePoint
 

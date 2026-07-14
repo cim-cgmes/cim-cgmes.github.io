@@ -5,8 +5,21 @@ The simplified model represents a synchronous generator as a constant internal v
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     SynchronousMachineDynamics <|-- SynchronousMachineSimplified
+    SynchronousMachineDynamics : +CrossCompoundTurbineGovernorDynamics CrossCompoundTurbineGovernorDyanmics[0..1]
+    SynchronousMachineDynamics : +CrossCompoundTurbineGovernorDynamics CrossCompoundTurbineGovernorDynamics[0..1]
+    SynchronousMachineDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[0..1]
+    SynchronousMachineDynamics : +GenICompensationForGenJ GenICompensationForGenJ[0..n]
+    SynchronousMachineDynamics : +MechanicalLoadDynamics MechanicalLoadDynamics[0..1]
+    SynchronousMachineDynamics : +SynchronousMachine SynchronousMachine[1]
+    SynchronousMachineDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[0..n]
+    click SynchronousMachineDynamics href "SynchronousMachineDynamics"
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

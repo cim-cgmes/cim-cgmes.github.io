@@ -5,8 +5,28 @@ Generic turbogas.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovGAST4
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovGAST4 : +Float bp[1..1]
+    GovGAST4 : +Float ktm[1..1]
+    GovGAST4 : +Float mnef[1..1]
+    GovGAST4 : +Float mxef[1..1]
+    GovGAST4 : +Float rymn[1..1]
+    GovGAST4 : +Float rymx[1..1]
+    GovGAST4 : +Float ta[1..1]
+    GovGAST4 : +Float tc[1..1]
+    GovGAST4 : +Float tcm[1..1]
+    GovGAST4 : +Float tm[1..1]
+    GovGAST4 : +Float ty[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

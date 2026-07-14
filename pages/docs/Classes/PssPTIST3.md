@@ -5,8 +5,50 @@ PTI microprocessor-based stabilizer type 3.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssPTIST3
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssPTIST3 : +Float a0[1..1]
+    PssPTIST3 : +Float a1[1..1]
+    PssPTIST3 : +Float a2[1..1]
+    PssPTIST3 : +Float a3[1..1]
+    PssPTIST3 : +Float a4[1..1]
+    PssPTIST3 : +Float a5[1..1]
+    PssPTIST3 : +Float al[1..1]
+    PssPTIST3 : +Float athres[1..1]
+    PssPTIST3 : +Float b0[1..1]
+    PssPTIST3 : +Float b1[1..1]
+    PssPTIST3 : +Float b2[1..1]
+    PssPTIST3 : +Float b3[1..1]
+    PssPTIST3 : +Float b4[1..1]
+    PssPTIST3 : +Float b5[1..1]
+    PssPTIST3 : +Float dl[1..1]
+    PssPTIST3 : +Float dtc[1..1]
+    PssPTIST3 : +Float dtf[1..1]
+    PssPTIST3 : +Float dtp[1..1]
+    PssPTIST3 : +Boolean isw[1..1]
+    PssPTIST3 : +Float k[1..1]
+    PssPTIST3 : +Float lthres[1..1]
+    PssPTIST3 : +Float m[1..1]
+    PssPTIST3 : +Float nav[1..1]
+    PssPTIST3 : +Float ncl[1..1]
+    PssPTIST3 : +Float ncr[1..1]
+    PssPTIST3 : +Float pmin[1..1]
+    PssPTIST3 : +Float t1[1..1]
+    PssPTIST3 : +Float t2[1..1]
+    PssPTIST3 : +Float t3[1..1]
+    PssPTIST3 : +Float t4[1..1]
+    PssPTIST3 : +Float t5[1..1]
+    PssPTIST3 : +Float t6[1..1]
+    PssPTIST3 : +Float tf[1..1]
+    PssPTIST3 : +Float tp[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

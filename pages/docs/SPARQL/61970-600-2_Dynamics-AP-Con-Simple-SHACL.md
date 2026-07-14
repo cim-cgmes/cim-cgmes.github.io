@@ -491,63 +491,63 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:ExcAC1A
-- targetClass: cim:ExcIEEEAC4A
-- targetClass: cim:ExcIEEEST2A
-- targetClass: cim:ExcIEEEAC3A
-- targetClass: cim:ExcIEEEDC4B
-- targetClass: cim:ExcRQB
-- targetClass: cim:ExcREXS
-- targetClass: cim:ExcST7B
-- targetClass: cim:ExcIEEEDC3A
-- targetClass: cim:ExcELIN1
-- targetClass: cim:ExcIEEEST1A
-- targetClass: cim:ExcAC3A
-- targetClass: cim:ExcIEEEST4B
 - targetClass: cim:ExcIEEEAC5A
-- targetClass: cim:ExcELIN2
-- targetClass: cim:ExcIEEEAC2A
-- targetClass: cim:ExcIEEEAC1A
-- targetClass: cim:ExcAVR1
-- targetClass: cim:ExcSCRX
-- targetClass: cim:ExcAVR5
-- targetClass: cim:ExcOEX3T
-- targetClass: cim:ExcSEXS
-- targetClass: cim:ExcST1A
-- targetClass: cim:ExcAC2A
-- targetClass: cim:ExcDC3A1
-- targetClass: cim:ExcST6B
-- targetClass: cim:ExcAC5A
-- targetClass: cim:ExcAVR3
-- targetClass: cim:ExcIEEEAC6A
-- targetClass: cim:ExcDC3A
-- targetClass: cim:ExcIEEEAC7B
-- targetClass: cim:ExcANS
-- targetClass: cim:ExcIEEEST5B
-- targetClass: cim:ExcAC8B
-- targetClass: cim:ExcPIC
-- targetClass: cim:ExcHU
-- targetClass: cim:ExcSK
-- targetClass: cim:ExcST2A
-- targetClass: cim:ExcIEEEDC2A
-- targetClass: cim:ExcIEEEST7B
-- targetClass: cim:ExcNI
-- targetClass: cim:ExcitationSystemUserDefined
-- targetClass: cim:ExcCZ
-- targetClass: cim:ExcAC4A
-- targetClass: cim:ExcST3A
-- targetClass: cim:ExcST4B
-- targetClass: cim:ExcDC2A
-- targetClass: cim:ExcBBC
-- targetClass: cim:ExcAVR7
-- targetClass: cim:ExcAVR2
-- targetClass: cim:ExcIEEEAC8B
 - targetClass: cim:ExcAC6A
-- targetClass: cim:ExcIEEEST6B
-- targetClass: cim:ExcAVR4
-- targetClass: cim:ExcDC1A
-- targetClass: cim:ExcIEEEDC1A
+- targetClass: cim:ExcELIN1
+- targetClass: cim:ExcAVR7
+- targetClass: cim:ExcHU
+- targetClass: cim:ExcIEEEDC2A
 - targetClass: cim:ExcIEEEST3A
+- targetClass: cim:ExcIEEEDC1A
+- targetClass: cim:ExcOEX3T
+- targetClass: cim:ExcST4B
+- targetClass: cim:ExcIEEEAC2A
+- targetClass: cim:ExcAVR1
+- targetClass: cim:ExcNI
+- targetClass: cim:ExcAC3A
+- targetClass: cim:ExcIEEEST1A
+- targetClass: cim:ExcAC5A
+- targetClass: cim:ExcDC3A1
+- targetClass: cim:ExcSK
+- targetClass: cim:ExcAC1A
+- targetClass: cim:ExcANS
+- targetClass: cim:ExcIEEEDC3A
+- targetClass: cim:ExcIEEEAC8B
+- targetClass: cim:ExcAC8B
+- targetClass: cim:ExcIEEEAC3A
+- targetClass: cim:ExcAC4A
+- targetClass: cim:ExcAC2A
+- targetClass: cim:ExcAVR4
+- targetClass: cim:ExcIEEEST5B
+- targetClass: cim:ExcST2A
+- targetClass: cim:ExcSEXS
+- targetClass: cim:ExcDC3A
+- targetClass: cim:ExcSCRX
+- targetClass: cim:ExcST3A
+- targetClass: cim:ExcBBC
+- targetClass: cim:ExcREXS
+- targetClass: cim:ExcIEEEST7B
+- targetClass: cim:ExcIEEEAC4A
+- targetClass: cim:ExcST7B
+- targetClass: cim:ExcELIN2
+- targetClass: cim:ExcIEEEAC6A
+- targetClass: cim:ExcIEEEAC1A
+- targetClass: cim:ExcCZ
+- targetClass: cim:ExcDC1A
+- targetClass: cim:ExcPIC
+- targetClass: cim:ExcST6B
+- targetClass: cim:ExcRQB
+- targetClass: cim:ExcAVR5
+- targetClass: cim:ExcIEEEAC7B
+- targetClass: cim:ExcDC2A
+- targetClass: cim:ExcIEEEST4B
+- targetClass: cim:ExcIEEEST6B
+- targetClass: cim:ExcitationSystemUserDefined
+- targetClass: cim:ExcIEEEDC4B
+- targetClass: cim:ExcST1A
+- targetClass: cim:ExcIEEEST2A
+- targetClass: cim:ExcAVR3
+- targetClass: cim:ExcAVR2
 
 ## dy302c:ExcitationSystemUserDefined
 
@@ -940,10 +940,10 @@
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:PFVArControllerType2UserDefined
 - targetClass: cim:PFVArType2Common1
 - targetClass: cim:PFVArType2IEEEPFController
 - targetClass: cim:PFVArType2IEEEVArController
-- targetClass: cim:PFVArControllerType2UserDefined
 
 ## dy302c:PFVArControllerType2UserDefined
 
@@ -992,25 +992,25 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:PssPTIST3
-- targetClass: cim:Pss2ST
-- targetClass: cim:PssELIN2
+- targetClass: cim:PssSTAB2A
 - targetClass: cim:Pss1A
 - targetClass: cim:Pss5
-- targetClass: cim:Pss2B
-- targetClass: cim:PssSB4
-- targetClass: cim:PssSTAB2A
-- targetClass: cim:PssSH
+- targetClass: cim:PssIEEE3B
 - targetClass: cim:PssRQB
-- targetClass: cim:PssIEEE4B
-- targetClass: cim:PssIEEE2B
+- targetClass: cim:PssSB4
+- targetClass: cim:Pss2ST
+- targetClass: cim:PssELIN2
 - targetClass: cim:PssIEEE1A
-- targetClass: cim:PssWECC
 - targetClass: cim:PssSK
-- targetClass: cim:PssPTIST1
 - targetClass: cim:Pss1
 - targetClass: cim:PowerSystemStabilizerUserDefined
-- targetClass: cim:PssIEEE3B
+- targetClass: cim:Pss2B
+- targetClass: cim:PssSH
+- targetClass: cim:PssWECC
+- targetClass: cim:PssIEEE2B
+- targetClass: cim:PssPTIST1
+- targetClass: cim:PssPTIST3
+- targetClass: cim:PssIEEE4B
 
 ## dy302c:PowerSystemStabilizerUserDefined
 
@@ -1241,78 +1241,78 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:GovHydroWEH
-- targetClass: cim:TurbineGovernorUserDefined
-- targetClass: cim:GovHydroIEEE2
-- targetClass: cim:GovGAST2
 - targetClass: cim:GovSteam0
 - targetClass: cim:GovHydroPID2
-- targetClass: cim:GovSteam1
+- targetClass: cim:GovSteamFV4
 - targetClass: cim:GovCT1
-- targetClass: cim:GovSteamIEEE1
+- targetClass: cim:GovHydroIEEE2
+- targetClass: cim:GovHydroWEH
 - targetClass: cim:GovSteamBB
-- targetClass: cim:GovHydroFrancis
-- targetClass: cim:GovGAST
-- targetClass: cim:GovGASTWD
-- targetClass: cim:GovHydroR
-- targetClass: cim:GovHydro2
-- targetClass: cim:GovCT2
-- targetClass: cim:GovHydroWPID
-- targetClass: cim:GovGAST1
-- targetClass: cim:GovHydroPID
-- targetClass: cim:GovSteamFV2
-- targetClass: cim:GovSteamFV3
-- targetClass: cim:GovSteamEU
-- targetClass: cim:GovGAST4
-- targetClass: cim:GovSteamSGO
-- targetClass: cim:GovHydro4
-- targetClass: cim:GovHydroIEEE0
-- targetClass: cim:GovHydro3
-- targetClass: cim:GovSteam2
-- targetClass: cim:GovGAST3
 - targetClass: cim:GovHydroDD
 - targetClass: cim:GovHydroPelton
+- targetClass: cim:GovCT2
+- targetClass: cim:GovHydroR
+- targetClass: cim:TurbineGovernorUserDefined
+- targetClass: cim:GovSteam1
+- targetClass: cim:GovSteamFV3
+- targetClass: cim:GovSteamSGO
+- targetClass: cim:GovGAST3
+- targetClass: cim:GovHydro3
+- targetClass: cim:GovSteamEU
+- targetClass: cim:GovHydroPID
+- targetClass: cim:GovGAST
+- targetClass: cim:GovSteamIEEE1
+- targetClass: cim:GovGAST4
+- targetClass: cim:GovHydroIEEE0
+- targetClass: cim:GovHydroFrancis
+- targetClass: cim:GovGAST2
+- targetClass: cim:GovHydro2
 - targetClass: cim:GovHydro1
-- targetClass: cim:GovSteamFV4
+- targetClass: cim:GovGASTWD
+- targetClass: cim:GovHydro4
+- targetClass: cim:GovSteam2
+- targetClass: cim:GovHydroWPID
+- targetClass: cim:GovSteamFV2
+- targetClass: cim:GovGAST1
 
 ## dy302c:TurbineGovernorDynamics.SynchronousMachineDynamics-valueTypeNodeShape
 
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:GovGAST3
-- targetClass: cim:GovSteamSGO
-- targetClass: cim:TurbineGovernorUserDefined
-- targetClass: cim:GovHydroWEH
-- targetClass: cim:GovSteam1
 - targetClass: cim:GovGAST4
-- targetClass: cim:GovHydro4
-- targetClass: cim:GovSteamBB
-- targetClass: cim:GovHydroFrancis
-- targetClass: cim:GovGAST1
-- targetClass: cim:GovSteamFV2
+- targetClass: cim:GovSteamEU
 - targetClass: cim:GovHydroDD
-- targetClass: cim:GovHydroWPID
-- targetClass: cim:GovHydroIEEE2
-- targetClass: cim:GovHydroPID
-- targetClass: cim:GovHydro1
-- targetClass: cim:GovGASTWD
-- targetClass: cim:GovGAST2
 - targetClass: cim:GovSteamFV4
+- targetClass: cim:TurbineGovernorUserDefined
+- targetClass: cim:GovHydroIEEE2
+- targetClass: cim:GovGASTWD
+- targetClass: cim:GovSteamIEEE1
+- targetClass: cim:GovHydro3
+- targetClass: cim:GovCT2
+- targetClass: cim:GovGAST
+- targetClass: cim:GovHydro1
+- targetClass: cim:GovHydro2
+- targetClass: cim:GovSteamFV3
+- targetClass: cim:GovGAST3
 - targetClass: cim:GovSteam0
 - targetClass: cim:GovHydroPelton
-- targetClass: cim:GovGAST
 - targetClass: cim:GovHydroR
-- targetClass: cim:GovSteamFV3
-- targetClass: cim:GovSteamIEEE1
-- targetClass: cim:GovHydroIEEE0
-- targetClass: cim:GovCT2
-- targetClass: cim:GovCT1
-- targetClass: cim:GovSteam2
-- targetClass: cim:GovSteamEU
-- targetClass: cim:GovHydro2
-- targetClass: cim:GovHydro3
 - targetClass: cim:GovHydroPID2
+- targetClass: cim:GovSteam1
+- targetClass: cim:GovSteam2
+- targetClass: cim:GovHydroFrancis
+- targetClass: cim:GovSteamFV2
+- targetClass: cim:GovSteamSGO
+- targetClass: cim:GovHydroIEEE0
+- targetClass: cim:GovHydroWEH
+- targetClass: cim:GovHydroPID
+- targetClass: cim:GovGAST1
+- targetClass: cim:GovGAST2
+- targetClass: cim:GovHydroWPID
+- targetClass: cim:GovHydro4
+- targetClass: cim:GovCT1
+- targetClass: cim:GovSteamBB
 
 ## dy302c:TurbineGovernorUserDefined
 
@@ -1376,12 +1376,12 @@
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:UnderexcLimX1
 - targetClass: cim:UnderexcLimX2
 - targetClass: cim:UnderexcLimIEEE2
 - targetClass: cim:UnderexcLimIEEE1
 - targetClass: cim:UnderexcitationLimiterUserDefined
 - targetClass: cim:UnderexcLim2Simplified
-- targetClass: cim:UnderexcLimX1
 
 ## dy302c:UnderexcitationLimiterUserDefined
 
@@ -1643,10 +1643,10 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:WindType1or2UserDefined
-- targetClass: cim:WindGenTurbineType2IEC
 - targetClass: cim:WindGenTurbineType1bIEC
 - targetClass: cim:WindGenTurbineType1aIEC
+- targetClass: cim:WindType1or2UserDefined
+- targetClass: cim:WindGenTurbineType2IEC
 
 ## dy302c:WindTurbineType3IEC
 

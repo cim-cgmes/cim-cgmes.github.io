@@ -12,6 +12,7 @@
 ### ssh456c:EnergyConsumer.p-valueRange
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** C:456:SSH:EnergyConsumer.p:ValueRange  
 Negative active power loads shall not be exchanged. In cases where this is needed EquivalentInjection is used instead.
 
 **Severity:** sh:Violation
@@ -27,6 +28,7 @@ Negative active power loads shall not be exchanged. In cases where this is neede
 ### ssh456c:EnergyConsumer.q-valueRange
 
 **Path:** `cim:EnergyConsumer.q`  
+**Name:** C:456:SSH:EnergyConsumer.q:ValueRange  
 Negative reactive power loads shall not be exchanged. In cases where this is needed EquivalentInjection is used instead.
 
 **Severity:** sh:Violation
@@ -51,6 +53,7 @@ Negative reactive power loads shall not be exchanged. In cases where this is nee
 ### ssh456c:EnergyConsumer.p-valueRange
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** C:456:SSH:EnergyConsumer.p:ValueRange  
 Negative active power loads shall not be exchanged. In cases where this is needed EquivalentInjection is used instead.
 
 **Severity:** sh:Violation
@@ -66,6 +69,7 @@ Negative active power loads shall not be exchanged. In cases where this is neede
 ### ssh456c:EnergyConsumer.q-valueRange
 
 **Path:** `cim:EnergyConsumer.q`  
+**Name:** C:456:SSH:EnergyConsumer.q:ValueRange  
 Negative reactive power loads shall not be exchanged. In cases where this is needed EquivalentInjection is used instead.
 
 **Severity:** sh:Violation
@@ -80,6 +84,7 @@ Negative reactive power loads shall not be exchanged. In cases where this is nee
 
 ## ssh456c:EnergySource-EnergySourcePQ
 
+**Name:** C:456:SSH:EnergySource:EnergySourcePQ  
 The attributes voltageAngle and voltageMagnitude shall not be used when the EnergySource is representing a constant active and reactive power injection (PQ injection), i.e. they shall only be used when the EnergySource is modelling a voltage source.
 
 **Severity:** sh:Warning
@@ -93,7 +98,23 @@ The attributes voltageAngle and voltageMagnitude shall not be used when the Ener
 **Constraints:**
 
 - **sh:AndConstraintComponent** (Severity: sh:Warning)
-  - Shapes: `[[{[cim:EnergySource.voltageMagnitude] sh:Violation    sh:MinCountConstraintComponent map[MinCount:0]} {[cim:EnergySource.voltageMagnitude] sh:Violation    sh:MaxCountConstraintComponent map[MaxCount:0]}] [{[cim:EnergySource.voltageAngle] sh:Violation    sh:MinCountConstraintComponent map[MinCount:0]} {[cim:EnergySource.voltageAngle] sh:Violation    sh:MaxCountConstraintComponent map[MaxCount:0]}]]` 
+
+  **Item 1:**
+
+  **Constraints:**
+
+  - **sh:MinCountConstraintComponent**
+    - MinCount: `0` 
+  - **sh:MaxCountConstraintComponent**
+    - MaxCount: `0` 
+  **Item 2:**
+
+  **Constraints:**
+
+  - **sh:MinCountConstraintComponent**
+    - MinCount: `0` 
+  - **sh:MaxCountConstraintComponent**
+    - MaxCount: `0`
 
 ## ssh456c:NonConformLoad
 
@@ -107,6 +128,7 @@ The attributes voltageAngle and voltageMagnitude shall not be used when the Ener
 ### ssh456c:EnergyConsumer.p-valueRange
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** C:456:SSH:EnergyConsumer.p:ValueRange  
 Negative active power loads shall not be exchanged. In cases where this is needed EquivalentInjection is used instead.
 
 **Severity:** sh:Violation
@@ -122,6 +144,7 @@ Negative active power loads shall not be exchanged. In cases where this is neede
 ### ssh456c:EnergyConsumer.q-valueRange
 
 **Path:** `cim:EnergyConsumer.q`  
+**Name:** C:456:SSH:EnergyConsumer.q:ValueRange  
 Negative reactive power loads shall not be exchanged. In cases where this is needed EquivalentInjection is used instead.
 
 **Severity:** sh:Violation
@@ -146,6 +169,7 @@ Negative reactive power loads shall not be exchanged. In cases where this is nee
 ### ssh456c:EnergyConsumer.p-valueRange
 
 **Path:** `cim:EnergyConsumer.p`  
+**Name:** C:456:SSH:EnergyConsumer.p:ValueRange  
 Negative active power loads shall not be exchanged. In cases where this is needed EquivalentInjection is used instead.
 
 **Severity:** sh:Violation
@@ -161,6 +185,7 @@ Negative active power loads shall not be exchanged. In cases where this is neede
 ### ssh456c:EnergyConsumer.q-valueRange
 
 **Path:** `cim:EnergyConsumer.q`  
+**Name:** C:456:SSH:EnergyConsumer.q:ValueRange  
 Negative reactive power loads shall not be exchanged. In cases where this is needed EquivalentInjection is used instead.
 
 **Severity:** sh:Violation

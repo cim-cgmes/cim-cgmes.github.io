@@ -5,8 +5,27 @@ Slovakian PSS with three inputs.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssSK
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssSK : +Float k1[1..1]
+    PssSK : +Float k2[1..1]
+    PssSK : +Float k3[1..1]
+    PssSK : +Float t1[1..1]
+    PssSK : +Float t2[1..1]
+    PssSK : +Float t3[1..1]
+    PssSK : +Float t4[1..1]
+    PssSK : +Float t5[1..1]
+    PssSK : +Float t6[1..1]
+    PssSK : +Float vsmax[1..1]
+    PssSK : +Float vsmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

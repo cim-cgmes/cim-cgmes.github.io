@@ -2,6 +2,7 @@
 
 ## gl600-2:Location-position
 
+**Name:** C:600:GL:NA:position  
 IEC 61968-13 allows both PositionPoint and mainAddress to be exchanged. CGMES requires that PositionPoint is exchanged and mainAddress is not exchanged.
 
 **Severity:** sh:Violation
@@ -15,5 +16,17 @@ IEC 61968-13 allows both PositionPoint and mainAddress to be exchanged. CGMES re
 **Constraints:**
 
 - **sh:AndConstraintComponent** (Severity: sh:Violation)
-  - Shapes: `[[{[cim:Location.mainAddress] sh:Violation    sh:MaxCountConstraintComponent map[MaxCount:0]}] [{[^cim:PositionPoint.Location] sh:Violation    sh:MinCountConstraintComponent map[MinCount:1]}]]` 
+
+  **Item 1:**
+
+  **Constraints:**
+
+  - **sh:MaxCountConstraintComponent**
+    - MaxCount: `0` 
+  **Item 2:**
+
+  **Constraints:**
+
+  - **sh:MinCountConstraintComponent**
+    - MinCount: `1`
 

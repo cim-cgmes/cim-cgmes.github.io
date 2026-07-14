@@ -5,10 +5,28 @@ An electrical connection point at a piece of DC conducting equipment. DC termina
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ACDCTerminal <|-- DCBaseTerminal
-    DCBaseTerminal <|-- ACDCConverterDCTerminal
+    ACDCTerminal : +BusNameMarker BusNameMarker[0..1]
+    ACDCTerminal : +Measurement Measurements[0..n]
+    ACDCTerminal : +OperationalLimitSet OperationalLimitSet[0..n]
+    ACDCTerminal : +Boolean connected[1..1]
+    ACDCTerminal : +Integer sequenceNumber[1..1]
+    click ACDCTerminal href "ACDCTerminal"
     DCBaseTerminal <|-- DCTerminal
+    DCTerminal : +DCConductingEquipment DCConductingEquipment[1]
+    click DCTerminal href "DCTerminal"
+    DCBaseTerminal <|-- ACDCConverterDCTerminal
+    ACDCConverterDCTerminal : +ACDCConverter DCConductingEquipment[1]
+    ACDCConverterDCTerminal : +DCPolarityKind polarity[1..1]
+    click ACDCConverterDCTerminal href "ACDCConverterDCTerminal"
+    DCBaseTerminal : +DCNode DCNode[0..1]
+    DCBaseTerminal : +DCTopologicalNode DCTopologicalNode[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

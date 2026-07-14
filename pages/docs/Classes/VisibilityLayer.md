@@ -5,8 +5,22 @@ Layers are typically used for grouping diagram objects according to themes and s
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- VisibilityLayer
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    VisibilityLayer : +DiagramObject VisibleObjects[1..n]
+    VisibilityLayer : +Integer drawingOrder[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

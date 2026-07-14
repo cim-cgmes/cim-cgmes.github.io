@@ -5,8 +5,19 @@ Power factor or VAr controller type 1 function block whose dynamic behaviour is 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PFVArControllerType1Dynamics <|-- PFVArControllerType1UserDefined
+    PFVArControllerType1Dynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PFVArControllerType1Dynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    PFVArControllerType1Dynamics : +VoltageAdjusterDynamics VoltageAdjusterDynamics[0..1]
+    click PFVArControllerType1Dynamics href "PFVArControllerType1Dynamics"
+    PFVArControllerType1UserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    PFVArControllerType1UserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

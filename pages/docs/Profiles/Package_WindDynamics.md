@@ -3,62 +3,37 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    WindTurbineType1or2IEC <|-- WindGenTurbineType1bIEC
-    WindGenTurbineType1bIEC --> WindPitchContPowerIEC : WindPitchContPowerIEC
-    WindProtectionIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
-    WindProtectionIEC --> WindTurbineType1or2IEC : WindTurbineType1or2IEC
-    WindProtectionIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
-    WindAeroTwoDimIEC --> WindTurbineType3IEC : WindTurbineType3IEC
-    WindMechIEC --> WindTurbineType1or2IEC : WindTurbineType1or2IEC
-    WindMechIEC --> WindTurbineType3IEC : WindTurbineType3IEC
-    WindMechIEC --> WindTurbineType4bIEC : WindTurbineType4bIEC
-    WindContPType4aIEC --> WindTurbineType4aIEC : WindTurbineType4aIEC
-    WindContPitchAngleIEC --> WindTurbineType3IEC : WindTurbineType3IEC
-    WindPlantDynamics --> WindTurbineType3or4Dynamics : WindTurbineType3or4Dynamics
-    WindPlantFreqPcontrolIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
-    WindPlantFreqPcontrolIEC --> WindPlantIEC : WindPlantIEC
-    WindPlantReactiveControlIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
-    WindPlantReactiveControlIEC --> WindPlantIEC : WindPlantIEC
-    WindGenType4IEC --> WindTurbineType4aIEC : WindTurbineType4aIEC
-    WindGenType4IEC --> WindTurbineType4bIEC : WindTurbineType4bIEC
-    WindPitchContPowerIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
-    WindPitchContPowerIEC --> WindGenTurbineType1bIEC : WindGenTurbineType1bIEC
-    WindPitchContPowerIEC --> WindGenTurbineType2IEC : WindGenTurbineType2IEC
-    WindContCurrLimIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
-    WindContCurrLimIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
-    WindGenType3IEC --> WindTurbineType3IEC : WindTurbineType3IEC
-    WindTurbineType1or2IEC <|-- WindGenTurbineType2IEC
-    WindGenTurbineType2IEC --> WindContRotorRIEC : WindContRotorRIEC
-    WindGenTurbineType2IEC --> WindPitchContPowerIEC : WindPitchContPowerIEC
-    WindContRotorRIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
-    WindContRotorRIEC --> WindGenTurbineType2IEC : WindGenTurbineType2IEC
-    WindGenType3IEC <|-- WindGenType3aIEC
-    WindGenType3aIEC --> WindTurbineType4IEC : WindTurbineType4IEC
-    WindTurbineType3or4Dynamics <|-- WindTurbineType3or4IEC
-    WindTurbineType3or4IEC --> WindContQIEC : WIndContQIEC
-    WindTurbineType3or4IEC --> WindContCurrLimIEC : WindContCurrLimIEC
-    WindTurbineType3or4IEC --> WindContQLimIEC : WindContQLimIEC
-    WindTurbineType3or4IEC --> WindContQPQULimIEC : WindContQPQULimIEC
-    WindTurbineType3or4IEC --> WindProtectionIEC : WindProtectionIEC
-    WindTurbineType3or4IEC --> WindRefFrameRotIEC : WindRefFrameRotIEC
-    WindContPType4bIEC --> WindTurbineType4bIEC : WindTurbineType4bIEC
-    WindAeroOneDimIEC --> WindTurbineType3IEC : WindTurbineType3IEC
-    WindContQPQULimIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
-    WindContQPQULimIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
-    WindAeroConstIEC --> WindGenTurbineType1aIEC : WindGenTurbineType1aIEC
-    WindTurbineType4IEC <|-- WindTurbineType4bIEC
-    WindTurbineType4bIEC --> WindContPType4bIEC : WindContPType4bIEC
-    WindTurbineType4bIEC --> WindGenType4IEC : WindGenType4IEC
-    WindTurbineType4bIEC --> WindMechIEC : WindMechIEC
     WindTurbineType1or2IEC <|-- WindGenTurbineType1aIEC
     WindGenTurbineType1aIEC --> WindAeroConstIEC : WindAeroConstIEC
     WindTurbineType3or4Dynamics --> WindPlantDynamics : WindPlantDynamics
-    WindContQIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
+    WindGenType3IEC --> WindTurbineType3IEC : WindTurbineType3IEC
+    WindPitchContPowerIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
+    WindPitchContPowerIEC --> WindGenTurbineType1bIEC : WindGenTurbineType1bIEC
+    WindPitchContPowerIEC --> WindGenTurbineType2IEC : WindGenTurbineType2IEC
+    WindProtectionIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
+    WindProtectionIEC --> WindTurbineType1or2IEC : WindTurbineType1or2IEC
+    WindProtectionIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
+    WindContPitchAngleIEC --> WindTurbineType3IEC : WindTurbineType3IEC
     WindContPType3IEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
     WindContPType3IEC --> WindTurbineType3IEC : WindTurbineType3IEC
-    WindTurbineType3or4IEC <|-- WindTurbineType4IEC
-    WindTurbineType4IEC --> WindGenType3aIEC : WindGenType3aIEC
+    WindContQPQULimIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
+    WindContQPQULimIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
+    WindContPType4aIEC --> WindTurbineType4aIEC : WindTurbineType4aIEC
+    WindContPType4bIEC --> WindTurbineType4bIEC : WindTurbineType4bIEC
+    WindGenType3IEC <|-- WindGenType3aIEC
+    WindGenType3aIEC --> WindTurbineType4IEC : WindTurbineType4IEC
+    WindContRotorRIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
+    WindContRotorRIEC --> WindGenTurbineType2IEC : WindGenTurbineType2IEC
+    WindContQLimIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
+    WindTurbineType1or2Dynamics <|-- WindTurbineType1or2IEC
+    WindTurbineType1or2IEC --> WindMechIEC : WindMechIEC
+    WindTurbineType1or2IEC --> WindProtectionIEC : WindProtectionIEC
     WindDynamicsLookupTable --> WindContCurrLimIEC : WindContCurrLimIEC
     WindDynamicsLookupTable --> WindContPType3IEC : WindContPType3IEC
     WindDynamicsLookupTable --> WindContQPQULimIEC : WindContQPQULimIEC
@@ -68,19 +43,11 @@ classDiagram
     WindDynamicsLookupTable --> WindPlantFreqPcontrolIEC : WindPlantFreqPcontrolIEC
     WindDynamicsLookupTable --> WindPlantReactiveControlIEC : WindPlantReactiveControlIEC
     WindDynamicsLookupTable --> WindProtectionIEC : WindProtectionIEC
-    WindGenType3IEC <|-- WindGenType3bIEC
-    WindGenType3bIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
-    WindContQLimIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
-    WindTurbineType1or2Dynamics <|-- WindTurbineType1or2IEC
-    WindTurbineType1or2IEC --> WindMechIEC : WindMechIEC
-    WindTurbineType1or2IEC --> WindProtectionIEC : WindProtectionIEC
-    WindPlantDynamics <|-- WindPlantIEC
-    WindPlantIEC --> WindPlantFreqPcontrolIEC : WindPlantFreqPcontrolIEC
-    WindPlantIEC --> WindPlantReactiveControlIEC : WindPlantReactiveControlIEC
+    WindTurbineType1or2IEC <|-- WindGenTurbineType1bIEC
+    WindGenTurbineType1bIEC --> WindPitchContPowerIEC : WindPitchContPowerIEC
     WindRefFrameRotIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
-    WindTurbineType4IEC <|-- WindTurbineType4aIEC
-    WindTurbineType4aIEC --> WindContPType4aIEC : WindContPType4aIEC
-    WindTurbineType4aIEC --> WindGenType4IEC : WindGenType4IEC
+    WindGenType4IEC --> WindTurbineType4aIEC : WindTurbineType4aIEC
+    WindGenType4IEC --> WindTurbineType4bIEC : WindTurbineType4bIEC
     WindTurbineType3or4IEC <|-- WindTurbineType3IEC
     WindTurbineType3IEC --> WindAeroOneDimIEC : WindAeroOneDimIEC
     WindTurbineType3IEC --> WindAeroTwoDimIEC : WindAeroTwoDimIEC
@@ -88,6 +55,44 @@ classDiagram
     WindTurbineType3IEC --> WindContPitchAngleIEC : WindContPitchAngleIEC
     WindTurbineType3IEC --> WindGenType3IEC : WindGenType3IEC
     WindTurbineType3IEC --> WindMechIEC : WindMechIEC
+    WindAeroTwoDimIEC --> WindTurbineType3IEC : WindTurbineType3IEC
+    WindTurbineType1or2IEC <|-- WindGenTurbineType2IEC
+    WindGenTurbineType2IEC --> WindContRotorRIEC : WindContRotorRIEC
+    WindGenTurbineType2IEC --> WindPitchContPowerIEC : WindPitchContPowerIEC
+    WindPlantReactiveControlIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
+    WindPlantReactiveControlIEC --> WindPlantIEC : WindPlantIEC
+    WindTurbineType4IEC <|-- WindTurbineType4bIEC
+    WindTurbineType4bIEC --> WindContPType4bIEC : WindContPType4bIEC
+    WindTurbineType4bIEC --> WindGenType4IEC : WindGenType4IEC
+    WindTurbineType4bIEC --> WindMechIEC : WindMechIEC
+    WindTurbineType3or4IEC <|-- WindTurbineType4IEC
+    WindTurbineType4IEC --> WindGenType3aIEC : WindGenType3aIEC
+    WindGenType3IEC <|-- WindGenType3bIEC
+    WindGenType3bIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
+    WindTurbineType3or4Dynamics <|-- WindTurbineType3or4IEC
+    WindTurbineType3or4IEC --> WindContQIEC : WIndContQIEC
+    WindTurbineType3or4IEC --> WindContCurrLimIEC : WindContCurrLimIEC
+    WindTurbineType3or4IEC --> WindContQLimIEC : WindContQLimIEC
+    WindTurbineType3or4IEC --> WindContQPQULimIEC : WindContQPQULimIEC
+    WindTurbineType3or4IEC --> WindProtectionIEC : WindProtectionIEC
+    WindTurbineType3or4IEC --> WindRefFrameRotIEC : WindRefFrameRotIEC
+    WindMechIEC --> WindTurbineType1or2IEC : WindTurbineType1or2IEC
+    WindMechIEC --> WindTurbineType3IEC : WindTurbineType3IEC
+    WindMechIEC --> WindTurbineType4bIEC : WindTurbineType4bIEC
+    WindAeroConstIEC --> WindGenTurbineType1aIEC : WindGenTurbineType1aIEC
+    WindPlantFreqPcontrolIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
+    WindPlantFreqPcontrolIEC --> WindPlantIEC : WindPlantIEC
+    WindContCurrLimIEC --> WindDynamicsLookupTable : WindDynamicsLookupTable
+    WindContCurrLimIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
+    WindPlantDynamics <|-- WindPlantIEC
+    WindPlantIEC --> WindPlantFreqPcontrolIEC : WindPlantFreqPcontrolIEC
+    WindPlantIEC --> WindPlantReactiveControlIEC : WindPlantReactiveControlIEC
+    WindAeroOneDimIEC --> WindTurbineType3IEC : WindTurbineType3IEC
+    WindContQIEC --> WindTurbineType3or4IEC : WindTurbineType3or4IEC
+    WindPlantDynamics --> WindTurbineType3or4Dynamics : WindTurbineType3or4Dynamics
+    WindTurbineType4IEC <|-- WindTurbineType4aIEC
+    WindTurbineType4aIEC --> WindContPType4aIEC : WindContPType4aIEC
+    WindTurbineType4aIEC --> WindGenType4IEC : WindGenType4IEC
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,28 @@ A generic equivalent for an energy supplier on a transmission or distribution vo
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EnergyConnection <|-- EnergySource
+    click EnergyConnection href "EnergyConnection"
+    EnergySource : +EnergySchedulingType EnergySchedulingType[0..1]
+    EnergySource : +Float activePower[1..1]
+    EnergySource : +Float nominalVoltage[0..1]
+    EnergySource : +Float pMax[0..1]
+    EnergySource : +Float pMin[0..1]
+    EnergySource : +Float r[0..1]
+    EnergySource : +Float r0[0..1]
+    EnergySource : +Float reactivePower[1..1]
+    EnergySource : +Float rn[0..1]
+    EnergySource : +Float voltageAngle[0..1]
+    EnergySource : +Float voltageMagnitude[0..1]
+    EnergySource : +Float x[0..1]
+    EnergySource : +Float x0[0..1]
+    EnergySource : +Float xn[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

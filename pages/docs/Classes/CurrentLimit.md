@@ -5,8 +5,18 @@ Operational limit on current.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     OperationalLimit <|-- CurrentLimit
+    OperationalLimit : +OperationalLimitSet OperationalLimitSet[1]
+    OperationalLimit : +OperationalLimitType OperationalLimitType[1..1]
+    click OperationalLimit href "OperationalLimit"
+    CurrentLimit : +Float normalValue[1..1]
+    CurrentLimit : +Float value[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

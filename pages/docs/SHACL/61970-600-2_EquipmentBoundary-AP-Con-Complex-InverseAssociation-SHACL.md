@@ -12,6 +12,7 @@
 ### eqbd301ia:ConnectivityNode.BoundaryPoint-cardinality
 
 **Path:** `^cim100:BoundaryPoint.ConnectivityNode`  
+**Name:** ConnectivityNode.BoundaryPoint-cardinality  
 This constraint validates the cardinality of the association at the inverse direction.
 
 **Severity:** sh:Violation

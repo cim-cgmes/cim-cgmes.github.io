@@ -5,8 +5,22 @@ A variable impedance device normally used to offset line charging during single 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EarthFaultCompensator <|-- PetersenCoil
+    EarthFaultCompensator : +Float r[0..1]
+    click EarthFaultCompensator href "EarthFaultCompensator"
+    PetersenCoil : +PetersenCoilModeKind mode[1..1]
+    PetersenCoil : +Float nominalU[1..1]
+    PetersenCoil : +Float offsetCurrent[0..1]
+    PetersenCoil : +Float positionCurrent[0..1]
+    PetersenCoil : +Float xGroundMax[1..1]
+    PetersenCoil : +Float xGroundMin[1..1]
+    PetersenCoil : +Float xGroundNominal[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

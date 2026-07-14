@@ -5,8 +5,25 @@ Defines a system base voltage which is referenced.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- BaseVoltage
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    BaseVoltage : +ConductingEquipment ConductingEquipment[0..n]
+    BaseVoltage : +TopologicalNode TopologicalNode[0..n]
+    BaseVoltage : +TransformerEnd TransformerEnds[0..n]
+    BaseVoltage : +VoltageLevel VoltageLevel[0..n]
+    BaseVoltage : +Float nominalVoltage[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

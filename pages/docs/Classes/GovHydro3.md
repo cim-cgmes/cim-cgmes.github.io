@@ -5,8 +5,53 @@ Modified IEEE hydro governor-turbine. This model differs from that defined in th
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydro3
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydro3 : +Float at[1..1]
+    GovHydro3 : +Float db1[1..1]
+    GovHydro3 : +Float db2[1..1]
+    GovHydro3 : +Float dturb[1..1]
+    GovHydro3 : +Float eps[1..1]
+    GovHydro3 : +Boolean governorControl[1..1]
+    GovHydro3 : +Float gv1[1..1]
+    GovHydro3 : +Float gv2[1..1]
+    GovHydro3 : +Float gv3[1..1]
+    GovHydro3 : +Float gv4[1..1]
+    GovHydro3 : +Float gv5[1..1]
+    GovHydro3 : +Float gv6[1..1]
+    GovHydro3 : +Float h0[1..1]
+    GovHydro3 : +Float k1[1..1]
+    GovHydro3 : +Float k2[1..1]
+    GovHydro3 : +Float kg[1..1]
+    GovHydro3 : +Float ki[1..1]
+    GovHydro3 : +Float mwbase[1..1]
+    GovHydro3 : +Float pgv1[1..1]
+    GovHydro3 : +Float pgv2[1..1]
+    GovHydro3 : +Float pgv3[1..1]
+    GovHydro3 : +Float pgv4[1..1]
+    GovHydro3 : +Float pgv5[1..1]
+    GovHydro3 : +Float pgv6[1..1]
+    GovHydro3 : +Float pmax[1..1]
+    GovHydro3 : +Float pmin[1..1]
+    GovHydro3 : +Float qnl[1..1]
+    GovHydro3 : +Float relec[1..1]
+    GovHydro3 : +Float rgate[1..1]
+    GovHydro3 : +Float td[1..1]
+    GovHydro3 : +Float tf[1..1]
+    GovHydro3 : +Float tp[1..1]
+    GovHydro3 : +Float tt[1..1]
+    GovHydro3 : +Float tw[1..1]
+    GovHydro3 : +Float velcl[1..1]
+    GovHydro3 : +Float velop[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

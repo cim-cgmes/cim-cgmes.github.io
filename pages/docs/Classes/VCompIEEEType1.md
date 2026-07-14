@@ -5,8 +5,19 @@ Terminal voltage transducer and load compensator as defined in IEEE 421.5-2005, 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     VoltageCompensatorDynamics <|-- VCompIEEEType1
+    VoltageCompensatorDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    VoltageCompensatorDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click VoltageCompensatorDynamics href "VoltageCompensatorDynamics"
+    VCompIEEEType1 : +Float rc[1..1]
+    VCompIEEEType1 : +Float tr[1..1]
+    VCompIEEEType1 : +Float xc[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

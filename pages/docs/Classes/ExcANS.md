@@ -5,8 +5,36 @@ Italian excitation system. It represents static field voltage or excitation curr
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcANS
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcANS : +Integer blint[1..1]
+    ExcANS : +Float ifmn[1..1]
+    ExcANS : +Float ifmx[1..1]
+    ExcANS : +Float k2[1..1]
+    ExcANS : +Float k3[1..1]
+    ExcANS : +Float kce[1..1]
+    ExcANS : +Integer krvecc[1..1]
+    ExcANS : +Integer kvfif[1..1]
+    ExcANS : +Float t1[1..1]
+    ExcANS : +Float t2[1..1]
+    ExcANS : +Float t3[1..1]
+    ExcANS : +Float tb[1..1]
+    ExcANS : +Float vrmn[1..1]
+    ExcANS : +Float vrmx[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

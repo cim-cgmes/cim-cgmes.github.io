@@ -5,8 +5,39 @@ IEEE 421.5-2005 type ST5B model. The type ST5B excitation system is a variation 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEST5B
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEST5B : +Float kc[1..1]
+    ExcIEEEST5B : +Float kr[1..1]
+    ExcIEEEST5B : +Float t1[1..1]
+    ExcIEEEST5B : +Float tb1[1..1]
+    ExcIEEEST5B : +Float tb2[1..1]
+    ExcIEEEST5B : +Float tc1[1..1]
+    ExcIEEEST5B : +Float tc2[1..1]
+    ExcIEEEST5B : +Float tob1[1..1]
+    ExcIEEEST5B : +Float tob2[1..1]
+    ExcIEEEST5B : +Float toc1[1..1]
+    ExcIEEEST5B : +Float toc2[1..1]
+    ExcIEEEST5B : +Float tub1[1..1]
+    ExcIEEEST5B : +Float tub2[1..1]
+    ExcIEEEST5B : +Float tuc1[1..1]
+    ExcIEEEST5B : +Float tuc2[1..1]
+    ExcIEEEST5B : +Float vrmax[1..1]
+    ExcIEEEST5B : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

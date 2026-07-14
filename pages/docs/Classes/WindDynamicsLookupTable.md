@@ -5,8 +5,33 @@ Look up table for the purpose of wind standard models.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindDynamicsLookupTable
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindDynamicsLookupTable : +WindContCurrLimIEC WindContCurrLimIEC[0..1]
+    WindDynamicsLookupTable : +WindContPType3IEC WindContPType3IEC[0..1]
+    WindDynamicsLookupTable : +WindContQPQULimIEC WindContQPQULimIEC[0..1]
+    WindDynamicsLookupTable : +WindContRotorRIEC WindContRotorRIEC[0..1]
+    WindDynamicsLookupTable : +WindGenType3bIEC WindGenType3bIEC[0..1]
+    WindDynamicsLookupTable : +WindPitchContPowerIEC WindPitchContPowerIEC[0..1]
+    WindDynamicsLookupTable : +WindPlantFreqPcontrolIEC WindPlantFreqPcontrolIEC[0..1]
+    WindDynamicsLookupTable : +WindPlantReactiveControlIEC WindPlantReactiveControlIEC[0..1]
+    WindDynamicsLookupTable : +WindProtectionIEC WindProtectionIEC[0..1]
+    WindDynamicsLookupTable : +Float input[1..1]
+    WindDynamicsLookupTable : +WindLookupTableFunctionKind lookupTableFunctionType[1..1]
+    WindDynamicsLookupTable : +Float output[1..1]
+    WindDynamicsLookupTable : +Integer sequence[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

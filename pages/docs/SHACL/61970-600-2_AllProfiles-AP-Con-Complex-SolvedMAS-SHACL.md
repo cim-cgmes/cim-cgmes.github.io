@@ -4,6 +4,9 @@
 
 **Severity:** sh:Violation
 
+**Targets:**
+- sparqlTarget: 
+
 ## mas600-2:RegulatingControlPoint
 
 **Severity:** sh:Violation

@@ -15,6 +15,7 @@
 ### op452cpe:Control.PowerSystemResource-valueType
 
 **Path:** `cim:Control.PowerSystemResource / rdf:type`  
+**Name:** Control.PowerSystemResource-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -44,6 +45,7 @@ This constraint validates the value type of the association at the used directio
 ### op452cpe:Measurement.ACDCTerminal-valueType
 
 **Path:** `cim:Measurement.Terminal / rdf:type`  
+**Name:** Measurement.Terminal-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -73,6 +75,7 @@ This constraint validates the value type of the association at the used directio
 ### op452cpe:Measurement.PowerSystemResource-valueType
 
 **Path:** `cim:Measurement.PowerSystemResource / rdf:type`  
+**Name:** Measurement.PowerSystemResource-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation

@@ -5,8 +5,51 @@ Modified single shaft gas turbine.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovGAST1
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovGAST1 : +Float a[1..1]
+    GovGAST1 : +Float b[1..1]
+    GovGAST1 : +Float db1[1..1]
+    GovGAST1 : +Float db2[1..1]
+    GovGAST1 : +Float eps[1..1]
+    GovGAST1 : +Float fidle[1..1]
+    GovGAST1 : +Float gv1[1..1]
+    GovGAST1 : +Float gv2[1..1]
+    GovGAST1 : +Float gv3[1..1]
+    GovGAST1 : +Float gv4[1..1]
+    GovGAST1 : +Float gv5[1..1]
+    GovGAST1 : +Float gv6[1..1]
+    GovGAST1 : +Float ka[1..1]
+    GovGAST1 : +Float kt[1..1]
+    GovGAST1 : +Float lmax[1..1]
+    GovGAST1 : +Float loadinc[1..1]
+    GovGAST1 : +Float ltrate[1..1]
+    GovGAST1 : +Float mwbase[1..1]
+    GovGAST1 : +Float pgv1[1..1]
+    GovGAST1 : +Float pgv2[1..1]
+    GovGAST1 : +Float pgv3[1..1]
+    GovGAST1 : +Float pgv4[1..1]
+    GovGAST1 : +Float pgv5[1..1]
+    GovGAST1 : +Float pgv6[1..1]
+    GovGAST1 : +Float r[1..1]
+    GovGAST1 : +Float rmax[1..1]
+    GovGAST1 : +Float t1[1..1]
+    GovGAST1 : +Float t2[1..1]
+    GovGAST1 : +Float t3[1..1]
+    GovGAST1 : +Float t4[1..1]
+    GovGAST1 : +Float t5[1..1]
+    GovGAST1 : +Float tltr[1..1]
+    GovGAST1 : +Float vmax[1..1]
+    GovGAST1 : +Float vmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

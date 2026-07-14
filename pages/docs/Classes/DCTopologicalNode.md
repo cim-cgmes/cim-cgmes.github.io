@@ -5,8 +5,24 @@ DC bus.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- DCTopologicalNode
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    DCTopologicalNode : +DCEquipmentContainer DCEquipmentContainer[1]
+    DCTopologicalNode : +DCNode DCNodes[0..n]
+    DCTopologicalNode : +DCBaseTerminal DCTerminals[0..n]
+    DCTopologicalNode : +DCTopologicalIsland DCTopologicalIsland[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

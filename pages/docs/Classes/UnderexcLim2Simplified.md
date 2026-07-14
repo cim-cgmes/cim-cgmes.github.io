@@ -5,8 +5,23 @@ Simplified type UEL2 underexcitation limiter. This model can be derived from Und
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     UnderexcitationLimiterDynamics <|-- UnderexcLim2Simplified
+    UnderexcitationLimiterDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    UnderexcitationLimiterDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click UnderexcitationLimiterDynamics href "UnderexcitationLimiterDynamics"
+    UnderexcLim2Simplified : +Float kui[1..1]
+    UnderexcLim2Simplified : +Float p0[1..1]
+    UnderexcLim2Simplified : +Float p1[1..1]
+    UnderexcLim2Simplified : +Float q0[1..1]
+    UnderexcLim2Simplified : +Float q1[1..1]
+    UnderexcLim2Simplified : +Float vuimax[1..1]
+    UnderexcLim2Simplified : +Float vuimin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

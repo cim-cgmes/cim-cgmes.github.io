@@ -21,10 +21,10 @@
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:ConformLoad
 - targetClass: cim:NonConformLoad
 - targetClass: cim:EnergyConsumer
 - targetClass: cim:StationSupply
-- targetClass: cim:ConformLoad
 
 ## dy457cpi:RemoteInputSignal.Terminal
 
@@ -45,10 +45,10 @@
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:SynchronousMachineEquivalentCircuit
 - targetClass: cim:SynchronousMachineUserDefined
 - targetClass: cim:SynchronousMachineSimplified
 - targetClass: cim:SynchronousMachineTimeConstantReactance
-- targetClass: cim:SynchronousMachineEquivalentCircuit
 
 ## dy457cpi:VSCDynamics.VsConverter
 
@@ -62,8 +62,8 @@
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:WindTurbineType3IEC
 - targetClass: cim:WindTurbineType4bIEC
 - targetClass: cim:WindTurbineType4aIEC
 - targetClass: cim:WindType3or4UserDefined
-- targetClass: cim:WindTurbineType3IEC
 

@@ -5,8 +5,28 @@ A tap changer that changes the voltage ratio impacting the voltage magnitude but
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TapChanger <|-- RatioTapChanger
+    TapChanger : +SvTapStep SvTapStep[0..1]
+    TapChanger : +TapChangerControl TapChangerControl[0..1]
+    TapChanger : +TapSchedule TapSchedules[0..n]
+    TapChanger : +Boolean controlEnabled[1..1]
+    TapChanger : +Integer highStep[1..1]
+    TapChanger : +Integer lowStep[1..1]
+    TapChanger : +Boolean ltcFlag[1..1]
+    TapChanger : +Integer neutralStep[1..1]
+    TapChanger : +Float neutralU[1..1]
+    TapChanger : +Integer normalStep[1..1]
+    TapChanger : +Float step[1..1]
+    click TapChanger href "TapChanger"
+    RatioTapChanger : +RatioTapChangerTable RatioTapChangerTable[0..1]
+    RatioTapChanger : +TransformerEnd TransformerEnd[1]
+    RatioTapChanger : +Float stepVoltageIncrement[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

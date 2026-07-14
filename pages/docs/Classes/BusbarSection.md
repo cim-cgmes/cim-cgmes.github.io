@@ -5,8 +5,15 @@ A conductor, or group of conductors, with negligible impedance, that serve to co
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Connector <|-- BusbarSection
+    click Connector href "Connector"
+    BusbarSection : +Float ipMax[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

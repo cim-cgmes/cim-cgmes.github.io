@@ -3,10 +3,32 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
+    DCEquipmentContainer --> DCNode : DCNodes
+    DCEquipmentContainer --> DCTopologicalNode : DCTopologicalNode
+    ACDCTerminal <|-- DCBaseTerminal
+    DCBaseTerminal --> DCNode : DCNode
+    DCBaseTerminal --> DCTopologicalNode : DCTopologicalNode
+    IdentifiedObject <|-- ACDCTerminal
+    DCBaseTerminal <|-- DCTerminal
+    IdentifiedObject <|-- ConnectivityNode
+    ConnectivityNode --> ConnectivityNodeContainer : ConnectivityNodeContainer
+    ConnectivityNode --> Terminal : Terminals
+    ConnectivityNode --> TopologicalNode : TopologicalNode
+    ConnectivityNodeContainer --> ConnectivityNode : ConnectivityNodes
+    ConnectivityNodeContainer --> TopologicalNode : TopologicalNode
     ACDCTerminal <|-- Terminal
     Terminal --> ConnectivityNode : ConnectivityNode
     Terminal --> TopologicalNode : TopologicalNode
+    IdentifiedObject <|-- DCNode
+    DCNode --> DCEquipmentContainer : DCEquipmentContainer
+    DCNode --> DCBaseTerminal : DCTerminals
+    DCNode --> DCTopologicalNode : DCTopologicalNode
     IdentifiedObject <|-- TopologicalNode
     TopologicalNode --> BaseVoltage : BaseVoltage
     TopologicalNode --> ConnectivityNodeContainer : ConnectivityNodeContainer
@@ -14,31 +36,14 @@ classDiagram
     TopologicalNode --> ReportingGroup : ReportingGroup
     TopologicalNode --> Terminal : Terminal
     DCBaseTerminal <|-- ACDCConverterDCTerminal
-    DCBaseTerminal <|-- DCTerminal
-    IdentifiedObject <|-- BaseVoltage
-    BaseVoltage --> TopologicalNode : TopologicalNode
-    IdentifiedObject <|-- ACDCTerminal
     IdentifiedObject <|-- DCTopologicalNode
     DCTopologicalNode --> DCEquipmentContainer : DCEquipmentContainer
     DCTopologicalNode --> DCNode : DCNodes
     DCTopologicalNode --> DCBaseTerminal : DCTerminals
-    ConnectivityNodeContainer --> ConnectivityNode : ConnectivityNodes
-    ConnectivityNodeContainer --> TopologicalNode : TopologicalNode
+    IdentifiedObject <|-- BaseVoltage
+    BaseVoltage --> TopologicalNode : TopologicalNode
     IdentifiedObject <|-- ReportingGroup
     ReportingGroup --> TopologicalNode : TopologicalNode
-    DCEquipmentContainer --> DCNode : DCNodes
-    DCEquipmentContainer --> DCTopologicalNode : DCTopologicalNode
-    IdentifiedObject <|-- DCNode
-    DCNode --> DCEquipmentContainer : DCEquipmentContainer
-    DCNode --> DCBaseTerminal : DCTerminals
-    DCNode --> DCTopologicalNode : DCTopologicalNode
-    ACDCTerminal <|-- DCBaseTerminal
-    DCBaseTerminal --> DCNode : DCNode
-    DCBaseTerminal --> DCTopologicalNode : DCTopologicalNode
-    IdentifiedObject <|-- ConnectivityNode
-    ConnectivityNode --> ConnectivityNodeContainer : ConnectivityNodeContainer
-    ConnectivityNode --> Terminal : Terminals
-    ConnectivityNode --> TopologicalNode : TopologicalNode
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -13,6 +13,7 @@
 ### eq452c:DCConverterUnit.Substation-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / cim:DCConverterUnit.Substation / rdf:type`  
+**Name:** C:452:EQ:ACDCConverter:containment  
 For ACDCConverter (CsConverter, VsConverter) the association Equipment.EquipmentContainer is required and shall point to DCEquipmentContainer of type DCConverterUnit. In this case the association DCConverterUnit.Substation is required.
 
 **Severity:** sh:Violation
@@ -32,6 +33,7 @@ For ACDCConverter (CsConverter, VsConverter) the association Equipment.Equipment
 ### eq452c:ACDCConverter-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:ACDCConverter:containment  
 For ACDCConverter (CsConverter, VsConverter) the association Equipment.EquipmentContainer is required and shall point to DCEquipmentContainer of type DCConverterUnit. In this case the association DCConverterUnit.Substation is required.
 
 **Severity:** sh:Violation
@@ -60,6 +62,7 @@ For ACDCConverter (CsConverter, VsConverter) the association Equipment.Equipment
 ### eq452c:ACLineSegment.r-valueRange
 
 **Path:** `cim:ACLineSegment.r`  
+**Name:** C:452:EQ:ACLineSegment.r:valueRange  
 ACLineSegment.r shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -75,6 +78,7 @@ ACLineSegment.r shall be a positive value or zero.
 ### eq452c:ACLineSegment.x-valueRange
 
 **Path:** `cim:ACLineSegment.x`  
+**Name:** C:452:EQ:ACLineSegment.x:valueRange  
 The attribute shall be a positive value. As negative reactance values are not allowed for ACLineSegment-s it is recommended to model series compensators explicitly.
 
 **Severity:** sh:Violation
@@ -90,6 +94,7 @@ The attribute shall be a positive value. As negative reactance values are not al
 ### eq452c:ConductingEquipment.BaseVoltage-whereRequired
 
 **Path:** `cim:ConductingEquipment.BaseVoltage`  
+**Name:** C:452:EQ:ConductingEquipment.BaseVoltage:whereRequired  
 The ConductingEquipment.BaseVoltage association is required for the following ConductingEquipment: ACLineSegment, EquivalentBranch and SeriesCompensator. For all other Equipment-s, not contained in a VoltageLevel, the association ConductingEquipment.BaseVoltage can be provided (as it is optional), however the association to BaseVoltage coming from the container or transformer ends takes precedence.
 
 **Severity:** sh:Violation
@@ -109,18 +114,19 @@ The ConductingEquipment.BaseVoltage association is required for the following Co
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:WaveTrap
+- targetClass: cim:FaultIndicator
 - targetClass: cim:CurrentTransformer
 - targetClass: cim:PotentialTransformer
 - targetClass: cim:PostLineSensor
 - targetClass: cim:SurgeArrester
-- targetClass: cim:WaveTrap
-- targetClass: cim:FaultIndicator
 
 **Nested Properties:**
 
 ### eq452c:AuxiliaryEquipment-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:AuxilaryEquipment:containment  
 For AuxilaryEquipment (CurrentTransformer, PotentialTransformer, PostLineSensor, SurgeArrester, WaveTrap, FaultIndicator) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay or Line.
 
 **Severity:** sh:Violation
@@ -156,6 +162,7 @@ For AuxilaryEquipment (CurrentTransformer, PotentialTransformer, PostLineSensor,
 ### eq452c:BusbarSection-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:BusbarSection:containment  
 For BusbarSection the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel or Bay (when a disconnector is splitting a busbar section in two).
 
 **Severity:** sh:Violation
@@ -184,6 +191,7 @@ For BusbarSection the association Equipment.EquipmentContainer is required and s
 ### eq452c:Clamp-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:Clamp:containment  
 For Clamp the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay or Line when outside substation.
 
 **Severity:** sh:Violation
@@ -205,24 +213,24 @@ For Clamp the association Equipment.EquipmentContainer is required and shall poi
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:ACLineSegment
-- targetClass: cim:DCSeriesDevice
-- targetClass: cim:DCBreaker
-- targetClass: cim:EquivalentBranch
-- targetClass: cim:Breaker
-- targetClass: cim:Cut
+- targetClass: cim:LoadBreakSwitch
 - targetClass: cim:SeriesCompensator
-- targetClass: cim:DCLineSegment
 - targetClass: cim:DCSwitch
 - targetClass: cim:DCChopper
-- targetClass: cim:Disconnector
-- targetClass: cim:LoadBreakSwitch
-- targetClass: cim:DCDisconnector
-- targetClass: cim:Switch
 - targetClass: cim:Fuse
 - targetClass: cim:GroundDisconnector
 - targetClass: cim:Jumper
+- targetClass: cim:Breaker
+- targetClass: cim:Cut
+- targetClass: cim:ACLineSegment
+- targetClass: cim:DCBreaker
+- targetClass: cim:Disconnector
 - targetClass: cim:DisconnectingCircuitBreaker
+- targetClass: cim:EquivalentBranch
+- targetClass: cim:DCLineSegment
+- targetClass: cim:DCSeriesDevice
+- targetClass: cim:DCDisconnector
+- targetClass: cim:Switch
 
 ## eq452c:Conductor
 
@@ -236,6 +244,7 @@ For Clamp the association Equipment.EquipmentContainer is required and shall poi
 ### eq452c:Conductor-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:Conductor:containment  
 For Conductor (ACLineSegment) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Line.
 
 **Severity:** sh:Violation
@@ -271,6 +280,7 @@ For Conductor (ACLineSegment) the association Equipment.EquipmentContainer is re
 ### eq452c:Cut-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:Cut:containment  
 For Cut the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel or DCConverterUnit or Line when outside substation.
 
 **Severity:** sh:Violation
@@ -299,6 +309,7 @@ For Cut the association Equipment.EquipmentContainer is required and shall point
 ### eq452c:DCBusbar-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:DCBusbar:containment  
 For DCBusbar the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.
 
 **Severity:** sh:Violation
@@ -327,6 +338,7 @@ For DCBusbar the association Equipment.EquipmentContainer is required and shall 
 ### eq452c:DCChopper-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:DCChopper:containment  
 For DCChopper the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.
 
 **Severity:** sh:Violation
@@ -355,6 +367,7 @@ For DCChopper the association Equipment.EquipmentContainer is required and shall
 ### eq452c:DCGround-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:DCGround:containment  
 For DCGround the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.
 
 **Severity:** sh:Violation
@@ -383,6 +396,7 @@ For DCGround the association Equipment.EquipmentContainer is required and shall 
 ### eq452c:DCLineSegment.resistance-valueRange
 
 **Path:** `cim:DCLineSegment.resistance`  
+**Name:** C:452:EQ:DCLineSegment.resistance:valueRange  
 The attribute DCLineSegment.resistance shall be a positive value.
 
 **Severity:** sh:Violation
@@ -398,6 +412,7 @@ The attribute DCLineSegment.resistance shall be a positive value.
 ### eq452c:DCLineSegment-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:DCLineSegment:containment  
 For DCLineSegment the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCLine. In the case of modelling back to back configuration the association shall point to EquipmentContainer of type Substation.
 
 **Severity:** sh:Violation
@@ -426,6 +441,7 @@ For DCLineSegment the association Equipment.EquipmentContainer is required and s
 ### eq452c:DCSeriesDevice-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:DCSeriesDevice:containment  
 For DCSeriesDevice the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.
 
 **Severity:** sh:Violation
@@ -454,6 +470,7 @@ For DCSeriesDevice the association Equipment.EquipmentContainer is required and 
 ### eq452c:DCShunt-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:DCShunt:containment  
 For DCShunt the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.
 
 **Severity:** sh:Violation
@@ -483,6 +500,7 @@ For DCShunt the association Equipment.EquipmentContainer is required and shall p
 ### eq452c:DCSwitch-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:DCSwitch:containment  
 For DCSwitch (DCDisconnector, DCBreaker) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type DCConverterUnit.
 
 **Severity:** sh:Violation
@@ -511,6 +529,7 @@ For DCSwitch (DCDisconnector, DCBreaker) the association Equipment.EquipmentCont
 ### eq452c:IdentifiedObject.name-validValues
 
 **Path:** `cim:IdentifiedObject.name`  
+**Name:** C:452:EQ:DayType.name:validValues  
 For DayType the name attribute indicates the days of the week that a given DayType represents. The name attribute is restricted to the following names: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Weekday, Weekend, All. If the name attribute is All, it represents all seven days of the week. If the name attribute is Weekday, it represents Monday through Friday. If the name attribute is Weekend, it represents Saturday and Sunday.
 
 **Severity:** sh:Violation
@@ -542,6 +561,7 @@ For DayType the name attribute indicates the days of the week that a given DayTy
 ### eq452c:Disconnector-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:Disconnector:containment  
 For Disconnector the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel, DCConverterUnit or Line when outside substation.
 
 **Severity:** sh:Violation
@@ -571,6 +591,7 @@ For Disconnector the association Equipment.EquipmentContainer is required and sh
 ### eq452c:EarthFaultCompensator-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:EarthFaultCompensator:containment  
 For EarthFaultCompensator (GroundingImpedance, PetersenCoil) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel.
 
 **Severity:** sh:Violation
@@ -592,22 +613,23 @@ For EarthFaultCompensator (GroundingImpedance, PetersenCoil) the association Equ
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:NonConformLoad
-- targetClass: cim:StaticVarCompensator
-- targetClass: cim:AsynchronousMachine
-- targetClass: cim:EnergyConsumer
-- targetClass: cim:ConformLoad
+- targetClass: cim:EnergySource
 - targetClass: cim:LinearShuntCompensator
+- targetClass: cim:StaticVarCompensator
+- targetClass: cim:SynchronousMachine
+- targetClass: cim:EnergyConsumer
+- targetClass: cim:NonConformLoad
+- targetClass: cim:ConformLoad
 - targetClass: cim:NonlinearShuntCompensator
 - targetClass: cim:ExternalNetworkInjection
-- targetClass: cim:SynchronousMachine
-- targetClass: cim:EnergySource
+- targetClass: cim:AsynchronousMachine
 
 **Nested Properties:**
 
 ### eq452c:EnergyConnection-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:EnergyConnection:containment  
 For EnergyConnection (EnergySource, EnergyConsumer, NonConformLoad, ConformLoad, LinearShuntCompensator, NonlinearShuntCompensator, ExternalNetworkInjection, StaticVarCompensator, SynchronousMachine, AsynchronousMachine) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel.
 
 **Severity:** sh:Violation
@@ -636,6 +658,7 @@ For EnergyConnection (EnergySource, EnergyConsumer, NonConformLoad, ConformLoad,
 ### eq452c:ConductingEquipment.BaseVoltage-whereRequired
 
 **Path:** `cim:ConductingEquipment.BaseVoltage`  
+**Name:** C:452:EQ:ConductingEquipment.BaseVoltage:whereRequired  
 The ConductingEquipment.BaseVoltage association is required for the following ConductingEquipment: ACLineSegment, EquivalentBranch and SeriesCompensator. For all other Equipment-s, not contained in a VoltageLevel, the association ConductingEquipment.BaseVoltage can be provided (as it is optional), however the association to BaseVoltage coming from the container or transformer ends takes precedence.
 
 **Severity:** sh:Violation
@@ -653,6 +676,7 @@ The ConductingEquipment.BaseVoltage association is required for the following Co
 ### eq452c:EquivalentBranch-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:EquivalentBranch:containment  
 For EquivalentBranch the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel, Line or Substation.
 
 **Severity:** sh:Violation
@@ -681,6 +705,7 @@ For EquivalentBranch the association Equipment.EquipmentContainer is required an
 ### eq452c:EquivalentInjection-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:EquivalentInjection:containment  
 For EquivalentInjection the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel or Line.
 
 **Severity:** sh:Violation
@@ -709,6 +734,7 @@ For EquivalentInjection the association Equipment.EquipmentContainer is required
 ### eq452c:EquivalentShunt-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:EquivalentShunt:containment  
 For EquivalentShunt the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel.
 
 **Severity:** sh:Violation
@@ -737,6 +763,7 @@ For EquivalentShunt the association Equipment.EquipmentContainer is required and
 ### eq452c:Fuse-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:Fuse:containment  
 For Fuse the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel, DCConverterUnit or Line when outside substation.
 
 **Severity:** sh:Violation
@@ -765,6 +792,7 @@ For Fuse the association Equipment.EquipmentContainer is required and shall poin
 ### eq452c:GeneratingUnit.minOperatingP-valueRangePair
 
 **Path:** `cim:GeneratingUnit.minOperatingP`  
+**Name:** C:452:EQ:GeneratingUnit.minOperatingP:valueRangePair  
 GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.
 
 **Severity:** sh:Violation
@@ -782,18 +810,19 @@ GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.mi
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:NuclearGeneratingUnit
 - targetClass: cim:ThermalGeneratingUnit
 - targetClass: cim:HydroGeneratingUnit
 - targetClass: cim:WindGeneratingUnit
 - targetClass: cim:GeneratingUnit
 - targetClass: cim:SolarGeneratingUnit
+- targetClass: cim:NuclearGeneratingUnit
 
 **Nested Properties:**
 
 ### eq452c:GeneratingUnit-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:GeneratingUnit:containment  
 For GeneratingUnit (SolarGeneratingUnit, NuclearGeneratingUnit, ThermalGeneratingUnit, HydroGeneratingUnit, WindGeneratingUnit) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Substation.
 
 **Severity:** sh:Violation
@@ -834,6 +863,7 @@ For GeneratingUnit (SolarGeneratingUnit, NuclearGeneratingUnit, ThermalGeneratin
 ### eq452c:Ground-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:Ground:containment  
 For Ground the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay or VoltageLevel.
 
 **Severity:** sh:Violation
@@ -862,6 +892,7 @@ For Ground the association Equipment.EquipmentContainer is required and shall po
 ### eq452c:GroundDisconnector-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:GroundDisconnector:containment  
 For GroundDisconnector the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel, DCConverterUnit or Line when outside substation.
 
 **Severity:** sh:Violation
@@ -890,6 +921,7 @@ For GroundDisconnector the association Equipment.EquipmentContainer is required 
 ### eq452c:GeneratingUnit.minOperatingP-valueRangePair
 
 **Path:** `cim:GeneratingUnit.minOperatingP`  
+**Name:** C:452:EQ:GeneratingUnit.minOperatingP:valueRangePair  
 GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.
 
 **Severity:** sh:Violation
@@ -914,6 +946,7 @@ GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.mi
 ### eq452c:HydroPump-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:HydroPump:containment  
 For HydroPump the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Substation.
 
 **Severity:** sh:Violation
@@ -942,6 +975,7 @@ For HydroPump the association Equipment.EquipmentContainer is required and shall
 ### eq452c:Jumper-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:Jumper:containment  
 For Jumper the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel, DCConverterUnit or Line when outside substation.
 
 **Severity:** sh:Violation
@@ -970,6 +1004,7 @@ For Jumper the association Equipment.EquipmentContainer is required and shall po
 ### eq452c:Junction-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:Junction:containment  
 For Junction the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Line (in case they model T-junction of a Line), or VoltageLevel or Bay (in case they model named join locations within a Substation).
 
 **Severity:** sh:Violation
@@ -998,6 +1033,7 @@ For Junction the association Equipment.EquipmentContainer is required and shall 
 ### eq452c:LinearShuntCompensator.gPerSection-valueRange
 
 **Path:** `cim:LinearShuntCompensator.gPerSection`  
+**Name:** C:452:EQ:LinearShuntCompensator.gPerSection:valueRange  
 LinearShuntCompensator.gPerSection shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -1013,6 +1049,7 @@ LinearShuntCompensator.gPerSection shall be a positive value or zero.
 ### eq452c:ShuntCompensator.voltageSensitivity-valueRange
 
 **Path:** `cim:ShuntCompensator.voltageSensitivity`  
+**Name:** C:452:EQ:ShuntCompensator.voltageSensitivity:valueRange  
 The ShuntCompensator.voltageSensitivity attribute shall be greater than zero.
 
 **Severity:** sh:Violation
@@ -1044,6 +1081,7 @@ The ShuntCompensator.voltageSensitivity attribute shall be greater than zero.
 ### eq452c:ShuntCompensator.voltageSensitivity-valueRange
 
 **Path:** `cim:ShuntCompensator.voltageSensitivity`  
+**Name:** C:452:EQ:ShuntCompensator.voltageSensitivity:valueRange  
 The ShuntCompensator.voltageSensitivity attribute shall be greater than zero.
 
 **Severity:** sh:Violation
@@ -1068,6 +1106,7 @@ The ShuntCompensator.voltageSensitivity attribute shall be greater than zero.
 ### eq452c:NonlinearShuntCompensatorPoint.g-valueRange
 
 **Path:** `cim:NonlinearShuntCompensatorPoint.g`  
+**Name:** C:452:EQ:NonlinearShuntCompensatorPoint.g:valueRange  
 NonlinearShuntCompensatorPoint.g shall be a positive value or zero.
 
 **Severity:** sh:Violation
@@ -1092,6 +1131,7 @@ NonlinearShuntCompensatorPoint.g shall be a positive value or zero.
 ### eq452c:GeneratingUnit.minOperatingP-valueRangePair
 
 **Path:** `cim:GeneratingUnit.minOperatingP`  
+**Name:** C:452:EQ:GeneratingUnit.minOperatingP:valueRangePair  
 GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.
 
 **Severity:** sh:Violation
@@ -1151,6 +1191,7 @@ GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.mi
 ### eq452c:PowerTransformer-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:PowerTransformer:containment  
 For PowerTransformer the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Substation or DCConverterUnit. For the case of a transformer that connects two substations, the terminal of one of the PowerTransformerEnd-s can be connected to a ConnectivityNode defined in another substation.
 
 **Severity:** sh:Violation
@@ -1179,6 +1220,7 @@ For PowerTransformer the association Equipment.EquipmentContainer is required an
 ### eq452c:PowerTransformerEnd.b-valueRange
 
 **Path:** `cim:PowerTransformerEnd.b`  
+**Name:** C:452:EQ:PowerTransformerEnd.b:valueRange  
 PowerTransformerEnd.b shall be negative value or zero. Negative magnetising branch susceptance (PowerTransformerEnd.b) means inductive reactive power losses in no load. 
 
 **Severity:** sh:Violation
@@ -1194,6 +1236,7 @@ PowerTransformerEnd.b shall be negative value or zero. Negative magnetising bran
 ### eq452c:PowerTransformerEnd.g-valueRange
 
 **Path:** `cim:PowerTransformerEnd.g`  
+**Name:** C:452:EQ:PowerTransformerEnd.g:valueRange  
 PowerTransformerEnd.g shall be positive value or zero. Positive magnetising branch conductance (PowerTransformerEnd.g) means positive active power losses in no load.
 
 **Severity:** sh:Violation
@@ -1220,6 +1263,7 @@ PowerTransformerEnd.g shall be positive value or zero. Positive magnetising bran
 ### eq452c:ProtectedSwitch-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:ProtectedSwitch:containment  
 For ProtectedSwitch (Breaker, DisconnectingCircuitBreaker, LoadBreakSwitch) the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type Bay, VoltageLevel or DCConverterUnit.
 
 **Severity:** sh:Violation
@@ -1262,6 +1306,7 @@ For ProtectedSwitch (Breaker, DisconnectingCircuitBreaker, LoadBreakSwitch) the 
 ### eq452c:RegulatingControl-RegulatingEquipment
 
 **Path:** `^cim:RegulatingCondEq.RegulatingControl`  
+**Name:** C:452:EQ:RegulatingControl:RegulatingEquipment  
 A RegulatingControl that is not a TapChangerControl must have at least one regulating equipment associated through the RegulatingCondEq.RegulatingControl. That is, a RegulatingControl cannot exist without some equipment using it for regulating.
 
 **Severity:** sh:Violation
@@ -1286,6 +1331,7 @@ A RegulatingControl that is not a TapChangerControl must have at least one regul
 ### eq452c:ConductingEquipment.BaseVoltage-whereRequired
 
 **Path:** `cim:ConductingEquipment.BaseVoltage`  
+**Name:** C:452:EQ:ConductingEquipment.BaseVoltage:whereRequired  
 The ConductingEquipment.BaseVoltage association is required for the following ConductingEquipment: ACLineSegment, EquivalentBranch and SeriesCompensator. For all other Equipment-s, not contained in a VoltageLevel, the association ConductingEquipment.BaseVoltage can be provided (as it is optional), however the association to BaseVoltage coming from the container or transformer ends takes precedence.
 
 **Severity:** sh:Violation
@@ -1303,6 +1349,7 @@ The ConductingEquipment.BaseVoltage association is required for the following Co
 ### eq452c:SeriesCompensator-containment
 
 **Path:** `cim:Equipment.EquipmentContainer / rdf:type`  
+**Name:** C:452:EQ:SeriesCompensator:containment  
 For SeriesCompensator the association Equipment.EquipmentContainer is required and shall point to EquipmentContainer of type VoltageLevel when in substation, DCConverterUnit or Line when outside substation.
 
 **Severity:** sh:Violation
@@ -1331,6 +1378,7 @@ For SeriesCompensator the association Equipment.EquipmentContainer is required a
 ### eq452c:GeneratingUnit.minOperatingP-valueRangePair
 
 **Path:** `cim:GeneratingUnit.minOperatingP`  
+**Name:** C:452:EQ:GeneratingUnit.minOperatingP:valueRangePair  
 GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.
 
 **Severity:** sh:Violation
@@ -1369,6 +1417,7 @@ GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.mi
 ### eq452c:SynchronousMachine.minQ-valueRangePair
 
 **Path:** `cim:SynchronousMachine.minQ`  
+**Name:** C:452:EQ:SynchronousMachine.maxQ:valueRangePair  
 SynchronousMachine.maxQ shall be greater than or equal to SynchronousMachine.minQ.
 
 **Severity:** sh:Violation
@@ -1400,6 +1449,7 @@ SynchronousMachine.maxQ shall be greater than or equal to SynchronousMachine.min
 ### eq452c:GeneratingUnit.minOperatingP-valueRangePair
 
 **Path:** `cim:GeneratingUnit.minOperatingP`  
+**Name:** C:452:EQ:GeneratingUnit.minOperatingP:valueRangePair  
 GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.
 
 **Severity:** sh:Violation
@@ -1431,6 +1481,7 @@ GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.mi
 ### eq452c:GeneratingUnit.minOperatingP-valueRangePair
 
 **Path:** `cim:GeneratingUnit.minOperatingP`  
+**Name:** C:452:EQ:GeneratingUnit.minOperatingP:valueRangePair  
 GeneratingUnit.maxOperatingP shall be greater than or equal to GeneratingUnit.minOperatingP.
 
 **Severity:** sh:Violation

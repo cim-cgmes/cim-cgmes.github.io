@@ -5,8 +5,44 @@ IEEE 421.5-2005 type AC6A model. The model represents field-controlled alternato
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEAC6A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEAC6A : +Float ka[1..1]
+    ExcIEEEAC6A : +Float kc[1..1]
+    ExcIEEEAC6A : +Float kd[1..1]
+    ExcIEEEAC6A : +Float ke[1..1]
+    ExcIEEEAC6A : +Float kh[1..1]
+    ExcIEEEAC6A : +Float seve1[1..1]
+    ExcIEEEAC6A : +Float seve2[1..1]
+    ExcIEEEAC6A : +Float ta[1..1]
+    ExcIEEEAC6A : +Float tb[1..1]
+    ExcIEEEAC6A : +Float tc[1..1]
+    ExcIEEEAC6A : +Float te[1..1]
+    ExcIEEEAC6A : +Float th[1..1]
+    ExcIEEEAC6A : +Float tj[1..1]
+    ExcIEEEAC6A : +Float tk[1..1]
+    ExcIEEEAC6A : +Float vamax[1..1]
+    ExcIEEEAC6A : +Float vamin[1..1]
+    ExcIEEEAC6A : +Float ve1[1..1]
+    ExcIEEEAC6A : +Float ve2[1..1]
+    ExcIEEEAC6A : +Float vfelim[1..1]
+    ExcIEEEAC6A : +Float vhmax[1..1]
+    ExcIEEEAC6A : +Float vrmax[1..1]
+    ExcIEEEAC6A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

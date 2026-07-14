@@ -5,8 +5,27 @@ Turbine load controller model developed by WECC. This model represents a supervi
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineLoadControllerDynamics <|-- TurbLCFB1
+    TurbineLoadControllerDynamics : +TurbineGovernorDynamics TurbineGovernorDynamics[1]
+    click TurbineLoadControllerDynamics href "TurbineLoadControllerDynamics"
+    TurbLCFB1 : +Float db[1..1]
+    TurbLCFB1 : +Float emax[1..1]
+    TurbLCFB1 : +Float fb[1..1]
+    TurbLCFB1 : +Boolean fbf[1..1]
+    TurbLCFB1 : +Float irmax[1..1]
+    TurbLCFB1 : +Float ki[1..1]
+    TurbLCFB1 : +Float kp[1..1]
+    TurbLCFB1 : +Float mwbase[1..1]
+    TurbLCFB1 : +Boolean pbf[1..1]
+    TurbLCFB1 : +Float pmwset[1..1]
+    TurbLCFB1 : +Boolean speedReferenceGovernor[1..1]
+    TurbLCFB1 : +Float tpelec[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,17 @@ A curve of load versus time (X-axis) showing the active power values (Y1-axis) a
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     SeasonDayTypeSchedule <|-- ConformLoadSchedule
+    SeasonDayTypeSchedule : +DayType DayType[1..1]
+    SeasonDayTypeSchedule : +Season Season[1..1]
+    click SeasonDayTypeSchedule href "SeasonDayTypeSchedule"
+    ConformLoadSchedule : +ConformLoadGroup ConformLoadGroup[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

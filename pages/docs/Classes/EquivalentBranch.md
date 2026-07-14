@@ -5,8 +5,31 @@ The class represents equivalent branches. In cases where a transformer phase shi
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EquivalentEquipment <|-- EquivalentBranch
+    EquivalentEquipment : +EquivalentNetwork EquivalentNetwork[0..1]
+    click EquivalentEquipment href "EquivalentEquipment"
+    EquivalentBranch : +Float negativeR12[1..1]
+    EquivalentBranch : +Float negativeR21[1..1]
+    EquivalentBranch : +Float negativeX12[1..1]
+    EquivalentBranch : +Float negativeX21[1..1]
+    EquivalentBranch : +Float positiveR12[1..1]
+    EquivalentBranch : +Float positiveR21[1..1]
+    EquivalentBranch : +Float positiveX12[1..1]
+    EquivalentBranch : +Float positiveX21[1..1]
+    EquivalentBranch : +Float r[1..1]
+    EquivalentBranch : +Float r21[0..1]
+    EquivalentBranch : +Float x[1..1]
+    EquivalentBranch : +Float x21[0..1]
+    EquivalentBranch : +Float zeroR12[1..1]
+    EquivalentBranch : +Float zeroR21[1..1]
+    EquivalentBranch : +Float zeroX12[1..1]
+    EquivalentBranch : +Float zeroX21[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

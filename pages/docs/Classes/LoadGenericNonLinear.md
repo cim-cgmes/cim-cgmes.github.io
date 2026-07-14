@@ -5,8 +5,22 @@ Generic non-linear dynamic (GNLD) load. This model can be used in mid-term and l
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     LoadDynamics <|-- LoadGenericNonLinear
+    LoadDynamics : +EnergyConsumer EnergyConsumer[0..n]
+    click LoadDynamics href "LoadDynamics"
+    LoadGenericNonLinear : +Float bs[1..1]
+    LoadGenericNonLinear : +Float bt[1..1]
+    LoadGenericNonLinear : +GenericNonLinearLoadModelKind genericNonLinearLoadModelType[1..1]
+    LoadGenericNonLinear : +Float ls[1..1]
+    LoadGenericNonLinear : +Float lt[1..1]
+    LoadGenericNonLinear : +Float tp[1..1]
+    LoadGenericNonLinear : +Float tq[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

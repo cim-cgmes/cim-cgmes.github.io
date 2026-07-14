@@ -5,8 +5,21 @@ Reactive power rating envelope versus the synchronous machine's active power, in
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Curve <|-- ReactiveCapabilityCurve
+    Curve : +CurveData CurveDatas[1..n]
+    Curve : +CurveStyle curveStyle[1..1]
+    Curve : +UnitSymbol xUnit[1..1]
+    Curve : +UnitSymbol y1Unit[1..1]
+    Curve : +UnitSymbol y2Unit[0..1]
+    click Curve href "Curve"
+    ReactiveCapabilityCurve : +EquivalentInjection EquivalentInjection[0..n]
+    ReactiveCapabilityCurve : +SynchronousMachine InitiallyUsedBySynchronousMachines[1..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

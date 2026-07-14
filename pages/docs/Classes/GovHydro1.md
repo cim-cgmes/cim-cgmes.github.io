@@ -5,8 +5,31 @@ Basic hydro turbine governor.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydro1
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydro1 : +Float at[1..1]
+    GovHydro1 : +Float dturb[1..1]
+    GovHydro1 : +Float gmax[1..1]
+    GovHydro1 : +Float gmin[1..1]
+    GovHydro1 : +Float hdam[1..1]
+    GovHydro1 : +Float mwbase[1..1]
+    GovHydro1 : +Float qnl[1..1]
+    GovHydro1 : +Float rperm[1..1]
+    GovHydro1 : +Float rtemp[1..1]
+    GovHydro1 : +Float tf[1..1]
+    GovHydro1 : +Float tg[1..1]
+    GovHydro1 : +Float tr[1..1]
+    GovHydro1 : +Float tw[1..1]
+    GovHydro1 : +Float velm[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

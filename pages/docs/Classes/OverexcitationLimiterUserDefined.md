@@ -5,8 +5,17 @@ Overexcitation limiter system function block whose dynamic behaviour is describe
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     OverexcitationLimiterDynamics <|-- OverexcitationLimiterUserDefined
+    OverexcitationLimiterDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    click OverexcitationLimiterDynamics href "OverexcitationLimiterDynamics"
+    OverexcitationLimiterUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    OverexcitationLimiterUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

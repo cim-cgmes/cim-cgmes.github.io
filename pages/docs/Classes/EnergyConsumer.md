@@ -5,11 +5,30 @@ Generic user of energy - a point of consumption on the power system model. Energ
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     EnergyConnection <|-- EnergyConsumer
-    EnergyConsumer <|-- StationSupply
+    click EnergyConnection href "EnergyConnection"
     EnergyConsumer <|-- NonConformLoad
+    NonConformLoad : +NonConformLoadGroup LoadGroup[1]
+    click NonConformLoad href "NonConformLoad"
+    EnergyConsumer <|-- StationSupply
+    click StationSupply href "StationSupply"
     EnergyConsumer <|-- ConformLoad
+    ConformLoad : +ConformLoadGroup LoadGroup[1]
+    click ConformLoad href "ConformLoad"
+    EnergyConsumer : +LoadDynamics LoadDynamics[0..1]
+    EnergyConsumer : +LoadResponseCharacteristic LoadResponse[0..1]
+    EnergyConsumer : +Float p[1..1]
+    EnergyConsumer : +Float pfixed[0..1]
+    EnergyConsumer : +Float pfixedPct[0..1]
+    EnergyConsumer : +Float q[1..1]
+    EnergyConsumer : +Float qfixed[0..1]
+    EnergyConsumer : +Float qfixedPct[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

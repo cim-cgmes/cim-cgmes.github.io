@@ -5,8 +5,14 @@ Instrument transformer used to measure electrical qualities of the circuit that 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Sensor <|-- CurrentTransformer
+    click Sensor href "Sensor"
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

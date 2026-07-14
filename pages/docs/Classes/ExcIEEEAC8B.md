@@ -5,8 +5,40 @@ IEEE 421.5-2005 type AC8B model. This model represents a PID voltage regulator w
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEAC8B
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEAC8B : +Float ka[1..1]
+    ExcIEEEAC8B : +Float kc[1..1]
+    ExcIEEEAC8B : +Float kd[1..1]
+    ExcIEEEAC8B : +Float kdr[1..1]
+    ExcIEEEAC8B : +Float ke[1..1]
+    ExcIEEEAC8B : +Float kir[1..1]
+    ExcIEEEAC8B : +Float kpr[1..1]
+    ExcIEEEAC8B : +Float seve1[1..1]
+    ExcIEEEAC8B : +Float seve2[1..1]
+    ExcIEEEAC8B : +Float ta[1..1]
+    ExcIEEEAC8B : +Float tdr[1..1]
+    ExcIEEEAC8B : +Float te[1..1]
+    ExcIEEEAC8B : +Float ve1[1..1]
+    ExcIEEEAC8B : +Float ve2[1..1]
+    ExcIEEEAC8B : +Float vemin[1..1]
+    ExcIEEEAC8B : +Float vfemax[1..1]
+    ExcIEEEAC8B : +Float vrmax[1..1]
+    ExcIEEEAC8B : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

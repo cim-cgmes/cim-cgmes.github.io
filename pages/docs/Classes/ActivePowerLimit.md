@@ -5,8 +5,18 @@ Limit on active power flow.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     OperationalLimit <|-- ActivePowerLimit
+    OperationalLimit : +OperationalLimitSet OperationalLimitSet[1]
+    OperationalLimit : +OperationalLimitType OperationalLimitType[1..1]
+    click OperationalLimit href "OperationalLimit"
+    ActivePowerLimit : +Float normalValue[1..1]
+    ActivePowerLimit : +Float value[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

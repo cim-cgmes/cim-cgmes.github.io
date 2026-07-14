@@ -5,8 +5,45 @@ P control model type 3. Reference: IEC 61400-27-1:2015, 5.6.5.4.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindContPType3IEC
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindContPType3IEC : +WindDynamicsLookupTable WindDynamicsLookupTable[1..n]
+    WindContPType3IEC : +WindTurbineType3IEC WindTurbineType3IEC[1]
+    WindContPType3IEC : +Float dpmax[1..1]
+    WindContPType3IEC : +Float dprefmax[1..1]
+    WindContPType3IEC : +Float dprefmin[1..1]
+    WindContPType3IEC : +Float dthetamax[1..1]
+    WindContPType3IEC : +Float dthetamaxuvrt[1..1]
+    WindContPType3IEC : +Float kdtd[1..1]
+    WindContPType3IEC : +Float kip[1..1]
+    WindContPType3IEC : +Float kpp[1..1]
+    WindContPType3IEC : +Boolean mpuvrt[1..1]
+    WindContPType3IEC : +Float omegadtd[1..1]
+    WindContPType3IEC : +Float omegaoffset[1..1]
+    WindContPType3IEC : +Float pdtdmax[1..1]
+    WindContPType3IEC : +Float tdvs[1..1]
+    WindContPType3IEC : +Float thetaemin[1..1]
+    WindContPType3IEC : +Float thetauscale[1..1]
+    WindContPType3IEC : +Float tomegafiltp3[1..1]
+    WindContPType3IEC : +Float tomegaref[1..1]
+    WindContPType3IEC : +Float tpfiltp3[1..1]
+    WindContPType3IEC : +Float tpord[1..1]
+    WindContPType3IEC : +Float tufiltp3[1..1]
+    WindContPType3IEC : +Float udvs[1..1]
+    WindContPType3IEC : +Float updip[1..1]
+    WindContPType3IEC : +Float zeta[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

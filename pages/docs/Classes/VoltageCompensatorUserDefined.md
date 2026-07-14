@@ -5,8 +5,18 @@ Voltage compensator function block whose dynamic behaviour is described by a use
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     VoltageCompensatorDynamics <|-- VoltageCompensatorUserDefined
+    VoltageCompensatorDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    VoltageCompensatorDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click VoltageCompensatorDynamics href "VoltageCompensatorDynamics"
+    VoltageCompensatorUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    VoltageCompensatorUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

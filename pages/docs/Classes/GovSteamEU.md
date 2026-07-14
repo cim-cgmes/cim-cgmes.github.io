@@ -5,8 +5,52 @@ Simplified boiler and steam turbine with PID governor.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovSteamEU
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovSteamEU : +Float chc[1..1]
+    GovSteamEU : +Float cho[1..1]
+    GovSteamEU : +Float cic[1..1]
+    GovSteamEU : +Float cio[1..1]
+    GovSteamEU : +Float db1[1..1]
+    GovSteamEU : +Float db2[1..1]
+    GovSteamEU : +Float hhpmax[1..1]
+    GovSteamEU : +Float ke[1..1]
+    GovSteamEU : +Float kfcor[1..1]
+    GovSteamEU : +Float khp[1..1]
+    GovSteamEU : +Float klp[1..1]
+    GovSteamEU : +Float komegacor[1..1]
+    GovSteamEU : +Float mwbase[1..1]
+    GovSteamEU : +Float pmax[1..1]
+    GovSteamEU : +Float prhmax[1..1]
+    GovSteamEU : +Float simx[1..1]
+    GovSteamEU : +Float tb[1..1]
+    GovSteamEU : +Float tdp[1..1]
+    GovSteamEU : +Float ten[1..1]
+    GovSteamEU : +Float tf[1..1]
+    GovSteamEU : +Float tfp[1..1]
+    GovSteamEU : +Float thp[1..1]
+    GovSteamEU : +Float tip[1..1]
+    GovSteamEU : +Float tlp[1..1]
+    GovSteamEU : +Float tp[1..1]
+    GovSteamEU : +Float trh[1..1]
+    GovSteamEU : +Float tvhp[1..1]
+    GovSteamEU : +Float tvip[1..1]
+    GovSteamEU : +Float tw[1..1]
+    GovSteamEU : +Float wfmax[1..1]
+    GovSteamEU : +Float wfmin[1..1]
+    GovSteamEU : +Float wmax1[1..1]
+    GovSteamEU : +Float wmax2[1..1]
+    GovSteamEU : +Float wwmax[1..1]
+    GovSteamEU : +Float wwmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

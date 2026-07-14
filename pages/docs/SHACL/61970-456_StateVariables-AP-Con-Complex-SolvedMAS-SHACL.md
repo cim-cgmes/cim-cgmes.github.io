@@ -5,19 +5,19 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:ConformLoad
-- targetClass: cim:EquivalentInjection
-- targetClass: cim:NonlinearShuntCompensator
 - targetClass: cim:ExternalNetworkInjection
 - targetClass: cim:PowerElectronicsConnection
+- targetClass: cim:StationSupply
 - targetClass: cim:NonConformLoad
 - targetClass: cim:EnergyConsumer
+- targetClass: cim:EquivalentInjection
 - targetClass: cim:LinearShuntCompensator
+- targetClass: cim:NonlinearShuntCompensator
 - targetClass: cim:StaticVarCompensator
 - targetClass: cim:EnergySource
 - targetClass: cim:SynchronousMachine
 - targetClass: cim:AsynchronousMachine
-- targetClass: cim:StationSupply
+- targetClass: cim:ConformLoad
 
 ## sv456sol:SvPowerFlow-SynchronousMachine
 
@@ -40,13 +40,13 @@
 **Targets:**
 - targetClass: cim:Cut
 - targetClass: cim:Switch
-- targetClass: cim:GroundDisconnector
 - targetClass: cim:Disconnector
-- targetClass: cim:Fuse
 - targetClass: cim:Jumper
-- targetClass: cim:Breaker
 - targetClass: cim:LoadBreakSwitch
 - targetClass: cim:DisconnectingCircuitBreaker
+- targetClass: cim:Fuse
+- targetClass: cim:GroundDisconnector
+- targetClass: cim:Breaker
 
 ## sv456sol:SvTapStep
 

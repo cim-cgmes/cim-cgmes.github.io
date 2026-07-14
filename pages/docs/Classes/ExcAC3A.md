@@ -5,8 +5,48 @@ Modified IEEE AC3A alternator-supplied rectifier excitation system with differen
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcAC3A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcAC3A : +Float efdn[1..1]
+    ExcAC3A : +Float ka[1..1]
+    ExcAC3A : +Float kc[1..1]
+    ExcAC3A : +Float kd[1..1]
+    ExcAC3A : +Float ke[1..1]
+    ExcAC3A : +Float kf[1..1]
+    ExcAC3A : +Float kf1[1..1]
+    ExcAC3A : +Float kf2[1..1]
+    ExcAC3A : +Float klv[1..1]
+    ExcAC3A : +Float kn[1..1]
+    ExcAC3A : +Float kr[1..1]
+    ExcAC3A : +Float ks[1..1]
+    ExcAC3A : +Float seve1[1..1]
+    ExcAC3A : +Float seve2[1..1]
+    ExcAC3A : +Float ta[1..1]
+    ExcAC3A : +Float tb[1..1]
+    ExcAC3A : +Float tc[1..1]
+    ExcAC3A : +Float te[1..1]
+    ExcAC3A : +Float tf[1..1]
+    ExcAC3A : +Float vamax[1..1]
+    ExcAC3A : +Float vamin[1..1]
+    ExcAC3A : +Float ve1[1..1]
+    ExcAC3A : +Float ve2[1..1]
+    ExcAC3A : +Float vemin[1..1]
+    ExcAC3A : +Float vfemax[1..1]
+    ExcAC3A : +Float vlv[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

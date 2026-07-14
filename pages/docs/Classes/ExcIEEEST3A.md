@@ -5,8 +5,42 @@ IEEE 421.5-2005 type ST3A model. Some static systems utilize a field voltage con
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEST3A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEST3A : +Float ka[1..1]
+    ExcIEEEST3A : +Float kc[1..1]
+    ExcIEEEST3A : +Float kg[1..1]
+    ExcIEEEST3A : +Float ki[1..1]
+    ExcIEEEST3A : +Float km[1..1]
+    ExcIEEEST3A : +Float kp[1..1]
+    ExcIEEEST3A : +Float ta[1..1]
+    ExcIEEEST3A : +Float tb[1..1]
+    ExcIEEEST3A : +Float tc[1..1]
+    ExcIEEEST3A : +Float thetap[1..1]
+    ExcIEEEST3A : +Float tm[1..1]
+    ExcIEEEST3A : +Float vbmax[1..1]
+    ExcIEEEST3A : +Float vgmax[1..1]
+    ExcIEEEST3A : +Float vimax[1..1]
+    ExcIEEEST3A : +Float vimin[1..1]
+    ExcIEEEST3A : +Float vmmax[1..1]
+    ExcIEEEST3A : +Float vmmin[1..1]
+    ExcIEEEST3A : +Float vrmax[1..1]
+    ExcIEEEST3A : +Float vrmin[1..1]
+    ExcIEEEST3A : +Float xl[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

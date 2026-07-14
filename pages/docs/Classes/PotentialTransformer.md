@@ -5,8 +5,14 @@ Instrument transformer (also known as Voltage Transformer) used to measure elect
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Sensor <|-- PotentialTransformer
+    click Sensor href "Sensor"
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

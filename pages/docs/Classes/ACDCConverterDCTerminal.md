@@ -5,8 +5,18 @@ A DC electrical connection point at the AC/DC converter. The AC/DC converter is 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     DCBaseTerminal <|-- ACDCConverterDCTerminal
+    DCBaseTerminal : +DCNode DCNode[0..1]
+    DCBaseTerminal : +DCTopologicalNode DCTopologicalNode[1]
+    click DCBaseTerminal href "DCBaseTerminal"
+    ACDCConverterDCTerminal : +ACDCConverter DCConductingEquipment[1]
+    ACDCConverterDCTerminal : +DCPolarityKind polarity[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

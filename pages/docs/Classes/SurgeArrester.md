@@ -5,8 +5,15 @@ Shunt device, installed on the network, usually in the proximity of electrical e
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     AuxiliaryEquipment <|-- SurgeArrester
+    AuxiliaryEquipment : +Terminal Terminal[1]
+    click AuxiliaryEquipment href "AuxiliaryEquipment"
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

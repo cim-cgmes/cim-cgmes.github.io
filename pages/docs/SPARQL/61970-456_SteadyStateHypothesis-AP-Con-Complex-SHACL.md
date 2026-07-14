@@ -16,6 +16,7 @@
 
 ## ssh456c:EnergySource-EnergySourcePQ
 
+**Name:** C:456:SSH:EnergySource:EnergySourcePQ  
 The attributes voltageAngle and voltageMagnitude shall not be used when the EnergySource is representing a constant active and reactive power injection (PQ injection), i.e. they shall only be used when the EnergySource is modelling a voltage source.
 
 **Severity:** sh:Warning

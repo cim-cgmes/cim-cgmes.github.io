@@ -5,10 +5,61 @@ A rotating machine which may be used as a generator or motor.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     RegulatingCondEq <|-- RotatingMachine
+    RegulatingCondEq : +RegulatingControl RegulatingControl[0..1]
+    RegulatingCondEq : +Boolean controlEnabled[1..1]
+    click RegulatingCondEq href "RegulatingCondEq"
     RotatingMachine <|-- AsynchronousMachine
+    AsynchronousMachine : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    AsynchronousMachine : +AsynchronousMachineKind asynchronousMachineType[1..1]
+    AsynchronousMachine : +Boolean converterFedDrive[1..1]
+    AsynchronousMachine : +Float efficiency[1..1]
+    AsynchronousMachine : +Float iaIrRatio[1..1]
+    AsynchronousMachine : +Float nominalFrequency[0..1]
+    AsynchronousMachine : +Float nominalSpeed[0..1]
+    AsynchronousMachine : +Integer polePairNumber[1..1]
+    AsynchronousMachine : +Float ratedMechanicalPower[1..1]
+    AsynchronousMachine : +Boolean reversible[1..1]
+    AsynchronousMachine : +Float rxLockedRotorRatio[0..1]
+    click AsynchronousMachine href "AsynchronousMachine"
     RotatingMachine <|-- SynchronousMachine
+    SynchronousMachine : +ReactiveCapabilityCurve InitialReactiveCapabilityCurve[0..1]
+    SynchronousMachine : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    SynchronousMachine : +Boolean earthing[1..1]
+    SynchronousMachine : +Float earthingStarPointR[0..1]
+    SynchronousMachine : +Float earthingStarPointX[0..1]
+    SynchronousMachine : +Float ikk[0..1]
+    SynchronousMachine : +Float maxQ[0..1]
+    SynchronousMachine : +Float minQ[0..1]
+    SynchronousMachine : +Float mu[0..1]
+    SynchronousMachine : +SynchronousMachineOperatingMode operatingMode[1..1]
+    SynchronousMachine : +Float qPercent[0..1]
+    SynchronousMachine : +Float r[1..1]
+    SynchronousMachine : +Float r0[1..1]
+    SynchronousMachine : +Float r2[1..1]
+    SynchronousMachine : +Integer referencePriority[1..1]
+    SynchronousMachine : +Float satDirectSubtransX[1..1]
+    SynchronousMachine : +Float satDirectSyncX[0..1]
+    SynchronousMachine : +Float satDirectTransX[0..1]
+    SynchronousMachine : +ShortCircuitRotorKind shortCircuitRotorType[0..1]
+    SynchronousMachine : +SynchronousMachineKind type[1..1]
+    SynchronousMachine : +Float voltageRegulationRange[0..1]
+    SynchronousMachine : +Float x0[1..1]
+    SynchronousMachine : +Float x2[1..1]
+    click SynchronousMachine href "SynchronousMachine"
+    RotatingMachine : +GeneratingUnit GeneratingUnit[0..1]
+    RotatingMachine : +HydroPump HydroPump[0..1]
+    RotatingMachine : +Float p[1..1]
+    RotatingMachine : +Float q[1..1]
+    RotatingMachine : +Float ratedPowerFactor[0..1]
+    RotatingMachine : +Float ratedS[0..1]
+    RotatingMachine : +Float ratedU[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

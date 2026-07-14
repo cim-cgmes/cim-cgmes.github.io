@@ -3,15 +3,20 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
+    Model <|-- DifferenceModel
+    Model <|-- FullModel
     Model --> Model : DependentOn
     Model --> Model : Depending
     Model --> Model : SupersededBy
     Model --> Model : Supersedes
     Model --> URI : modelingAuthoritySet
     Model --> URI : profile
-    Model <|-- DifferenceModel
-    Model <|-- FullModel
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

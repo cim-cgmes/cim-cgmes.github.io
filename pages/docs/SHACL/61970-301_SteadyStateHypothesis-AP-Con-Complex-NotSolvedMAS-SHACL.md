@@ -12,6 +12,7 @@
 ### ssh301n:BatteryUnit.storedE-valueRangePair
 
 **Path:** `cim:BatteryUnit.storedE`  
+**Name:** C:301:SSH:BatteryUnit.storedE:valueRangePair  
 The attribute shall be a positive value or zero and lower than BatteryUnit.ratedE.
 
 **Severity:** sh:Violation
@@ -43,6 +44,7 @@ The attribute shall be a positive value or zero and lower than BatteryUnit.rated
 ### ssh301n:CsConverter.targetAlpha-valueRangePairTo
 
 **Path:** `cim:CsConverter.targetAlpha`  
+**Name:** C:301:SSH:CsConverter.targetAlpha:valueRangePairTo  
 Allowed values are within the range minAlpha<=targetAlpha<=maxAlpha.
 
 **Severity:** sh:Violation
@@ -58,6 +60,7 @@ Allowed values are within the range minAlpha<=targetAlpha<=maxAlpha.
 ### ssh301n:CsConverter.targetGamma-valueRangePairTo
 
 **Path:** `cim:CsConverter.targetGamma`  
+**Name:** C:301:SSH:CsConverter.targetGamma:valueRangePairTo  
 Allowed values are within the range minGamma<=targetGamma<=maxGamma. 
 
 **Severity:** sh:Violation
@@ -96,6 +99,7 @@ Allowed values are within the range minGamma<=targetGamma<=maxGamma.
 ### ssh301n:TapChanger.step-valueRangePairTo
 
 **Path:** `cim:TapChanger.step`  
+**Name:** C:301:SSH:TapChanger.step:valueRangePairTo  
 The attribute shall be equal to or greater than lowStep and equal to or less than highStep.
 
 **Severity:** sh:Violation
@@ -120,6 +124,7 @@ The attribute shall be equal to or greater than lowStep and equal to or less tha
 ### ssh301n:TapChanger.step-valueRangePairTo
 
 **Path:** `cim:TapChanger.step`  
+**Name:** C:301:SSH:TapChanger.step:valueRangePairTo  
 The attribute shall be equal to or greater than lowStep and equal to or less than highStep.
 
 **Severity:** sh:Violation
@@ -144,6 +149,7 @@ The attribute shall be equal to or greater than lowStep and equal to or less tha
 ### ssh301n:TapChanger.step-valueRangePairTo
 
 **Path:** `cim:TapChanger.step`  
+**Name:** C:301:SSH:TapChanger.step:valueRangePairTo  
 The attribute shall be equal to or greater than lowStep and equal to or less than highStep.
 
 **Severity:** sh:Violation
@@ -168,6 +174,7 @@ The attribute shall be equal to or greater than lowStep and equal to or less tha
 ### ssh301n:TapChanger.step-valueRangePairTo
 
 **Path:** `cim:TapChanger.step`  
+**Name:** C:301:SSH:TapChanger.step:valueRangePairTo  
 The attribute shall be equal to or greater than lowStep and equal to or less than highStep.
 
 **Severity:** sh:Violation
@@ -192,6 +199,7 @@ The attribute shall be equal to or greater than lowStep and equal to or less tha
 ### ssh301n:TapChanger.step-valueRangePairTo
 
 **Path:** `cim:TapChanger.step`  
+**Name:** C:301:SSH:TapChanger.step:valueRangePairTo  
 The attribute shall be equal to or greater than lowStep and equal to or less than highStep.
 
 **Severity:** sh:Violation
@@ -217,9 +225,9 @@ The attribute shall be equal to or greater than lowStep and equal to or less tha
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:RatioTapChanger
 - targetClass: cim:PhaseTapChangerLinear
 - targetClass: cim:PhaseTapChangerSymmetrical
 - targetClass: cim:PhaseTapChangerAsymmetrical
 - targetClass: cim:PhaseTapChangerTabular
-- targetClass: cim:RatioTapChanger
 

@@ -5,8 +5,20 @@ The P-Q capability curve for a voltage source converter, with P on X-axis and Qm
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Curve <|-- VsCapabilityCurve
+    Curve : +CurveData CurveDatas[1..n]
+    Curve : +CurveStyle curveStyle[1..1]
+    Curve : +UnitSymbol xUnit[1..1]
+    Curve : +UnitSymbol y1Unit[1..1]
+    Curve : +UnitSymbol y2Unit[0..1]
+    click Curve href "Curve"
+    VsCapabilityCurve : +VsConverter VsConverterDCSides[0..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

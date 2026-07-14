@@ -5,8 +5,56 @@ Steam turbine governor, based on the GovSteamIEEE1 (with optional deadband and n
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovSteam1
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovSteam1 : +Float db1[1..1]
+    GovSteam1 : +Float db2[1..1]
+    GovSteam1 : +Float eps[1..1]
+    GovSteam1 : +Float gv1[1..1]
+    GovSteam1 : +Float gv2[1..1]
+    GovSteam1 : +Float gv3[1..1]
+    GovSteam1 : +Float gv4[1..1]
+    GovSteam1 : +Float gv5[1..1]
+    GovSteam1 : +Float gv6[1..1]
+    GovSteam1 : +Float k[1..1]
+    GovSteam1 : +Float k1[1..1]
+    GovSteam1 : +Float k2[1..1]
+    GovSteam1 : +Float k3[1..1]
+    GovSteam1 : +Float k4[1..1]
+    GovSteam1 : +Float k5[1..1]
+    GovSteam1 : +Float k6[1..1]
+    GovSteam1 : +Float k7[1..1]
+    GovSteam1 : +Float k8[1..1]
+    GovSteam1 : +Float mwbase[1..1]
+    GovSteam1 : +Float pgv1[1..1]
+    GovSteam1 : +Float pgv2[1..1]
+    GovSteam1 : +Float pgv3[1..1]
+    GovSteam1 : +Float pgv4[1..1]
+    GovSteam1 : +Float pgv5[1..1]
+    GovSteam1 : +Float pgv6[1..1]
+    GovSteam1 : +Float pmax[1..1]
+    GovSteam1 : +Float pmin[1..1]
+    GovSteam1 : +Boolean sdb1[1..1]
+    GovSteam1 : +Boolean sdb2[1..1]
+    GovSteam1 : +Float t1[1..1]
+    GovSteam1 : +Float t2[1..1]
+    GovSteam1 : +Float t3[1..1]
+    GovSteam1 : +Float t4[1..1]
+    GovSteam1 : +Float t5[1..1]
+    GovSteam1 : +Float t6[1..1]
+    GovSteam1 : +Float t7[1..1]
+    GovSteam1 : +Float uc[1..1]
+    GovSteam1 : +Float uo[1..1]
+    GovSteam1 : +Boolean valve[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,24 @@ Connectivity nodes are points where terminals of AC conducting equipment are con
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- ConnectivityNode
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    ConnectivityNode : +BoundaryPoint BoundaryPoint[0..1]
+    ConnectivityNode : +ConnectivityNodeContainer ConnectivityNodeContainer[1]
+    ConnectivityNode : +Terminal Terminals[0..n]
+    ConnectivityNode : +TopologicalNode TopologicalNode[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,17 @@ Aggregate loads are used to represent all or part of the real and reactive load 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     LoadDynamics <|-- LoadAggregate
+    LoadDynamics : +EnergyConsumer EnergyConsumer[0..n]
+    click LoadDynamics href "LoadDynamics"
+    LoadAggregate : +LoadMotor LoadMotor[0..1]
+    LoadAggregate : +LoadStatic LoadStatic[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

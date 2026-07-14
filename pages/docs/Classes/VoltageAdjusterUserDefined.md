@@ -5,8 +5,17 @@ Voltage adjuster function block whose dynamic behaviour is described by a user-d
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     VoltageAdjusterDynamics <|-- VoltageAdjusterUserDefined
+    VoltageAdjusterDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[1]
+    click VoltageAdjusterDynamics href "VoltageAdjusterDynamics"
+    VoltageAdjusterUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    VoltageAdjusterUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

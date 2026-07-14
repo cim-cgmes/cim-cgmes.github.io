@@ -5,8 +5,14 @@ A sensor used mainly in overhead distribution networks as the source of both cur
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Sensor <|-- PostLineSensor
+    click Sensor href "Sensor"
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

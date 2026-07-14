@@ -5,8 +5,23 @@ DC nodes are points where terminals of DC conducting equipment are connected tog
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- DCNode
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    DCNode : +DCEquipmentContainer DCEquipmentContainer[1]
+    DCNode : +DCBaseTerminal DCTerminals[0..n]
+    DCNode : +DCTopologicalNode DCTopologicalNode[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

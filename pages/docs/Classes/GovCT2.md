@@ -5,8 +5,73 @@ General governor with frequency-dependent fuel flow limit. This model is a modif
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovCT2
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovCT2 : +Float aset[1..1]
+    GovCT2 : +Float db[1..1]
+    GovCT2 : +Float dm[1..1]
+    GovCT2 : +Float flim1[1..1]
+    GovCT2 : +Float flim10[1..1]
+    GovCT2 : +Float flim2[1..1]
+    GovCT2 : +Float flim3[1..1]
+    GovCT2 : +Float flim4[1..1]
+    GovCT2 : +Float flim5[1..1]
+    GovCT2 : +Float flim6[1..1]
+    GovCT2 : +Float flim7[1..1]
+    GovCT2 : +Float flim8[1..1]
+    GovCT2 : +Float flim9[1..1]
+    GovCT2 : +Float ka[1..1]
+    GovCT2 : +Float kdgov[1..1]
+    GovCT2 : +Float kigov[1..1]
+    GovCT2 : +Float kiload[1..1]
+    GovCT2 : +Float kimw[1..1]
+    GovCT2 : +Float kpgov[1..1]
+    GovCT2 : +Float kpload[1..1]
+    GovCT2 : +Float kturb[1..1]
+    GovCT2 : +Float ldref[1..1]
+    GovCT2 : +Float maxerr[1..1]
+    GovCT2 : +Float minerr[1..1]
+    GovCT2 : +Float mwbase[1..1]
+    GovCT2 : +Float plim1[1..1]
+    GovCT2 : +Float plim10[1..1]
+    GovCT2 : +Float plim2[1..1]
+    GovCT2 : +Float plim3[1..1]
+    GovCT2 : +Float plim4[1..1]
+    GovCT2 : +Float plim5[1..1]
+    GovCT2 : +Float plim6[1..1]
+    GovCT2 : +Float plim7[1..1]
+    GovCT2 : +Float plim8[1..1]
+    GovCT2 : +Float plim9[1..1]
+    GovCT2 : +Float prate[1..1]
+    GovCT2 : +Float r[1..1]
+    GovCT2 : +Float rclose[1..1]
+    GovCT2 : +Float rdown[1..1]
+    GovCT2 : +Float ropen[1..1]
+    GovCT2 : +DroopSignalFeedbackKind rselect[1..1]
+    GovCT2 : +Float rup[1..1]
+    GovCT2 : +Float ta[1..1]
+    GovCT2 : +Float tact[1..1]
+    GovCT2 : +Float tb[1..1]
+    GovCT2 : +Float tc[1..1]
+    GovCT2 : +Float tdgov[1..1]
+    GovCT2 : +Float teng[1..1]
+    GovCT2 : +Float tfload[1..1]
+    GovCT2 : +Float tpelec[1..1]
+    GovCT2 : +Float tsa[1..1]
+    GovCT2 : +Float tsb[1..1]
+    GovCT2 : +Float vmax[1..1]
+    GovCT2 : +Float vmin[1..1]
+    GovCT2 : +Float wfnl[1..1]
+    GovCT2 : +Boolean wfspd[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

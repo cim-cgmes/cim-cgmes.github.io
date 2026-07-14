@@ -5,8 +5,34 @@ This class represents the external network and it is used for IEC 60909 calculat
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     RegulatingCondEq <|-- ExternalNetworkInjection
+    RegulatingCondEq : +RegulatingControl RegulatingControl[0..1]
+    RegulatingCondEq : +Boolean controlEnabled[1..1]
+    click RegulatingCondEq href "RegulatingCondEq"
+    ExternalNetworkInjection : +Float governorSCD[1..1]
+    ExternalNetworkInjection : +Boolean ikSecond[0..1]
+    ExternalNetworkInjection : +Float maxInitialSymShCCurrent[1..1]
+    ExternalNetworkInjection : +Float maxP[1..1]
+    ExternalNetworkInjection : +Float maxQ[1..1]
+    ExternalNetworkInjection : +Float maxR0ToX0Ratio[1..1]
+    ExternalNetworkInjection : +Float maxR1ToX1Ratio[1..1]
+    ExternalNetworkInjection : +Float maxZ0ToZ1Ratio[1..1]
+    ExternalNetworkInjection : +Float minInitialSymShCCurrent[1..1]
+    ExternalNetworkInjection : +Float minP[1..1]
+    ExternalNetworkInjection : +Float minQ[1..1]
+    ExternalNetworkInjection : +Float minR0ToX0Ratio[1..1]
+    ExternalNetworkInjection : +Float minR1ToX1Ratio[1..1]
+    ExternalNetworkInjection : +Float minZ0ToZ1Ratio[1..1]
+    ExternalNetworkInjection : +Float p[1..1]
+    ExternalNetworkInjection : +Float q[1..1]
+    ExternalNetworkInjection : +Integer referencePriority[1..1]
+    ExternalNetworkInjection : +Float voltageFactor[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

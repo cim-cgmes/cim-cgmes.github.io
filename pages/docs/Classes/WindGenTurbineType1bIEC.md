@@ -5,8 +5,17 @@ Wind turbine IEC type 1B. Reference: IEC 61400-27-1:2015, 5.5.2.3.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     WindTurbineType1or2IEC <|-- WindGenTurbineType1bIEC
+    WindTurbineType1or2IEC : +WindMechIEC WindMechIEC[1]
+    WindTurbineType1or2IEC : +WindProtectionIEC WindProtectionIEC[1]
+    click WindTurbineType1or2IEC href "WindTurbineType1or2IEC"
+    WindGenTurbineType1bIEC : +WindPitchContPowerIEC WindPitchContPowerIEC[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

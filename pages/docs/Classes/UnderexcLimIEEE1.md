@@ -5,8 +5,31 @@ Type UEL1 model which has a circular limit boundary when plotted in terms of mac
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     UnderexcitationLimiterDynamics <|-- UnderexcLimIEEE1
+    UnderexcitationLimiterDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    UnderexcitationLimiterDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click UnderexcitationLimiterDynamics href "UnderexcitationLimiterDynamics"
+    UnderexcLimIEEE1 : +Float kuc[1..1]
+    UnderexcLimIEEE1 : +Float kuf[1..1]
+    UnderexcLimIEEE1 : +Float kui[1..1]
+    UnderexcLimIEEE1 : +Float kul[1..1]
+    UnderexcLimIEEE1 : +Float kur[1..1]
+    UnderexcLimIEEE1 : +Float tu1[1..1]
+    UnderexcLimIEEE1 : +Float tu2[1..1]
+    UnderexcLimIEEE1 : +Float tu3[1..1]
+    UnderexcLimIEEE1 : +Float tu4[1..1]
+    UnderexcLimIEEE1 : +Float vucmax[1..1]
+    UnderexcLimIEEE1 : +Float vuimax[1..1]
+    UnderexcLimIEEE1 : +Float vuimin[1..1]
+    UnderexcLimIEEE1 : +Float vulmax[1..1]
+    UnderexcLimIEEE1 : +Float vulmin[1..1]
+    UnderexcLimIEEE1 : +Float vurmax[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

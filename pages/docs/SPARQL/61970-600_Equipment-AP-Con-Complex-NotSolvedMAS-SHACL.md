@@ -12,6 +12,7 @@
 ### eq600n:ACLineSegment-BaseVoltageDiff
 
 **Path:** `rdf:type`  
+**Name:** C:600:EQ:ACLineSegment:BaseVoltageDiff  
 CGMES exchanges allow 10 % difference of the BaseVoltage.nominalVoltage at the two ends of an ACLineSegment representing a complete tie-line or connecting to a boundary node.
 
 **Severity:** sh:Violation
@@ -21,9 +22,9 @@ CGMES exchanges allow 10 % difference of the BaseVoltage.nominalVoltage at the t
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?tp1nv ?tp2nv
 			WHERE {
@@ -45,11 +46,15 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 **Severity:** sh:Violation
 
+**Targets:**
+- sparqlTarget: 
+
 **Nested Properties:**
 
 ### eq600n:BoundaryPoint-bppl1Bppl2
 
 **Path:** `rdf:type`  
+**Name:** C:600:EQ:BoundaryPoint:bppl1Bppl2  
 BPPL1 EquivalentInjection classes are used to represent the power flow exchanges through Boundary points. These classes are included in the individual model MAS (e.g. Model Authority MAS) and refer to the Boundary points (ConnectivityNode-s) in the Boundary set. The SvInjection class is not used for this purpose. BPPL2 In case the use cases require the exchange of multiple SSH, TP, SV, etc. instance files (distribution) which are dependent on an EQ instance file, this EQ shall always include an instance of EquivalentInjection per Boundary point. Therefore, in a multi MAS (among TSOs, DSOs or mixed) exchange a Boundary point shall always have two EquivalentInjections per Boundary point which are contained in different MAS connecting to the Boundary point. mRIDs of those EquivalentInjections are kept persistent.
 
 **Severity:** sh:Violation
@@ -59,9 +64,9 @@ BPPL1 EquivalentInjection classes are used to represent the power flow exchanges
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -85,6 +90,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq600n:BoundaryPoint-bppl3
 
 **Path:** `rdf:type`  
+**Name:** C:600:EQ:BoundaryPoint:bppl3  
 A ConnectivityNode and a TopologicalNode representing a Boundary point may connect various branches.
 
 **Severity:** sh:Info
@@ -94,9 +100,9 @@ A ConnectivityNode and a TopologicalNode representing a Boundary point may conne
 - **sh:SPARQLConstraintComponent** (Severity: sh:Info)
 
 ```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -175,6 +181,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq600n:EquivalentInjection.regulationCapability-notHVDC
 
 **Path:** `cim:EquivalentInjection.regulationCapability`  
+**Name:** C:600:EQ:EquivalentInjection.regulationCapability:notHvdc  
 If EquivalentInjection connects to a BoundaryPoint with flag isDirectCurrent=false (meaning this is not HVDC), the EquivalentInjection.regulationCapability in EQ shall be set to false and there shall not be a ReactiveCapabilityCurve associated.
 
 **Severity:** sh:Violation
@@ -184,9 +191,9 @@ If EquivalentInjection connects to a BoundaryPoint with flag isDirectCurrent=fal
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value
 			WHERE {

@@ -5,8 +5,20 @@ A hydro power station which can generate or pump. When generating, the generator
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemResource <|-- HydroPowerPlant
+    PowerSystemResource : +Control Controls[0..n]
+    PowerSystemResource : +Location Location[0..1]
+    PowerSystemResource : +Measurement Measurements[0..n]
+    click PowerSystemResource href "PowerSystemResource"
+    HydroPowerPlant : +HydroGeneratingUnit HydroGeneratingUnits[0..n]
+    HydroPowerPlant : +HydroPump HydroPumps[0..n]
+    HydroPowerPlant : +HydroPlantStorageKind hydroPlantStorageType[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,8 +5,50 @@ DC side of the voltage source converter (VSC).
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ACDCConverter <|-- VsConverter
+    ACDCConverter : +ACDCConverterDCTerminal DCTerminals[0..n]
+    ACDCConverter : +Terminal PccTerminal[0..1]
+    ACDCConverter : +Float baseS[0..1]
+    ACDCConverter : +Float idc[1..1]
+    ACDCConverter : +Float idleLoss[0..1]
+    ACDCConverter : +Float maxP[0..1]
+    ACDCConverter : +Float maxUdc[0..1]
+    ACDCConverter : +Float minP[0..1]
+    ACDCConverter : +Float minUdc[0..1]
+    ACDCConverter : +Integer numberOfValves[0..1]
+    ACDCConverter : +Float p[1..1]
+    ACDCConverter : +Float poleLossP[1..1]
+    ACDCConverter : +Float q[1..1]
+    ACDCConverter : +Float ratedUdc[0..1]
+    ACDCConverter : +Float resistiveLoss[0..1]
+    ACDCConverter : +Float switchingLoss[0..1]
+    ACDCConverter : +Float targetPpcc[0..1]
+    ACDCConverter : +Float targetUdc[0..1]
+    ACDCConverter : +Float uc[1..1]
+    ACDCConverter : +Float udc[1..1]
+    ACDCConverter : +Float valveU0[0..1]
+    click ACDCConverter href "ACDCConverter"
+    VsConverter : +VsCapabilityCurve CapabilityCurve[0..1]
+    VsConverter : +VSCDynamics VSCDynamics[0..1]
+    VsConverter : +Float delta[1..1]
+    VsConverter : +Float droop[0..1]
+    VsConverter : +Float droopCompensation[0..1]
+    VsConverter : +Float maxModulationIndex[0..1]
+    VsConverter : +VsPpccControlKind pPccControl[1..1]
+    VsConverter : +VsQpccControlKind qPccControl[1..1]
+    VsConverter : +Float qShare[0..1]
+    VsConverter : +Float targetPWMfactor[0..1]
+    VsConverter : +Float targetPhasePcc[0..1]
+    VsConverter : +Float targetPowerFactorPcc[0..1]
+    VsConverter : +Float targetQpcc[0..1]
+    VsConverter : +Float targetUpcc[0..1]
+    VsConverter : +Float uv[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

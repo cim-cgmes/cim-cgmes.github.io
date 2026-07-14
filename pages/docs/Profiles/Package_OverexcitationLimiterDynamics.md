@@ -3,11 +3,16 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    OverexcitationLimiterDynamics <|-- OverexcLimX2
+    OverexcitationLimiterDynamics <|-- OverexcLimX1
     OverexcitationLimiterDynamics <|-- OverexcLimIEEE
     OverexcitationLimiterDynamics <|-- OverexcLim2
-    OverexcitationLimiterDynamics <|-- OverexcLimX1
+    OverexcitationLimiterDynamics <|-- OverexcLimX2
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

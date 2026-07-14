@@ -5,8 +5,24 @@ P control model type 4A. Reference: IEC 61400-27-1:2015, 5.6.5.5.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- WindContPType4aIEC
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    WindContPType4aIEC : +WindTurbineType4aIEC WindTurbineType4aIEC[1]
+    WindContPType4aIEC : +Float dpmaxp4a[1..1]
+    WindContPType4aIEC : +Float tpordp4a[1..1]
+    WindContPType4aIEC : +Float tufiltp4a[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

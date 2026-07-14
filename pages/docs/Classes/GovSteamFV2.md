@@ -5,8 +5,29 @@ Steam turbine governor with reheat time constants and modelling of the effects o
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovSteamFV2
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovSteamFV2 : +Float dt[1..1]
+    GovSteamFV2 : +Float k[1..1]
+    GovSteamFV2 : +Float mwbase[1..1]
+    GovSteamFV2 : +Float r[1..1]
+    GovSteamFV2 : +Float t1[1..1]
+    GovSteamFV2 : +Float t3[1..1]
+    GovSteamFV2 : +Float ta[1..1]
+    GovSteamFV2 : +Float tb[1..1]
+    GovSteamFV2 : +Float tc[1..1]
+    GovSteamFV2 : +Float tt[1..1]
+    GovSteamFV2 : +Float vmax[1..1]
+    GovSteamFV2 : +Float vmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

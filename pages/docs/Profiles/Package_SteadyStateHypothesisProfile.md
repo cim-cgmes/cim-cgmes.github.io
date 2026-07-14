@@ -3,85 +3,90 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
+    RegulatingCondEq <|-- RotatingMachine
+    RotatingMachine --> GeneratingUnit : GeneratingUnit
+    ConductingEquipment <|-- EnergyConnection
+    EnergyConsumer <|-- NonConformLoad
+    PowerSystemResource <|-- ControlArea
+    PhaseTapChanger <|-- PhaseTapChangerLinear
+    TapChanger <|-- RatioTapChanger
+    Equipment <|-- GeneratingUnit
+    GeneratingUnit --> RotatingMachine : RotatingMachine
+    PowerSystemResource <|-- TapChanger
+    TapChanger --> TapChangerControl : TapChangerControl
+    ACDCTerminal <|-- DCBaseTerminal
+    IdentifiedObject <|-- ACDCTerminal
+    RotatingMachine <|-- AsynchronousMachine
+    Equipment <|-- ConductingEquipment
+    ConductingEquipment --> Terminal : Terminals
+    DCBaseTerminal <|-- DCTerminal
+    Switch <|-- Disconnector
+    ACDCConverter <|-- CsConverter
+    RotatingMachine <|-- SynchronousMachine
+    Equipment <|-- PowerElectronicsUnit
+    PowerElectronicsUnit --> PowerElectronicsConnection : PowerElectronicsConnection
+    Switch <|-- GroundDisconnector
+    PhaseTapChangerNonLinear <|-- PhaseTapChangerAsymmetrical
+    Breaker <|-- DisconnectingCircuitBreaker
     ACDCTerminal <|-- Terminal
     Terminal --> ConductingEquipment : ConductingEquipment
     Terminal --> ACDCConverter : ConverterDCSides
     Terminal --> RegulatingControl : RegulatingControl
-    Equipment <|-- PowerElectronicsUnit
-    PowerElectronicsUnit --> PowerElectronicsConnection : PowerElectronicsConnection
-    ACDCConverter <|-- VsConverter
-    EquivalentEquipment <|-- EquivalentInjection
-    OperationalLimit <|-- ActivePowerLimit
-    ProtectedSwitch <|-- Breaker
-    PhaseTapChanger <|-- PhaseTapChangerLinear
-    PowerSystemResource <|-- RegulatingControl
-    RegulatingControl --> RegulatingCondEq : RegulatingCondEq
-    RegulatingControl --> Terminal : Terminal
-    PhaseTapChanger <|-- PhaseTapChangerTabular
-    PowerSystemResource <|-- TapChanger
-    TapChanger --> TapChangerControl : TapChangerControl
-    OperationalLimit <|-- ApparentPowerLimit
-    GeneratingUnit <|-- ThermalGeneratingUnit
-    PhaseTapChangerNonLinear <|-- PhaseTapChangerSymmetrical
-    TapChanger <|-- PhaseTapChanger
-    RegulatingCondEq <|-- StaticVarCompensator
-    PowerSystemResource <|-- Equipment
-    DCBaseTerminal <|-- ACDCConverterDCTerminal
-    ACDCConverterDCTerminal --> ACDCConverter : DCConductingEquipment
-    RegulatingCondEq <|-- PowerElectronicsConnection
-    PowerElectronicsConnection --> PowerElectronicsUnit : PowerElectronicsUnit
-    DCBaseTerminal <|-- DCTerminal
-    RegulatingCondEq <|-- ShuntCompensator
     ProtectedSwitch <|-- LoadBreakSwitch
-    Switch <|-- Fuse
-    Switch <|-- Jumper
-    PhaseTapChanger <|-- PhaseTapChangerNonLinear
-    Equipment <|-- GeneratingUnit
-    GeneratingUnit --> RotatingMachine : RotatingMachine
-    Breaker <|-- DisconnectingCircuitBreaker
-    EnergyConnection <|-- RegulatingCondEq
-    RegulatingCondEq --> RegulatingControl : RegulatingControl
+    ACDCConverter <|-- VsConverter
     Switch <|-- ProtectedSwitch
-    IdentifiedObject <|-- PowerSystemResource
-    EnergyConnection <|-- EnergySource
-    PowerSystemResource <|-- ControlArea
-    ConductingEquipment <|-- EnergyConnection
-    GeneratingUnit <|-- NuclearGeneratingUnit
-    GeneratingUnit <|-- HydroGeneratingUnit
-    IdentifiedObject <|-- ACDCTerminal
+    GeneratingUnit <|-- SolarGeneratingUnit
+    ShuntCompensator <|-- NonlinearShuntCompensator
+    PhaseTapChanger <|-- PhaseTapChangerNonLinear
+    ConductingEquipment <|-- EquivalentEquipment
+    EquivalentEquipment <|-- EquivalentInjection
     ConductingEquipment <|-- ACDCConverter
     ACDCConverter --> ACDCConverterDCTerminal : DCTerminals
     ACDCConverter --> Terminal : PccTerminal
-    EnergyConsumer <|-- ConformLoad
     EnergyConsumer <|-- StationSupply
-    EnergyConnection <|-- EnergyConsumer
-    ConductingEquipment <|-- EquivalentEquipment
-    RotatingMachine <|-- AsynchronousMachine
-    TapChanger <|-- RatioTapChanger
-    ACDCConverter <|-- CsConverter
-    RotatingMachine <|-- SynchronousMachine
-    GeneratingUnit <|-- WindGeneratingUnit
-    ACDCTerminal <|-- DCBaseTerminal
-    EnergyConsumer <|-- NonConformLoad
+    IdentifiedObject <|-- PowerSystemResource
+    Switch <|-- Fuse
+    ShuntCompensator <|-- LinearShuntCompensator
+    OperationalLimit <|-- ApparentPowerLimit
+    PhaseTapChangerNonLinear <|-- PhaseTapChangerSymmetrical
+    PhaseTapChanger <|-- PhaseTapChangerTabular
+    DCBaseTerminal <|-- ACDCConverterDCTerminal
+    ACDCConverterDCTerminal --> ACDCConverter : DCConductingEquipment
+    PowerSystemResource <|-- Equipment
+    RegulatingCondEq <|-- ExternalNetworkInjection
+    GeneratingUnit <|-- NuclearGeneratingUnit
+    OperationalLimit <|-- ActivePowerLimit
+    GeneratingUnit <|-- ThermalGeneratingUnit
+    TapChanger <|-- PhaseTapChanger
+    PowerElectronicsUnit <|-- BatteryUnit
     RegulatingControl <|-- TapChangerControl
     TapChangerControl --> TapChanger : TapChanger
-    ShuntCompensator <|-- LinearShuntCompensator
-    RegulatingCondEq <|-- ExternalNetworkInjection
-    Switch <|-- Disconnector
-    GeneratingUnit <|-- SolarGeneratingUnit
-    RegulatingCondEq <|-- RotatingMachine
-    RotatingMachine --> GeneratingUnit : GeneratingUnit
-    IdentifiedObject <|-- OperationalLimit
-    ConductingEquipment <|-- Switch
-    ShuntCompensator <|-- NonlinearShuntCompensator
-    PowerElectronicsUnit <|-- BatteryUnit
-    PhaseTapChangerNonLinear <|-- PhaseTapChangerAsymmetrical
     OperationalLimit <|-- CurrentLimit
+    EnergyConnection <|-- EnergySource
+    RegulatingCondEq <|-- ShuntCompensator
+    EnergyConnection <|-- EnergyConsumer
+    IdentifiedObject <|-- OperationalLimit
+    Switch <|-- Jumper
+    RegulatingCondEq <|-- PowerElectronicsConnection
+    PowerElectronicsConnection --> PowerElectronicsUnit : PowerElectronicsUnit
+    PowerSystemResource <|-- RegulatingControl
+    RegulatingControl --> RegulatingCondEq : RegulatingCondEq
+    RegulatingControl --> Terminal : Terminal
+    ProtectedSwitch <|-- Breaker
     OperationalLimit <|-- VoltageLimit
-    Switch <|-- GroundDisconnector
-    Equipment <|-- ConductingEquipment
-    ConductingEquipment --> Terminal : Terminals
+    RegulatingCondEq <|-- StaticVarCompensator
+    GeneratingUnit <|-- HydroGeneratingUnit
+    EnergyConsumer <|-- ConformLoad
+    ConductingEquipment <|-- Switch
+    EnergyConnection <|-- RegulatingCondEq
+    RegulatingCondEq --> RegulatingControl : RegulatingControl
+    GeneratingUnit <|-- WindGeneratingUnit
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

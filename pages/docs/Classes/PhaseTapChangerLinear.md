@@ -5,8 +5,18 @@ Describes a tap changer with a linear relation between the tap step and the phas
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PhaseTapChanger <|-- PhaseTapChangerLinear
+    PhaseTapChanger : +TransformerEnd TransformerEnd[1]
+    click PhaseTapChanger href "PhaseTapChanger"
+    PhaseTapChangerLinear : +Float stepPhaseShiftIncrement[1..1]
+    PhaseTapChangerLinear : +Float xMax[1..1]
+    PhaseTapChangerLinear : +Float xMin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

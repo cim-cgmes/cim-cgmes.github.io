@@ -5,8 +5,27 @@ Single shaft gas turbine.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovGAST
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovGAST : +Float at[1..1]
+    GovGAST : +Float dturb[1..1]
+    GovGAST : +Float kt[1..1]
+    GovGAST : +Float mwbase[1..1]
+    GovGAST : +Float r[1..1]
+    GovGAST : +Float t1[1..1]
+    GovGAST : +Float t2[1..1]
+    GovGAST : +Float t3[1..1]
+    GovGAST : +Float vmax[1..1]
+    GovGAST : +Float vmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

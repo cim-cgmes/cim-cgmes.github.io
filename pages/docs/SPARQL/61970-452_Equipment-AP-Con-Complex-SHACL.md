@@ -20,12 +20,12 @@
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:WaveTrap
+- targetClass: cim:FaultIndicator
 - targetClass: cim:CurrentTransformer
 - targetClass: cim:PotentialTransformer
 - targetClass: cim:PostLineSensor
 - targetClass: cim:SurgeArrester
-- targetClass: cim:WaveTrap
-- targetClass: cim:FaultIndicator
 
 ## eq452c:Breaker
 
@@ -39,6 +39,7 @@
 ### eq452c:Switch-connection
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:Switch:connection  
 Switch and its subclasses shall only connect to ConnectivityNode-s that are contained in either the same VoltageLevel or in different VoltageLevel-s which have the same BaseVoltage.
 
 **Severity:** sh:Violation
@@ -109,30 +110,31 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:ACLineSegment
-- targetClass: cim:DCSeriesDevice
-- targetClass: cim:DCBreaker
-- targetClass: cim:EquivalentBranch
-- targetClass: cim:Breaker
-- targetClass: cim:Cut
+- targetClass: cim:LoadBreakSwitch
 - targetClass: cim:SeriesCompensator
-- targetClass: cim:DCLineSegment
 - targetClass: cim:DCSwitch
 - targetClass: cim:DCChopper
-- targetClass: cim:Disconnector
-- targetClass: cim:LoadBreakSwitch
-- targetClass: cim:DCDisconnector
-- targetClass: cim:Switch
 - targetClass: cim:Fuse
 - targetClass: cim:GroundDisconnector
 - targetClass: cim:Jumper
+- targetClass: cim:Breaker
+- targetClass: cim:Cut
+- targetClass: cim:ACLineSegment
+- targetClass: cim:DCBreaker
+- targetClass: cim:Disconnector
 - targetClass: cim:DisconnectingCircuitBreaker
+- targetClass: cim:EquivalentBranch
+- targetClass: cim:DCLineSegment
+- targetClass: cim:DCSeriesDevice
+- targetClass: cim:DCDisconnector
+- targetClass: cim:Switch
 
 **Nested Properties:**
 
 ### eq452c:Terminal-connection
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:Terminal:connection  
 Terminal-s of the two sides of a two-terminal ConductingEquipment (or any of its subclasses) shall not be connected to the same ConnectivityNode.
 
 **Severity:** sh:Violation
@@ -180,6 +182,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:CurveData-equationY2
 
 **Path:** `cim:CurveData.Curve`  
+**Name:** C:452:EQ:CurveData.Curve:equationY2  
 If CurveData.Curve is a ReactiveCapabilityCurve, each CurveData shall satisfy the following relation: CurveData.xvalue^2+CurveData.y2value^2 shall be less than or equal to RotatingMachine.ratedS^2.
 
 **Severity:** sh:Violation
@@ -211,6 +214,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:CurveData-equationY1
 
 **Path:** `cim:CurveData.Curve`  
+**Name:** C:452:EQ:CurveData.Curve:equationY1  
 If CurveData.Curve is a ReactiveCapabilityCurve, each CurveData shall satisfy the following relation: CurveData.xvalue^2+CurveData.y1value^2 shall be less than or equal to RotatingMachine.ratedS^2.
 
 **Severity:** sh:Violation
@@ -241,6 +245,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:CurveData-reactive
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:CurveData.Curve:reactive  
 If CurveData.Curve is a ReactiveCapabilityCurve, the CurveData.y2value shall be greater than or equal to CurveData.y1value.It is not allowed that all CurveData.y2value values are equal to CurveData.y1value values.
 
 **Severity:** sh:Violation
@@ -297,6 +302,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:Switch-connection
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:Switch:connection  
 Switch and its subclasses shall only connect to ConnectivityNode-s that are contained in either the same VoltageLevel or in different VoltageLevel-s which have the same BaseVoltage.
 
 **Severity:** sh:Violation
@@ -417,6 +423,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:Switch-connection
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:Switch:connection  
 Switch and its subclasses shall only connect to ConnectivityNode-s that are contained in either the same VoltageLevel or in different VoltageLevel-s which have the same BaseVoltage.
 
 **Severity:** sh:Violation
@@ -480,6 +487,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:Switch-connection
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:Switch:connection  
 Switch and its subclasses shall only connect to ConnectivityNode-s that are contained in either the same VoltageLevel or in different VoltageLevel-s which have the same BaseVoltage.
 
 **Severity:** sh:Violation
@@ -544,16 +552,16 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:NonConformLoad
-- targetClass: cim:StaticVarCompensator
-- targetClass: cim:AsynchronousMachine
-- targetClass: cim:EnergyConsumer
-- targetClass: cim:ConformLoad
+- targetClass: cim:EnergySource
 - targetClass: cim:LinearShuntCompensator
+- targetClass: cim:StaticVarCompensator
+- targetClass: cim:SynchronousMachine
+- targetClass: cim:EnergyConsumer
+- targetClass: cim:NonConformLoad
+- targetClass: cim:ConformLoad
 - targetClass: cim:NonlinearShuntCompensator
 - targetClass: cim:ExternalNetworkInjection
-- targetClass: cim:SynchronousMachine
-- targetClass: cim:EnergySource
+- targetClass: cim:AsynchronousMachine
 
 ## eq452c:EquivalentBranch
 
@@ -588,6 +596,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:Switch-connection
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:Switch:connection  
 Switch and its subclasses shall only connect to ConnectivityNode-s that are contained in either the same VoltageLevel or in different VoltageLevel-s which have the same BaseVoltage.
 
 **Severity:** sh:Violation
@@ -651,6 +660,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:GeneratingUnit.maxOperatingP-ratedS
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:GeneratingUnit:maxOperatingP:ratedS  
 GeneratingUnit.maxOperatingP shall be less than or equal to the sum of RotatingMachine.ratedS for RotatingMachine-s associated to the GeneratingUnit.
 
 **Severity:** sh:Violation
@@ -691,12 +701,12 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:NuclearGeneratingUnit
 - targetClass: cim:ThermalGeneratingUnit
 - targetClass: cim:HydroGeneratingUnit
 - targetClass: cim:WindGeneratingUnit
 - targetClass: cim:GeneratingUnit
 - targetClass: cim:SolarGeneratingUnit
+- targetClass: cim:NuclearGeneratingUnit
 
 ## eq452c:GeneratingUnit.aggregate
 
@@ -712,50 +722,10 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 
 **Nested Properties:**
 
-### eq452c:SynchronousMachine-aggregate
-
-**Path:** `cim:Equipment.aggregate`  
-If only one SynchronousMachine is associated with the GeneratingUnit then the Equipment.aggregate flag shall be consistent between the SynchronousMachine and GeneratingUnit if it exists in both.
-
-**Severity:** sh:Violation
-
-**Constraints:**
-
-- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
-
-```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-
-	    SELECT $this ?sms ?value 
-      WHERE {
-        {
-        SELECT $this (COUNT(?typesm) AS ?sms) 
-        WHERE {
-        #BIND(EXISTS{$this ^cim:RotatingMachine.GeneratingUnit/rdf:type cim:SynchronousMachine} AS ?hasam).
-        $this ^cim:RotatingMachine.GeneratingUnit/rdf:type ?typesm.
-        #OPTIONAL {?sm cim:RotatingMachine.GeneratingUnit $this }.
-        #OPTIONAL {?sm rdf:type ?typesm }.
-        FILTER(?typesm=cim:SynchronousMachine ).
-        }
-        GROUP BY $this ?typesm 
-        }
-        $this $PATH ?value.
-        #OPTIONAL {$this $PATH ?value }.
-        #OPTIONAL {?sm cim:RotatingMachine.GeneratingUnit $this }.
-        #OPTIONAL {?sm cim:Equipment.aggregate ?smaggregate }.
-        $this ^cim:RotatingMachine.GeneratingUnit/cim:Equipment.aggregate ?smaggregate .
-        #BIND(EXISTS{$this ^cim:RotatingMachine.GeneratingUnit/cim:Equipment.aggregate ?smaggregatea} AS ?hasaggr).
-        #FILTER (?sms=1 && bound(?value) && ?hasaggr=true && ?value!=?smaggregate ) .
-        FILTER (?sms=1 && ?value!=?smaggregate ) .
-        } 
-```
-  - Messages: `["The value is not consistent with .aggregate for the associated GeneratingUnit."]`
-
 ### eq452c:AsynchronousMachine-aggregate
 
 **Path:** `cim:Equipment.aggregate`  
+**Name:** C:452:EQ:AsynchronousMachine:aggregate  
 If one AsynchronousMachine is associated with one GeneratingUnit the flag Equipment.aggregate shall be consistent in case it is provided at both AsynchronousMachine and GeneratingUnit.
 
 **Severity:** sh:Violation
@@ -795,6 +765,48 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ```
   - Messages: `["The value is not consistent with .aggregate for the associated GeneratingUnit."]`
 
+### eq452c:SynchronousMachine-aggregate
+
+**Path:** `cim:Equipment.aggregate`  
+**Name:** C:452:EQ:SynchronousMachine:aggregate  
+If only one SynchronousMachine is associated with the GeneratingUnit then the Equipment.aggregate flag shall be consistent between the SynchronousMachine and GeneratingUnit if it exists in both.
+
+**Severity:** sh:Violation
+
+**Constraints:**
+
+- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
+
+```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+	    SELECT $this ?sms ?value 
+      WHERE {
+        {
+        SELECT $this (COUNT(?typesm) AS ?sms) 
+        WHERE {
+        #BIND(EXISTS{$this ^cim:RotatingMachine.GeneratingUnit/rdf:type cim:SynchronousMachine} AS ?hasam).
+        $this ^cim:RotatingMachine.GeneratingUnit/rdf:type ?typesm.
+        #OPTIONAL {?sm cim:RotatingMachine.GeneratingUnit $this }.
+        #OPTIONAL {?sm rdf:type ?typesm }.
+        FILTER(?typesm=cim:SynchronousMachine ).
+        }
+        GROUP BY $this ?typesm 
+        }
+        $this $PATH ?value.
+        #OPTIONAL {$this $PATH ?value }.
+        #OPTIONAL {?sm cim:RotatingMachine.GeneratingUnit $this }.
+        #OPTIONAL {?sm cim:Equipment.aggregate ?smaggregate }.
+        $this ^cim:RotatingMachine.GeneratingUnit/cim:Equipment.aggregate ?smaggregate .
+        #BIND(EXISTS{$this ^cim:RotatingMachine.GeneratingUnit/cim:Equipment.aggregate ?smaggregatea} AS ?hasaggr).
+        #FILTER (?sms=1 && bound(?value) && ?hasaggr=true && ?value!=?smaggregate ) .
+        FILTER (?sms=1 && ?value!=?smaggregate ) .
+        } 
+```
+  - Messages: `["The value is not consistent with .aggregate for the associated GeneratingUnit."]`
+
 ## eq452c:Ground
 
 **Severity:** sh:Violation
@@ -814,6 +826,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:Switch-connection
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:Switch:connection  
 Switch and its subclasses shall only connect to ConnectivityNode-s that are contained in either the same VoltageLevel or in different VoltageLevel-s which have the same BaseVoltage.
 
 **Severity:** sh:Violation
@@ -877,6 +890,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:GeneratingUnit.maxOperatingP-ratedS
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:GeneratingUnit:maxOperatingP:ratedS  
 GeneratingUnit.maxOperatingP shall be less than or equal to the sum of RotatingMachine.ratedS for RotatingMachine-s associated to the GeneratingUnit.
 
 **Severity:** sh:Violation
@@ -915,6 +929,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:HydroGeneratingUnit.energyConversionCapability-typeConsistency
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:HydroGeneratingUnit.energyConversionCapability:typeConsistency  
 If HydroGeneratingUnit.energyConversionCapability is generator the associated SynchronousMachine shall have SynchronousMachine.type set to generator or generatorOrCondenser. If HydroGeneratingUnit.energyConversionCapability is pumpAndGenerator the associated SynchronousMachine shall have SynchronousMachine.type set to motor, generatorOrMotor or generatorOrCondenserOrMotor.
 
 **Severity:** sh:Violation
@@ -958,6 +973,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:Switch-connection
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:Switch:connection  
 Switch and its subclasses shall only connect to ConnectivityNode-s that are contained in either the same VoltageLevel or in different VoltageLevel-s which have the same BaseVoltage.
 
 **Severity:** sh:Violation
@@ -1028,6 +1044,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:ShuntCompensator-controlMode
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:ShuntCompensator:controlMode  
 For ShuntCompensator, the association RegulatingCondEq.RequlatingControl shall only point to a RequlatingControl that has the following control modes for RegulatingControl.mode: voltage, reactivePower and powerFactor.
 
 **Severity:** sh:Violation
@@ -1063,6 +1080,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:Switch-connection
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:Switch:connection  
 Switch and its subclasses shall only connect to ConnectivityNode-s that are contained in either the same VoltageLevel or in different VoltageLevel-s which have the same BaseVoltage.
 
 **Severity:** sh:Violation
@@ -1126,6 +1144,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:ShuntCompensator-controlMode
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:ShuntCompensator:controlMode  
 For ShuntCompensator, the association RegulatingCondEq.RequlatingControl shall only point to a RequlatingControl that has the following control modes for RegulatingControl.mode: voltage, reactivePower and powerFactor.
 
 **Severity:** sh:Violation
@@ -1168,6 +1187,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:GeneratingUnit.maxOperatingP-ratedS
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:GeneratingUnit:maxOperatingP:ratedS  
 GeneratingUnit.maxOperatingP shall be less than or equal to the sum of RotatingMachine.ratedS for RotatingMachine-s associated to the GeneratingUnit.
 
 **Severity:** sh:Violation
@@ -1215,6 +1235,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:OperationalLimitSet-limits
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:OperationalLimitSet:limits  
 In case the OperationalLimitSet is the operational limit of the AuxiliaryEquipment, then the association end OperationalLimitSet.Equipment is also required. In the case where OperationalLimitSet.Equipment is associated with an instance of ConductingEquipment, OperationalLimitSet.Terminal shall be one of the ConductingEquipment’s Terminal-s.
 
 **Severity:** sh:Violation
@@ -1256,6 +1277,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:PhaseTapChanger-controlModeP
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:PhaseTapChanger:controlModeP  
 The association TapChanger.TapChangerControl for PhaseTapChanger-s shall only point to a TapChangerControl that has the following control modes for RegulatingControl.mode: activePower or voltage.
 
 **Severity:** sh:Violation
@@ -1291,6 +1313,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:PhaseTapChanger-controlModeP
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:PhaseTapChanger:controlModeP  
 The association TapChanger.TapChangerControl for PhaseTapChanger-s shall only point to a TapChangerControl that has the following control modes for RegulatingControl.mode: activePower or voltage.
 
 **Severity:** sh:Violation
@@ -1326,6 +1349,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:PhaseTapChanger-controlModeP
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:PhaseTapChanger:controlModeP  
 The association TapChanger.TapChangerControl for PhaseTapChanger-s shall only point to a TapChangerControl that has the following control modes for RegulatingControl.mode: activePower or voltage.
 
 **Severity:** sh:Violation
@@ -1361,6 +1385,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:PhaseTapChanger-controlModeP
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:PhaseTapChanger:controlModeP  
 The association TapChanger.TapChangerControl for PhaseTapChanger-s shall only point to a TapChangerControl that has the following control modes for RegulatingControl.mode: activePower or voltage.
 
 **Severity:** sh:Violation
@@ -1396,6 +1421,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:PowerTransformerEnd.x-value
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:PowerTransformerEnd.x:value  
 Transformers with zero series reactance do not exist. PowerTransformerEnd.x of high voltage end in case of a two winding transformer shall be a positive value. In case of a three winding transformer the PowerTransformerEnd.x shall not be zero.
 
 **Severity:** sh:Violation
@@ -1463,6 +1489,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:RatioTapChanger-controlMode
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:RatioTapChanger:controlMode  
 The association TapChanger.TapChangerControl for RatioTapChanger-s shall only point to a TapChangerControl the has the following control modes for RegulatingControl.mode: voltage, reactivePower and powerFactor.
 
 **Severity:** sh:Violation
@@ -1498,6 +1525,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:ReactiveCapabilityCurve-reactiveCountP
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:CurveData.Curve:reactiveCountP  
 For a SynchronousMachine with a ReactiveCapabilityCurve the number of CurveData instances depends on the attribute SynchronousMachine.type as follows: - condenser, ReactiveCapabilityCurve is given by SynchronousMachine.maxQ and SynchronousMachine.minQ. There shall not be any association to ReactiveCapabilityCurve. - generator or generatorOrCondenser, at least two CurveData instances with CurveData.xvalue greater than or equal to 0. - motor or motorOrCondenser, at least two CurveData instances with CurveData.xvalue less than or equal to 0. - generatorOrMotor or generatorOrCondenserOrMotor, at least three CurveData instances with at least one having CurveData.xvalue greater than or equal to 0 and one having CurveData.xvalue less than or equal to 0. In general, it is required that the points defined by the ReactiveCapabilityCurve form an area of reactive capability different than 0.   
 
 **Severity:** sh:Violation
@@ -1555,6 +1583,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:ReactiveCapabilityCurve-xvalue
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:ReactiveCapabiltyCurve.CurveData:xvalue  
 All CurveData.xvalue for a given ReactiveCapabilityCurve shall be unique, e.g. it is not allowed for two or more .xvalue to have the same float value for a given ReactiveCapabilityCurve.
 
 **Severity:** sh:Violation
@@ -1619,6 +1648,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:GeneratingUnit.maxOperatingP-ratedS
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:GeneratingUnit:maxOperatingP:ratedS  
 GeneratingUnit.maxOperatingP shall be less than or equal to the sum of RotatingMachine.ratedS for RotatingMachine-s associated to the GeneratingUnit.
 
 **Severity:** sh:Violation
@@ -1666,6 +1696,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:StaticVarCompensator-controlMode
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:StaticVarCompensator:controlMode  
 For StaticVarCompensator, the association RegulatingCondEq.RequlatingControl is required and shall only point to a RequlatingControl that has the following control modes for RegulatingControl.mode: voltage and reactivePower.
 
 **Severity:** sh:Violation
@@ -1705,6 +1736,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:Switch-connection
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:Switch:connection  
 Switch and its subclasses shall only connect to ConnectivityNode-s that are contained in either the same VoltageLevel or in different VoltageLevel-s which have the same BaseVoltage.
 
 **Severity:** sh:Violation
@@ -1768,6 +1800,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:GeneratingUnit-typeDependency
 
 **Path:** `cim:SynchronousMachine.type`  
+**Name:** C:452:EQ:GeneratingUnit:typeDependency  
 GeneratingUnit.maxOperatingP and GeneratingUnit.minOperatingP shall depend on the SynchronousMachine.type of the associated SynchronousMachine as follows:- condenser: GeneratingUnit.minOperatingP and GeneratingUnit.maxOperatingP shall equal zero.- generator or generatorOrCondenser: GeneratingUnit.minOperatingP shall be greater than or equal to zero and GeneratingUnit.maxOperatingP shall be greater than zero.- motor or motorOrCondenser: GeneratingUnit.minOperatingP shall be a negative value and GeneratingUnit.maxOperatingP shall be a negative value or zero.- generatorOrMotor or generatorOrCondenserOrMotor: GeneratingUnit.minOperatingP shall be a negative value and GeneratingUnit.maxOperatingP shall be greater than zero.
 
 **Severity:** sh:Violation
@@ -1811,6 +1844,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:SynchronousMachine.type-condenser
 
 **Path:** `cim:SynchronousMachine.type`  
+**Name:** C:452:EQ:SynchronousMachine.type:condenser  
 The SynchronousMachine is not required to be associated with a GeneratingUnit via the association RotatingMachine.GeneratingUnit in cases where a synchronous condenser is being modelled as there is no capability for real power output. In this case, the SynchronousMachine.type shall be set to condenser. The following SynchronousMachine.type-s: motorOrCondenser, generatorOrCondenser, and generatorOrCondenserOrMotor are not allowed to use.
 
 **Severity:** sh:Info
@@ -1836,35 +1870,10 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ```
   - Messages: `["SynchronousMachine of type condenser with associated GeneratingUnit."]`
 
-### eq452c:SynchronousMachine-controlMode
-
-**Path:** `rdf:type`  
-For SynchronousMachine, the association RegulatingCondEq.RequlatingControl shall only point to a RequlatingControl that has the following control modes for RegulatingControl.mode: voltage, reactivePower and powerFactor.
-
-**Severity:** sh:Violation
-
-**Constraints:**
-
-- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
-
-```sparql
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-
-	      SELECT $this ?value 
-        WHERE {
-        #?rcontrol ^cim:RegulatingCondEq.RegulatingControl $this  .
-        #?rcontrol cim:RegulatingControl.mode ?value  .
-        $this cim:RegulatingCondEq.RegulatingControl/cim:RegulatingControl.mode ?value  .
-        FILTER (?value!=cim:RegulatingControlModeKind.reactivePower && ?value!=cim:RegulatingControlModeKind.voltage && ?value!=cim:RegulatingControlModeKind.powerFactor).
-        }
-```
-  - Messages: `["Unallowed regulating control mode for a SynchronousMachine."]`
-
 ### eq452c:SynchronousMachine-reactiveLimits
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:SynchronousMachine:reactiveLimits  
 ReactiveCapabilityCurve-s are not required if the reactive power limits of the SynchronousMachine do not vary with real power output. SynchronousMachine.minQ and SynchronousMachine.maxQ are required if SynchronousMachine.InitialReactiveCapabilityCurve is missing. If the association SynchronousMachine.InitialReactiveCapabilityCurve is provided it takes precedence to the information provided by the attributes SynchronousMachine.minQ and SynchronousMachine.maxQ. However, if both SynchronousMachine.minQ, SynchronousMachine.maxQ and ReactiveCapabilityCurve are present, the SynchronousMachine.minQ shall be equal to min of CurveData.y1value-s and SynchronousMachine.maxQ shall be equal to max CurveData.y2value-s.
 
 **Severity:** sh:Violation
@@ -1909,6 +1918,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:CurveData.xvalue-value
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:CurveData.xvalue:value  
 The GeneratingUnit.minOperatingP shall be equal of the minimum of the CurveData.xvalue among all points defined for a ReactveCapabilityCurve. The GeneratingUnit.maxOperatingP shall be equal of the maximum of the CurveData.xvalue among all points defined for a ReactveCapabilityCurve.
 
 **Severity:** sh:Violation
@@ -1952,6 +1962,33 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ```
   - Messages: `["The CurveData.xvalue for ReactveCapabilityCurve are not consistent with GeneratingUnit.minOperatingP and GeneratingUnit.maxOperatingP."]`
 
+### eq452c:SynchronousMachine-controlMode
+
+**Path:** `rdf:type`  
+**Name:** C:452:EQ:SynchronousMachine:controlMode  
+For SynchronousMachine, the association RegulatingCondEq.RequlatingControl shall only point to a RequlatingControl that has the following control modes for RegulatingControl.mode: voltage, reactivePower and powerFactor.
+
+**Severity:** sh:Violation
+
+**Constraints:**
+
+- **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
+
+```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+	      SELECT $this ?value 
+        WHERE {
+        #?rcontrol ^cim:RegulatingCondEq.RegulatingControl $this  .
+        #?rcontrol cim:RegulatingControl.mode ?value  .
+        $this cim:RegulatingCondEq.RegulatingControl/cim:RegulatingControl.mode ?value  .
+        FILTER (?value!=cim:RegulatingControlModeKind.reactivePower && ?value!=cim:RegulatingControlModeKind.voltage && ?value!=cim:RegulatingControlModeKind.powerFactor).
+        }
+```
+  - Messages: `["Unallowed regulating control mode for a SynchronousMachine."]`
+
 ## eq452c:TapChangerControl
 
 **Severity:** sh:Violation
@@ -1964,6 +2001,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:TapChangerControl-remoteQcontrol
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:TapChangerControl:remoteQcontrol  
 A power transformer cannot efficiently control reactive power flow on remote terminals. Therefore, a TapChangerControl controlling reactive power flow shall only control the flow at one of the Terminal-s associated with PowerTransformerEnd-s of the PowerTransformer where the TapChanger is located. Control of a remote Terminal not associated with the PowerTransformer that has the TapChanger is not allowed. This constraint defines that multiple TapChanger-s cannot be controlled by the same TapChangerControl.
 
 **Severity:** sh:Violation
@@ -2001,6 +2039,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:GeneratingUnit.maxOperatingP-ratedS
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:GeneratingUnit:maxOperatingP:ratedS  
 GeneratingUnit.maxOperatingP shall be less than or equal to the sum of RotatingMachine.ratedS for RotatingMachine-s associated to the GeneratingUnit.
 
 **Severity:** sh:Violation
@@ -2048,6 +2087,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:VsCapabilityCurve-VsCapabilityCurveCount
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:CurveData.Curve:VsCapabilityCurveCount  
 If CurveData.Curve is a VsCapabilityCurve at least two CurveData shall be associated.
 
 **Severity:** sh:Violation
@@ -2075,6 +2115,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:VsCapabilityCurve-yvalues
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:CurveData.Curve:VsCapabilityCurve  
 If CurveData.Curve is a VsCapabilityCurve, the CurveData.y2value shall be greater than CurveData.y1value.
 
 **Severity:** sh:Violation
@@ -2110,6 +2151,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### eq452c:GeneratingUnit.maxOperatingP-ratedS
 
 **Path:** `rdf:type`  
+**Name:** C:452:EQ:GeneratingUnit:maxOperatingP:ratedS  
 GeneratingUnit.maxOperatingP shall be less than or equal to the sum of RotatingMachine.ratedS for RotatingMachine-s associated to the GeneratingUnit.
 
 **Severity:** sh:Violation

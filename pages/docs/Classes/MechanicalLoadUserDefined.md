@@ -5,8 +5,18 @@ Mechanical load function block whose dynamic behaviour is described by a user-de
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     MechanicalLoadDynamics <|-- MechanicalLoadUserDefined
+    MechanicalLoadDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    MechanicalLoadDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    click MechanicalLoadDynamics href "MechanicalLoadDynamics"
+    MechanicalLoadUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    MechanicalLoadUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

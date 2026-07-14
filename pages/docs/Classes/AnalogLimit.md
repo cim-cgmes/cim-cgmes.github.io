@@ -5,8 +5,16 @@ Limit values for Analog measurements.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     Limit <|-- AnalogLimit
+    click Limit href "Limit"
+    AnalogLimit : +AnalogLimitSet LimitSet[1]
+    AnalogLimit : +Float value[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

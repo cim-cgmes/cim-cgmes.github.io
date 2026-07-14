@@ -12,6 +12,7 @@
 ### sc600-2:SeriesCompensator.varistorRatedCurrent-required
 
 **Path:** `cim:SeriesCompensator.varistorRatedCurrent`  
+**Name:** C:600:SC:SeriesCompensator.varistorRatedCurrent:required  
 The SeriesCompensator.varistorRatedCurrent is requited if SeriesCompensator.varistorPresent is true.
 
 **Severity:** sh:Violation
@@ -21,9 +22,9 @@ The SeriesCompensator.varistorRatedCurrent is requited if SeriesCompensator.vari
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value
 			WHERE {
@@ -37,6 +38,7 @@ PREFIX cim: <http://iec.ch/TC57/CIM100#>
 ### sc600-2:SeriesCompensator.varistorVoltageThreshold-required
 
 **Path:** `cim:SeriesCompensator.varistorVoltageThreshold`  
+**Name:** C:600:SC:SeriesCompensator.varistorVoltageThreshold:required  
 The SeriesCompensator.varistorVoltageThreshold is requited if SeriesCompensator.varistorPresent is true.
 
 **Severity:** sh:Violation
@@ -46,9 +48,9 @@ The SeriesCompensator.varistorVoltageThreshold is requited if SeriesCompensator.
 - **sh:SPARQLConstraintComponent** (Severity: sh:Violation)
 
 ```sparql
+PREFIX cim: <http://iec.ch/TC57/CIM100#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
-PREFIX cim: <http://iec.ch/TC57/CIM100#>
 
 			SELECT  $this ?value
 			WHERE {

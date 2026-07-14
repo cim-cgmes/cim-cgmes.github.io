@@ -5,10 +5,44 @@ An electrical connection point (AC or DC) to a piece of conducting equipment. Te
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- ACDCTerminal
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
     ACDCTerminal <|-- DCBaseTerminal
+    DCBaseTerminal : +DCNode DCNode[0..1]
+    DCBaseTerminal : +DCTopologicalNode DCTopologicalNode[1]
+    click DCBaseTerminal href "DCBaseTerminal"
     ACDCTerminal <|-- Terminal
+    Terminal : +AuxiliaryEquipment AuxiliaryEquipment[0..n]
+    Terminal : +ConductingEquipment ConductingEquipment[1]
+    Terminal : +ConnectivityNode ConnectivityNode[0..1]
+    Terminal : +ACDCConverter ConverterDCSides[0..n]
+    Terminal : +MutualCoupling HasFirstMutualCoupling[0..n]
+    Terminal : +MutualCoupling HasSecondMutualCoupling[0..n]
+    Terminal : +RegulatingControl RegulatingControl[0..n]
+    Terminal : +RemoteInputSignal RemoteInputSignal[0..n]
+    Terminal : +SvPowerFlow SvPowerFlow[0..1]
+    Terminal : +TieFlow TieFlow[0..2]
+    Terminal : +TopologicalNode TopologicalNode[0..1]
+    Terminal : +TransformerEnd TransformerEnd[0..n]
+    Terminal : +PhaseCode phases[0..1]
+    click Terminal href "Terminal"
+    ACDCTerminal : +BusNameMarker BusNameMarker[0..1]
+    ACDCTerminal : +Measurement Measurements[0..n]
+    ACDCTerminal : +OperationalLimitSet OperationalLimitSet[0..n]
+    ACDCTerminal : +Boolean connected[1..1]
+    ACDCTerminal : +Integer sequenceNumber[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

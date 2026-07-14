@@ -12,6 +12,7 @@
 ### tp301ia:TopologicalNode.Terminal-cardinality
 
 **Path:** `^cim:Terminal.TopologicalNode`  
+**Name:** TopologicalNode.Terminal-cardinality  
 This constraint validates the cardinality of the association at the inverse direction.
 
 **Severity:** sh:Violation

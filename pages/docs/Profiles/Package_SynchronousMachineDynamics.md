@@ -3,11 +3,16 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     SynchronousMachineDynamics <|-- SynchronousMachineDetailed
     SynchronousMachineDetailed <|-- SynchronousMachineTimeConstantReactance
-    SynchronousMachineDynamics <|-- SynchronousMachineSimplified
     SynchronousMachineDetailed <|-- SynchronousMachineEquivalentCircuit
+    SynchronousMachineDynamics <|-- SynchronousMachineSimplified
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

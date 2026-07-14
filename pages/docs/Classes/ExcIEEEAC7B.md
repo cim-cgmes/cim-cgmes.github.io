@@ -5,8 +5,48 @@ IEEE 421.5-2005 type AC7B model. The model represents excitation systems which c
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEAC7B
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEAC7B : +Float kc[1..1]
+    ExcIEEEAC7B : +Float kd[1..1]
+    ExcIEEEAC7B : +Float kdr[1..1]
+    ExcIEEEAC7B : +Float ke[1..1]
+    ExcIEEEAC7B : +Float kf1[1..1]
+    ExcIEEEAC7B : +Float kf2[1..1]
+    ExcIEEEAC7B : +Float kf3[1..1]
+    ExcIEEEAC7B : +Float kia[1..1]
+    ExcIEEEAC7B : +Float kir[1..1]
+    ExcIEEEAC7B : +Float kl[1..1]
+    ExcIEEEAC7B : +Float kp[1..1]
+    ExcIEEEAC7B : +Float kpa[1..1]
+    ExcIEEEAC7B : +Float kpr[1..1]
+    ExcIEEEAC7B : +Float seve1[1..1]
+    ExcIEEEAC7B : +Float seve2[1..1]
+    ExcIEEEAC7B : +Float tdr[1..1]
+    ExcIEEEAC7B : +Float te[1..1]
+    ExcIEEEAC7B : +Float tf[1..1]
+    ExcIEEEAC7B : +Float vamax[1..1]
+    ExcIEEEAC7B : +Float vamin[1..1]
+    ExcIEEEAC7B : +Float ve1[1..1]
+    ExcIEEEAC7B : +Float ve2[1..1]
+    ExcIEEEAC7B : +Float vemin[1..1]
+    ExcIEEEAC7B : +Float vfemax[1..1]
+    ExcIEEEAC7B : +Float vrmax[1..1]
+    ExcIEEEAC7B : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

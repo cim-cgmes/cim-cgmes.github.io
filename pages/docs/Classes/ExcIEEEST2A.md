@@ -5,8 +5,35 @@ IEEE 421.5-2005 type ST2A model. Some static systems use both current and voltag
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEST2A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEST2A : +Float efdmax[1..1]
+    ExcIEEEST2A : +Float ka[1..1]
+    ExcIEEEST2A : +Float kc[1..1]
+    ExcIEEEST2A : +Float ke[1..1]
+    ExcIEEEST2A : +Float kf[1..1]
+    ExcIEEEST2A : +Float ki[1..1]
+    ExcIEEEST2A : +Float kp[1..1]
+    ExcIEEEST2A : +Float ta[1..1]
+    ExcIEEEST2A : +Float te[1..1]
+    ExcIEEEST2A : +Float tf[1..1]
+    ExcIEEEST2A : +Boolean uelin[1..1]
+    ExcIEEEST2A : +Float vrmax[1..1]
+    ExcIEEEST2A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

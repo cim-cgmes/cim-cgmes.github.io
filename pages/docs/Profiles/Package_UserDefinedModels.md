@@ -3,8 +3,14 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    TurbineGovernorUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    PFVArControllerType2UserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    AsynchronousMachineUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
     ProprietaryParameterDynamics --> AsynchronousMachineUserDefined : AsynchronousMachineUserDefined
     ProprietaryParameterDynamics --> CSCUserDefined : CSCUserDefined
     ProprietaryParameterDynamics --> DiscontinuousExcitationControlUserDefined : DiscontinuousExcitationControlUserDefined
@@ -26,26 +32,25 @@ classDiagram
     ProprietaryParameterDynamics --> WindPlantUserDefined : WindPlantUserDefined
     ProprietaryParameterDynamics --> WindType1or2UserDefined : WindType1or2UserDefined
     ProprietaryParameterDynamics --> WindType3or4UserDefined : WindType3or4UserDefined
-    TurbineLoadControllerUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    AsynchronousMachineUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    UnderexcitationLimiterUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    OverexcitationLimiterUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    PFVArControllerType1UserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    VoltageCompensatorUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    PFVArControllerType2UserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    CSCUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    ExcitationSystemUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    WindType1or2UserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    VoltageAdjusterUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    WindPlantUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    LoadUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    WindType3or4UserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    PowerSystemStabilizerUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
-    SVCUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
     MechanicalLoadUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    WindPlantUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    CSCUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    UnderexcitationLimiterUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    VoltageAdjusterUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    OverexcitationLimiterUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    TurbineGovernorUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    SVCUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    VoltageCompensatorUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    PowerSystemStabilizerUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    WindType3or4UserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
     VSCUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
     DiscontinuousExcitationControlUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    WindType1or2UserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    LoadUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    TurbineLoadControllerUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
     SynchronousMachineUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    PFVArControllerType1UserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
+    ExcitationSystemUserDefined --> ProprietaryParameterDynamics : ProprietaryParameterDynamics
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

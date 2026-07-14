@@ -5,8 +5,33 @@ IEEE 421.5-2005 type PSS3B power system stabilizer model. The PSS model PSS3B ha
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssIEEE3B
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssIEEE3B : +Float a1[1..1]
+    PssIEEE3B : +Float a2[1..1]
+    PssIEEE3B : +Float a3[1..1]
+    PssIEEE3B : +Float a4[1..1]
+    PssIEEE3B : +Float a5[1..1]
+    PssIEEE3B : +Float a6[1..1]
+    PssIEEE3B : +Float a7[1..1]
+    PssIEEE3B : +Float a8[1..1]
+    PssIEEE3B : +Float ks1[1..1]
+    PssIEEE3B : +Float ks2[1..1]
+    PssIEEE3B : +Float t1[1..1]
+    PssIEEE3B : +Float t2[1..1]
+    PssIEEE3B : +Float tw1[1..1]
+    PssIEEE3B : +Float tw2[1..1]
+    PssIEEE3B : +Float tw3[1..1]
+    PssIEEE3B : +Float vstmax[1..1]
+    PssIEEE3B : +Float vstmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

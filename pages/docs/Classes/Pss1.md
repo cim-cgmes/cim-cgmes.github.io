@@ -5,8 +5,31 @@ Italian PSS with three inputs (speed, frequency, power).
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- Pss1
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    Pss1 : +Float kf[1..1]
+    Pss1 : +Float komega[1..1]
+    Pss1 : +Float kpe[1..1]
+    Pss1 : +Float ks[1..1]
+    Pss1 : +Float pmin[1..1]
+    Pss1 : +Float t10[1..1]
+    Pss1 : +Float t5[1..1]
+    Pss1 : +Float t6[1..1]
+    Pss1 : +Float t7[1..1]
+    Pss1 : +Float t8[1..1]
+    Pss1 : +Float t9[1..1]
+    Pss1 : +Float tpe[1..1]
+    Pss1 : +Boolean vadat[1..1]
+    Pss1 : +Float vsmn[1..1]
+    Pss1 : +Float vsmx[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

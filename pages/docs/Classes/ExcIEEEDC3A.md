@@ -5,8 +5,33 @@ IEEE 421.5-2005 type DC3A model. This model represents older systems, in particu
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcIEEEDC3A
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcIEEEDC3A : +Float efd1[1..1]
+    ExcIEEEDC3A : +Float efd2[1..1]
+    ExcIEEEDC3A : +Boolean exclim[1..1]
+    ExcIEEEDC3A : +Float ke[1..1]
+    ExcIEEEDC3A : +Float kv[1..1]
+    ExcIEEEDC3A : +Float seefd1[1..1]
+    ExcIEEEDC3A : +Float seefd2[1..1]
+    ExcIEEEDC3A : +Float te[1..1]
+    ExcIEEEDC3A : +Float trh[1..1]
+    ExcIEEEDC3A : +Float vrmax[1..1]
+    ExcIEEEDC3A : +Float vrmin[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

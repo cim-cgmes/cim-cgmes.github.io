@@ -5,8 +5,44 @@ Detailed hydro unit - Francis model. This model can be used to represent three t
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydroFrancis
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydroFrancis : +Float am[1..1]
+    GovHydroFrancis : +Float av0[1..1]
+    GovHydroFrancis : +Float av1[1..1]
+    GovHydroFrancis : +Float bp[1..1]
+    GovHydroFrancis : +Float db1[1..1]
+    GovHydroFrancis : +Float etamax[1..1]
+    GovHydroFrancis : +FrancisGovernorControlKind governorControl[1..1]
+    GovHydroFrancis : +Float h1[1..1]
+    GovHydroFrancis : +Float h2[1..1]
+    GovHydroFrancis : +Float hn[1..1]
+    GovHydroFrancis : +Float kc[1..1]
+    GovHydroFrancis : +Float kg[1..1]
+    GovHydroFrancis : +Float kt[1..1]
+    GovHydroFrancis : +Float qc0[1..1]
+    GovHydroFrancis : +Float qn[1..1]
+    GovHydroFrancis : +Float ta[1..1]
+    GovHydroFrancis : +Float td[1..1]
+    GovHydroFrancis : +Float ts[1..1]
+    GovHydroFrancis : +Float twnc[1..1]
+    GovHydroFrancis : +Float twng[1..1]
+    GovHydroFrancis : +Float tx[1..1]
+    GovHydroFrancis : +Float va[1..1]
+    GovHydroFrancis : +Float valvmax[1..1]
+    GovHydroFrancis : +Float valvmin[1..1]
+    GovHydroFrancis : +Float vc[1..1]
+    GovHydroFrancis : +Boolean waterTunnelSurgeChamberSimulation[1..1]
+    GovHydroFrancis : +Float zsfc[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

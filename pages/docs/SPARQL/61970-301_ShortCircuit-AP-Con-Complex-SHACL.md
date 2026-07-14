@@ -33,6 +33,7 @@
 ### sc:SeriesCompensator.varistorRatedCurrent-usage
 
 **Path:** `cim:SeriesCompensator.varistorRatedCurrent`  
+**Name:** C:301:SC:SeriesCompensator.varistorRatedCurrent:usage  
 It is used for short circuit calculations and exchanged only if SeriesCompensator.varistorPresent is true.
 
 **Severity:** sh:Violation
@@ -55,6 +56,7 @@ It is used for short circuit calculations and exchanged only if SeriesCompensato
 ### sc:SeriesCompensator.varistorVoltageThreshold-usage
 
 **Path:** `cim:SeriesCompensator.varistorVoltageThreshold`  
+**Name:** C:301:SC:SeriesCompensator.varistorVoltageThreshold:usage  
 It is used for short circuit calculations and exchanged only if SeriesCompensator.varistorPresent is true.
 
 **Severity:** sh:Violation

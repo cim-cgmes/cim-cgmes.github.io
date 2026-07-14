@@ -12,6 +12,7 @@
 ### op301ia:AccumulatorLimitSet.Limits-cardinality
 
 **Path:** `^cim:AccumulatorLimit.LimitSet`  
+**Name:** AccumulatorLimitSet.Limits-cardinality  
 This constraint validates the cardinality of the association at the inverse direction.
 
 **Severity:** sh:Violation
@@ -36,6 +37,7 @@ This constraint validates the cardinality of the association at the inverse dire
 ### op301ia:AccumulatorValue.AccumulatorReset-cardinality
 
 **Path:** `^cim:AccumulatorReset.AccumulatorValue`  
+**Name:** AccumulatorValue.AccumulatorReset-cardinality  
 This constraint validates the cardinality of the association at the inverse direction.
 
 **Severity:** sh:Violation
@@ -60,6 +62,7 @@ This constraint validates the cardinality of the association at the inverse dire
 ### op301ia:AnalogValue.AnalogControl-cardinality
 
 **Path:** `^cim:AnalogControl.AnalogValue`  
+**Name:** AnalogValue.AnalogControl-cardinality  
 This constraint validates the cardinality of the association at the inverse direction.
 
 **Severity:** sh:Violation
@@ -84,6 +87,7 @@ This constraint validates the cardinality of the association at the inverse dire
 ### op301ia:DiscreteValue.Command-cardinality
 
 **Path:** `^cim:Command.DiscreteValue`  
+**Name:** DiscreteValue.Command-cardinality  
 This constraint validates the cardinality of the association at the inverse direction.
 
 **Severity:** sh:Violation
@@ -111,6 +115,7 @@ This constraint validates the cardinality of the association at the inverse dire
 ### op301ia:MeasurementValue.MeasurementValueQuality-cardinality
 
 **Path:** `^cim:MeasurementValueQuality.MeasurementValue`  
+**Name:** MeasurementValue.MeasurementValueQuality-cardinality  
 This constraint validates the cardinality of the association at the inverse direction.
 
 **Severity:** sh:Violation
@@ -135,6 +140,7 @@ This constraint validates the cardinality of the association at the inverse dire
 ### op301ia:ValueAliasSet.Values-cardinality
 
 **Path:** `^cim:ValueToAlias.ValueAliasSet`  
+**Name:** ValueAliasSet.Values-cardinality  
 This constraint validates the cardinality of the association at the inverse direction.
 
 **Severity:** sh:Violation

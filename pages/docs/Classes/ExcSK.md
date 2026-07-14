@@ -5,8 +5,54 @@ Slovakian excitation system. UEL and secondary voltage control are included in t
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcSK
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcSK : +Float efdmax[1..1]
+    ExcSK : +Float efdmin[1..1]
+    ExcSK : +Float emax[1..1]
+    ExcSK : +Float emin[1..1]
+    ExcSK : +Float k[1..1]
+    ExcSK : +Float k1[1..1]
+    ExcSK : +Float k2[1..1]
+    ExcSK : +Float kc[1..1]
+    ExcSK : +Float kce[1..1]
+    ExcSK : +Float kd[1..1]
+    ExcSK : +Float kgob[1..1]
+    ExcSK : +Float kp[1..1]
+    ExcSK : +Float kqi[1..1]
+    ExcSK : +Float kqob[1..1]
+    ExcSK : +Float kqp[1..1]
+    ExcSK : +Float nq[1..1]
+    ExcSK : +Boolean qconoff[1..1]
+    ExcSK : +Float qz[1..1]
+    ExcSK : +Boolean remote[1..1]
+    ExcSK : +Float sbase[1..1]
+    ExcSK : +Float tc[1..1]
+    ExcSK : +Float te[1..1]
+    ExcSK : +Float ti[1..1]
+    ExcSK : +Float tp[1..1]
+    ExcSK : +Float tr[1..1]
+    ExcSK : +Float uimax[1..1]
+    ExcSK : +Float uimin[1..1]
+    ExcSK : +Float urmax[1..1]
+    ExcSK : +Float urmin[1..1]
+    ExcSK : +Float vtmax[1..1]
+    ExcSK : +Float vtmin[1..1]
+    ExcSK : +Float yp[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

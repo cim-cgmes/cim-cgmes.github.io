@@ -5,8 +5,46 @@ IEEE hydro turbine governor with straightforward penstock configuration and hydr
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     TurbineGovernorDynamics <|-- GovHydro2
+    TurbineGovernorDynamics : +AsynchronousMachineDynamics AsynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[0..1]
+    TurbineGovernorDynamics : +TurbineLoadControllerDynamics TurbineLoadControllerDynamics[0..1]
+    click TurbineGovernorDynamics href "TurbineGovernorDynamics"
+    GovHydro2 : +Float aturb[1..1]
+    GovHydro2 : +Float bturb[1..1]
+    GovHydro2 : +Float db1[1..1]
+    GovHydro2 : +Float db2[1..1]
+    GovHydro2 : +Float eps[1..1]
+    GovHydro2 : +Float gv1[1..1]
+    GovHydro2 : +Float gv2[1..1]
+    GovHydro2 : +Float gv3[1..1]
+    GovHydro2 : +Float gv4[1..1]
+    GovHydro2 : +Float gv5[1..1]
+    GovHydro2 : +Float gv6[1..1]
+    GovHydro2 : +Float kturb[1..1]
+    GovHydro2 : +Float mwbase[1..1]
+    GovHydro2 : +Float pgv1[1..1]
+    GovHydro2 : +Float pgv2[1..1]
+    GovHydro2 : +Float pgv3[1..1]
+    GovHydro2 : +Float pgv4[1..1]
+    GovHydro2 : +Float pgv5[1..1]
+    GovHydro2 : +Float pgv6[1..1]
+    GovHydro2 : +Float pmax[1..1]
+    GovHydro2 : +Float pmin[1..1]
+    GovHydro2 : +Float rperm[1..1]
+    GovHydro2 : +Float rtemp[1..1]
+    GovHydro2 : +Float tg[1..1]
+    GovHydro2 : +Float tp[1..1]
+    GovHydro2 : +Float tr[1..1]
+    GovHydro2 : +Float tw[1..1]
+    GovHydro2 : +Float uc[1..1]
+    GovHydro2 : +Float uo[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

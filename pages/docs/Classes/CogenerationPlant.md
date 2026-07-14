@@ -5,8 +5,18 @@ A set of thermal generating units for the production of electrical energy and pr
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemResource <|-- CogenerationPlant
+    PowerSystemResource : +Control Controls[0..n]
+    PowerSystemResource : +Location Location[0..1]
+    PowerSystemResource : +Measurement Measurements[0..n]
+    click PowerSystemResource href "PowerSystemResource"
+    CogenerationPlant : +ThermalGeneratingUnit ThermalGeneratingUnits[0..n]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

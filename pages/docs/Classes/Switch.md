@@ -5,14 +5,38 @@ A generic device designed to close, or open, or both, one or more electric circu
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ConductingEquipment <|-- Switch
+    ConductingEquipment : +BaseVoltage BaseVoltage[0..1]
+    ConductingEquipment : +SvStatus SvStatus[0..1]
+    ConductingEquipment : +Terminal Terminals[0..n]
+    click ConductingEquipment href "ConductingEquipment"
     Switch <|-- Cut
+    Cut : +ACLineSegment ACLineSegment[1]
+    Cut : +Float lengthFromTerminal1[0..1]
+    click Cut href "Cut"
     Switch <|-- Disconnector
+    click Disconnector href "Disconnector"
     Switch <|-- GroundDisconnector
-    Switch <|-- Fuse
-    Switch <|-- Jumper
+    click GroundDisconnector href "GroundDisconnector"
     Switch <|-- ProtectedSwitch
+    click ProtectedSwitch href "ProtectedSwitch"
+    Switch <|-- Fuse
+    click Fuse href "Fuse"
+    Switch <|-- Jumper
+    click Jumper href "Jumper"
+    Switch : +SvSwitch SvSwitch[0..n]
+    Switch : +SwitchSchedule SwitchSchedules[0..n]
+    Switch : +Boolean locked[1..1]
+    Switch : +Boolean normalOpen[1..1]
+    Switch : +Boolean open[1..1]
+    Switch : +Float ratedCurrent[0..1]
+    Switch : +Boolean retained[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

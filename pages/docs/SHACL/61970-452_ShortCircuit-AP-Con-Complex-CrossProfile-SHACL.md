@@ -12,6 +12,7 @@
 ### sc452cp:MutualCoupling.First_Terminal-valueType
 
 **Path:** `cim:MutualCoupling.First_Terminal / rdf:type`  
+**Name:** MutualCoupling.First_Terminal-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation
@@ -38,6 +39,7 @@ This constraint validates the value type of the association at the used directio
 ### sc452cp:MutualCoupling.Second_Terminal-valueType
 
 **Path:** `cim:MutualCoupling.Second_Terminal / rdf:type`  
+**Name:** MutualCoupling.Second_Terminal-valueType  
 This constraint validates the value type of the association at the used direction.
 
 **Severity:** sh:Violation

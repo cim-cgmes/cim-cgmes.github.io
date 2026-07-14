@@ -5,10 +5,29 @@ The class is the third level in a hierarchical structure for grouping of loads f
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- LoadGroup
-    LoadGroup <|-- ConformLoadGroup
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
     LoadGroup <|-- NonConformLoadGroup
+    NonConformLoadGroup : +NonConformLoad EnergyConsumers[1..n]
+    NonConformLoadGroup : +NonConformLoadSchedule NonConformLoadSchedules[0..n]
+    click NonConformLoadGroup href "NonConformLoadGroup"
+    LoadGroup <|-- ConformLoadGroup
+    ConformLoadGroup : +ConformLoadSchedule ConformLoadSchedules[0..n]
+    ConformLoadGroup : +ConformLoad EnergyConsumers[1..n]
+    click ConformLoadGroup href "ConformLoadGroup"
+    LoadGroup : +SubLoadArea SubLoadArea[1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

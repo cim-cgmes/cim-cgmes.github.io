@@ -5,8 +5,8 @@
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:Analog
 - targetClass: cim:Accumulator
 - targetClass: cim:Discrete
 - targetClass: cim:StringMeasurement
-- targetClass: cim:Analog
 

@@ -5,8 +5,18 @@ Underexcitation limiter function block whose dynamic behaviour is described by a
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     UnderexcitationLimiterDynamics <|-- UnderexcitationLimiterUserDefined
+    UnderexcitationLimiterDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    UnderexcitationLimiterDynamics : +RemoteInputSignal RemoteInputSignal[0..1]
+    click UnderexcitationLimiterDynamics href "UnderexcitationLimiterDynamics"
+    UnderexcitationLimiterUserDefined : +ProprietaryParameterDynamics ProprietaryParameterDynamics[0..n]
+    UnderexcitationLimiterUserDefined : +Boolean proprietary[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

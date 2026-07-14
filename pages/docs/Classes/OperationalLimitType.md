@@ -5,8 +5,25 @@ The operational meaning of a category of limits.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- OperationalLimitType
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
+    OperationalLimitType : +OperationalLimit OperationalLimit[0..n]
+    OperationalLimitType : +Float acceptableDuration[0..1]
+    OperationalLimitType : +OperationalLimitDirectionKind direction[1..1]
+    OperationalLimitType : +Boolean isInfiniteDuration[1..1]
+    OperationalLimitType : +LimitKind kind[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

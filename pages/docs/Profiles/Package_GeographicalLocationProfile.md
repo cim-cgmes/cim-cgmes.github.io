@@ -3,20 +3,25 @@
 ## Overview Diagram
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
-    StreetAddress --> Status : status
-    StreetAddress --> StreetDetail : streetDetail
-    StreetAddress --> TownDetail : townDetail
-    IdentifiedObject <|-- PowerSystemResource
-    PowerSystemResource --> Location : Location
-    Location <|-- WorkLocation
+    PositionPoint --> Location : Location
     IdentifiedObject <|-- Location
     Location --> CoordinateSystem : CoordinateSystem
     Location --> PositionPoint : PositionPoints
     Location --> PowerSystemResource : PowerSystemResources
     Location --> StreetAddress : mainAddress
+    IdentifiedObject <|-- PowerSystemResource
+    PowerSystemResource --> Location : Location
+    StreetAddress --> Status : status
+    StreetAddress --> StreetDetail : streetDetail
+    StreetAddress --> TownDetail : townDetail
+    Location <|-- WorkLocation
     WorkLocation <|-- ServiceLocation
-    PositionPoint --> Location : Location
     IdentifiedObject <|-- CoordinateSystem
     CoordinateSystem --> Location : Locations
 ```

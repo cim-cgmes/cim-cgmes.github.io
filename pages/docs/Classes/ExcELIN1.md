@@ -5,8 +5,37 @@ Static PI transformer fed excitation system ELIN (VATECH) - simplified model. Th
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     ExcitationSystemDynamics <|-- ExcELIN1
+    ExcitationSystemDynamics : +DiscontinuousExcitationControlDynamics DiscontinuousExcitationControlDynamics[0..1]
+    ExcitationSystemDynamics : +OverexcitationLimiterDynamics OverexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType1Dynamics PFVArControllerType1Dynamics[0..1]
+    ExcitationSystemDynamics : +PFVArControllerType2Dynamics PFVArControllerType2Dynamics[0..1]
+    ExcitationSystemDynamics : +PowerSystemStabilizerDynamics PowerSystemStabilizerDynamics[0..1]
+    ExcitationSystemDynamics : +SynchronousMachineDynamics SynchronousMachineDynamics[1]
+    ExcitationSystemDynamics : +UnderexcitationLimiterDynamics UnderexcitationLimiterDynamics[0..1]
+    ExcitationSystemDynamics : +VoltageCompensatorDynamics VoltageCompensatorDynamics[1]
+    click ExcitationSystemDynamics href "ExcitationSystemDynamics"
+    ExcELIN1 : +Float dpnf[1..1]
+    ExcELIN1 : +Float efmax[1..1]
+    ExcELIN1 : +Float efmin[1..1]
+    ExcELIN1 : +Float ks1[1..1]
+    ExcELIN1 : +Float ks2[1..1]
+    ExcELIN1 : +Float smax[1..1]
+    ExcELIN1 : +Float tfi[1..1]
+    ExcELIN1 : +Float tnu[1..1]
+    ExcELIN1 : +Float ts1[1..1]
+    ExcELIN1 : +Float ts2[1..1]
+    ExcELIN1 : +Float tsw[1..1]
+    ExcELIN1 : +Float vpi[1..1]
+    ExcELIN1 : +Float vpnf[1..1]
+    ExcELIN1 : +Float vpu[1..1]
+    ExcELIN1 : +Float xe[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

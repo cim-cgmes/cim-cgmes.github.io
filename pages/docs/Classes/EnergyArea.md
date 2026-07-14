@@ -5,10 +5,28 @@ Describes an area having energy production or consumption. Specializations are i
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     IdentifiedObject <|-- EnergyArea
-    EnergyArea <|-- LoadArea
+    IdentifiedObject : +DiagramObject DiagramObjects[0..n]
+    IdentifiedObject : +String description[0..1]
+    IdentifiedObject : +String energyIdentCodeEic[0..1]
+    IdentifiedObject : +String mRID[1..1]
+    IdentifiedObject : +String name[1..1]
+    IdentifiedObject : +String shortName[0..1]
+    click IdentifiedObject href "IdentifiedObject"
     EnergyArea <|-- SubLoadArea
+    SubLoadArea : +LoadArea LoadArea[1]
+    SubLoadArea : +LoadGroup LoadGroups[1..n]
+    click SubLoadArea href "SubLoadArea"
+    EnergyArea <|-- LoadArea
+    LoadArea : +SubLoadArea SubLoadAreas[1..n]
+    click LoadArea href "LoadArea"
+    EnergyArea : +ControlArea ControlArea[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

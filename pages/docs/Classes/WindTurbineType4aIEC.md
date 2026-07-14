@@ -5,8 +5,17 @@ Wind turbine IEC type 4A. Reference: IEC 61400-27-1:2015, 5.5.5.2.
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     WindTurbineType4IEC <|-- WindTurbineType4aIEC
+    WindTurbineType4IEC : +WindGenType3aIEC WindGenType3aIEC[0..1]
+    click WindTurbineType4IEC href "WindTurbineType4IEC"
+    WindTurbineType4aIEC : +WindContPType4aIEC WindContPType4aIEC[1]
+    WindTurbineType4aIEC : +WindGenType4IEC WindGenType4IEC[0..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

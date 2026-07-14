@@ -5,8 +5,24 @@ Power system stabilizer part of an ABB excitation system. [Footnote: ABB excitat
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PowerSystemStabilizerDynamics <|-- PssSTAB2A
+    PowerSystemStabilizerDynamics : +ExcitationSystemDynamics ExcitationSystemDynamics[1]
+    PowerSystemStabilizerDynamics : +RemoteInputSignal RemoteInputSignal[0..n]
+    click PowerSystemStabilizerDynamics href "PowerSystemStabilizerDynamics"
+    PssSTAB2A : +Float hlim[1..1]
+    PssSTAB2A : +Float k2[1..1]
+    PssSTAB2A : +Float k3[1..1]
+    PssSTAB2A : +Float k4[1..1]
+    PssSTAB2A : +Float k5[1..1]
+    PssSTAB2A : +Float t2[1..1]
+    PssSTAB2A : +Float t3[1..1]
+    PssSTAB2A : +Float t5[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

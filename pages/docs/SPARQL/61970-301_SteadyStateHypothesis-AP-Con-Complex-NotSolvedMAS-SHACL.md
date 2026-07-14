@@ -19,6 +19,7 @@
 ### ssh301n:ControlArea-netInterchangeCalculation
 
 **Path:** `rdf:type`  
+**Name:** C:301:SSH:ControlArea:netInterchangeCalculation  
 Control area constraints in power flow are represented as a set of area control equality constraints of the form: Control Area Net Interchange = SUM (control area flow into the area on each tie)
 
 **Severity:** sh:Warning
@@ -64,6 +65,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh301n:CsConverter.targetAlpha-applicability
 
 **Path:** `cim:CsConverter.targetAlpha`  
+**Name:** C:301:SSH:CsConverter.targetAlpha:applicability  
 It is only applicable for rectifier if continuous tap changer control is used.
 
 **Severity:** sh:Warning
@@ -104,6 +106,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh301n:CsConverter.targetGamma-applicability
 
 **Path:** `cim:CsConverter.targetGamma`  
+**Name:** C:301:SSH:CsConverter.targetGamma:applicability  
 It is only applicable for inverter if continuous tap changer control is used.
 
 **Severity:** sh:Warning
@@ -152,6 +155,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh301n:ShuntCompensator.sections-valueLinear
 
 **Path:** `cim:ShuntCompensator.sections`  
+**Name:** C:301:SSH:ShuntCompensator.sections:valueLinear  
 Non integer values are allowed to support continuous variables. For LinearShuntCompensator the value shall be between zero and ShuntCompensator.maximumSections. At value zero the shunt compensator conductance and admittance is zero.
 
 **Severity:** sh:Violation
@@ -190,6 +194,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh301n:ShuntCompensator.sections-valueNonLinear
 
 **Path:** `cim:ShuntCompensator.sections`  
+**Name:** C:301:SSH:ShuntCompensator.sections:valueNonLinear  
 For NonlinearShuntCompensator-s shall only be set to one of the NonlinearShuntCompenstorPoint.sectionNumber.
 
 **Severity:** sh:Violation
@@ -276,6 +281,7 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 ### ssh301n:RegulatingControl-requiredAttributes
 
 **Path:** `cim:RegulatingControl.mode`  
+**Name:** C:301:SSH:RegulatingControl:requiredAttributes  
 The attribute minAllowedTargetValue and maxAllowedTargetValue are required in the following cases: - For a power generating module operated in power factor control mode to specify maximum and minimum power factor values; - ....
 
 **Severity:** sh:Violation
@@ -306,17 +312,18 @@ PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
 **Severity:** sh:Violation
 
 **Targets:**
+- targetClass: cim:RatioTapChanger
 - targetClass: cim:PhaseTapChangerLinear
 - targetClass: cim:PhaseTapChangerSymmetrical
 - targetClass: cim:PhaseTapChangerAsymmetrical
 - targetClass: cim:PhaseTapChangerTabular
-- targetClass: cim:RatioTapChanger
 
 **Nested Properties:**
 
 ### ssh301n:TapChanger.step-valueType
 
 **Path:** `cim:TapChanger.step`  
+**Name:** C:301:SSH:TapChanger.step:valueType  
 Non integer values are allowed to support continuous tap variables.
 
 **Severity:** sh:Violation

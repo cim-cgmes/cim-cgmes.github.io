@@ -5,8 +5,18 @@ Describes the tap model for an asymmetrical phase shifting transformer in which 
 ## Inheritance
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
     PhaseTapChangerNonLinear <|-- PhaseTapChangerAsymmetrical
+    PhaseTapChangerNonLinear : +Float voltageStepIncrement[1..1]
+    PhaseTapChangerNonLinear : +Float xMax[1..1]
+    PhaseTapChangerNonLinear : +Float xMin[1..1]
+    click PhaseTapChangerNonLinear href "PhaseTapChangerNonLinear"
+    PhaseTapChangerAsymmetrical : +Float windingConnectionAngle[1..1]
 ```
 <button class="mermaid-enlarge-button">Enlarge Diagram</button>
 

@@ -5,13 +5,13 @@
 **Severity:** sh:Violation
 
 **Targets:**
-- targetClass: cim:GroundDisconnector
-- targetClass: cim:DisconnectingCircuitBreaker
 - targetClass: cim:Switch
-- targetClass: cim:Fuse
+- targetClass: cim:Disconnector
 - targetClass: cim:Jumper
+- targetClass: cim:DisconnectingCircuitBreaker
+- targetClass: cim:Cut
+- targetClass: cim:Fuse
+- targetClass: cim:GroundDisconnector
 - targetClass: cim:Breaker
 - targetClass: cim:LoadBreakSwitch
-- targetClass: cim:Cut
-- targetClass: cim:Disconnector
 
